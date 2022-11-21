@@ -1,7 +1,12 @@
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+/******************************** IMPORTS ********************************/
+// libraries
+import { legacy_createStore as createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
+// local files
 import sessionReducer from './session';
 
+
+/******************************* REDUCER *********************************/
 const rootReducer = combineReducers({
   session: sessionReducer,
 });
@@ -21,4 +26,6 @@ const configureStore = (preloadedState) => {
   return createStore(rootReducer, preloadedState, enhancer);
 };
 
+
+/******************************** EXPORTS ********************************/
 export default configureStore;
