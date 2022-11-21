@@ -1,1 +1,31 @@
 /* TODO Add site wide styles */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    /* background-color: yellow; */
+    font-family: "Helvetica for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+.page-wrapper-container {
+    display: flex;
+    justify-content: center;
+
+    margin: 0px;
+    padding: 0px;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*
+- component wrapper:
+    - 100vw X 100vh
+- component itself:
+    - flex centered
+    - width 100%
+    - max width 1400px;
+    - margin: 0px;
+    - padding: 0px 20px;
+*/
