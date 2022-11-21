@@ -35,17 +35,28 @@ module.exports = (sequelize, DataTypes) => {
       }
     };
 
-    static async signup({ firstName, lastName, username, email, password }) {
+    // Uncomment once firstName and lastName are added to model + migration
+    // static async signup({ firstName, lastName, username, email, password }) {
+    //   const hashedPassword = bcrypt.hashSync(password);
+    //   const user = await User.create({
+    //     firstName,
+    //     lastName,
+    //     username,
+    //     email,
+    //     hashedPassword
+    //   });
+    //   return await User.scope('currentUser').findByPk(user.id);
+    // };
+
+    static async signup({ username, email, password }) {
       const hashedPassword = bcrypt.hashSync(password);
       const user = await User.create({
-        firstName,
-        lastName,
         username,
         email,
         hashedPassword
       });
       return await User.scope('currentUser').findByPk(user.id);
-    };
+    }
 
     static associate(models) {
       // define association here
