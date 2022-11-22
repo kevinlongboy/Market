@@ -13,13 +13,14 @@ function NavBarMain() {
         <div id="NavBarMain-component">
 
           <div className="NavBarMain-left-container">
-            <p>Seattle</p>
+            <i class="fa-solid fa-city"></i>
+            <p id="navbar-location-button">Online Store</p>
           </div>
 
           <div className="NavBarMain-right-container">
-            <p>Seattle</p>
-            <p>Seattle</p>
-            <p>Seattle</p>
+            <p>Weekly Ad</p>
+            <p>BlueCard</p>
+            <p>Market Squared</p>
           </div>
         </div>
 

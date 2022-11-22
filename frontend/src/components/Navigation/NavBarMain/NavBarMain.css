@@ -32,6 +32,10 @@
     font-size: 12px;
 }
 
+#navbar-location-button {
+    margin-left: 8px;
+}
+
 .NavBarMain-right-container {
     grid-column: 2 / 3;
 
@@ -40,10 +44,7 @@
     justify-content: right;
     align-items: center;
     font-size: 12px;
-
 }
-
-p {
-    padding: 0px;
-    margin: 0px;
+.NavBarMain-right-container > p {
+    margin-left: 32px;
 }
