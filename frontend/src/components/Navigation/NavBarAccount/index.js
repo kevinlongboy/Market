@@ -24,14 +24,15 @@ function NavBarAccount({ isLoaded }){
 
   return (
     <div className="NavBarAccount-wrapper-container">
+
       <div id='NavBarAccount-component'>
-        <ul>
           <p>
             <NavLink exact to="/">Home</NavLink>
             {isLoaded && sessionLinks}
           </p>
-        </ul>
+          <i class="fa-solid fa-cart-shopping"></i>
       </div>
+
     </div>
   );
 }
