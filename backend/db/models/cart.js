@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Cart.belongsTo(models.User, { foreignKey: 'userId' }),
       Cart.belongsTo(models.Product, { foreignKey: 'productId' })
+      
     }
   }
 
@@ -34,6 +35,6 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Cart',
   });
 
-  
+
   return Cart;
 };

@@ -12,6 +12,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Product.hasMany(models.ProductImage, { foreignKey:'productId', onDelete: 'CASCADE', hooks: true })
+      Product.hasMany(models.Review, { foreignKey:'productId', onDelete: 'CASCADE', hooks: true })
+      Product.belongsTo(models.Department, { foreignKey: 'departmentId' })
+      // join table
+      Product.belongsToMany(models.User, { through: models.Cart })
+      Product.belongsToMany(models.Order, { through: models.Cart })
     }
   }
 

@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Order.hasMany(models.Product, { foreignKey: 'productId', onDelete: 'CASCADE', hooks: true })
+      Order.belongsTo(models.User, { foreignKey: 'userId' })
+      // join table
+      Order.belongsToMany(models.Product, { through: models.Cart })
     }
   }
 
@@ -19,23 +23,19 @@ module.exports = (sequelize, DataTypes) => {
   Order.init(
   {
     userId: {
-      type: DataTypes.INTEGER,
       allowNull: false,
-    },
-    productId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
     },
     status: {
-      type: DataTypes.STRING,
       allowNull: false,
+      type: DataTypes.STRING,
       validate: {
         len: [5, 50],
       }
     },
     total: {
-      type: DataTypes.FLOAT,
       allowNull: false,
+      type: DataTypes.FLOAT,
       validate: {
         min: 0
       },
@@ -48,6 +48,6 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Order',
   });
 
-  
+
   return Order;
 };
