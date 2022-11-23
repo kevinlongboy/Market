@@ -1,8 +1,9 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+
+
 module.exports = (sequelize, DataTypes) => {
+
   class Department extends Model {
     /**
      * Helper method for defining associations.
@@ -13,6 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+
+
   Department.init(
   {
     name: {
@@ -22,9 +25,14 @@ module.exports = (sequelize, DataTypes) => {
         len: [5, 100],
       }
     },
-  }, {
+  },
+
+
+  {
     sequelize,
     modelName: 'Department',
   });
+
+
   return Department;
 };

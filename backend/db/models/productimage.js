@@ -1,7 +1,9 @@
 'use strict';
 const { Model } = require('sequelize');
 
+
 module.exports = (sequelize, DataTypes) => {
+
   class ProductImage extends Model {
     /**
      * Helper method for defining associations.
@@ -12,6 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
+
+  
   ProductImage.init(
   {
     productId: {
@@ -25,9 +29,14 @@ module.exports = (sequelize, DataTypes) => {
         isUrl: true,
       }
     },
-  }, {
+  },
+
+
+  {
     sequelize,
     modelName: 'ProductImage',
   });
+
+
   return ProductImage;
 };

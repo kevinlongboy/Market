@@ -3,6 +3,7 @@ const { Model } = require('sequelize');
 
 
 module.exports = (sequelize, DataTypes) => {
+
   class Review extends Model {
     /**
      * Helper method for defining associations.
@@ -55,6 +56,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Review',
   });
+
 
   return Review;
 };

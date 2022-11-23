@@ -1,6 +1,7 @@
 'use strict';
 const { Model } = require('sequelize');
 
+
 module.exports = (sequelize, DataTypes) => {
 
   class Product extends Model {
@@ -13,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  
+
+
   Product.init(
     {
     departmentId: {
@@ -41,9 +43,14 @@ module.exports = (sequelize, DataTypes) => {
         len: [5, 255],
       }
     }
-  },{
+  },
+
+
+  {
     sequelize,
     modelName: 'Product',
   });
+
+
   return Product;
 };
