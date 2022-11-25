@@ -1,4 +1,5 @@
 'use strict';
+// /** @type {import('sequelize-cli').Migration} */
 
 const demoProducts = [
   /******** 1. Personal Care ********/
@@ -434,26 +435,29 @@ const demoProducts = [
   // },
 ]
 
-/** @type {import('sequelize-cli').Migration} */
+
+let deptIds = [];
+demoProducts.forEach(product => {
+  if (!deptIds.includes(product.departmentId)) {
+    deptIds.push(product.departmentId)
+  }
+})
+
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+  up: async (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert(
+      'Products',
+      demoProducts,
+      {}
+    )
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  down: async (queryInterface, Sequelize) => {
+    const Op = Sequelize.Op;
+    return queryInterface.bulkDelete(
+      'Products',
+      { departmentId: { [Op.in]: deptIds } },
+      {}
+    )
   }
 };

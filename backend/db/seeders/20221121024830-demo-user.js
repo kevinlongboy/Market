@@ -325,6 +325,13 @@ const demoUsers = [
     email: 'thenu@appacademy.io',
   },
   {
+    firstName: 'Brennon',
+    lastName: 'Morris',
+    username: 'BrennonMorris',
+    hashedPassword: bcrypt.hashSync('BrennonMorris'),
+    email: 'BrennonMorris@appacademy.io',
+  },
+  {
     firstName: 'Andrew',
     lastName: 'Kay',
     username: 'rewd',

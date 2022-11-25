@@ -1047,25 +1047,28 @@ const demoProductImages = [
   // },
 ]
 
+
+let prodIds = [];
+demoProductImages.forEach(image => {
+  if (!prodIds.includes(image.productId)) {
+    prodIds.push(image.productId)
+  }
+})
+
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+  up: async (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert(
+      'ProductImages',
+      demoUsers,
+      {}
+    )
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  async down(queryInterface, Sequelize) {
+    const Op = Sequelize.Op;
+    await queryInterface.bulkDelete(
+      'ProductImages',
+      { productId: { [Op.in]: prodIds } }
+    )
   }
 };
