@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       Product.belongsTo(models.Department, { foreignKey: 'departmentId' })
       // join table
       Product.belongsToMany(models.User, { through: models.Cart })
-      Product.belongsToMany(models.Order, { through: models.Cart })
+      Product.belongsToMany(models.Order, { through: models.OrderDetail })
     }
   }
 

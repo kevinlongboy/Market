@@ -3,6 +3,7 @@
 
 const demoOrderDetails = [
   // demo
+  // total: 17.98
   {
     orderId: 1,
     productId: 24,
@@ -12,11 +13,13 @@ const demoOrderDetails = [
     productId: 6,
   },
   // Bill
+  // total: 1299.99
   {
     orderId: 2,
     productId: 32,
   },
   // Shane
+  // 285.25
   {
     orderId: 3,
     productId: 3,
@@ -38,6 +41,7 @@ const demoOrderDetails = [
     productId: 22,
   },
   // Geoffrey
+  // 2569.97
   {
     orderId: 4,
     productId: 31,
@@ -51,6 +55,7 @@ const demoOrderDetails = [
     productId: 18,
   },
   // Dan
+  // 2552.47
   {
     orderId: 5,
     productId: 26,
@@ -64,6 +69,7 @@ const demoOrderDetails = [
     productId: 56,
   },
   // Brad
+  // 177.36
   {
     orderId: 6,
     productId: 16,
@@ -81,6 +87,7 @@ const demoOrderDetails = [
     productId: 9,
   },
   // Hector
+  // 253.78
   {
     orderId: 7,
     productId: 27,
@@ -90,6 +97,7 @@ const demoOrderDetails = [
     productId: 33,
   },
   // Cody
+  // 274.87
   {
     orderId: 8,
     productId: 46,
@@ -99,10 +107,11 @@ const demoOrderDetails = [
     productId: 47,
   },
   {
-    orderId: 7,
+    orderId: 8,
     productId: 33,
   },
   // Cameron
+  // 1320.98
   {
     orderId: 9,
     productId: 30,
@@ -112,16 +121,23 @@ const demoOrderDetails = [
     productId: 32,
   },
   // Peter
+  // 7.00
   {
     orderId: 10,
     productId: 10,
   },
   // Braxton
+  // 2525.98
   {
     orderId: 11,
     productId: 44,
   },
+  {
+    orderId: 11,
+    productId: 31,
+  },
   // Jesse
+  // 26.48
   {
     orderId: 12,
     productId: 48,
@@ -131,6 +147,7 @@ const demoOrderDetails = [
     productId: 50,
   },
   // Jojo
+  // 18.48
   {
     orderId: 13,
     productId: 2,
@@ -144,6 +161,7 @@ const demoOrderDetails = [
     productId: 25,
   },
   // Nick
+  // 2897.96
   {
     orderId: 14,
     productId: 31,
@@ -161,6 +179,7 @@ const demoOrderDetails = [
     productId: 42,
   },
   // Andrew Fava
+  // 525.98
   {
     orderId: 15,
     productId: 44,
@@ -170,6 +189,7 @@ const demoOrderDetails = [
     productId: 39,
   },
   // Ari
+  // 109.27
   {
     orderId: 16,
     productId: 54,
@@ -183,6 +203,7 @@ const demoOrderDetails = [
     productId: 13,
   },
   // Sam
+  // 10.97
   {
     orderId: 17,
     productId: 25,
@@ -196,11 +217,13 @@ const demoOrderDetails = [
     productId: 2,
   },
   // Tanner
+  // 139.99
   {
     orderId: 18,
     productId: 41,
   },
   // Olivia
+  // 279.98
   {
     orderId: 19,
     productId: 12,
@@ -210,6 +233,7 @@ const demoOrderDetails = [
     productId: 33,
   },
   // Nate
+  // 2879.34
   {
     orderId: 20,
     productId: 31,
@@ -235,11 +259,13 @@ const demoOrderDetails = [
     productId: 28,
   },
   // Daniel Chin
+  // 99.99
   {
     orderId: 21,
     productId: 34,
   },
   // Alex Pezzati
+  // 188.77
   {
     orderId: 22,
     productId: 21,
@@ -253,6 +279,7 @@ const demoOrderDetails = [
     productId: 41,
   },
   // Sherry
+  // 10.28
   {
     orderId: 23,
     productId: 58,
@@ -266,6 +293,7 @@ const demoOrderDetails = [
     productId: 1,
   },
   // Rawaha
+  // 1333.97
   {
     orderId: 24,
     productId: 32,
@@ -279,6 +307,7 @@ const demoOrderDetails = [
     productId: 52,
   },
   // Whit
+  // 22.99
   {
     orderId: 25,
     productId: 58,
@@ -292,6 +321,7 @@ const demoOrderDetails = [
     productId: 26,
   },
   // Daniel Flores
+  // 4299.97
   {
     orderId: 26,
     productId: 31,
@@ -305,6 +335,7 @@ const demoOrderDetails = [
     productId: 40,
   },
   // David Nash
+  // 1317.98
   {
     orderId: 27,
     productId: 4,
@@ -314,26 +345,31 @@ const demoOrderDetails = [
     productId: 32,
   },
   // John Lee
+  // 499.99
   {
     orderId: 28,
     productId: 40,
   },
   // Andrew Tran
+  // 2.89
   {
     orderId: 29,
     productId: 46,
   },
   // Cesar
+  // 1299.99
   {
     orderId: 30,
     productId: 32,
   },
-  // Ryan
+  // Ryan Schneider
+  // 1299.99
   {
     orderId: 31,
     productId: 32,
   },
   // Anthony
+  // 82.47
   {
     orderId: 32,
     productId: 26,
@@ -347,6 +383,7 @@ const demoOrderDetails = [
     productId: 35,
   },
   // Franco
+  // 599.98
   {
     orderId: 33,
     productId: 36,
@@ -356,6 +393,7 @@ const demoOrderDetails = [
     productId: 39,
   },
   // Kevin
+  // 999.98
   {
     orderId: 34,
     productId: 39,
@@ -365,6 +403,7 @@ const demoOrderDetails = [
     productId: 40,
   },
   // David DeHerrera
+  // 239.98
   {
     orderId: 35,
     productId: 36,
@@ -374,6 +413,7 @@ const demoOrderDetails = [
     productId: 41,
   },
   // Drew
+  // 110.27
   {
     orderId: 36,
     productId: 20,
@@ -387,6 +427,7 @@ const demoOrderDetails = [
     productId: 34,
   },
   // David Rogers
+  // 111.76
   {
     orderId: 37,
     productId: 16,
@@ -404,6 +445,7 @@ const demoOrderDetails = [
     productId: 13,
   },
   // Jair
+  // 389.98
   {
     orderId: 38,
     productId: 41,
@@ -413,6 +455,7 @@ const demoOrderDetails = [
     productId: 33,
   },
   // Tiffany
+  // 46.99
   {
     orderId: 39,
     productId: 30,
@@ -426,11 +469,13 @@ const demoOrderDetails = [
     productId: 58,
   },
   // Daniel Lam
+  // 139.99
   {
     orderId: 40,
     productId: 41,
   },
   // Gary
+  // 370.97
   {
     orderId: 41,
     productId: 37,
@@ -444,11 +489,13 @@ const demoOrderDetails = [
     productId: 36,
   },
   // Jake
+  // 249.99
   {
     orderId: 42,
     productId: 33,
   },
   // John
+  // 105.38
   {
     orderId: 43,
     productId: 23,
@@ -458,11 +505,13 @@ const demoOrderDetails = [
     productId: 36,
   },
   // Maliha
+  // 559.99
   {
     orderId: 44,
     productId: 53,
   },
   // Thenu
+  // 199.98
   {
     orderId: 45,
     productId: 54,
@@ -472,6 +521,7 @@ const demoOrderDetails = [
     productId: 34,
   },
   // Brennon
+  // 30.48
   {
     orderId: 46,
     productId: 28,
@@ -481,11 +531,13 @@ const demoOrderDetails = [
     productId: 44,
   },
   // Andrew Kim
+  // 21.00
   {
     orderId: 47,
     productId: 57,
   },
   // Adam Selki
+  // 389.98
   {
     orderId: 48,
     productId: 33,
@@ -495,6 +547,7 @@ const demoOrderDetails = [
     productId: 41,
   },
   // Chris P
+  // 5329.91
   {
     orderId: 49,
     productId: 31,
@@ -523,7 +576,16 @@ const demoOrderDetails = [
     orderId: 49,
     productId: 37,
   },
+  {
+    orderId: 49,
+    productId: 38,
+  },
+  {
+    orderId: 49,
+    productId: 39,
+  },
   // Christo
+  // 1859.98
   {
     orderId: 50,
     productId: 32,
@@ -533,11 +595,13 @@ const demoOrderDetails = [
     productId: 53,
   },
   // Cindy
+  // 20.99
   {
     orderId: 51,
     productId: 30,
   },
   // David Burch
+  // 55.99
   {
     orderId: 52,
     productId: 30,
@@ -547,6 +611,7 @@ const demoOrderDetails = [
     productId: 55,
   },
   // Eliza
+  // 1092.96
   {
     orderId: 53,
     productId: 15,
@@ -568,11 +633,13 @@ const demoOrderDetails = [
     productId: 54,
   },
   // James Lee
+  // 20.99
   {
     orderId: 54,
     productId: 30,
   },
   // Jason Kong
+  // 313.97
   {
     orderId: 55,
     productId: 52,
@@ -594,6 +661,7 @@ const demoOrderDetails = [
     productId: 55,
   },
   // Joanna
+  // 24.88
   {
     orderId: 56,
     productId: 47,
@@ -603,11 +671,13 @@ const demoOrderDetails = [
     productId: 46,
   },
   // Max
+  // 699.99
   {
     orderId: 57,
     productId: 43,
   },
   // Moran
+  // 38.87
   {
     orderId: 58,
     productId: 9,
@@ -625,6 +695,7 @@ const demoOrderDetails = [
     productId: 8,
   },
   // Yasha
+  // 49.98
   {
     orderId: 59,
     productId: 30,
@@ -638,6 +709,7 @@ const demoOrderDetails = [
     productId: 45,
   },
   // Yibo
+  // 1561.85
   {
     orderId: 60,
     productId: 33,
@@ -659,6 +731,7 @@ const demoOrderDetails = [
     productId: 3,
   },
   // Alex
+  // 249.99
   {
     orderId: 61,
     productId: 33,
@@ -670,25 +743,26 @@ const demoOrderDetails = [
   // },
 ]
 
+let orderIds = [];
+demoOrderDetails.forEach(order => {
+  if (!orderIds.includes(order.orderId)) {
+    orderIds.push(order.orderId)
+  }
+})
+
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert(
+      'OrderDetails',
+      demoOrderDetails
+    )
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+    const Op = Sequelize.Op;
+    await queryInterface.bulkDelete(
+      'OrderDetails',
+      { orderId: { [Op.in]: orderIds } }
+    )
   }
 };
