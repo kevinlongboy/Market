@@ -10,6 +10,14 @@ const bcrypt = require("bcryptjs");
 // },
 
 const demoUsers = [
+  {
+    id: 1,
+    firstName: 'Demo',
+    lastName: 'User',
+    username: 'demo_user',
+    hashedPassword: bcrypt.hashSync('demoPassword'),
+    email: 'demo@email.com',
+  },
   // Module Leads
   {
     firstName: 'Bill',

@@ -209,8 +209,8 @@ const demoProducts = [
     // id: 29,
     departmentId: 4,
     name: "Silk Vanilla Soy Milk - 0.5gal",
-    price: "Treat yourself to the tasty goodness of Silk Vanilla Soymilk. Made with whole-harvested soybeans and a touch of vanilla, this Soymilk offers rich, creamy taste in every delectable drop and makes a perfect non-dairy alternative to milk.",
-    description: 4.49,
+    price: 4.49,
+    description: "Treat yourself to the tasty goodness of Silk Vanilla Soymilk. Made with whole-harvested soybeans and a touch of vanilla, this Soymilk offers rich, creamy taste in every delectable drop and makes a perfect non-dairy alternative to milk.",
   },
   {
     // id: 30,

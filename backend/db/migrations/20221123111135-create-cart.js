@@ -13,13 +13,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
-        allowNull: false,
+        // allowNull: false,
         type: Sequelize.INTEGER,
         references: { model: 'Users' },
         onDelete: 'CASCADE'
       },
       productId: {
-        allowNull: false,
+        // allowNull: false,
         type: Sequelize.INTEGER,
         references: { model: 'Products' },
         onDelete: 'CASCADE'
@@ -36,7 +36,7 @@ module.exports = {
       },
     });
   },
-  
+
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Carts');
   }
