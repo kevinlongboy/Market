@@ -49,7 +49,7 @@ function App() {
             <DepartmentPage />
           </Route>
 
-          <Route exact path={'/departments/:departmentId/:productId'}>
+          <Route exact path={'/departments/:departmentId/products/:productId'}>
             <ProductPage />
           </Route>
 
