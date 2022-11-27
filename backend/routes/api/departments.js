@@ -14,7 +14,7 @@ const router = express.Router();
 
 
 /******************************** ROUTES *********************************/
-// Get all routes
+// Get all departments
 router.get('/', async(req, res) => {
 
     let error = {};
@@ -62,7 +62,7 @@ router.get('/:departmentId/products', async(req, res) => {
                 raw: true,
             })
 
-            // add previewImage key to every product
+            // add previewImage-key to every product
             for (let i = 0; i < findAllDepartmentProducts.length; i++) {
                 let product = findAllDepartmentProducts[i];
                 let prevImage = await ProductImage.findOne({

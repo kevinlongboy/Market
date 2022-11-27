@@ -14,7 +14,7 @@ const router = express.Router();
 
 
 /******************************** ROUTES *********************************/
-// Get product details
+// Get single product details
 router.get('/:productId', async(req, res) => {
 
     let currProdId = req.params.productId;
