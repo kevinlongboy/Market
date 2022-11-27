@@ -43,11 +43,14 @@ router.get('/', async(req, res) => {
 router.get('/:departmentId/products', async(req, res) => {
 
     let currDeptId = req.params.departmentId;
+        // let { currDeptId } = req.params.departmentId;
+        // let currDeptId = paresInt(req.params.departmentId);
     let error = {};
 
     try {
         let findDept = await Department.findByPk(currDeptId)
 
+        // handle error: missing department
         if (!findDept) {
             error.message = "Department couldn't be found";
             error.statusCode = 404;

@@ -1,14 +1,14 @@
+/******************************** IMPORTS ********************************/
+// libraries
 const express = require('express');
 const { check } = require('express-validator');
-
+// local files
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { handleValidationErrors } = require('../../utils/validation');
 const { User } = require('../../db/models');
 
+/*************************** GLOBAL VARIABLES ****************************/
 const router = express.Router();
-
-
-/************************************* global variables *************************************/
 
 const validateSignup = [
     check('firstName')
@@ -41,8 +41,7 @@ const validateSignup = [
 ];
 
 
-/****************************************** /users ******************************************/
-
+/******************************** ROUTES *********************************/
 // Sign up
 router.post('/', validateSignup, async (req, res) => {
 
@@ -105,6 +104,11 @@ router.post('/', validateSignup, async (req, res) => {
 });
 
 
-/****************************************** export ********************************************/
+/***************************** ERROR HANDLER *****************************/
+router.use((err, req, res, next) => {
+    return res.json(err)
+})
 
+
+/******************************** EXPORTS ********************************/
 module.exports = router;

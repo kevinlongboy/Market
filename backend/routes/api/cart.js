@@ -14,13 +14,13 @@ const router = express.Router();
 
 
 /******************************** ROUTES *********************************/
-// get all items in cart by current user
-router.get('/:userId', async(req, res) => {
+// Get all items in cart by current user
+router.get('/', requireAuth, async(req, res) => {
     // ^ remember to add pass requireAuth and remove wildcard ^
+    // let currentUserId = req.params.userId;
 
-    let currentUserId = req.params.userId;
-    // let currentUser = req.user;
-    // let currentUserId = req.user.id;
+    let currentUser = req.user;
+    let currentUserId = req.user.id;
     let error = {};
 
     try {
@@ -84,12 +84,9 @@ router.get('/:userId', async(req, res) => {
     };
 });
 
+// Add item to cart
+router.post('/', requireAuth, async(req, res) => {
 
-// add item to cart
-router.post('/', async(req, res) => {
-    // ^ remember to add pass requireAuth and remove wildcard ^
-
-    // let currentUserId = req.params.userId;
     let currentUser = req.user;
     let currentUserId = parseInt(req.user.id);
     let error = {};
@@ -141,16 +138,12 @@ router.post('/', async(req, res) => {
     };
 });
 
-
+// Remove item from cart
 // should route be specific to cartId?
-// remove item from cart
-router.delete('/:productId', async(req, res) => {
-    // ^ remember to add pass requireAuth ^
+router.delete('/:productId', requireAuth, async(req, res) => {
 
-    // let currentUser = req.user;
-    // let currentUserId = parseInt(req.user.id);
-    let prodId = req.params.productId;
-
+    let currentUser = req.user;
+    let currentUserId = parseInt(req.user.id);
     let error = {};
 
     try {
@@ -161,12 +154,14 @@ router.delete('/:productId', async(req, res) => {
             }
         })
 
+        // handle error: missing product
         if (!deleteProduct) {
             error.message = "Product couldn't be found";
             error.status = 404;
             return res.status(404).json(error);
         }
 
+        // delete record
         deleteProduct.destroy();
         deleteProduct.save();
 
@@ -185,12 +180,10 @@ router.delete('/:productId', async(req, res) => {
 
 
 /***************************** ERROR HANDLER *****************************/
-
 router.use((err, req, res, next) => {
     return res.json(err)
 })
 
 
 /******************************** EXPORTS ********************************/
-
 module.exports = router;

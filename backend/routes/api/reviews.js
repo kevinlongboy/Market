@@ -59,7 +59,6 @@ router.get('/current', requireAuth, async(req, res) => {
     };
 })
 
-
 // Edit a review
 router.put('/:reviewId', requireAuth, async (req, res) => {
 
@@ -106,7 +105,7 @@ router.delete('/:reviewId', requireAuth, async (req, res) => {
         if (!deleteReview) {
             error.message = "Review couldn't be found";
             error.status = 404;
-            return res.json(error);
+            return res.status(404).json(error);
         }
 
         // delete record
@@ -126,13 +125,12 @@ router.delete('/:reviewId', requireAuth, async (req, res) => {
     }
 });
 
-/***************************** ERROR HANDLER *****************************/
 
+/***************************** ERROR HANDLER *****************************/
 router.use((err, req, res, next) => {
     return res.json(err)
 })
 
 
 /******************************** EXPORTS ********************************/
-
 module.exports = router;

@@ -15,12 +15,10 @@ const router = express.Router();
 
 /******************************** ROUTES *********************************/
 // Get all orders by current user
-router.get('/:userId', async(req, res) => {
-    // ^ remember to add pass requireAuth and remove wildcard ^
+router.get('/', requireAuth, async(req, res) => {
 
-    let currentUserId = req.params.userId;
-    // let currentUser = req.user;
-    // let currentUserId = req.user.id;
+    let currentUser = req.user;
+    let currentUserId = req.user.id;
     let error = {};
 
     try {
@@ -32,6 +30,7 @@ router.get('/:userId', async(req, res) => {
             raw: true
         })
 
+        // handle error: missing order
         if (!getAllOrders.length) {
             error.message = "Order couldn't be found";
             error.statusCode = 404;
@@ -77,19 +76,17 @@ router.get('/:userId', async(req, res) => {
                     raw: true
                 });
                 let prevUrl = prevImage.url;
-                product.previewImage = prevUrl
+                product.previewImage = prevUrl;
+            };
 
-            }
             order.Products = productsPurchased;
+        };
 
-        }
         return res
             .status(200)
             .json({
                 "Orders": getAllOrders
-            })
-
-
+            });
 
     } catch (err) {
         error.error = err
@@ -97,11 +94,9 @@ router.get('/:userId', async(req, res) => {
     };
 });
 
-
+// ⬇︎ Not necessary; instead: filter through all orders using orderId, on frontend ⬇︎
 // Get single order details
 // router.get('/:orderId', async(req, res) => {
-//     let currentUserId = req.params.userId;
-//     // remember to add pass requireAuth ^
 //     // let currentUser = req.user;
 //     // let currentUserId = req.user.id;
 //     let error = {};
@@ -185,12 +180,10 @@ router.post('/', requireAuth, async(req, res) => {
 
 
 /***************************** ERROR HANDLER *****************************/
-
 router.use((err, req, res, next) => {
     return res.json(err)
-})
+});
 
 
 /******************************** EXPORTS ********************************/
-
 module.exports = router;
