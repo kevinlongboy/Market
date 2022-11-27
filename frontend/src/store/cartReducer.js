@@ -81,7 +81,7 @@ const cartReducer = (state = initialState, action) => {
 
         case CART_READ_CART:
             newState.allProductsByUser = {...action.payload}
-                newState.allProductsByUser.Products = {...action.payload.Products}
+                newState.allProductsByUser.Products = [...action.payload.Products]
             return newState
 
         case CART_ADD_SINGLE_PRODUCT_TO_CART:

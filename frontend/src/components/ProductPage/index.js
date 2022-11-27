@@ -38,7 +38,6 @@ function ProductPage() {
 
 
   /***************** handle events *******************/
-
   function addItem() {
 
     let productData = {

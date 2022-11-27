@@ -173,17 +173,25 @@ router.post('/', requireAuth, async(req, res) => {
                 where: {
                     userId: currentUserId,
                     productId: currProduct.id
-                }
+                },
+                raw: true,
             })
+
             // handle error: missing product
             if (!deleteProduct) {
                 error.message = "Product couldn't be found";
                 error.status = 404;
                 return res.status(404).json(error);
             }
+
             // delete record
-            deleteProduct.destroy();
-            deleteProduct.save();
+            Cart.destroy({
+                where: {
+                    userId: currentUserId,
+                    productId: currProduct.id
+                },
+            })
+            // ❗️ END ❗️
         }
 
         return res

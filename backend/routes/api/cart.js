@@ -155,6 +155,8 @@ router.delete('/:productId', requireAuth, async(req, res) => {
     let currentUser = req.user;
     let currentUserId = parseInt(req.user.id);
     let prodId = req.params.productId
+    prodId = parseInt(prodId)
+
     let error = {};
 
     try {
@@ -162,7 +164,8 @@ router.delete('/:productId', requireAuth, async(req, res) => {
             where: {
                 userId: currentUserId,
                 productId: prodId
-            }
+            },
+            raw: true,
         })
 
         // handle error: missing product
@@ -173,8 +176,14 @@ router.delete('/:productId', requireAuth, async(req, res) => {
         }
 
         // delete record
-        deleteProduct.destroy();
-        deleteProduct.save();
+        Cart.destroy({
+            where: {
+                userId: currentUserId,
+                productId: prodId
+            },
+        })
+
+        console.log("reach")
 
         return res
             .status(200)

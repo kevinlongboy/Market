@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 // local files
-import { thunkReadCart } from "../../store/cartReducer";
+import { thunkReadCart, thunkRemoveSingleProductFromCart } from "../../store/cartReducer";
 import "./Cart.css"
 
 /******************************* COMPONENT *******************************/
@@ -28,6 +28,15 @@ function Cart() {
       dispatch(thunkReadCart());
   }, [dispatch])
 
+  /***************** handle events *******************/
+  function removeItem(productId) {
+
+    // let productData = {
+    //   productId: productId
+    // }
+
+    dispatch(thunkRemoveSingleProductFromCart(productId))
+  }
 
   /**************** render component *****************/
   return (
@@ -37,7 +46,10 @@ function Cart() {
 
           <h1>Cart</h1>
           {products && products.map((product) => (
-            <p>{product.name}</p>
+            <>
+              <p>{product.name}</p>
+              <button onClick={(e) => removeItem(product.id)}>remove from cart</button>
+            </>
           ))}
       </div>
 
