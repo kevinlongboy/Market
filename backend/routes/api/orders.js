@@ -109,10 +109,78 @@ router.get('/:userId', async(req, res) => {
 
 
 // Create new order
-router.post('/', async(req, res) => {
-    // need to pass quantity
+router.post('/', requireAuth, async(req, res) => {
+
     // cart should calculate total
     // then pass to order
+
+    // first instantiate order
+    // req. fields:
+        // userId via req.user
+        // total
+
+    // upon success, instantiate order details
+        // find new order using ByPk
+        // using found orderId,
+        // iterate through array of objects (in cart)
+        // and instantiate new OrderDetails record for each element
+
+    let currentUser = req.user;
+    let currentUserId = req.user.id;
+    let error = {};
+
+    try {
+        let { total, products } = req.body //  products should be an array of objects
+
+        // handle error: missing fields
+        const validationErrorMessages = []
+        if (!total) {
+            error.message = "Validation Error";
+            error.status = 400;
+            validationErrorMessages.push("Total is required.")
+        } else if (!products) {
+            error.message = "Validation Error";
+            error.status = 400;
+            validationErrorMessages.push("Products is required.")
+        }
+        if (error.message) {
+            error.errors = validationErrorMessages;
+            return res.status(400).json(error);
+        }
+
+        // instantiate cart-object
+        let postOrder = await currentUser.createOrder({
+            userId: currentUserId,
+            total: total,
+        });
+        postOrder.save();
+
+        let printOrder = await Order.findByPk(postOrder.id, {
+            attributes: {
+                exclude: ['createdAt', 'updatedAt']
+            },
+        })
+
+        // instantiate order details
+        let orderId = printOrder.id
+        for (let i = 0; i < products.length; i++) {
+            let currProduct = products[i];
+            let postOrderDetail = await currentUser.createOrderDetail({
+                orderId: orderId,
+                productId: currProduct.id
+            });
+            postOrderDetail.save();
+        }
+
+        return res
+            .status(200)
+            .json(printOrder) // also return list of products ordered?
+
+
+    } catch (err) {
+        error.error = err
+        return res.json(error)
+    };
 })
 
 

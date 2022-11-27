@@ -13,7 +13,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       status: {
-        allowNull: false,
+        allowNull: true,
+        defaultValue: "Fulfilled",
         type: Sequelize.STRING(50),
       },
       total: {

@@ -86,12 +86,12 @@ router.get('/:userId', async(req, res) => {
 
 
 // add item to cart
-router.post('/:userId', async(req, res) => {
+router.post('/', async(req, res) => {
     // ^ remember to add pass requireAuth and remove wildcard ^
 
-    let currentUserId = req.params.userId;
-    // let currentUser = req.user;
-    // let currentUserId = parseInt(req.user.id);
+    // let currentUserId = req.params.userId;
+    let currentUser = req.user;
+    let currentUserId = parseInt(req.user.id);
     let error = {};
 
     try {
@@ -118,10 +118,11 @@ router.post('/:userId', async(req, res) => {
         }
 
         // instantiate cart-object
-        let postCartProduct = await findProduct.createCart({
+        let postCartProduct = await currentUser.createCart({
             userId: currentUserId,
             productId: productId
-        })
+        });
+        postCartProduct.save();
 
         let printCartProduct = await Cart.findByPk(postCartProduct.id, {
             attributes: {
@@ -140,10 +141,11 @@ router.post('/:userId', async(req, res) => {
     };
 });
 
+
 // should route be specific to cartId?
 // remove item from cart
 router.delete('/:productId', async(req, res) => {
-    // ^ remember to add pass requireAuth and remove wildcard ^
+    // ^ remember to add pass requireAuth ^
 
     // let currentUser = req.user;
     // let currentUserId = parseInt(req.user.id);

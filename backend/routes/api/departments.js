@@ -71,6 +71,9 @@ router.get('/:departmentId/products', async(req, res) => {
                 });
                 let prevUrl = prevImage.url;
                 product.previewImage = prevUrl
+
+                // modify keys
+                delete product.departmentId
             }
 
             return res
