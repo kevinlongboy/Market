@@ -50,8 +50,6 @@ router.get('/:userId', async(req, res) => {
                 raw: true,
             })
 
-            let subtotal = 0;
-
             // add product details to every product in array
             for (let j = 0; j < productsPurchased.length; j++) {
                 let product = productsPurchased[j];
@@ -81,12 +79,8 @@ router.get('/:userId', async(req, res) => {
                 let prevUrl = prevImage.url;
                 product.previewImage = prevUrl
 
-                // update subtotal
-                subtotal += product.price;
             }
             order.Products = productsPurchased;
-            order.backendTotal = subtotal
-
 
         }
         return res
