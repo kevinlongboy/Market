@@ -1,8 +1,14 @@
+/******************************** IMPORTS ********************************/
+// local files
 import { csrfFetch } from './csrf';
 
+
+/********************************* TYPES *********************************/
 const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser';
 
+
+/**************************** ACTION CREATORS ****************************/
 const setUser = (user) => {
   return {
     type: SET_USER,
@@ -16,18 +22,22 @@ const removeUser = () => {
   };
 };
 
+
+/***************************** THUNKS (API) ******************************/
 export const signup = (user) => async (dispatch) => {
-  const { username, email, password } = user;
+  const { firstName, lastName, username, password, email } = user;
   const response = await csrfFetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
+      firstName,
+      lastName,
       username,
       email,
       password,
     }),
   });
   const data = await response.json();
-  dispatch(setUser(data.user));
+  dispatch(setUser(data));
   return response;
 };
 
@@ -41,14 +51,14 @@ export const login = (user) => async (dispatch) => {
     }),
   });
   const data = await response.json();
-  dispatch(setUser(data.user));
-  return response;
+  dispatch(setUser(data));
+return response;
 };
 
 export const restoreUser = () => async dispatch => {
   const response = await csrfFetch('/api/session');
   const data = await response.json();
-  dispatch(setUser(data.user));
+  dispatch(setUser(data));
   return response;
 };
 
@@ -60,8 +70,12 @@ export const logout = () => async (dispatch) => {
   return response;
 };
 
+
+/***************************** STATE SHAPE *******************************/
 const initialState = { user: null };
 
+
+/******************************* REDUCER *********************************/
 const sessionReducer = (state = initialState, action) => {
   let newState;
   switch (action.type) {
@@ -78,4 +92,6 @@ const sessionReducer = (state = initialState, action) => {
   }
 };
 
+
+/******************************** EXPORTS ********************************/
 export default sessionReducer;

@@ -3,12 +3,14 @@
 import { legacy_createStore as createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 // local files
-import sessionReducer from './session';
+import departmentsReducer from "./departmentsReducer";
+import sessionReducer from './sessionReducer';
 
 
 /******************************* REDUCER *********************************/
 const rootReducer = combineReducers({
   session: sessionReducer,
+  departments: departmentsReducer
 });
 
 let enhancer;

@@ -165,6 +165,25 @@ router.post('/', requireAuth, async(req, res) => {
                 productId: currProduct.id
             });
             postOrderDetail.save();
+
+            // ❗️ IMPORTANT ❗️
+            // following code block subsequently removes same item from user's cart,
+            // after its OrderDetail-record creation
+            let deleteProduct = await Cart.findOne({
+                where: {
+                    userId: currentUserId,
+                    productId: currProduct.id
+                }
+            })
+            // handle error: missing product
+            if (!deleteProduct) {
+                error.message = "Product couldn't be found";
+                error.status = 404;
+                return res.status(404).json(error);
+            }
+            // delete record
+            deleteProduct.destroy();
+            deleteProduct.save();
         }
 
         return res
