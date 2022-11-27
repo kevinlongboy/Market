@@ -60,6 +60,72 @@ router.get('/current', requireAuth, async(req, res) => {
 })
 
 
+// Edit a review
+router.put('/:reviewId', requireAuth, async (req, res) => {
+
+    let reviewId = req.params.reviewId;
+    let error = {};
+
+    try {
+        let putReview = await Review.findByPk(reviewId);
+
+        // handle error: missing review
+        if (!putReview) {
+            error.message = "Review couldn't be found";
+            error.statusCode = 404;
+            return res.status(404).json(error);
+        }
+
+        // update review
+        let { rating, title, description } = req.body;
+        if (rating) putReview.set({ rating: rating });
+        if (title) await putReview.update({ title: title });
+        if (description) await putReview.update({ description: description });
+        await putReview.save();
+
+        return res
+            .status(200)
+            .json(putReview)
+
+    } catch (err) {
+        error.error = err
+        return res.json(error);
+    }
+});
+
+// Delete a review
+router.delete('/:reviewId', requireAuth, async (req, res) => {
+
+    let reviewId = req.params.reviewId;
+    let error = {};
+
+    try {
+        let deleteReview = await Review.findByPk(reviewId);
+
+        // handle error: missing review
+        if (!deleteReview) {
+            error.message = "Review couldn't be found";
+            error.status = 404;
+            return res.json(error);
+        }
+
+        // delete record
+        deleteReview.destroy();
+        deleteReview.save();
+
+        return res
+            .status(200)
+            .json({
+                "message": "Successfully deleted",
+                "statusCode": 200
+            })
+
+    } catch (err) {
+        error.error = err
+        return res.json(error);
+    }
+});
+
 /***************************** ERROR HANDLER *****************************/
 
 router.use((err, req, res, next) => {

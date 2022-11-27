@@ -12,6 +12,21 @@ const { Department, Product, ProductImage, Review, User } = require('../../db/mo
 /*************************** GLOBAL VARIABLES ****************************/
 const router = express.Router();
 
+const validateReview = [
+    check('review')
+        // .exists({ checkFalsy: true })
+        .isLength({ min: 5 })
+        .withMessage("Please write a longer review."),
+    check('review')
+        // .exists({ checkFalsy: true })
+        .isLength({ max: 500 })
+        .withMessage("Please write a shorter review."),
+    check('stars')
+        .exists({ checkFalsy: true })
+        .withMessage("Stars must be an integer from 1 to 5."),
+    handleValidationErrors
+]
+
 
 /******************************** ROUTES *********************************/
 // Get all reviews by Product
@@ -62,6 +77,88 @@ router.get('/:productId/reviews', async(req, res) => {
 })
 
 
+// Create a review for a Product
+router.get('/:productId/reviews', requireAuth, async(req, res) => {
+    // add validateReview ^
+
+    let currentUser = req.user;
+    let currentUserId = req.user.id;
+    let currProdId = req.params.productId;
+    let error = {};
+
+    try {
+        let { rating, title, description } = req.body;
+
+        // handle error: missing product
+        let findProduct = await Product.findByPk(currProdId, {
+            attributes: {
+                exclude: ["createdAt", "updatedAt"]
+            },
+            raw: true,
+        });
+        if (!findProduct) {
+            error.message = "Product couldn't be found";
+            error.statusCode = 404;
+            return res.status(404).json(error);
+
+        }
+
+        // handle error: missing fields
+        const validationErrorMessages = []
+        if (!rating) {
+            error.message = "Validation Error";
+            error.status = 400;
+            validationErrorMessages.push("Rating must be an integer from 1 to 5.")
+        }
+        if (!title) {
+            error.message = "Validation Error";
+            error.status = 400;
+            validationErrorMessages.push("Please write a longer title.")
+        }
+        if (!description) {
+            error.message = "Validation Error";
+            error.status = 400;
+            validationErrorMessages.push("Please write a longer review.")
+        }
+        if (error.message) {
+            error.errors = validationErrorMessages;
+            return res.status(400).json(error)
+        }
+
+        // handle error: review exits
+        let reviewExists = await Review.findAll({ // returns array of review for req. spot
+            where: { userId: currentUserId, productId: currProdId }
+        });
+        if (reviewExists.length > 0) {
+            error.message = "Validation Error";
+            error.statusCode = 403;
+            validationErrorMessages.push("User already has a review for this product");
+            error.errors = validationErrorMessages;
+            return res.status(403).json(error)
+        }
+
+        // instantiate review
+        let postReview = await currentUser.createReview({
+            productId: parseInt(currProdId),
+            userId: currentUserId,
+            rating: rating,
+            title: title,
+            description: description,
+        })
+        postReview.save();
+
+        return res
+            .status(201)
+            .json(postReview)
+
+
+    } catch (err) {
+        error.error = err;
+        return res.json(error);
+    };
+})
+
+
 // Get single product details
 router.get('/:productId', async(req, res) => {
 
@@ -69,20 +166,20 @@ router.get('/:productId', async(req, res) => {
     let error = {};
 
     try {
+        // handle error: missing spot
         let findProduct = await Product.findByPk(currProdId, {
             attributes: {
                 exclude: ["createdAt", "updatedAt"]
             },
             raw: true,
         });
-
         if (!findProduct) {
             error.message = "Product couldn't be found";
             error.statusCode = 404;
             return res.status(404).json(error);
 
-        } else {
 
+        } else {
             // add numReviews-key
             let reviewCount = await Review.count({
                 where: { productId: currProdId},
