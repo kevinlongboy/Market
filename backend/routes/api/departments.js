@@ -1,7 +1,7 @@
 /******************************** IMPORTS ********************************/
 // libraries
 const express = require('express');
-const { Op, EmptyResultError } = require('sequelize');
+const { Op } = require('sequelize');
 const { check } = require('express-validator');
 // local files
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
