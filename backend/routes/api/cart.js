@@ -73,7 +73,7 @@ router.get('/', requireAuth, async(req, res) => {
         .json({
             "userId": parseInt(currentUserId),
             "subtotal": subtotal,
-            "Cart": getAllCartItems
+            "Products": getAllCartItems
         })
 
 
@@ -106,8 +106,13 @@ router.post('/', requireAuth, async(req, res) => {
             return res.status(400).json(error);
         }
 
+        let findProduct = await Product.findByPk(productId, {
+            attributes: {
+                exclude: ['createdAt', 'updatedAt']
+            },
+        });
+
         // handle error: missing product
-        let findProduct = await Product.findByPk(productId);
         if (!findProduct) {
             error.message = "Product couldn't be found";
             error.statusCode = 404;
@@ -121,15 +126,17 @@ router.post('/', requireAuth, async(req, res) => {
         });
         postCartProduct.save();
 
-        let printCartProduct = await Cart.findByPk(postCartProduct.id, {
-            attributes: {
-                exclude: ['createdAt', 'updatedAt']
-            },
-        })
+        // add previewImage-key
+        let prevImage = await ProductImage.findOne({
+            where: { productId: findProduct.id },
+            raw: true
+        });
+        let prevUrl = prevImage.url;
+        findProduct.previewImage = prevUrl
 
         return res
             .status(200)
-            .json(printCartProduct)
+            .json(findProduct)
 
 
     } catch (err) {
@@ -144,6 +151,7 @@ router.delete('/:productId', requireAuth, async(req, res) => {
 
     let currentUser = req.user;
     let currentUserId = parseInt(req.user.id);
+    let prodId = req.params.productId
     let error = {};
 
     try {

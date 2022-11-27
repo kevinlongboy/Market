@@ -43,7 +43,7 @@ function ProductPage() {
       <div id="ProductPage-component">
 
           <h1>{product.name}</h1>
-          <p>{(product.price).toFixed(2)}</p>
+          {/* <p>{product && (product.price).toFixed(2)}</p> */}
           <p>{product.description}</p>
 
           {productImages.map((image) => (

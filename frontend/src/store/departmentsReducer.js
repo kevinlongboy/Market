@@ -6,7 +6,7 @@ import { normalizeArray } from "../component-resources/index";
 
 /********************************* TYPES *********************************/
 const DEPARTMENTS_READ_ALL_DEPARTMENTS = 'DEPARTMENTS/READ_ALL_DEPARTMENTS';
-const DEPARTMENTS_READ_SINGLE_DEPARTMENT_DETAILS = 'DEPARTMENTS_READ_SINGLE_DEPARTMENT_DETAILS';
+const DEPARTMENTS_READ_SINGLE_DEPARTMENT_DETAILS = 'DEPARTMENTS/READ_SINGLE_DEPARTMENT_DETAILS';
 
 
 /**************************** ACTION CREATORS ****************************/

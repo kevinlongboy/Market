@@ -13,7 +13,6 @@ function DepartmentPage() {
 
   /****************** access store *******************/
   const departmentsState = useSelector(state => state.departments)
-  console.log("departmentsState", departmentsState)
 
   /************ key into pertinent values ************/
   const { departmentId } = useParams()
@@ -28,30 +27,30 @@ function DepartmentPage() {
   }, [dispatch])
 
   /**************** render component *****************/
-    return (
-      <div className="page-wrapper-container">
+  return (
+    <div className="page-wrapper-container">
 
-        <div id="DepartmentPage-component">
+      <div id="DepartmentPage-component">
 
-            <h1>{department.name}</h1>
-            {productsArr.map((product) => (
-              <>
-                <Link
-                  key={`${product.id}`}
-                  to={`/departments/${departmentId}/products/${product.id}`}
-                >
-                <h2>{product.name}</h2>
+          <h1>{department.name}</h1>
+          {productsArr.map((product) => (
+            <>
+              <Link
+                key={`${product.id}`}
+                to={`/departments/${departmentId}/products/${product.id}`}
+              >
+              <h2>{product.name}</h2>
 
-                </Link>
+              </Link>
 
-                <p>{(product.price).toFixed(2)}</p>
-                <p>{product.description}</p>
-              </>
-            ))}
-        </div>
-
+              <p>{(product.price).toFixed(2)}</p>
+              <p>{product.description}</p>
+            </>
+          ))}
       </div>
-    )
+
+    </div>
+  )
 }
 
 

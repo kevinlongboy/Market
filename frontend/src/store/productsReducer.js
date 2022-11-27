@@ -5,7 +5,7 @@ import { normalizeArray } from "../component-resources/index";
 
 
 /********************************* TYPES *********************************/
-const PRODUCTS_READ_SINGLE_PRODUCT_DETAILS = 'PRODUCTS_READ_SINGLE_PRODUCT_DETAILS';
+const PRODUCTS_READ_SINGLE_PRODUCT_DETAILS = 'PRODUCTS/READ_SINGLE_PRODUCT_DETAILS';
 
 
 /**************************** ACTION CREATORS ****************************/
