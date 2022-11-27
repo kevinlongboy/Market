@@ -38,13 +38,16 @@ export const thunkReadCart = () => async (dispatch) => {
 }
 
 export const thunkAddSingleProductToCart = (productId) => async (dispatch) => {
+    console.log("productId",productId)
     const response = await csrfFetch(`/api/cart`, {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(productId)
     });
+    console.log("response", response)
     if (response.ok) {
         const newProduct = await response.json()
+        console.log("newProduct", newProduct)
         dispatch(actionAddSingleProductToCart(newProduct))
         return newProduct;
     }

@@ -13,6 +13,7 @@ export function normalizeArray(arr) {
 // search array of objects
 // for first object whose id-key matches provided ID-number
 // return that element's index number
+// *use when avoiding key-collisions*
 export function findItemIndex(arr, idNo ) {
     for (let i = 0; i < arr.length; i++) {
      if (arr[i].id === idNo) {

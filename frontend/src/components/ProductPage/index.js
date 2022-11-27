@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 // local files
 import { thunkReadSingleProductDetails } from "../../store/productsReducer";
+import { thunkAddSingleProductToCart } from "../../store/cartReducer";
 import "./ProductPage.css"
 
 
@@ -36,6 +37,17 @@ function ProductPage() {
   }, [dispatch])
 
 
+  /***************** handle events *******************/
+
+  function addItem() {
+
+    let productData = {
+      productId: productId
+    }
+
+    dispatch(thunkAddSingleProductToCart(productData))
+  }
+
   /**************** render component *****************/
   return (
     <div className="page-wrapper-container">
@@ -50,6 +62,7 @@ function ProductPage() {
             <img src={image.url}></img>
           ))}
       </div>
+      <button onClick={addItem}>add item to cart</button>
 
     </div>
   )

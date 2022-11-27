@@ -93,6 +93,7 @@ router.post('/', requireAuth, async(req, res) => {
 
     try {
         let { productId } = req.body;
+        productId = parseInt(productId)
 
         // handle error: missing fields
         const validationErrorMessages = []
@@ -110,7 +111,9 @@ router.post('/', requireAuth, async(req, res) => {
             attributes: {
                 exclude: ['createdAt', 'updatedAt']
             },
+            raw: true,
         });
+        console.log("findProduct >>", findProduct)
 
         // handle error: missing product
         if (!findProduct) {
@@ -120,7 +123,7 @@ router.post('/', requireAuth, async(req, res) => {
         }
 
         // instantiate cart-object
-        let postCartProduct = await currentUser.createCart({
+        let postCartProduct = await Cart.create({
             userId: currentUserId,
             productId: productId
         });
@@ -141,7 +144,7 @@ router.post('/', requireAuth, async(req, res) => {
 
     } catch (err) {
         error.error = err
-        return res.json(error)
+        return res.status(404).json(error)
     };
 });
 

@@ -160,7 +160,7 @@ router.post('/', requireAuth, async(req, res) => {
         let orderId = printOrder.id
         for (let i = 0; i < products.length; i++) {
             let currProduct = products[i];
-            let postOrderDetail = await currentUser.createOrderDetail({
+            let postOrderDetail = await OrderDetail.create({
                 orderId: orderId,
                 productId: currProduct.id
             });
