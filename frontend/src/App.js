@@ -16,6 +16,7 @@ import Reviews from "./components/Reviews";
 import ReviewCreateForm from "./components/ReviewCreateForm";
 import ReviewUpdateForm from "./components/ReviewUpdateForm";
 import Footer from "./components/Footer";
+import OrdersDetails from "./components/OrderDetails";
 
 function App() {
   const dispatch = useDispatch();
@@ -62,6 +63,10 @@ function App() {
 
           <Route exact path={'/account/orders'}>
             <Orders />
+          </Route>
+
+          <Route exact path={'/orders/:orderId'}>
+            <OrdersDetails />
           </Route>
 
           <Route exact path={'/account/reviews'}>

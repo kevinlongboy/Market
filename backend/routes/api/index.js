@@ -12,6 +12,7 @@ const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const departmentsRouter = require('./departments.js');
 const productsRouter = require('./products.js')
+const cartRouter = require('./cart.js');
 const ordersRouter = require('./orders.js');
 
 // Connect restoreUser middleware to the API router
@@ -23,6 +24,7 @@ router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
 router.use('/departments', departmentsRouter);
 router.use('/products', productsRouter);
+router.use('/cart', cartRouter);
 router.use('/orders', ordersRouter);
 
 

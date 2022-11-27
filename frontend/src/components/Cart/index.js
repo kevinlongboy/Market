@@ -7,6 +7,11 @@ import "./Cart.css"
 /******************************* COMPONENT *******************************/
 function Cart() {
 
+    // When updating qty:
+    // - check if delta is > or <
+    // - dispatch add or remove (respectively)
+    //   - by however many delta
+
     return (
       <div className="page-wrapper-container">
 

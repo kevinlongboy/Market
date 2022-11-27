@@ -16,9 +16,9 @@ const router = express.Router();
 /******************************** ROUTES *********************************/
 // Get all orders by current user
 router.get('/:userId', async(req, res) => {
+    // ^ remember to add pass requireAuth and remove wildcard ^
 
     let currentUserId = req.params.userId;
-    // remember to add pass requireAuth ^
     // let currentUser = req.user;
     // let currentUserId = req.user.id;
     let error = {};
@@ -50,14 +50,16 @@ router.get('/:userId', async(req, res) => {
                 raw: true,
             })
 
+            let subtotal = 0;
+
             // add product details to every product in array
             for (let j = 0; j < productsPurchased.length; j++) {
                 let product = productsPurchased[j];
 
                 // modify keys
-                delete product.orderId;
                 product.id = product.productId;
                 delete product.productId;
+                delete product.orderId;
 
                 let productDetails = await Product.findByPk(product.id, {
                     // attributes: {
@@ -78,8 +80,12 @@ router.get('/:userId', async(req, res) => {
                 });
                 let prevUrl = prevImage.url;
                 product.previewImage = prevUrl
+
+                // update subtotal
+                subtotal += product.price;
             }
             order.Products = productsPurchased;
+            order.backendTotal = subtotal
 
 
         }
@@ -99,17 +105,30 @@ router.get('/:userId', async(req, res) => {
 
 
 // Get single order details
-router.get('/:orderId', async(req, res) => {
+// router.get('/:orderId', async(req, res) => {
+//     let currentUserId = req.params.userId;
+//     // remember to add pass requireAuth ^
+//     // let currentUser = req.user;
+//     // let currentUserId = req.user.id;
+//     let error = {};
+// });
 
-});
 
-/*************************************** error handler ****************************************/
+// Create new order
+router.post('/', async(req, res) => {
+    // need to pass quantity
+    // cart should calculate total
+    // then pass to order
+})
+
+
+/***************************** ERROR HANDLER *****************************/
 
 router.use((err, req, res, next) => {
     return res.json(err)
 })
 
 
-/****************************************** export ********************************************/
+/******************************** EXPORTS ********************************/
 
 module.exports = router;

@@ -2,22 +2,20 @@
 // libraries
 
 // local files
-import "./ProductPage.css"
+import "./OrdersDetails.css"
 
 /******************************* COMPONENT *******************************/
-function ProductPage() {
+function OrdersDetails() {
 
-  // When updating qty:
-  // - check if delta is > or <
-  // - dispatch add or remove (respectively)
-  //   - by however many delta
+  // use get all orders API route and filter using orderId param no.
 
     return (
       <div className="page-wrapper-container">
 
-        <div id="ProductPage-component">
+        <div id="OrdersDetails-component">
 
-            <h1>ProductPage</h1>
+            <h1>OrdersDetails</h1>
+
         </div>
 
       </div>
@@ -26,4 +24,4 @@ function ProductPage() {
 
 
 /******************************** EXPORTS ********************************/
-export default ProductPage
+export default OrdersDetails
