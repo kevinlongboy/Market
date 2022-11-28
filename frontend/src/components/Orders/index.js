@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 // local files
-import { thunkReadAllOrders } from "../../store/ordersReducer";
+import { thunkReadAllUserOrders } from "../../store/ordersReducer";
 import "./Orders.css"
 
 /******************************* COMPONENT *******************************/
@@ -21,7 +21,7 @@ function Orders() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-      dispatch(thunkReadAllOrders());
+      dispatch(thunkReadAllUserOrders());
   }, [dispatch])
 
   /**************** render component *****************/
@@ -31,6 +31,7 @@ function Orders() {
       <div id="Orders-component">
 
           <h1>Orders</h1>
+
           {orders && orders.map((order) => (
             <>
               <p>Order Number: {order.id}</p>
@@ -40,6 +41,7 @@ function Orders() {
               <br></br>
             </>
           ))}
+          
       </div>
 
     </div>

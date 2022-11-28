@@ -51,8 +51,11 @@ router.get('/:productId/reviews', async(req, res) => {
 
         let findAllProductReviews = await Review.findAll({
             where: { productId: currProdId },
+            order: [['id', 'DESC']],
             raw: true,
         })
+        console.log("findAllProductReviews", findAllProductReviews)
+
 
         // add User-key
         for (let i = 0; i < findAllProductReviews.length; i++) {
@@ -61,13 +64,18 @@ router.get('/:productId/reviews', async(req, res) => {
                 attributes: {
                     exclude: ["createdAt", "updatedAt"]
                 },
+                raw: true,
             });
             review.User = userData;
         }
+        console.log("findAllProductReviews", findAllProductReviews)
+
 
         return res
             .status(200)
-            .json(findAllProductReviews)
+            .json({
+                "Reviews": findAllProductReviews
+            })
 
 
     } catch (err) {
@@ -78,7 +86,7 @@ router.get('/:productId/reviews', async(req, res) => {
 
 
 // Create a review for a Product
-router.get('/:productId/reviews', requireAuth, async(req, res) => {
+router.post('/:productId/reviews', requireAuth, async(req, res) => {
     // add validateReview ^
 
     let currentUser = req.user;
@@ -147,10 +155,36 @@ router.get('/:productId/reviews', requireAuth, async(req, res) => {
         })
         postReview.save();
 
+        let printReview = await Review.findByPk(postReview.id, {
+            raw: true,
+        })
+        console.log("printReview", printReview)
+
+        // add User-key
+        // let userData = await User.findByPk(currentUserId, {
+        //     attributes: {
+        //         exclude: ['email', 'hashedPassword', 'createdAt', 'updatedAt']
+        //     },
+        //     raw: true,
+        // });
+        // printReview.User = userData;
+
+        // add Product-key
+        printReview.Product = findProduct;
+
+        // add ProductImages-key
+        let image = await ProductImage.findOne({
+            where: { productId: currProdId },
+            attributes: {
+                exclude: ["createdAt", "updatedAt"]
+            },
+            raw: true,
+        })
+        printReview.Product.previewImage = image
+
         return res
             .status(201)
-            .json(postReview)
-
+            .json(printReview)
 
     } catch (err) {
         error.error = err;

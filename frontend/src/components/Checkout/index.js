@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 // local files
 import { thunkReadCart } from "../../store/cartReducer";
-import { thunkCreateSingleOrder, thunkReadAllOrders } from "../../store/ordersReducer";
+import { thunkCreateSingleOrder, thunkReadAllUserOrders } from "../../store/ordersReducer";
 import "./Checkout.css"
 
 /******************************* COMPONENT *******************************/
@@ -31,7 +31,7 @@ function Checkout() {
   }, [dispatch, cartState])
 
   useEffect(() => {
-    dispatch(thunkReadAllOrders());
+    dispatch(thunkReadAllUserOrders());
   }, [dispatch])
 
 

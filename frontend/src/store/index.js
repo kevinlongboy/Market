@@ -7,6 +7,7 @@ import cartReducer from "./cartReducer";
 import departmentsReducer from "./departmentsReducer";
 import ordersReducer from "./ordersReducer";
 import productsReducer from "./productsReducer";
+import reviewsReducer from "./reviewsReducer";
 import sessionReducer from './sessionReducer';
 
 
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   products: productsReducer,
   cart: cartReducer,
   orders: ordersReducer,
+  reviews: reviewsReducer,
 });
 
 let enhancer;
