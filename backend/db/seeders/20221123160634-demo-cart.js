@@ -34,7 +34,6 @@ module.exports = {
     const Op = Sequelize.Op;
     return queryInterface.bulkDelete(
       'Carts',
-      // { id: 1 },
       { userId: 1 },
       {}
     )

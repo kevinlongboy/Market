@@ -152,6 +152,7 @@ router.post('/', requireAuth, async(req, res) => {
             total: total,
         });
         postOrder.save();
+        console.log("postOrder", postOrder)
 
 
         /************** 1. Add products as OrderDetail join table **************/

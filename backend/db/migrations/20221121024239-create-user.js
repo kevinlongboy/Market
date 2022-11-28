@@ -1,4 +1,5 @@
 "use strict";
+/** @type {import('sequelize-cli').Migration} */
 
 
 module.exports = {
@@ -45,7 +46,7 @@ module.exports = {
       }
     });
   },
-  
+
   down: async (queryInterface, Sequelize) => {
     return queryInterface.dropTable("Users");
   }

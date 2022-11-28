@@ -54,7 +54,6 @@ router.get('/:productId/reviews', async(req, res) => {
             order: [['id', 'DESC']],
             raw: true,
         })
-        console.log("findAllProductReviews", findAllProductReviews)
 
 
         // add User-key
@@ -68,7 +67,6 @@ router.get('/:productId/reviews', async(req, res) => {
             });
             review.User = userData;
         }
-        console.log("findAllProductReviews", findAllProductReviews)
 
 
         return res
@@ -154,6 +152,7 @@ router.post('/:productId/reviews', requireAuth, async(req, res) => {
             description: description,
         })
         postReview.save();
+        console.log("postReview", postReview)
 
         let printReview = await Review.findByPk(postReview.id, {
             raw: true,
