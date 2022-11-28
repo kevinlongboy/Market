@@ -14,7 +14,6 @@ function ReviewCreateForm() {
   const sessionState = useSelector(state => state.session);
   const reviewsState = useSelector(state => state.reviews);
   const productsState = useSelector(state => state.products);
-  console.log("productsState", productsState)
 
   /************ key into pertinent values ************/
   const { productId } = useParams()

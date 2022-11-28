@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 // local files
+import DeleteReview from "../Reviews/DeleteReview"
 import { thunkReadAllUserReviews } from "../../store/reviewsReducer";
 import "./UserReviews.css"
 
@@ -12,9 +13,7 @@ function UserReviews() {
 
   /****************** access store *******************/
   const reviewsState = useSelector(state => state.reviews)
-  console.log("reviewsState", reviewsState)
   const reviews = Object.values(reviewsState.allReviewsByUser)
-  console.log("reviews", reviews)
 
 
   /************ reducer/API communication ************/
@@ -22,7 +21,11 @@ function UserReviews() {
 
   useEffect(() => {
       dispatch(thunkReadAllUserReviews());
-  }, [dispatch])
+  }, [dispatch, reviewsState])
+
+  /***************** handle events *******************/
+
+
 
   /**************** render component *****************/
 
@@ -44,7 +47,7 @@ function UserReviews() {
                 <button>edit review</button>
               </NavLink>
 
-              <button>delete review</button>
+              <DeleteReview id={review.id} />
 
               <br></br>
             </>

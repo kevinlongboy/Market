@@ -87,6 +87,25 @@ router.put('/:reviewId', requireAuth, async (req, res) => {
         if (description) await putReview.update({ description: description });
         await putReview.save();
 
+        // add Product-key
+        let findProduct = await Product.findByPk(putReview.productId, {
+            attributes: {
+                exclude: ["createdAt", "updatedAt"]
+            },
+            raw: true,
+        });
+        putReview.Product = findProduct
+
+        // add ProductImages-key
+        let image = await ProductImage.findOne({
+            where: { productId: putReview.productId },
+            attributes: {
+                exclude: ["createdAt", "updatedAt"]
+            },
+            raw: true,
+        })
+        putReview.Product.previewImage = image
+
         return res
             .status(200)
             .json(putReview)

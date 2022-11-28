@@ -29,6 +29,15 @@ export const actionReadAllUserReviews = (userReviews) => ({
     payload: userReviews
 });
 
+export const actionUpdateSingleReview = (updateReview) => ({
+    type: REVIEWS_UPDATE_SINGLE_REVIEW,
+    payload: updateReview
+})
+
+export const actionDeleteSingleReview = (reviewId) => ({
+    type: REVIEWS_DELETE_SINGLE_REVIEW,
+    payload: reviewId
+});
 
 /***************************** THUNKS (API) ******************************/
 export const thunkCreateSingleReview = (productId, createReviewData) => async (dispatch) => {
@@ -37,10 +46,8 @@ export const thunkCreateSingleReview = (productId, createReviewData) => async (d
         headers: { 'Content-Type': 'application/json'} ,
         body: JSON.stringify(createReviewData)
     });
-    console.log("response",response)
     if (response.ok) {
         const newReview = await response.json();
-        console.log("newReview", newReview)
         dispatch(actionCreateSingleReview(newReview));
         return newReview;
     }
@@ -64,6 +71,30 @@ export const thunkReadAllUserReviews = () => async (dispatch) => {
     }
 }
 
+export const thunkUpdateSingleReview = (reviewId, updateReviewData) => async (dispatch) => {
+    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
+        method: 'put',
+        headers: { 'Content-Type': 'application/json'} ,
+        body: JSON.stringify(updateReviewData)
+    });
+    console.log("response",response)
+    if (response.ok) {
+        const updateReview = await response.json();
+        console.log("updateReview", updateReview)
+        dispatch(actionUpdateSingleReview(updateReview));
+        return updateReview;
+    }
+}
+
+export const thunkDeleteSingleReview = (reviewId) => async (dispatch) => {
+    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
+        method: 'delete',
+    });
+    if (response.ok) {
+        dispatch(actionDeleteSingleReview(reviewId))
+        return
+    }
+}
 
 /***************************** STATE SHAPE *******************************/
 const initialState = {
@@ -92,6 +123,17 @@ const reviewsReducer = (state = initialState, action) => {
         case REVIEWS_READ_ALL_USER_REVIEWS:
             newState.singleProductReviews = {...state.singleProductReviews}
             newState.allReviewsByUser = normalizeArray(action.payload)
+            return newState
+
+        case REVIEWS_UPDATE_SINGLE_REVIEW:
+            newState.singleProductReviews = {...state.singleProductReviews}
+            newState.allReviewsByUser[action.payload.id] = {...action.payload}
+            return newState
+
+        case REVIEWS_DELETE_SINGLE_REVIEW:
+            newState.singleProductReviews = {...state.singleProductReviews}
+            newState.allReviewsByUser = {...state.allReviewsByUser}
+                delete newState.allReviewsByUser[action.payload]
             return newState
 
         default:
