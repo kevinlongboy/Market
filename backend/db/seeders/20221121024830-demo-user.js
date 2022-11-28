@@ -11,7 +11,7 @@ const bcrypt = require("bcryptjs");
 
 const demoUsers = [
   {
-    // id: 1,
+    id: 1,
     firstName: 'Demo',
     lastName: 'User',
     username: 'demo_user',
@@ -20,7 +20,7 @@ const demoUsers = [
   },
   // Module Leads
   {
-    // id: 2,
+    id: 2,
     firstName: 'Bill',
     lastName: 'Adams',
     username: 'wadams',
@@ -28,7 +28,7 @@ const demoUsers = [
     email: 'wadams@appacademy.io',
   },
   {
-    // id: 3,
+    id: 3,
     firstName: 'Shane',
     lastName: 'Wilkey',
     username: 'swilkey',
@@ -36,6 +36,7 @@ const demoUsers = [
     email: 'swilkey@appacademy.io',
   },
   {
+    id: 4,
     firstName: 'Geoffrey',
     lastName: 'Otieno',
     username: 'gotieno',
@@ -43,6 +44,7 @@ const demoUsers = [
     email: 'gotieno@appacademy.io',
   },
   {
+    id: 5,
     firstName: 'Dan',
     lastName: 'Purcell',
     username: 'dpurcell',
@@ -50,6 +52,7 @@ const demoUsers = [
     email: 'dpurcell@appacademy.io',
   },
   {
+    id: 6,
     firstName: 'Brad',
     lastName: 'Simpson',
     username: 'bsimpson',
@@ -57,6 +60,7 @@ const demoUsers = [
     email: 'bsimpson@appacademy.io',
   },
   {
+    id: 7,
     firstName: 'Hector',
     lastName: 'Crespo',
     username: 'hcrespo',
@@ -65,6 +69,7 @@ const demoUsers = [
   },
   // TA's
   {
+    id: 8,
     firstName: 'Cody',
     lastName: 'Lavene',
     username: 'clavene',
@@ -72,6 +77,7 @@ const demoUsers = [
     email: 'clavene@appacademy.io',
   },
   {
+    id: 9,
     firstName: 'Cameron',
     lastName: 'Whiteside',
     username: 'cwhiteside',
@@ -79,6 +85,7 @@ const demoUsers = [
     email: 'cwhiteside@appacademy.io',
   },
   {
+    id: 10,
     firstName: 'Peter',
     lastName: 'Shin',
     username: 'pshin',
@@ -86,6 +93,7 @@ const demoUsers = [
     email: 'pshin@appacademy.io',
   },
   {
+    id: 11,
     firstName: 'Braxton',
     lastName: 'Kappes',
     username: 'bkappes',
@@ -93,6 +101,7 @@ const demoUsers = [
     email: 'bkappes@appacademy.io',
   },
   {
+    id: 12,
     firstName: 'Jesse',
     lastName: 'Christensen',
     username: 'jchristensen',
@@ -100,6 +109,7 @@ const demoUsers = [
     email: 'jchristensen@appacademy.io',
   },
   {
+    id: 13,
     firstName: 'Jojo',
     lastName: 'Yih',
     username: 'jyih',
@@ -107,6 +117,7 @@ const demoUsers = [
     email: 'jyih@appacademy.io',
   },
   {
+    id: 14,
     firstName: 'Nick',
     lastName: 'Esqueda',
     username: 'nesqueda',
@@ -114,6 +125,7 @@ const demoUsers = [
     email: 'nesqueda@appacademy.io',
   },
   {
+    id: 15,
     firstName: 'Andrew',
     lastName: 'Fava',
     username: 'afava',
@@ -121,6 +133,7 @@ const demoUsers = [
     email: 'afava@appacademy.io',
   },
   {
+    id: 16,
     firstName: 'Ari',
     lastName: 'Robinson',
     username: 'arobinson',
@@ -128,6 +141,7 @@ const demoUsers = [
     email: 'arobinson@appacademy.io',
   },
   {
+    id: 17,
     firstName: 'Sam',
     lastName: 'Song',
     username: 'ssong',
@@ -135,6 +149,7 @@ const demoUsers = [
     email: 'ssong@appacademy.io',
   },
   {
+    id: 18,
     firstName: 'Tanner',
     lastName: 'Shaw',
     username: 'tshaw',
@@ -142,6 +157,7 @@ const demoUsers = [
     email: 'tshaw@appacademy.io',
   },
   {
+    id: 19,
     firstName: 'Olivia',
     lastName: 'Bir',
     username: 'obir',
@@ -149,6 +165,7 @@ const demoUsers = [
     email: 'obir@appacademy.io',
   },
   {
+    id: 20,
     firstName: 'Nate',
     lastName: 'Treadaway',
     username: 'ntreadway',
@@ -156,6 +173,7 @@ const demoUsers = [
     email: 'ntreadway@appacademy.io',
   },
   {
+    id: 21,
     firstName: 'Daniel',
     lastName: 'Chin',
     username: 'dchin',
@@ -163,6 +181,7 @@ const demoUsers = [
     email: 'dchin@appacademy.io',
   },
   {
+    id: 22,
     firstName: 'Alex',
     lastName: 'Pezzati',
     username: 'apezzati',
@@ -170,6 +189,7 @@ const demoUsers = [
     email: 'apezzati@appacademy.io',
   },
   {
+    id: 23,
     firstName: 'Sherry',
     lastName: 'Yu',
     username: 'syu',
@@ -177,6 +197,7 @@ const demoUsers = [
     email: 'syu@appacademy.io',
   },
   {
+    id: 24,
     firstName: 'Rawaha',
     lastName: 'Memon',
     username: 'rmemon',
@@ -184,6 +205,7 @@ const demoUsers = [
     email: 'rmemon@appacademy.io',
   },
   {
+    id: 25,
     firstName: 'Whit',
     lastName: 'Minson',
     username: 'wminson',
@@ -191,6 +213,7 @@ const demoUsers = [
     email: 'wminson@appacademy.io',
   },
   {
+    id: 26,
     firstName: 'Daniel',
     lastName: 'Flores',
     username: 'dflores',
@@ -198,6 +221,7 @@ const demoUsers = [
     email: 'dflores@appacademy.io',
   },
   {
+    id: 27,
     firstName: 'David',
     lastName: 'Nash',
     username: 'dnash',
@@ -205,6 +229,7 @@ const demoUsers = [
     email: 'dnash@appacademy.io',
   },
   {
+    id: 28,
     firstName: 'John',
     lastName: 'Lee',
     username: 'jlee',
@@ -212,6 +237,7 @@ const demoUsers = [
     email: 'jlee@appacademy.io',
   },
   {
+    id: 29,
     firstName: 'Andrew',
     lastName: 'Tran',
     username: 'atran',
@@ -219,6 +245,7 @@ const demoUsers = [
     email: 'atran@appacademy.io',
   },
   {
+    id: 30,
     firstName: 'Cesar',
     lastName: 'Solano',
     username: 'csolano',
@@ -226,6 +253,7 @@ const demoUsers = [
     email: 'csolano@appacademy.io',
   },
   {
+    id: 31,
     firstName: 'Ryan',
     lastName: 'Schneider',
     username: 'rschneider',
@@ -233,6 +261,7 @@ const demoUsers = [
     email: 'rschneider@appacademy.io',
   },
   {
+    id: 32,
     firstName: 'Anthony',
     lastName: 'Lovern',
     username: 'alovern',
@@ -240,6 +269,7 @@ const demoUsers = [
     email: 'alovern@appacademy.io',
   },
   {
+    id: 33,
     firstName: 'Franco',
     lastName: 'Portin',
     username: 'fportin',
@@ -247,6 +277,7 @@ const demoUsers = [
     email: 'fportin@appacademy.io',
   },
   {
+    id: 34,
     firstName: 'Kevin',
     lastName: 'Bartolome',
     username: 'kbartolome',
@@ -256,6 +287,7 @@ const demoUsers = [
 
   // Cohort Leads
   {
+    id: 35,
     firstName: 'David',
     lastName: 'DeHerrera',
     username: 'ddeherrera',
@@ -263,6 +295,7 @@ const demoUsers = [
     email: 'ddeherrera@appacademy.io',
   },
   {
+    id: 36,
     firstName: 'Drew',
     lastName: 'Thurman',
     username: 'athruman',
@@ -270,6 +303,7 @@ const demoUsers = [
     email: 'athruman@appacademy.io',
   },
   {
+    id: 37,
     firstName: 'David',
     lastName: 'Rogers',
     username: 'drogers',
@@ -279,6 +313,7 @@ const demoUsers = [
 
   // Students
   {
+    id: 38,
     firstName: 'Jair',
     lastName: 'Carbajal',
     username: 'jcarbajal',
@@ -286,6 +321,7 @@ const demoUsers = [
     email: 'jcarbajal@appacademy.io',
   },
   {
+    id: 39,
     firstName: 'Tiffany',
     lastName: 'Yang',
     username: 'tyang',
@@ -293,6 +329,7 @@ const demoUsers = [
     email: 'tyang@appacademy.io',
   },
   {
+    id: 40,
     firstName: 'Daniel',
     lastName: 'Lam',
     username: 'lain',
@@ -300,6 +337,7 @@ const demoUsers = [
     email: 'lain@appacademy.io',
   },
   {
+    id: 41,
     firstName: 'Gary',
     lastName: 'Song',
     username: 'hustling',
@@ -307,6 +345,7 @@ const demoUsers = [
     email: 'hustling@appacademy.io',
   },
   {
+    id: 42,
     firstName: 'Jake',
     lastName: 'Matillano',
     username: 'doofey',
@@ -314,6 +353,7 @@ const demoUsers = [
     email: 'doofey@appacademy.io',
   },
   {
+    id: 43,
     firstName: 'John',
     lastName: 'Carrera',
     username: 'badreg',
@@ -321,6 +361,7 @@ const demoUsers = [
     email: 'badreg@appacademy.io',
   },
   {
+    id: 44,
     firstName: 'Maliha',
     lastName: 'Omair',
     username: 'maliha',
@@ -328,6 +369,7 @@ const demoUsers = [
     email: 'maliha@appacademy.io',
   },
   {
+    id: 45,
     firstName: 'Thenu',
     lastName: 'Nachiyappan',
     username: 'thenu',
@@ -335,6 +377,7 @@ const demoUsers = [
     email: 'thenu@appacademy.io',
   },
   {
+    id: 46,
     firstName: 'Brennon',
     lastName: 'Morris',
     username: 'BrennonMorris',
@@ -342,6 +385,7 @@ const demoUsers = [
     email: 'BrennonMorris@appacademy.io',
   },
   {
+    id: 47,
     firstName: 'Andrew',
     lastName: 'Kay',
     username: 'rewd',
@@ -349,6 +393,7 @@ const demoUsers = [
     email: 'rewd@appacademy.io',
   },
   {
+    id: 48,
     firstName: 'Adam',
     lastName: 'Selki',
     username: 'Damzzz123',
@@ -356,6 +401,7 @@ const demoUsers = [
     email: 'Damzzz123@appacademy.io',
   },
   {
+    id: 49,
     firstName: 'Christopher',
     lastName: 'Pannella',
     username: 'goatedIndeed',
@@ -363,6 +409,7 @@ const demoUsers = [
     email: 'goatedIndeed@appacademy.io',
   },
   {
+    id: 50,
     firstName: 'Christo',
     lastName: 'Grabowski',
     username: 'ChristoGrabowski',
@@ -370,6 +417,7 @@ const demoUsers = [
     email: 'ChristoGrabowski@appacademy.io',
   },
   {
+    id: 51,
     firstName: 'Cindy',
     lastName: 'Guzman',
     username: 'Cece',
@@ -377,6 +425,7 @@ const demoUsers = [
     email: 'CeceRose@appacademy.io',
   },
   {
+    id: 52,
     firstName: 'David',
     lastName: 'Burch',
     username: 'DavidDanielBurch',
@@ -384,6 +433,7 @@ const demoUsers = [
     email: 'DavidDanielBurch@appacademy.io',
   },
   {
+    id: 53,
     firstName: 'Eliza',
     lastName: 'Wimberly',
     username: 'ElizaW',
@@ -391,6 +441,7 @@ const demoUsers = [
     email: 'ElizaW@appacademy.io',
   },
   {
+    id: 54,
     firstName: 'James',
     lastName: 'Lee',
     username: 'JamesLee',
@@ -398,6 +449,7 @@ const demoUsers = [
     email: 'JamesLee@appacademy.io',
   },
   {
+    id: 55,
     firstName: 'Jason',
     lastName: 'Kong',
     username: 'JasonKong',
@@ -405,6 +457,7 @@ const demoUsers = [
     email: 'JasonKong@appacademy.io',
   },
   {
+    id: 56,
     firstName: 'Joanna',
     lastName: 'Gilbert',
     username: 'joanna',
@@ -412,6 +465,7 @@ const demoUsers = [
     email: 'joanna@appacademy.io',
   },
   {
+    id: 57,
     firstName: 'Max',
     lastName: 'Yaswen',
     username: 'MaxYaswen',
@@ -419,6 +473,7 @@ const demoUsers = [
     email: 'MaxYaswen@appacademy.io',
   },
   {
+    id: 58,
     firstName: 'Moran',
     lastName: 'Even',
     username: 'MoranEven',
@@ -426,6 +481,7 @@ const demoUsers = [
     email: 'MoranEven@appacademy.io',
   },
   {
+    id: 59,
     firstName: 'Yasha',
     lastName: 'Yang',
     username: 'yashaY',
@@ -433,6 +489,7 @@ const demoUsers = [
     email: 'yashaY@appacademy.io',
   },
   {
+    id: 60,
     firstName: 'Yibo',
     lastName: 'Guo',
     username: 'YiboGuo',
@@ -440,6 +497,7 @@ const demoUsers = [
     email: 'YiboGuo@appacademy.io',
   },
   {
+    id: 61,
     firstName: 'Alex',
     lastName: 'Auch',
     username: 'Auchie',

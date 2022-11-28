@@ -6,43 +6,43 @@ const department = require("../models/department");
 
 const demoDepartments = [
   {
-    // id: 1,
+    id: 1,
     name: "Personal Care",
   },
   {
-    // id: 2,
+    id: 2,
     name: "Home",
   },
   {
-    // id: 3,
+    id: 3,
     name: "Kitchen & Dining",
   },
   {
-    // id: 4,
+    id: 4,
     name: "Grocery",
   },
   {
-    // id: 5,
+    id: 5,
     name: "Electronics",
   },
   {
-    // id: 6,
+    id: 6,
     name: "Video Games",
   },
   {
-    // id: 7,
+    id: 7,
     name: "Sports & Outdoors",
   },
   {
-    // id: 8,
+    id: 8,
     name: "Pets",
   },
   {
-    // id: 9,
+    id: 9,
     name: "Furniture",
   },
   {
-    // id: 10,
+    id: 10,
     name: "Clearance",
   },
 ]
