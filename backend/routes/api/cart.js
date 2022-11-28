@@ -22,16 +22,22 @@ router.get('/', requireAuth, async(req, res) => {
     let currentUser = req.user;
     let currentUserId = req.user.id;
     let error = {};
+    console.log("reach after delete")
 
     try {
 
         let getAllCartItems = await Cart.findAll({
             where: { userId: currentUserId },
             attributes: {
+                include: ['id'],
                 exclude: ['createdAt', 'updatedAt']
             },
             raw: true,
         })
+        // returns:
+            // id (cartID) - use this PK to delete
+            // userId
+            // productId
 
         let subtotal = 0;
 
@@ -39,12 +45,7 @@ router.get('/', requireAuth, async(req, res) => {
         for (let j = 0; j < getAllCartItems.length; j++) {
             let product = getAllCartItems[j];
 
-            // modify keys
-            product.id = product.productId;
-            delete product.productId;
-            delete product.userId;
-
-            let productDetails = await Product.findByPk(product.id, {
+            let productDetails = await Product.findByPk(product.productId, {
                 // attributes: {
                 //     exclude: ['createdAt', 'updatedAt']
                 // },
@@ -58,7 +59,7 @@ router.get('/', requireAuth, async(req, res) => {
 
             // add previewImage-key to every product
             let prevImage = await ProductImage.findOne({
-                where: { productId: product.id },
+                where: { productId: product.productId },
                 raw: true
             });
             let prevUrl = prevImage.url;
@@ -150,12 +151,12 @@ router.post('/', requireAuth, async(req, res) => {
 
 // Remove item from cart
 // should route be specific to cartId?
-router.delete('/:productId', requireAuth, async(req, res) => {
+router.delete('/:cartId', requireAuth, async(req, res) => {
 
     let currentUser = req.user;
     let currentUserId = parseInt(req.user.id);
-    let prodId = req.params.productId
-    prodId = parseInt(prodId)
+    let cartId = req.params.cartId
+    cartId = parseInt(cartId)
 
     let error = {};
 
@@ -163,7 +164,7 @@ router.delete('/:productId', requireAuth, async(req, res) => {
         let deleteProduct = await Cart.findOne({
             where: {
                 userId: currentUserId,
-                productId: prodId
+                id: cartId
             },
             raw: true,
         })
@@ -178,12 +179,9 @@ router.delete('/:productId', requireAuth, async(req, res) => {
         // delete record
         Cart.destroy({
             where: {
-                userId: currentUserId,
-                productId: prodId
+                id: cartId, // use params, not deleteProduct.id
             },
         })
-
-        console.log("reach")
 
         return res
             .status(200)

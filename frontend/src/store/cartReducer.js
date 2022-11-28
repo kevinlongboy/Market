@@ -21,17 +21,20 @@ export const actionAddSingleProductToCart = (newProduct) => ({
     payload: newProduct
 });
 
-export const actionRemoveSingleProductFromCart = (productId) => ({
+export const actionRemoveSingleProductFromCart = (cartId) => ({
     type: CART_REMOVE_SINGLE_PRODUCT_FROM_CART,
-    payload: productId
+    payload: cartId
 });
 
 
 /***************************** THUNKS (API) ******************************/
 export const thunkReadCart = () => async (dispatch) => {
     const response = await csrfFetch(`/api/cart`);
+    console.log("response", response)
     if (response.ok) {
         const cart = await response.json();
+        console.log("cart", cart)
+
         dispatch(actionReadCart(cart))
         return cart
     }
@@ -53,13 +56,13 @@ export const thunkAddSingleProductToCart = (productId) => async (dispatch) => {
     }
 }
 
-export const thunkRemoveSingleProductFromCart = (productId) => async (dispatch) => {
-    const response = await csrfFetch(`/api/cart/${productId}`, {
+export const thunkRemoveSingleProductFromCart = (cartId) => async (dispatch) => {
+    const response = await csrfFetch(`/api/cart/${cartId}`, {
         method: 'delete',
     });
     if (response.ok) {
-        dispatch(actionRemoveSingleProductFromCart(productId))
-        return productId;
+        dispatch(actionRemoveSingleProductFromCart(cartId))
+        return cartId;
     }
 }
 
@@ -80,13 +83,14 @@ const cartReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case CART_READ_CART:
+            console.log("action.payload", action.payload)
             newState.allProductsByUser = {...action.payload}
                 newState.allProductsByUser.Products = [...action.payload.Products]
             return newState
 
         case CART_ADD_SINGLE_PRODUCT_TO_CART:
             newState.allProductsByUser = {...state.allProductsByUser}
-                newState.allProductsByUser.subtotal = state.allProductsByUser.subtotal + action.payload.price
+                // newState.allProductsByUser.subtotal = state.allProductsByUser.subtotal + action.payload.price
                 newState.allProductsByUser.Products =  [...state.allProductsByUser.Products]
                 newState.allProductsByUser.Products.push(action.payload)
             return newState

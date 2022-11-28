@@ -174,6 +174,9 @@ router.post('/', requireAuth, async(req, res) => {
                     userId: currentUserId,
                     productId: currProduct.id
                 },
+                attributes: {
+                    include: ['id']
+                },
                 raw: true,
             })
 
@@ -185,10 +188,10 @@ router.post('/', requireAuth, async(req, res) => {
             }
 
             // delete record
+            let id = deleteProduct.id
             Cart.destroy({
                 where: {
-                    userId: currentUserId,
-                    productId: currProduct.id
+                    id: id,
                 },
             })
             // ❗️ END ❗️

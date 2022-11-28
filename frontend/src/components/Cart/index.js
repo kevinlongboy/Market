@@ -26,16 +26,11 @@ function Cart() {
 
   useEffect(() => {
       dispatch(thunkReadCart());
-  }, [dispatch])
+  }, [dispatch, cartState])
 
   /***************** handle events *******************/
-  function removeItem(productId) {
-
-    // let productData = {
-    //   productId: productId
-    // }
-
-    dispatch(thunkRemoveSingleProductFromCart(productId))
+  function removeItem(cartId) {
+    dispatch(thunkRemoveSingleProductFromCart(cartId), [dispatch])
   }
 
   /**************** render component *****************/
@@ -51,6 +46,7 @@ function Cart() {
               <button onClick={(e) => removeItem(product.id)}>remove from cart</button>
             </>
           ))}
+          <p>{cartState && cartState.allProductsByUser.subtotal}</p>
       </div>
 
     </div>
