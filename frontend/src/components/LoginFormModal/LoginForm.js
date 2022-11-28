@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as sessionActions from "../../store/session";
+import * as sessionActions from "../../store/sessionReducer";
 import { useDispatch } from "react-redux";
 
 function LoginForm() {

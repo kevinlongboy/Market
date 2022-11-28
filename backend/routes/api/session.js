@@ -1,14 +1,15 @@
+/******************************** IMPORTS ********************************/
+// libraries
 const express = require('express')
 const { check } = require('express-validator');
-
+// local files
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
 const { handleValidationErrors } = require('../../utils/validation');
 const { User } = require('../../db/models');
 
+
+/*************************** GLOBAL VARIABLES ****************************/
 const router = express.Router();
-
-
-/************************************* global variables *************************************/
 
 const validateLogin = [
     check('credential')
@@ -23,8 +24,7 @@ const validateLogin = [
 ];
 
 
-/********************************** /session ***********************************/
-
+/******************************** ROUTES *********************************/
 // Log in
 router.post('/', validateLogin, async (req, res, next) => {
 
@@ -60,14 +60,12 @@ router.post('/', validateLogin, async (req, res, next) => {
     }
 });
 
-
 // Log out
 router.delete('/', (_req, res) => {
 
     res.clearCookie('token');
     return res.json({ message: 'success' });
 });
-
 
 // Get Current User
 router.get('/', restoreUser, (req, res) => {
@@ -76,7 +74,6 @@ router.get('/', restoreUser, (req, res) => {
     let error = {};
 
     try {
-
         if (user) {
             let printUser = {};
             printUser.id = user.id;
@@ -98,6 +95,11 @@ router.get('/', restoreUser, (req, res) => {
 });
 
 
-/****************************************** export ********************************************/
+/***************************** ERROR HANDLER *****************************/
+router.use((err, req, res, next) => {
+    return res.json(err)
+})
 
+
+/******************************** EXPORTS ********************************/
 module.exports = router;

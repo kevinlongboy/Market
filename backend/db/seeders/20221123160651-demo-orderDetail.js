@@ -736,6 +736,12 @@ const demoOrderDetails = [
     orderId: 61,
     productId: 33,
   },
+  // Demo (second order)
+  // 1299.99
+  {
+    orderId: 62,
+    productId: 32,
+  },
   // //
   // {
   //   orderId: ,

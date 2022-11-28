@@ -27,11 +27,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
     },
     status: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING,
-      validate: {
-        len: [5, 50],
-      }
+      defaultValue: "Fulfilled",
+      // validate: {
+      //   len: [5, 50],
+      // }
     },
     total: {
       allowNull: false,

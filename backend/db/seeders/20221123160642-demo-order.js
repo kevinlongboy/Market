@@ -368,6 +368,13 @@ const demoOrders = [
     status: "Fulfilled",
     total: 249.99,
   },
+  // Demo (second order)
+  {
+    // id: 62
+    userId: 1,
+    status: "Fulfilled",
+    total: 1299.99,
+  },
 ]
 
 let userIds = [];

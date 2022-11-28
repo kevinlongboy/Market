@@ -1,15 +1,20 @@
+/******************************** IMPORTS ********************************/
+// libraries
 const router = require('express').Router();
+// local files
+const { requireAuth } = require('../../utils/auth.js');
+const { restoreUser } = require('../../utils/auth.js');
+const { setTokenCookie } = require('../../utils/auth.js');
+const { User } = require('../../db/models');
 
 // Import routers
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const departmentsRouter = require('./departments.js');
-const ordersRouter = require('./orders.js')
-
-const { restoreUser } = require('../../utils/auth.js');
-const { setTokenCookie } = require('../../utils/auth.js');
-const { requireAuth } = require('../../utils/auth.js');
-const { User } = require('../../db/models');
+const productsRouter = require('./products.js');
+const cartRouter = require('./cart.js');
+const ordersRouter = require('./orders.js');
+const reviewsRouter = require('./reviews.js');
 
 // Connect restoreUser middleware to the API router
 // If current user session is valid, set req.user to the user in the database
@@ -19,8 +24,10 @@ router.use(restoreUser);
 router.use('/session', sessionRouter);
 router.use('/users', usersRouter);
 router.use('/departments', departmentsRouter);
+router.use('/products', productsRouter);
+router.use('/cart', cartRouter);
 router.use('/orders', ordersRouter);
-
+router.use('/reviews', reviewsRouter);
 
 
 /************************* TEST ROUTES *************************/

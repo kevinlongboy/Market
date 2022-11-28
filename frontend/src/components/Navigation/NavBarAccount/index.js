@@ -30,7 +30,9 @@ function NavBarAccount({ isLoaded }){
             <NavLink exact to="/">Home</NavLink>
             {isLoaded && sessionLinks}
           </p>
-          <i class="fa-solid fa-cart-shopping"></i>
+          <NavLink exact to="/cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </NavLink>
       </div>
 
     </div>
