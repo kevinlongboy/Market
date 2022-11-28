@@ -11,7 +11,7 @@ const bcrypt = require("bcryptjs");
 
 const demoUsers = [
   {
-    id: 1,
+    // id: 1,
     firstName: 'Demo',
     lastName: 'User',
     username: 'demo_user',
@@ -20,6 +20,7 @@ const demoUsers = [
   },
   // Module Leads
   {
+    // id: 2,
     firstName: 'Bill',
     lastName: 'Adams',
     username: 'wadams',
@@ -27,6 +28,7 @@ const demoUsers = [
     email: 'wadams@appacademy.io',
   },
   {
+    // id: 3,
     firstName: 'Shane',
     lastName: 'Wilkey',
     username: 'swilkey',
