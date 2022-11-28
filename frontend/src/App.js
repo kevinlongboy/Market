@@ -12,7 +12,7 @@ import DepartmentPage from "./components/DepartmentPage";
 import ProductPage from "./components/ProductPage";
 import LoginFormPage from "./components/LoginFormPage";
 import Orders from "./components/Orders";
-import Reviews from "./components/Reviews";
+import UserReviews from "./components/UserReviews";
 import ReviewCreateForm from "./components/ReviewCreateForm";
 import ReviewUpdateForm from "./components/ReviewUpdateForm";
 import Footer from "./components/Footer";
@@ -70,10 +70,10 @@ function App() {
           </Route>
 
           <Route exact path={'/account/reviews'}>
-            <Reviews />
+            <UserReviews />
           </Route>
 
-          <Route exact path={'/reviews/create'}>
+          <Route exact path={'/products/:productId/add-review'}>
             <ReviewCreateForm />
           </Route>
 

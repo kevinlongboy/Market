@@ -2,9 +2,11 @@
 // libraries
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 // local files
+import ProductReviews from "../Reviews/ProductReviews";
 import { thunkReadSingleProductDetails } from "../../store/productsReducer";
+import { thunkReadAllProductReviews } from "../../store/reviewsReducer";
 import { thunkAddSingleProductToCart } from "../../store/cartReducer";
 import "./ProductPage.css"
 
@@ -20,14 +22,12 @@ function ProductPage() {
 
   /****************** access store *******************/
   const productsState = useSelector(state => state.products)
-  console.log("productsState", productsState)
-
+  const reviewsState = useSelector(state => state.reviews);
 
   /************ key into pertinent values ************/
   const { productId } = useParams()
   const product = productsState.singleProductDetails;
   const productImages = product.ProductImages
-
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -36,6 +36,9 @@ function ProductPage() {
       dispatch(thunkReadSingleProductDetails(productId));
   }, [dispatch])
 
+  useEffect(() => {
+    dispatch(thunkReadAllProductReviews(productId));
+}, [dispatch])
 
   /***************** handle events *******************/
   function addItem() {
@@ -62,6 +65,11 @@ function ProductPage() {
           ))}
       </div>
       <button onClick={addItem}>add item to cart</button>
+
+      <ProductReviews />
+
+      {/* add condition to remove button if users already has reviewed item */}
+      <NavLink exact to={`/products/${product.id}/add-review`}><button>Write a review</button></NavLink>
 
     </div>
   )

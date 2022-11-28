@@ -22,7 +22,6 @@ router.get('/', requireAuth, async(req, res) => {
     let currentUser = req.user;
     let currentUserId = req.user.id;
     let error = {};
-    console.log("reach after delete")
 
     try {
 
@@ -33,11 +32,12 @@ router.get('/', requireAuth, async(req, res) => {
                 exclude: ['createdAt', 'updatedAt']
             },
             raw: true,
+
+            // returns:
+                // id (cartID) - use this PK to delete
+                // userId
+                // productId
         })
-        // returns:
-            // id (cartID) - use this PK to delete
-            // userId
-            // productId
 
         let subtotal = 0;
 
@@ -51,11 +51,18 @@ router.get('/', requireAuth, async(req, res) => {
                 // },
                 raw: true,
             });
+
+            // modify existing keys
+            product.cartId = product.id // changing key-name to be more descriptive
+            delete product.id
+
+            // add keys
             let { departmentId, name, price, description } = productDetails;
             product.departmentId = departmentId
             product.name = name
             product.price = price
             product.description = description
+
 
             // add previewImage-key to every product
             let prevImage = await ProductImage.findOne({
@@ -114,7 +121,6 @@ router.post('/', requireAuth, async(req, res) => {
             },
             raw: true,
         });
-        console.log("findProduct >>", findProduct)
 
         // handle error: missing product
         if (!findProduct) {
@@ -129,6 +135,12 @@ router.post('/', requireAuth, async(req, res) => {
             productId: productId
         });
         postCartProduct.save();
+
+        // dataValues are null & _previousDataValues are not null
+        // findCart is not null, but record is in DataBase
+        // ???
+        // let findCart = await Cart.findByPk(postCartProduct.id)
+        // console.log("findCart", findCart)
 
         // add previewImage-key
         let prevImage = await ProductImage.findOne({

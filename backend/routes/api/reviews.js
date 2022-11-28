@@ -24,7 +24,7 @@ router.get('/current', requireAuth, async(req, res) => {
     try {
         let getCurrentUserReviews = await Review.findAll({ // returns array of review-objects
             where: { userId: currentUserId },
-            order: [['id']],
+            order: [['id', 'DESC']],
             raw: true,
         });
 
@@ -36,6 +36,7 @@ router.get('/current', requireAuth, async(req, res) => {
                 attributes: {
                     exclude: ["createdAt", "updatedAt"]
                 },
+                raw: true
             });
             review.Product = productData;
 
@@ -46,11 +47,15 @@ router.get('/current', requireAuth, async(req, res) => {
             });
             let prevUrl = prevImage.url;
             review.Product.previewImage = prevUrl
+
+
         }
 
         return res
             .status(200)
-            .json(getCurrentUserReviews)
+            .json({
+                Reviews: getCurrentUserReviews
+            })
 
 
     } catch (err) {
@@ -81,6 +86,25 @@ router.put('/:reviewId', requireAuth, async (req, res) => {
         if (title) await putReview.update({ title: title });
         if (description) await putReview.update({ description: description });
         await putReview.save();
+
+        // add Product-key
+        let findProduct = await Product.findByPk(putReview.productId, {
+            attributes: {
+                exclude: ["createdAt", "updatedAt"]
+            },
+            raw: true,
+        });
+        putReview.Product = findProduct
+
+        // add ProductImages-key
+        let image = await ProductImage.findOne({
+            where: { productId: putReview.productId },
+            attributes: {
+                exclude: ["createdAt", "updatedAt"]
+            },
+            raw: true,
+        })
+        putReview.Product.previewImage = image
 
         return res
             .status(200)
