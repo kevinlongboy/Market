@@ -14,7 +14,7 @@ module.exports = {
       },
       name: {
         allowNull: false,
-        type: Sequelize.STRING(100),
+        type: Sequelize.STRING(150),
       },
       price: {
         allowNull: false,
@@ -35,7 +35,7 @@ module.exports = {
       },
     });
   },
-  
+
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Products');
   }

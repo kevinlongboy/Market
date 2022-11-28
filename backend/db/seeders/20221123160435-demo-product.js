@@ -43,7 +43,7 @@ const demoProducts = [
     departmentId: 1,
     name: "Aleve Naproxen Sodium Arthritis Pain Reliever & Fever Reducer Tablets (NSAID)",
     price: 10.19,
-    description: "Aleve Naproxen Sodium Pain Relief Caplets are proven stronger and longer on pain than Tylenol. Each Naproxen Sodium 220 mg pain medicine caplet has the strength to last up to 12 hours. ",
+    description: "Aleve Naproxen Sodium Pain Relief Caplets are proven stronger and longer on pain than Tylenol. Each Naproxen Sodium 220 mg pain medicine caplet has the strength to last up to 12 hours.",
   },
 
   /******** 2. Home ********/
