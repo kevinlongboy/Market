@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 import cartReducer from "./cartReducer";
 // local files
 import departmentsReducer from "./departmentsReducer";
+import ordersReducer from "./ordersReducer";
 import productsReducer from "./productsReducer";
 import sessionReducer from './sessionReducer';
 
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   departments: departmentsReducer,
   products: productsReducer,
   cart: cartReducer,
+  orders: ordersReducer,
 });
 
 let enhancer;

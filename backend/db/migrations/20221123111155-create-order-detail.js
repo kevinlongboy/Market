@@ -13,13 +13,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       orderId: {
-        allowNull: false,
+        // allowNull: false,
         type: Sequelize.INTEGER,
         references: { model: 'Orders' },
         onDelete: 'CASCADE'
       },
       productId: {
-        allowNull: false,
+        // allowNull: false,
         type: Sequelize.INTEGER,
         references: { model: 'Products' },
         onDelete: 'CASCADE'
