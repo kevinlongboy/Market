@@ -1,6 +1,6 @@
 /******************************** IMPORTS ********************************/
 // libraries
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, Redirect } from 'react-router-dom';
 // local files
@@ -22,14 +22,33 @@ function LoginFormPage() {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
 
+  // useEffect(() => {
+  //   let validationErrors = [];
+  //   setErrors(validationErrors)
+
+  //   if (credential.length > 0 && credential.length < 5) {
+  //     validationErrors.push("Please enter your username or email")
+  //   }
+
+  //   if (password.length > 0 && password.length < 5) {
+  //     validationErrors.push("Please enter your password")
+  //   }
+
+  //   setErrors(validationErrors)
+  // }, [credential, password])
+
+
   /***************** handle events *******************/
   const handleSubmit = (e) => {
+
     e.preventDefault();
+
     setErrors([]);
-    return dispatch(sessionActions.login({ credential, password }))
-    .catch(async (res) => {
+
+    return dispatch(sessionActions.login({ credential, password })).catch(
+      async (res) => {
       const data = await res.json();
-      if (data && data.errors) setErrors(data.errors);
+      if (data && data.errors) setErrors(data.errors); // double check key is .errors vs .message
     });
   }
 
@@ -55,6 +74,7 @@ function LoginFormPage() {
                   value={credential}
                   onChange={(e) => setCredential(e.target.value)}
                   required
+                  minLength={5}
                   className='login-or-signup-form-input-field'
                   >
                 </input>
@@ -65,13 +85,12 @@ function LoginFormPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
+                  minLength={5}
                   className='login-or-signup-form-input-field'
                   >
                 </input>
 
-              <ul>
-                {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-              </ul>
+              {errors.map((error, idx) => <p key={idx} className='form-validation-errors'>{error}</p>)}
 
               <button
               type="submit"

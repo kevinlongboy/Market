@@ -27,19 +27,32 @@ function SignupFormPage() {
   const [errors, setErrors] = useState([]);
 
   /***************** handle events *******************/
-
   const handleSubmit = (e) => {
+
     e.preventDefault();
-    if (password === confirmPassword) {
+
+    if (password !== confirmPassword) {
+      setErrors(["Those passwords didn't match. Please try again."]);
+      return
+
+    } else {
+
+      let errors = [];
       setErrors([]);
-      return dispatch(sessionActions.signup({ firstName, lastName,email, username, password }))
-      .catch(async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
-      });
+
+      let userData = {firstName, lastName, username, password, email }
+      return  dispatch(sessionActions.signup(userData)).catch(
+
+        async (res) => {
+          const data = await res.json();
+
+          if (data && data.errors) {
+            data.errors.forEach(message => errors.push(message));
+            setErrors(errors);
+          }
+        });
+      }
     }
-    return setErrors(['Confirm Password field must be the same as the Password field']);
-  };
 
   /**************** render component *****************/
   // if (sessionUser) return <Redirect to="/" />;
@@ -62,6 +75,8 @@ function SignupFormPage() {
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
           required
+          minLength={2}
+          maxLength={25}
           className='login-or-signup-form-input-field'
         >
         </input>
@@ -72,6 +87,8 @@ function SignupFormPage() {
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
           required
+          minLength={2}
+          maxLength={25}
           className='login-or-signup-form-input-field'
         >
         </input>
@@ -82,6 +99,8 @@ function SignupFormPage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          minLength={3}
+          maxLength={100}
           className='login-or-signup-form-input-field'
         >
         </input>
@@ -93,6 +112,8 @@ function SignupFormPage() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
+          minLength={3}
+          maxLength={30}
           className='login-or-signup-form-input-field'
         >
         </input>
@@ -103,6 +124,7 @@ function SignupFormPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          minLength={5}
           className='login-or-signup-form-input-field'
         >
         </input>
@@ -113,6 +135,7 @@ function SignupFormPage() {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
+          minLength={5}
           className='login-or-signup-form-input-field'
         >
         </input>
@@ -143,9 +166,7 @@ function SignupFormPage() {
 
         </div>
 
-        <ul>
-          {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-        </ul>
+        {errors.map((error, idx) => <p key={idx} className='form-validation-errors'>{error}</p>)}
 
         <button
         type="submit"
