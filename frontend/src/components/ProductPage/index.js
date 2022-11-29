@@ -9,6 +9,7 @@ import { thunkReadSingleProductDetails } from "../../store/productsReducer";
 import { thunkReadAllProductReviews } from "../../store/reviewsReducer";
 import { thunkAddSingleProductToCart } from "../../store/cartReducer";
 import "./ProductPage.css"
+import AddToCart from "../AddToCart";
 
 
 /******************************* COMPONENT *******************************/
@@ -64,7 +65,14 @@ function ProductPage() {
             <img src={image.url}></img>
           ))}
       </div>
-      <button onClick={addItem}>add item to cart</button>
+      <div>
+
+      <AddToCart
+        productId={productId}
+        text={`Add to cart`}
+        cssSelector={"ProductPage-AddToCart-button"}
+        />
+      </div>
 
       <ProductReviews />
 

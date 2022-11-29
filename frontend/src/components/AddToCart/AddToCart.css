@@ -1,0 +1,35 @@
+.AddToCart-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: rgb(204, 0, 0);
+    font-weight: 700px;
+    color: #fff;
+
+    cursor: pointer;
+}
+.AddToCart-button:hover {
+    background-color: #aa0200;
+}
+.AddToCart-button:active {
+    text-decoration: underline;
+}
+
+#DepartmentPage-AddToCart-button {
+    height: 32px;
+    width: 68px;
+    margin: 15px 0px;
+    font-size: 12px;
+}
+
+
+#ProductPage-AddToCart-button {
+    height: 44px;
+    width: 242px;
+    margin: 15px 0px;
+    font-size: 16px;
+}
