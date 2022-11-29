@@ -55,7 +55,7 @@ function CategoriesButton() {
 
         {/* <div className="categories-menu-side-panel-list-container"> */}
         {allDepartments && allDepartments.map((department) => (
-          <div>
+          <div className="categories-menu-side-panel-list-item-container">
               <NavLink
                 exact
                 to={`/departments/${department.id}`}
@@ -67,7 +67,7 @@ function CategoriesButton() {
         ))}
         {/* </div> */}
     </>
-    )
+  )
 
 
   /***************** handle events *******************/
