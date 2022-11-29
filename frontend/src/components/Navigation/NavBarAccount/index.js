@@ -27,15 +27,27 @@ function NavBarAccount({ isLoaded }){
 
       <div id='NavBarAccount-component'>
 
-            <NavLink exact to="/">Home</NavLink>
+        <div className='NavBarAccount-left'>
+            <NavLink exact to="/">Logo</NavLink>
+            <div>Categories</div>
+        </div>
 
-            {/* {isLoaded && sessionLinks} */}
 
-            <ProfileButton user={sessionUser} />
+        <div className='NavBarAccount-right'>
+
+          <ProfileButton user={sessionUser} />
+
 
           <NavLink exact to="/cart">
             <i class="fa-solid fa-cart-shopping"></i>
           </NavLink>
+        </div>
+
+
+
+            {/* {isLoaded && sessionLinks} */}
+
+
 
       </div>
 
