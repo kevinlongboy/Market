@@ -21,9 +21,38 @@
 
 .categories-menu-side-panel-container {
     position: absolute;
+    /* offset by NavBarAccount's height */
+    top: 80px;
+    left: inherit;
     z-index: 1;
 
-    height: 100%;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 400px;
+    width: 320px;
+
+    background-color: #fff;
+
+    padding: 0px 16px;
     border: 1px solid red;
+    border-radius: 0px 0px 8px 8px;
+}
+.categories-menu-side-panel-title {
+    font-size: 19px;
+    color: #333;
+    font-weight: 700;
+}
+
+.categories-menu-side-panel-list-container {
+    text-decoration: none;
+    color: #333;
+}
+.categories-menu-side-panel-list-item {
+    text-decoration: none;
+    color: #333;
+}
+.categories-menu-side-panel-list-item:hover {
+    text-decoration: underline;
 }

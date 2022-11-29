@@ -49,15 +49,23 @@ function CategoriesButton() {
   /************* conditional components **************/
   let menuOptions = (
     <>
-        <div>
-            <h1>All Categories</h1>
+        <div className="categories-menu-side-panel-title">
+            <p>All Categories</p>
         </div>
 
+        {/* <div className="categories-menu-side-panel-list-container"> */}
         {allDepartments && allDepartments.map((department) => (
-            <NavLink exact to={`/departments/${department.id}`}>
+          <div>
+              <NavLink
+                exact
+                to={`/departments/${department.id}`}
+                className="categories-menu-side-panel-list-item"
+                >
                 <div>{department.name}</div>
-            </NavLink>
+              </NavLink>
+            </div>
         ))}
+        {/* </div> */}
     </>
     )
 
