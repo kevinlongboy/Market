@@ -52,14 +52,21 @@ function LoginFormPage() {
       const data = await res.json();
       if (data && data.errors) setErrors(data.errors); // double check key is .errors vs .message
     });
-    
+
     history.push('/');
   }
 
+  const handleSubmitDemoUser = (e) => {
+
+    e.preventDefault();
+
+    dispatch(sessionActions.login({ credential: 'demo@email.com', password: 'demoPassword' }))
+
+    history.push('/');
+  };
+
   /**************** render component *****************/
-  // if (sessionUser) return (
-  //   <Redirect to="/" />
-  // );
+  if (sessionUser) return <Redirect exact to="/" />;
 
   return (
     <div className="page-wrapper-container">
@@ -105,6 +112,12 @@ function LoginFormPage() {
               </button>
 
             </form>
+
+          <div id='login-form-DemoUser-button-container'>
+            <span onClick={handleSubmitDemoUser} id='login-form-DemoUser-button'>
+              Continue as Demo User
+            </span>
+          </div>
 
           <div>
             <NavLink exact to={`/signup`}>

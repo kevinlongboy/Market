@@ -55,7 +55,7 @@ function SignupFormPage() {
     }
 
   /**************** render component *****************/
-  // if (sessionUser) return <Redirect to="/" />;
+  if (sessionUser) return <Redirect to="/" />;
 
   return (
     <div className="page-wrapper-container">

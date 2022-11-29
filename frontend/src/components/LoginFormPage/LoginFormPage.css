@@ -65,6 +65,20 @@
     background-color: #aa0200;
 }
 
+#login-form-DemoUser-button-container {
+    padding-top: 35px;
+}
+#login-form-DemoUser-button {
+    color: #666;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#login-form-DemoUser-button:hover {
+    color: #333;
+    text-decoration: none;
+}
+
 
 #login-or-signup-form-proceed-button {
     background-color: white;

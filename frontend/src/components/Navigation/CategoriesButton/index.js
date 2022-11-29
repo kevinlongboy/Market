@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from "react-router-dom";
 import { thunkReadAllDepartments } from "../../../store/departmentsReducer";
 // local files
+import * as sessionActions from '../../../store/sessionReducer';
 import './CategoriesButton.css'
 
 /******************************* COMPONENT *******************************/

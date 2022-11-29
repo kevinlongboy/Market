@@ -18,3 +18,12 @@
     border-radius: 10px;
     background-color: #f7f7f7;
 }
+
+.categories-menu-side-panel-container {
+    position: absolute;
+    z-index: 1;
+
+    height: 100%;
+    background-color: red;
+    border: 1px solid red;
+}

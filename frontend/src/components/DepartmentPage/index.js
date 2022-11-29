@@ -87,7 +87,7 @@ function DepartmentPage() {
 
             <div className="product-card-price-container">
               <div className="product-card-price">${(product.price).toFixed(2)}</div>
-              <div className="product-card-location">Online</div>
+              <div className="product-card-location">When purchased online</div>
             </div>
 
 

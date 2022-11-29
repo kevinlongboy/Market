@@ -2,7 +2,7 @@
 // libraries
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 // local files
 import * as sessionActions from '../../../store/sessionReducer';
 import './ProfileButton.css'
@@ -24,6 +24,8 @@ function ProfileButton({ user }) {
   };
 
   /***************** handle events *******************/
+  const history = useHistory();
+
   // toggle menu
   useEffect(() => {
     if (!showMenu) return;
@@ -41,6 +43,7 @@ function ProfileButton({ user }) {
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
+    history.push('/');
   };
 
   /************* conditional components **************/
