@@ -30,6 +30,8 @@ function NavBarAccount({ isLoaded }){
 
         <div className='NavBarAccount-right'>
           <ProfileButton user={sessionUser} />
+          {/* <ProfileButton /> */}
+
 
           <NavLink exact to="/cart">
             <div id="NavBarAccount-cart-button-container">

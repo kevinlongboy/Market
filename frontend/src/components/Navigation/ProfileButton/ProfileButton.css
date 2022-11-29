@@ -5,7 +5,8 @@
     align-items: center;
 
     height: 44px;
-    width: 150px;
+    min-width: 100px;
+    padding: 0px 20px;
 
     font-size: 14px;
     border: 0px;
@@ -20,6 +21,7 @@
 
 .ProfileButton-container > i:first-child {
     font-size: 24px;
+    padding-right: 16px;
 }
 
 .ProfileButton-container > i:last-child {
@@ -32,3 +34,16 @@
 #visible-on-hover:hover {
     visibility: visible;
 } */
+
+
+/* MODAL */
+.account-menu-side-panel-container {
+    position: fixed;
+    height: 100vh;
+    top:0;
+    width: 375px;
+
+    z-index: 1;
+    right: 0;
+    background-color: #fff;
+}
