@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/sessionReducer";
-import Navigation from "./components/Navigation/NavBarAccount";
-import NavBarAccount from "./components/Navigation/NavBarMain";
+import NavBarMain from "./components/Navigation/NavBarMain";
+import NavBarAccount from "./components/Navigation/NavBarAccount";
 import Landing from "./components/Landing";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
@@ -20,16 +20,22 @@ import OrdersDetails from "./components/OrderDetails";
 import OrderConfirmation from "./components/OrderConfirmation";
 
 function App() {
+
   const dispatch = useDispatch();
+
+  // use to load components only after there is a current session
+  // and user's details are retrieved from database
   const [isLoaded, setIsLoaded] = useState(false);
+
+
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
   return (
     <>
-      <NavBarAccount />
-      <Navigation isLoaded={isLoaded} />
+      <NavBarMain isLoaded={isLoaded} />
+      <NavBarAccount isLoaded={isLoaded} />
 
       {isLoaded && (
         <Switch>

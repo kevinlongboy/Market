@@ -2,7 +2,7 @@
 // libraries
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, NavLink, Redirect } from 'react-router-dom';
+import { Link, NavLink, Redirect, useHistory } from 'react-router-dom';
 // local files
 import * as sessionActions from '../../store/sessionReducer';
 import './LoginFormPage.css';
@@ -39,17 +39,21 @@ function LoginFormPage() {
 
 
   /***************** handle events *******************/
+  const history = useHistory();
+
   const handleSubmit = (e) => {
 
     e.preventDefault();
 
     setErrors([]);
 
-    return dispatch(sessionActions.login({ credential, password })).catch(
+    dispatch(sessionActions.login({ credential, password })).catch(
       async (res) => {
       const data = await res.json();
       if (data && data.errors) setErrors(data.errors); // double check key is .errors vs .message
     });
+    
+    history.push('/');
   }
 
   /**************** render component *****************/

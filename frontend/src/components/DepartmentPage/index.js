@@ -32,7 +32,7 @@ function DepartmentPage() {
 
   useEffect(() => {
       dispatch(thunkReadSingleDepartmentDetails(departmentId));
-  }, [dispatch])
+  }, [dispatch, departmentsState])
 
   /**************** render component *****************/
   return (

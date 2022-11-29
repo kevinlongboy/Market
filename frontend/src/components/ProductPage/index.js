@@ -41,15 +41,6 @@ function ProductPage() {
     dispatch(thunkReadAllProductReviews(productId));
 }, [dispatch])
 
-  /***************** handle events *******************/
-  function addItem() {
-
-    let productData = {
-      productId: productId
-    }
-
-    dispatch(thunkAddSingleProductToCart(productData))
-  }
 
   /**************** render component *****************/
   return (

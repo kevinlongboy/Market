@@ -45,3 +45,35 @@
     justify-content:  right;
     align-items: center;
 }
+
+#NavBarAccount-cart-button-container {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 44px;
+    width: 44px;
+
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+
+}
+#NavBarAccount-cart-button-container:hover {
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+#NavBarAccount-cart-button-container:visited {
+    text-decoration: none;
+
+}
+#NavBarAccount-cart-button{
+    text-decoration: none;
+}
+#NavBarAccount-cart-button:visited{
+    text-decoration: none;
+}
+#NavBarAccount-cart-button:active{
+    text-decoration: none;
+}
