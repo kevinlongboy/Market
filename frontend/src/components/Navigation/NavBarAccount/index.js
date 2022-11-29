@@ -5,9 +5,8 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 // local files
 import ProfileButton from '../ProfileButton';
-import LoginFormModal from '../../LoginFormModal';
-import './NavBarAccount.css';
 import CategoriesButton from '../CategoriesButton';
+import './NavBarAccount.css';
 
 
 /******************************* COMPONENT *******************************/
@@ -15,22 +14,6 @@ function NavBarAccount({ isLoaded }){
 
   /****************** access store *******************/
   const sessionUser = useSelector(state => state.session.user);
-
-  /************ key into pertinent values ************/
-
-  let sessionLinks;
-  if (sessionUser) {
-    sessionLinks = (
-      <ProfileButton user={sessionUser} />
-    );
-  } else {
-    sessionLinks = (
-      <>
-        <LoginFormModal />
-        <NavLink to="/signup">Sign Up</NavLink>
-      </>
-    );
-  }
 
   /**************** render component *****************/
   return (

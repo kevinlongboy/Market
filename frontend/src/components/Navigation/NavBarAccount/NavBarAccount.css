@@ -38,12 +38,18 @@
     justify-content:  left;
     align-items: center;
 }
+.NavBarAccount-right > * {
+    margin-left: 20px;
+}
 
 .NavBarAccount-right {
     display: flex;
     flex-direction: row;
     justify-content:  right;
     align-items: center;
+}
+.NavBarAccount-left > * {
+    margin-right: 20px;
 }
 
 #NavBarAccount-cart-button-container {
@@ -69,7 +75,9 @@
 
 }
 #NavBarAccount-cart-button{
+    color: #333;
     text-decoration: none;
+    font-size: 20px;
 }
 #NavBarAccount-cart-button:visited{
     text-decoration: none;

@@ -5,12 +5,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from "react-router-dom";
 import { thunkReadAllDepartments } from "../../../store/departmentsReducer";
 // local files
-import * as sessionActions from '../../../store/sessionReducer';
-
+import './CategoriesButton.css'
 
 /******************************* COMPONENT *******************************/
 function CategoriesButton() {
-
 
     /****************** access store *******************/
     const departmentsState = useSelector(state => state.departments)
@@ -18,12 +16,14 @@ function CategoriesButton() {
     /************ key into pertinent values ************/
     const allDepartments = Object.values(departmentsState.allDepartments);
 
+    /************ reducer/API communication ************/
     const dispatch = useDispatch();
 
     useEffect(()=>{
         dispatch(thunkReadAllDepartments())
     }, [dispatch])
 
+    /****************** manage state *******************/
     const [showMenu, setShowMenu] = useState(false);
 
     const openMenu = () => {
@@ -31,6 +31,8 @@ function CategoriesButton() {
         setShowMenu(true);
     };
 
+    /***************** handle events *******************/
+    // toggle menu
     useEffect(() => {
         if (!showMenu) return;
 
@@ -43,8 +45,7 @@ function CategoriesButton() {
         return () => document.removeEventListener("click", closeMenu);
     }, [showMenu]);
 
-
-  // conditional components
+  /************* conditional components **************/
   let menuOptions = (
     <>
         <div>
@@ -68,7 +69,7 @@ function CategoriesButton() {
   /**************** render component *****************/
   return (
     <>
-      <button onClick={openMenu}>
+      <button onClick={openMenu} className='CategoriesButton-container'>
         Categories
       </button>
 
@@ -81,4 +82,6 @@ function CategoriesButton() {
   );
 }
 
+
+/******************************** EXPORTS ********************************/
 export default CategoriesButton;

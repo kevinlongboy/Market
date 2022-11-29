@@ -5,23 +5,26 @@ import { useDispatch } from 'react-redux';
 import { NavLink } from "react-router-dom";
 // local files
 import * as sessionActions from '../../../store/sessionReducer';
+import './ProfileButton.css'
 
 
 /******************************* COMPONENT *******************************/
 function ProfileButton({ user }) {
-  console.log("user from profile button", user)
 
-  /****************** access store *******************/
-
-
+  /************ reducer/API communication ************/
   const dispatch = useDispatch();
+
+  /************ reducer/API communication ************/
   const [showMenu, setShowMenu] = useState(false);
 
+  /****************** manage state *******************/
   const openMenu = () => {
     if (showMenu) return;
     setShowMenu(true);
   };
 
+  /***************** handle events *******************/
+  // toggle menu
   useEffect(() => {
     if (!showMenu) return;
 
@@ -34,15 +37,19 @@ function ProfileButton({ user }) {
     return () => document.removeEventListener("click", closeMenu);
   }, [showMenu]);
 
+  // logout
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
   };
 
-  // conditional components
+  /************* conditional components **************/
   let menuOptions;
+  let profileGreeting;
 
   if (user) {
+    profileGreeting = `Hello, ${user.firstName}`;
+
     menuOptions = (
       <>
         <div>
@@ -68,6 +75,8 @@ function ProfileButton({ user }) {
     )
 
   } else {
+    profileGreeting = `Sign in`
+
     menuOptions = (
       <>
         <div>
@@ -87,16 +96,13 @@ function ProfileButton({ user }) {
     )
   }
 
-  /***************** handle events *******************/
-
-
-
-
   /**************** render component *****************/
   return (
     <>
-      <button onClick={openMenu}>
+      <button onClick={openMenu} className='ProfileButton-container'>
         <i className="fas fa-user-circle" />
+        <p>{profileGreeting}</p>
+        <i class="fa-solid fa-chevron-down" id='visible-on-hover'></i>
       </button>
 
       {showMenu && (
@@ -110,4 +116,6 @@ function ProfileButton({ user }) {
   );
 }
 
+
+/******************************** EXPORTS ********************************/
 export default ProfileButton;
