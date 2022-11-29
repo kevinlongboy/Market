@@ -26,13 +26,17 @@ function NavBarAccount({ isLoaded }){
     <div className="NavBarAccount-wrapper-container">
 
       <div id='NavBarAccount-component'>
-          <p>
+
             <NavLink exact to="/">Home</NavLink>
-            {isLoaded && sessionLinks}
-          </p>
+
+            {/* {isLoaded && sessionLinks} */}
+
+            <ProfileButton user={sessionUser} />
+
           <NavLink exact to="/cart">
             <i class="fa-solid fa-cart-shopping"></i>
           </NavLink>
+
       </div>
 
     </div>

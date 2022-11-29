@@ -34,14 +34,16 @@ function Orders() {
 
           {orders && orders.map((order) => (
             <>
-              <p>Order Number: {order.id}</p>
-              <p>Status: {order.status}</p>
-              <p>Total: {order.total}</p>
-              {/* <p>{order.Products}</p> */}
-              <br></br>
+              <NavLink exact to={`/orders/${order.id}`}>
+                <p>Order Number: {order.id}</p>
+                <p>Status: {order.status}</p>
+                <p>Total: {order.total}</p>
+                {/* <p>{order.Products}</p> */}
+                <br></br>
+              </NavLink>
             </>
           ))}
-          
+
       </div>
 
     </div>

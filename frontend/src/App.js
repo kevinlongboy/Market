@@ -17,6 +17,7 @@ import ReviewCreateForm from "./components/ReviewCreateForm";
 import ReviewUpdateForm from "./components/ReviewUpdateForm";
 import Footer from "./components/Footer";
 import OrdersDetails from "./components/OrderDetails";
+import OrderConfirmation from "./components/OrderConfirmation";
 
 function App() {
   const dispatch = useDispatch();
@@ -59,6 +60,10 @@ function App() {
 
           <Route exact path={'/checkout'}>
             <Checkout />
+          </Route>
+
+          <Route exact path={'/order-confirmation'}>
+            <OrderConfirmation />
           </Route>
 
           <Route exact path={'/account/orders'}>

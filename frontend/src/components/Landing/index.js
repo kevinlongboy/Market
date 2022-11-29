@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { thunkReadAllDepartments } from "../../store/departmentsReducer";
 import "./Landing.css"
 
+
 /******************************* COMPONENT *******************************/
 function Landing() {
 

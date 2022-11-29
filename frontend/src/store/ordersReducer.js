@@ -23,7 +23,6 @@ export const actionReadAllUserOrders = (allOrders) => ({
 
 /***************************** THUNKS (API) ******************************/
 export const thunkCreateSingleOrder = (orderData) => async (dispatch) => {
-    console.log("reach")
     const response = await csrfFetch(`/api/orders`, {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
@@ -62,7 +61,6 @@ const ordersReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case ORDERS_CREATE_SINGLE_ORDER:
-            console.log(action)
             newState.allOrdersByUser = {...state.allOrdersByUser}
             newState.allOrdersByUser[action.payload.id] = action.payload
             return newState

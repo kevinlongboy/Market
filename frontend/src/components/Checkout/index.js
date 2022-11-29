@@ -2,7 +2,7 @@
 // libraries
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 // local files
 import { thunkReadCart } from "../../store/cartReducer";
 import { thunkCreateSingleOrder, thunkReadAllUserOrders } from "../../store/ordersReducer";
@@ -36,6 +36,7 @@ function Checkout() {
 
 
   /***************** handle events *******************/
+  const history = useHistory()
   function placeOrder(){
 
     let orderData = {
@@ -44,6 +45,7 @@ function Checkout() {
     }
 
     dispatch(thunkCreateSingleOrder(orderData))
+    history.push(`/order-confirmation`)
   }
 
 
