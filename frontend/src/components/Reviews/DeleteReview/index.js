@@ -8,7 +8,7 @@ import { thunkDeleteSingleReview } from "../../../store/reviewsReducer";
 import "./DeleteReview.css"
 
 /******************************* COMPONENT *******************************/
-function DeleteReview({id}) {
+function DeleteReview({reviewId, className}) {
 
     /************ reducer/API communication ************/
     const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function DeleteReview({id}) {
 
     /**************** render component *****************/
     return (
-        <button id="reviewTableDeleteButton" type="submit" onClick={(e) => handleDelete(id)}>Delete</button>
+        <button className={className} type="submit" onClick={(e) => handleDelete(reviewId)}>Delete</button>
     )
 }
 

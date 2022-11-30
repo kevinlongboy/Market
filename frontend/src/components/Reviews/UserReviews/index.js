@@ -34,29 +34,64 @@ function UserReviews() {
     return (
       <div className="page-wrapper-container">
 
-        <div id="Reviews-component">
+        <div id="UserReviews-component">
 
             <NavBarAccount user={user} />
 
+            <div className='UserReviews-right'>
 
-            <h1>Reviews</h1>
+              <div className="UserReviews-directory-container">
+                <NavLink exact to={'/account'} id="UserReviews-Account-redirect-button">
+                  Account
+                </NavLink>
+                <p>/</p>
+                <p>Rate & review</p>
+              </div>
+
+
+            <div className="UserReviews-title-container">
+              <div className="UserReviews-title">Rate & review</div>
+              <div className="UserReviews-subtitle">Tell others about your recent purchases.</div>
+            </div>
+
 
             {reviews && reviews.map((review) => (
-            <>
-              <h2>{review.Product.name}</h2>
-              <p>Rating: {review.rating}</p>
-              <p>{review.title}</p>
-              <p>{review.description}</p>
+              <>
+              <div className="review-card-container">
 
-              <NavLink exact to={`/reviews/${review.id}/edit`}>
-                <button>edit review</button>
-              </NavLink>
+                <div className="review-card-container-left">
+                  <NavLink exact to={`/departments/${review.Product.departmentId}/products/${review.Product.id}`}>
+                    <img
+                      src={review.Product.previewImage}
+                      id='review-card-thumbnail'
+                      >
+                    </img>
+                  </NavLink>
+                </div>
 
-              <DeleteReview id={review.id} />
+                <div className="review-card-container-right">
+                  <p className="review-card-product-name">{review.Product.name}</p>
+                  <p id="review-card-product-details">{review.title}</p>
+                  <p id="review-card-product-details">Rating: {review.rating}</p>
+                  <p className="review-card-product-description">{review.description}</p>
 
-              <br></br>
+                  <div className="modify-review-options-container">
+                    <NavLink
+                      exact to={`/reviews/${review.id}/edit`}
+                      className="UserReviews-modify-review-button"
+                    >
+                      Edit review
+                    </NavLink>
+
+                    <DeleteReview reviewId={review.id} className={'UserReviews-modify-review-button'}/>
+                  </div>
+                </div>
+
+              </div>
             </>
           ))}
+
+          </div>
 
         </div>
 
