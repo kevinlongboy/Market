@@ -110,6 +110,8 @@
     color: #333;
     text-decoration: none;
 }
+
+
 .blurb-card-details-container > p {
     font-size: 14px;
     color: #666;
@@ -131,6 +133,8 @@
     width: 100%;
     display: inline-block;
 }
+
+
 #blurb-card-order-thumbnail {
     width: 60px;
 }
