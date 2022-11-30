@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import { NavLink, useHistory } from "react-router-dom";
 // local files
 import { Modal } from "../../../context/Modal";
-import * as sessionActions from '../../../store/sessionReducer';
 import ProfileButtonModal from "./ProfileButtonModal";
 import './ProfileButton.css'
 

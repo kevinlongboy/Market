@@ -6,7 +6,7 @@
 
     height: 44px;
     min-width: 100px;
-    padding: 0px 20px;
+    padding: 0px 15px;
 
     font-size: 14px;
     border: 0px;
@@ -37,13 +37,86 @@
 
 
 /* MODAL */
-.account-menu-side-panel-container {
+.ProfileButton-modal-container {
     position: fixed;
-    height: 100vh;
     top:0;
-    width: 375px;
-
-    z-index: 1;
     right: 0;
+    z-index: 1;
+
+    height: 100vh;
+    width: 375px;
     background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.ProfileButton-modal-title-container {
+    display: flex;
+    align-items: center;
+
+    height: 64px;
+    font-size: 23px;
+    font-weight: 700;
+    padding-left: 16px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.ProfileButton-modal-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+.ProfileButton-modal-list-container > * {
+    height: 49.71px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    /* border: 1px solid red; */
+    border-bottom: 1px solid rgb(214, 214, 214);
+    text-decoration: none;
+}
+#ProfileButton-modal-list-user-greeting {
+    text-decoration: none;
+}
+
+/* refers to NavLink */
+.ProfileButton-modal-list-container > * > * {
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+.ProfileButton-modal-list-container > * > *:hover {
+    text-decoration: underline;
+}
+
+.ProfileButton-modal-list-container > * > * > :last-child {
+    font-size: 16px;
+    color: #666;
+}
+#ProfileButton-modal-list-SignOut-button{
+    border: 0px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    width: 352px;
+}
+#ProfileButton-modal-list-SignOut-button:hover{
+    text-decoration: underline;
+    color: #333;
 }

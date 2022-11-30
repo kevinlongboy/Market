@@ -30,32 +30,35 @@ function ProfileButtonModal({ user }) {
     menuOptions = (
       <>
         <div>
-          <h1>Account</h1>
-        </div>
-
-        <div>Hello, {user.firstName}</div>
-
-        <div>
-          <NavLink exact to={'/account/orders'}>Orders</NavLink>
-          <p>Track + manage</p>
+          <div id="ProfileButton-modal-list-user-greeting">Hello, {user.firstName}</div>
         </div>
 
         <div>
-          <NavLink exact to={'/account/reviews'}>Reviews</NavLink>
-          <p>See reviews</p>
+          <NavLink exact to={'/account/orders'}>
+            <div>Orders</div>
+            <div>Track + manage</div>
+          </NavLink>
         </div>
 
-        <button onClick={logout}>Sign Out</button>
+        <div>
+          <NavLink exact to={'/account/reviews'}>
+            <div>Reviews</div>
+            <div>See reviews</div>
+          </NavLink>
+        </div>
+
+          <button
+            onClick={logout}
+            id='ProfileButton-modal-list-SignOut-button'
+          >
+            Sign Out
+          </button>
       </>
     )
 
   } else {
     menuOptions = (
       <>
-        <div>
-          <h1>Account</h1>
-        </div>
-
         <div>
           <NavLink exact to={'/login'}>Sign in</NavLink>
         </div>
@@ -70,8 +73,16 @@ function ProfileButtonModal({ user }) {
   /**************** render component *****************/
   return (
     <>
-        <div className="account-menu-side-panel-container">
-          {menuOptions}
+        <div className="ProfileButton-modal-container">
+
+          <div className="ProfileButton-modal-title-container">
+            <p>Account</p>
+          </div>
+
+          <div className="ProfileButton-modal-list-container">
+            {menuOptions}
+          </div>
+
         </div>
     </>
   );
