@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 // local files
-import { thunkReadCart, thunkRemoveSingleProductFromCart } from "../../store/cartReducer";
-import "./Cart.css"
+import { thunkReadCart, thunkRemoveSingleProductFromCart } from "../../../store/cartReducer";
+import "./UserCart.css"
 
 /******************************* COMPONENT *******************************/
-function Cart() {
+function UserCart() {
 
     // When updating qty:
     // - check if delta is > or <
@@ -58,4 +58,4 @@ function Cart() {
 
 
 /******************************** EXPORTS ********************************/
-export default Cart
+export default UserCart

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 // local files
-import { thunkReadSingleDepartmentDetails } from "../../store/departmentsReducer";
-import AddToCart from "../AddToCart";
+import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
+import AddToCart from "../../Cart/AddToCart";
 import "./DepartmentPage.css"
 
 

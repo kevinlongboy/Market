@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 // local files
-import DeleteReview from "../Reviews/DeleteReview"
-import { thunkReadAllUserReviews } from "../../store/reviewsReducer";
+import DeleteReview from "../DeleteReview"
+import { thunkReadAllUserReviews } from "../../../store/reviewsReducer";
 import "./UserReviews.css"
 
 /******************************* COMPONENT *******************************/

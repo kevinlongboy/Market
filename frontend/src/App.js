@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/sessionReducer";
 import NavBarMain from "./components/Navigation/NavBarMain";
 import NavBarAccount from "./components/Navigation/NavBarAccount";
 import Landing from "./components/Landing";
-import Cart from "./components/Cart";
+import UserCart from "./components/Cart/UserCart";
 import Checkout from "./components/Checkout";
-import DepartmentPage from "./components/DepartmentPage";
-import ProductPage from "./components/ProductPage";
-import LoginFormPage from "./components/LoginFormPage";
-import Orders from "./components/Orders";
-import UserReviews from "./components/UserReviews";
-import ReviewCreateForm from "./components/ReviewCreateForm";
-import ReviewUpdateForm from "./components/ReviewUpdateForm";
+import DepartmentPage from "./components/Departments/DepartmentPage";
+import ProductPage from "./components/Products/ProductPage";
+import LoginFormPage from "./components/Session/LoginFormPage";
+import SignupFormPage from "./components/Session/SignupFormPage";
+import UserOrders from "./components/Orders/UserOrders";
+import UserReviews from "./components/Reviews/UserReviews";
+import ReviewCreateForm from "./components/Reviews/ReviewCreateForm";
+import ReviewUpdateForm from "./components/Reviews/ReviewUpdateForm";
 import Footer from "./components/Footer";
-import OrdersDetails from "./components/OrderDetails";
-import OrderConfirmation from "./components/OrderConfirmation";
+import OrdersDetails from "./components/Orders/OrderDetails";
+import OrderConfirmation from "./components/Orders/OrderConfirmation";
+import AccountPage from "./components/AccountPage";
 
 function App() {
 
@@ -61,7 +62,7 @@ function App() {
           </Route>
 
           <Route exact path={'/cart'}>
-            <Cart />
+            <UserCart />
           </Route>
 
           <Route exact path={'/checkout'}>
@@ -72,8 +73,12 @@ function App() {
             <OrderConfirmation />
           </Route>
 
+          <Route exact path={'/account'}>
+            <AccountPage />
+          </Route>
+
           <Route exact path={'/account/orders'}>
-            <Orders />
+            <UserOrders />
           </Route>
 
           <Route exact path={'/orders/:orderId'}>

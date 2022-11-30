@@ -4,43 +4,29 @@ import { useEffect, useState } from "react";
 import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 // local files
-import { thunkReadAllUserReviews, thunkUpdateSingleReview } from "../../store/reviewsReducer";
-import "./ReviewUpdateForm.css"
+import "./ReviewCreateForm.css"
+import { thunkCreateSingleReview } from "../../../store/reviewsReducer";
 
 /******************************* COMPONENT *******************************/
-function ReviewUpdateForm() {
+function ReviewCreateForm() {
 
   /****************** access store *******************/
   const sessionState = useSelector(state => state.session);
   const reviewsState = useSelector(state => state.reviews);
-  console.log("reviewsState", reviewsState)
+  const productsState = useSelector(state => state.products);
 
   /************ key into pertinent values ************/
-  const { reviewId } = useParams()
-  // const departmentId = reviewsState.allReviewsByUser[parseInt(reviewId)].Product.departmentId
-  // const productId = reviewsState.allReviewsByUser[parseInt(reviewId)].id
+  const { productId } = useParams()
+  const departmentId = productsState.singleProductDetails.Department.id
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(thunkReadAllUserReviews());
-  }, [dispatch])
 
   /****************** manage state *******************/
   const [rating, setRating] = useState("★★★★★");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [validationErrors, setValidationErrors] = useState([]);
-
-
-  // set initial input field values as current spot values
-  //   useEffect(() => {
-  //     setRating(currentReview.rating)
-  //     setTitle(currentReview && currentReview.title)
-  //     setDescription(currentReview && currentReview.description)
-  // }, [reviewsState]);
-
 
   // change rating-value
   let incrementCounter = () => {
@@ -101,13 +87,13 @@ function ReviewUpdateForm() {
     setValidationErrors(errors);
     if (errors.length) return
 
-    let updateReviewData = {
+    let createReviewData = {
       rating: rating.length,
       title: title,
       description: description,
     }
 
-    dispatch(thunkUpdateSingleReview(parseInt(reviewId), updateReviewData)).catch(
+    dispatch(thunkCreateSingleReview(parseInt(productId), createReviewData)).catch(
       async (res) => {
 
           const data = await res.json();
@@ -118,23 +104,19 @@ function ReviewUpdateForm() {
           }
       });
 
-      // history.push(`/departments/${departmentId}/products/${productId}`)
+      history.push(`/departments/${departmentId}/products/${productId}`)
   }
 
   /**************** render component *****************/
+  // add redirect error handler: redirect to ReviewUpdateForm component if user already reviewed product
+  return (
+    <div className="page-wrapper-container">
 
-    return (
-      <div className="page-wrapper-container">
+      <div id="ReviewCreateForm-component">
 
-        <div id="ReviewUpdateForm-component">
+          <h1>ReviewCreate Form</h1>
 
-            <h1>ReviewUpdateForm</h1>
-
-
-
-
-
-        <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
 
             <div>
                 <h2>Rating</h2>
@@ -185,7 +167,7 @@ function ReviewUpdateForm() {
                     placeholder="Title"
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
-                    >
+                >
                 </input>
             </label>
 
@@ -202,20 +184,20 @@ function ReviewUpdateForm() {
                     placeholder="Description"
                     onChange={(e) => setDescription(e.target.value)}
                     value={description}
-                    >
+                >
                 </textarea>
             </label>
 
 
            {/* { <div className="errors">
                 {validationErrors.length > 0 &&
-                  validationErrors.map((error) =>
-                  <p className="error-item" key={error}>{error}</p>)}
-                </div>} */}
+                validationErrors.map((error) =>
+                <p className="error-item" key={error}>{error}</p>)}
+            </div>} */}
 
             {validationErrors.map((error, idx) => (
-              <p className="error-item" key={idx}>{error}</p>
-              ))}
+                <p className="error-item" key={idx}>{error}</p>
+            ))}
 
             <button
             id="review-submit-button"
@@ -229,13 +211,16 @@ function ReviewUpdateForm() {
 
 
 
-      </div>
+
+
 
 
       </div>
-    )
+
+    </div>
+  )
 }
 
 
 /******************************** EXPORTS ********************************/
-export default ReviewUpdateForm
+export default ReviewCreateForm

@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 // local files
-import { thunkReadAllUserOrders } from "../../store/ordersReducer";
-import "./Orders.css"
+import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
+import "./UserOrders.css"
 
 /******************************* COMPONENT *******************************/
-function Orders() {
+function UserOrders() {
 
   /****************** access store *******************/
   const ordersState = useSelector(state => state.orders)
@@ -52,4 +52,4 @@ function Orders() {
 
 
 /******************************** EXPORTS ********************************/
-export default Orders
+export default UserOrders

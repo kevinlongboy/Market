@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 // local files
-import ProductReviews from "../Reviews/ProductReviews";
-import { thunkReadSingleProductDetails } from "../../store/productsReducer";
-import { thunkReadAllProductReviews } from "../../store/reviewsReducer";
-import { thunkAddSingleProductToCart } from "../../store/cartReducer";
+import ProductReviews from "../../Reviews/ProductReviews";
+import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
+import { thunkReadAllProductReviews } from "../../../store/reviewsReducer";
+import { thunkAddSingleProductToCart } from "../../../store/cartReducer";
 import "./ProductPage.css"
-import AddToCart from "../AddToCart";
+import AddToCart from "../../Cart/AddToCart";
 
 
 /******************************* COMPONENT *******************************/
