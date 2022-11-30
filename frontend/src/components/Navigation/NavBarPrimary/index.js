@@ -2,10 +2,10 @@
 // libraries
 
 // local files
-import "./NavBarMain.css"
+import "./NavBarPrimary.css"
 
 /******************************* COMPONENT *******************************/
-function NavBarMain() {
+function NavBarPrimary() {
 
     return (
       <div className="NavBarMain-wrapper-container">
@@ -30,4 +30,4 @@ function NavBarMain() {
 
 
 /******************************** EXPORTS ********************************/
-export default NavBarMain
+export default NavBarPrimary

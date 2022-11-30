@@ -29,9 +29,17 @@ function ProfileButtonModal({ user }) {
   if (user) {
     menuOptions = (
       <>
-        <div>
+        {/* <div>
           <div id="ProfileButton-modal-list-user-greeting">Hello, {user.firstName}</div>
+        </div> */}
+
+        <div>
+          <NavLink exact to={'/account'}>
+            <div>Account </div>
+            <div>Hello, {user.firstName}</div>
+          </NavLink>
         </div>
+
 
         <div>
           <NavLink exact to={'/account/orders'}>
@@ -91,3 +99,11 @@ function ProfileButtonModal({ user }) {
 
 /******************************** EXPORTS ********************************/
 export default ProfileButtonModal;
+
+
+// ✨
+// can also be reused in lieu of NavBarAccount
+// this component would require receiving an object of classNames/css selectors
+// via props
+// to render different styling depending on which component is wrapping it
+// IE: if this component appears a modal or inline/same z-index

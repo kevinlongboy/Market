@@ -1,52 +1,70 @@
 /******************************** IMPORTS ********************************/
 // libraries
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import React, { useState, useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import { NavLink, Redirect, useHistory } from "react-router-dom";
 // local files
-import ProfileButton from '../ProfileButton';
-import CategoriesButton from '../CategoriesButton';
-import './NavBarAccount.css';
+import * as sessionActions from '../../../store/sessionReducer';
+import './NavBarAccount.css'
 
 
 /******************************* COMPONENT *******************************/
-function NavBarAccount({ isLoaded }){
+function NavBarAccount({ user }) {
 
-  /****************** access store *******************/
-  const sessionUser = useSelector(state => state.session.user);
+  /************ reducer/API communication ************/
+  const dispatch = useDispatch();
+
+  /***************** handle events *******************/
+  const history = useHistory();
 
   /**************** render component *****************/
   return (
+        <div className="NavBarAccount-container">
 
-    <div className="NavBarAccount-wrapper-container">
-      <div id='NavBarAccount-component'>
-
-
-        <div className='NavBarAccount-left'>
-            <NavLink exact to="/">Logo</NavLink>
-            <CategoriesButton />
-        </div>
-
-
-        <div className='NavBarAccount-right'>
-          <ProfileButton user={sessionUser} />
-          {/* <ProfileButton /> */}
-
-
-          <NavLink exact to="/cart">
-            <div id="NavBarAccount-cart-button-container">
-              <i class="fa-solid fa-cart-shopping" id='NavBarAccount-cart-button'></i>
+            <div className="NavBarAccount-title-container">
+                <div id="NavBarAccount-title-user-greeting">Hello, {user.firstName}</div>
+                <div id="NavBarAccount-title-account-createdAt">Account since May 2, 2012</div>
             </div>
-          </NavLink>
+
+            <div className="NavBarAccount-list-container">
+
+                <div>
+                <NavLink exact to={'/account'}>
+                    <div>Account </div>
+                    <div>Overview</div>
+                </NavLink>
+                </div>
+
+                <div>
+                <NavLink exact to={'/account/orders'}>
+                    <div>Orders</div>
+                    <div>Track, manage, & return</div>
+                </NavLink>
+                </div>
+
+                <div>
+                <NavLink exact to={'/account/reviews'}>
+                    <div>Rate & review</div>
+                    <div>See reviews</div>
+                </NavLink>
+                </div>
+
+
+            </div>
+
         </div>
-
-        {/* {isLoaded && sessionLinks} */}
-
-      </div>
-    </div>
   );
 }
 
 
 /******************************** EXPORTS ********************************/
 export default NavBarAccount;
+
+
+/********* Notes from ProfileButtonModal: *********/
+// ✨
+// can also be reused in lieu of NavBarAccount
+// this component would require receiving an object of classNames/css selectors
+// via props
+// to render different styling depending on which component is wrapping it
+// IE: if this component appears a modal or inline/same z-index

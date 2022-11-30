@@ -5,16 +5,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 // local files
 import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
+import NavBarAccount from "../../Navigation/NavBarAccount";
 import "./UserOrders.css"
 
 /******************************* COMPONENT *******************************/
 function UserOrders() {
 
   /****************** access store *******************/
+  const user = useSelector(state => state.session.user);
   const ordersState = useSelector(state => state.orders)
-  console.log("ordersState", ordersState)
   const orders = Object.values(ordersState.allOrdersByUser)
-  console.log("orders", orders)
 
 
   /************ reducer/API communication ************/
@@ -29,6 +29,8 @@ function UserOrders() {
     <div className="page-wrapper-container">
 
       <div id="Orders-component">
+        <NavBarAccount user={user} />
+
 
           <h1>Orders</h1>
 

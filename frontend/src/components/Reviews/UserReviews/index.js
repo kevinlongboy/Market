@@ -7,11 +7,13 @@ import { Link, NavLink, useParams } from "react-router-dom";
 import DeleteReview from "../DeleteReview"
 import { thunkReadAllUserReviews } from "../../../store/reviewsReducer";
 import "./UserReviews.css"
+import NavBarAccount from "../../Navigation/NavBarAccount";
 
 /******************************* COMPONENT *******************************/
 function UserReviews() {
 
   /****************** access store *******************/
+  const user = useSelector(state => state.session.user);
   const reviewsState = useSelector(state => state.reviews)
   const reviews = Object.values(reviewsState.allReviewsByUser)
 
@@ -33,6 +35,9 @@ function UserReviews() {
       <div className="page-wrapper-container">
 
         <div id="Reviews-component">
+
+            <NavBarAccount user={user} />
+
 
             <h1>Reviews</h1>
 

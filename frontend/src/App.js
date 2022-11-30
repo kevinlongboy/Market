@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import * as sessionActions from "./store/sessionReducer";
-import NavBarMain from "./components/Navigation/NavBarMain";
-import NavBarAccount from "./components/Navigation/NavBarAccount";
+// components
+import NavBarPrimary from "./components/Navigation/NavBarPrimary";
+import NavBarSecondary from "./components/Navigation/NavBarSecondary";
 import Landing from "./components/Landing";
 import UserCart from "./components/Cart/UserCart";
 import Checkout from "./components/Checkout";
@@ -15,10 +16,10 @@ import UserOrders from "./components/Orders/UserOrders";
 import UserReviews from "./components/Reviews/UserReviews";
 import ReviewCreateForm from "./components/Reviews/ReviewCreateForm";
 import ReviewUpdateForm from "./components/Reviews/ReviewUpdateForm";
-import Footer from "./components/Footer";
-import OrdersDetails from "./components/Orders/OrderDetails";
+import OrderDetails from "./components/Orders/OrderDetails";
 import OrderConfirmation from "./components/Orders/OrderConfirmation";
 import AccountPage from "./components/AccountPage";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -35,8 +36,8 @@ function App() {
 
   return (
     <>
-      <NavBarMain isLoaded={isLoaded} />
-      <NavBarAccount isLoaded={isLoaded} />
+      <NavBarPrimary isLoaded={isLoaded} />
+      <NavBarSecondary isLoaded={isLoaded} />
 
       {isLoaded && (
         <Switch>
@@ -82,7 +83,7 @@ function App() {
           </Route>
 
           <Route exact path={'/orders/:orderId'}>
-            <OrdersDetails />
+            <OrderDetails />
           </Route>
 
           <Route exact path={'/account/reviews'}>
