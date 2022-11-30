@@ -24,30 +24,55 @@ function UserOrders() {
       dispatch(thunkReadAllUserOrders());
   }, [dispatch])
 
+
   /**************** render component *****************/
   return (
     <div className="page-wrapper-container">
 
-      <div id="Orders-component">
-        <NavBarAccount user={user} />
+      <div id="UserOrders-component">
+          {/* <NavBarAccount user={user} /> */}
 
-
-          <h1>Orders</h1>
-
-          {orders && orders.map((order) => (
-            <>
-              <NavLink exact to={`/orders/${order.id}`}>
-                <p>Order Number: {order.id}</p>
-                <p>Status: {order.status}</p>
-                <p>Total: {order.total}</p>
-                {/* <p>{order.Products}</p> */}
-                <br></br>
+          <div className="UserReviews-directory-container">
+              <NavLink exact to={'/account'} id="UserReviews-Account-redirect-button">
+                <i class="fa-solid fa-chevron-left"></i>
+                Account
               </NavLink>
-            </>
-          ))}
+          </div>
+
+          <div className="UserReviews-title-container">
+            <div className="UserReviews-title">Order history</div>
+          </div>
+
+
+
+            {orders && orders.map((order) => (
+              <>
+
+                <div className='blurb-card-title-container'>
+                  <div>{order.createdAt}</div>
+                  <NavLink
+                    exact
+                    to={`/orders/${order.id}`}
+                    id='blurb-card-title-redirect'
+                  >
+                    View order
+                  </NavLink>
+                </div>
+
+                <div className='blurb-card-details-container'>
+                  <p>${order.total}</p>
+                  <p>Order: {order.id}</p>
+                  <div>
+                    <i class="fa-solid fa-check"></i>
+                    {order.status}
+                  </div>
+                </div>
+              </>
+
+            ))}
+
 
       </div>
-
     </div>
   )
 }
