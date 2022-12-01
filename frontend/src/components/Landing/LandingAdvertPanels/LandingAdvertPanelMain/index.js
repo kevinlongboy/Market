@@ -25,7 +25,7 @@ function LandingAdvertPanelMain() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-      dispatch(thunkReadSingleDepartmentDetails(4));
+      dispatch(thunkReadSingleDepartmentDetails(5));
   }, [dispatch])
 
 
@@ -59,7 +59,9 @@ function LandingAdvertPanelMain() {
                             id="LandingAdvertPanelMain-thumbnail">
                         </img>
                         <div id="main-panel-list-item-price">${product.price}</div>
-                        <div id="main-panel-list-item-name">{product.name}</div>
+                        <div id="main-panel-list-item-name-container">
+                            <div id="main-panel-list-item-name">{product.name}</div>
+                        </div>
                     </NavLink>
                 </div>
             ))}

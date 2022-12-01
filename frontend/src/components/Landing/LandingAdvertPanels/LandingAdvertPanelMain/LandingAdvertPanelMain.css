@@ -41,7 +41,7 @@
     align-items: center;
     overflow-y: scroll;
     background-color: #252525;
-    padding: 5px 0px;
+    padding: 0px;
 }
 .main-panel-scroll-title {
     height: 280px;
@@ -103,8 +103,11 @@
     padding: 10px 0px;
 }
 #main-panel-list-item-name {
+    min-height: 50px;
+    /* background-color: red; */
+}
+#main-panel-list-item-name {
     color: #333;
-    max-height: 42px;
     text-overflow: ellipsis;
     text-align: center;
 }

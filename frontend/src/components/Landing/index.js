@@ -8,6 +8,8 @@ import { thunkReadAllDepartments } from "../../store/departmentsReducer";
 import "./Landing.css"
 import LandingAdvertDepartmentList from "./LandingAdvertPanels/LandingAdvertDepartmentList";
 import LandingAdvertPanelMain from "./LandingAdvertPanels/LandingAdvertPanelMain";
+import LandingAdvertPanelSubLeft from "./LandingAdvertPanels/LandingAdvertPanelSubLeft";
+import LandingAdvertPanelSubRight from "./LandingAdvertPanels/LandingAdvertPanelSubRight";
 
 
 /******************************* COMPONENT *******************************/
@@ -30,7 +32,7 @@ function Landing() {
 
   /**************** render component *****************/
   return (
-    <div className="page-wrapper-container">
+    <div className="landing-wrapper-container">
 
       <div id="Landing-component">
 
@@ -38,10 +40,18 @@ function Landing() {
 
 
           <div className="secondary-panels">
+            <div className="secondary-panel-left">
+              <LandingAdvertPanelSubLeft />
+            </div>
 
+            <div className="secondary-panel-right">
+              <LandingAdvertPanelSubRight />
+            </div>
           </div>
 
-          <LandingAdvertDepartmentList />
+          <div className="dept-panel">
+            <LandingAdvertDepartmentList />
+          </div>
       </div>
 
     </div>
