@@ -8,6 +8,7 @@ import { thunkReadAllUserOrders } from '../../store/ordersReducer';
 import { thunkReadAllUserReviews } from '../../store/reviewsReducer';
 import "./AccountPage.css"
 import { NavLink } from 'react-router-dom';
+import { convertExactDate } from '../../component-resources';
 
 /******************************* COMPONENT *******************************/
 function AccountPage() {
@@ -44,7 +45,7 @@ function AccountPage() {
       <>
         <div className='blurb-card-title-container'>
 
-          <div>{mostRecentOrder.createdAt}</div>
+          <div>{convertExactDate(mostRecentOrder.createdAt)}</div>
             <NavLink
               exact
               to={`/orders/${mostRecentOrder.id}`}
@@ -57,7 +58,8 @@ function AccountPage() {
 
         <div className='blurb-card-details-container'>
           <p>${mostRecentOrder.total}</p>
-          <p>Order: {mostRecentOrder.id}</p>
+          <p>{mostRecentOrder && mostRecentOrder.id}</p>
+          {/* <p>{mostRecentOrder && (mostRecentOrder.id).toString.padStart(12 , '0')}</p> */}
           <div>
             <i class="fa-solid fa-check"></i>
             {mostRecentOrder.status}
@@ -102,7 +104,7 @@ function AccountPage() {
 
         <div className='blurb-card-details-container'>
           <p>{mostRecentReview.rating}</p>
-          <p>{mostRecentReview.createdAt}</p>
+          <p>{mostRecentReview && convertExactDate(mostRecentReview.createdAt)}</p>
         </div>
 
         <div id='blurb-card-review-description'>

@@ -15,8 +15,9 @@ function UserReviews() {
   /****************** access store *******************/
   const user = useSelector(state => state.session.user);
   const reviewsState = useSelector(state => state.reviews)
-  const reviews = Object.values(reviewsState.allReviewsByUser)
 
+  /************ key into pertinent values ************/
+  const reviews = Object.values(reviewsState.allReviewsByUser)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -25,12 +26,8 @@ function UserReviews() {
       dispatch(thunkReadAllUserReviews());
   }, [dispatch, reviewsState])
 
-  /***************** handle events *******************/
-
-
 
   /**************** render component *****************/
-
     return (
       <div className="page-wrapper-container">
 

@@ -23,17 +23,23 @@
 
     padding: 12px;
 
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+
+    display: flex;
+    flex-direction: column;
 }
 
 .AccountPage-orders-blurb {
-    grid-row: 1 / 2;
+    /* grid-row: 1 / 2; */
 }
 
 .AccountPage-reviews-blurb {
-    grid-row: 2 / 3;
+    /* grid-row: 2 / 3; */
+    /* apply margin if flex; no margin if grid */
+    margin: 40px 0px;
+
 }
 
 .AccountPage-blurb-title-container {

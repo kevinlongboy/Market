@@ -2,11 +2,10 @@
 // libraries
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useParams } from "react-router-dom";
-import { convertDate, convertExactDate, normalizeArray } from "../../../component-resources";
+import { NavLink, useParams } from "react-router-dom";
+import { convertExactDate, normalizeArray } from "../../../component-resources";
 // local files
 import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
-import NavBarAccount from "../../Navigation/NavBarAccount";
 import "./UserOrders.css"
 
 /******************************* COMPONENT *******************************/
@@ -15,20 +14,9 @@ function UserOrders() {
   /****************** access store *******************/
   const user = useSelector(state => state.session.user);
   const ordersState = useSelector(state => state.orders)
+
+  /************ key into pertinent values ************/
   const orders = Object.values(ordersState.allOrdersByUser)
-
-  console.log("orders", orders)
-  let orderProducts = []
-  orders.forEach(order => {
-    orderProducts.push(order.Products)
-  })
-  let normalizedOrderProducts = normalizeArray(orderProducts)
-  console.log("normalizedOrderProducts", normalizedOrderProducts.undefined)
-
-  function getPreviewImage(orderId) {
-    return normalizedOrderProducts.undefined.orderId.previewImage
-  }
-
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -57,11 +45,13 @@ function UserOrders() {
             <div className="UserOrders-title-location">Online</div>
           </div>
 
+          <div className="UserOrders-cards-list-container">
+
             {orders && orders.map((order) => {
 
               return (
 
-              <div className='UserOrders-card-container'>
+                <div className='UserOrders-card-container'>
 
                 <div className='UserOrders-card-title-container'>
                   <div>{convertExactDate(order.createdAt)}</div>
@@ -70,7 +60,7 @@ function UserOrders() {
                     exact
                     to={`/orders/${order.id}`}
                     id='UserOrders-card-title-redirect'
-                  >
+                    >
                     View order
                   </NavLink>
                 </div>
@@ -89,17 +79,17 @@ function UserOrders() {
                   console.log("product", product)
                   return (
 
-                      // <NavLink exact path={`/departments/${product.departmentId}/products/${product.id}`}>
+                    <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`}>
                         <img src={product.previewImage} className="UserOrders-card-thumbnail"></img>
-                      // </NavLink>
+                      </NavLink>
                     )
-                })}
+                  })}
                 </div>
 
               </div>
-
-            )
-            })}
+          )
+          })}
+          </div>
 
 
       </div>
