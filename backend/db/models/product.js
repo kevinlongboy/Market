@@ -24,6 +24,10 @@ module.exports = (sequelize, DataTypes) => {
 
   Product.init(
     {
+      userId: {
+        type: DataTypes.INTEGER,
+        // allowNull: false,
+      },
     departmentId: {
       type: DataTypes.INTEGER,
       allowNull: false,
