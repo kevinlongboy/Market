@@ -31,6 +31,7 @@ router.get('/', requireAuth, async(req, res) => {
             },
             raw: true
         })
+        console.log("getAllOrders", getAllOrders)
 
         // handle error: missing order
         // if (!getAllOrders.length) {

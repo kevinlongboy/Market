@@ -16,18 +16,14 @@ module.exports = (sequelize, DataTypes) => {
       Product.hasMany(models.Review, { foreignKey:'productId', onDelete: 'CASCADE', hooks: true })
       Product.belongsTo(models.Department, { foreignKey: 'departmentId' })
       // join table
-      Product.belongsToMany(models.User, { through: models.Cart })
-      Product.belongsToMany(models.Order, { through: models.OrderDetail })
+      Product.belongsToMany(models.User, { through: models.Cart, foreignKey: 'productId', otherKey: 'userId' })
+      Product.belongsToMany(models.Order, { through: models.OrderDetail , foreignKey: 'productId', otherKey: 'orderId'})
     }
   }
 
 
   Product.init(
     {
-      userId: {
-        type: DataTypes.INTEGER,
-        // allowNull: false,
-      },
     departmentId: {
       type: DataTypes.INTEGER,
       allowNull: false,

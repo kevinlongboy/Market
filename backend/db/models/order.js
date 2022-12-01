@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Order.belongsTo(models.User, { foreignKey: 'userId' })
       // join table
-      Order.belongsToMany(models.Product, { through: models.OrderDetail })
+      Order.belongsToMany(models.Product, { through: models.OrderDetail, foreignKey: 'orderId', otherKey: 'productId' })
     }
   }
 
