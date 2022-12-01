@@ -58,8 +58,8 @@ function LandingAdvertPanelMain() {
                             src={product.previewImage}
                             id="LandingAdvertPanelMain-thumbnail">
                         </img>
-                        <div>{product.price}</div>
-                        <div className="main-panel-list-item-name">{product.name}</div>
+                        <div id="main-panel-list-item-price">${product.price}</div>
+                        <div id="main-panel-list-item-name">{product.name}</div>
                     </NavLink>
                 </div>
             ))}

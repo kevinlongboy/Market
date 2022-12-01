@@ -64,10 +64,11 @@
 .main-panel-list {
     display: flex;
     flex-direction: row;
+    padding: 0px 10px;
 }
 .main-panel-list-item-container{
     height: 280px;
-    width: 150px;
+    width: 180px;
 
     display: flex;
     flex-direction: column;
@@ -85,6 +86,9 @@
 
     margin: 0px 5px;
     background-color: #fff;
+
+    font-size: 12px;
+    text-decoration: none;
 }
 
 #LandingAdvertPanelMain-thumbnail {
@@ -93,5 +97,14 @@
 
     text-decoration: none;
 }
-.main-panel-list-item-name {
+#main-panel-list-item-price {
+    color: #c44237;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+#main-panel-list-item-name {
+    color: #333;
+    max-height: 42px;
+    text-overflow: ellipsis;
+    text-align: center;
 }
