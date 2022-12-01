@@ -1,0 +1,31 @@
+.LandingAdvertPanelMain-component {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0px;
+    padding: 0px 20px;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.LandingAdvertPanelMain-title{
+    width: 100%;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.LandingAdvertPanelMain-panel {
+    width: 100%;
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    overflow-x: scroll;
+}
+#LandingAdvertPanelMain-thumbnail {
+    width: 150px;
+}

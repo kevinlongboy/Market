@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { thunkReadAllDepartments } from "../../store/departmentsReducer";
 import "./Landing.css"
 import LandingAdvertDepartmentList from "./LandingAdvertPanels/LandingAdvertDepartmentList";
+import LandingAdvertPanelMain from "./LandingAdvertPanels/LandingAdvertPanelMain";
 
 
 /******************************* COMPONENT *******************************/
@@ -35,7 +36,13 @@ function Landing() {
 
           <h1>Landing</h1>
 
-          
+          <LandingAdvertPanelMain />
+
+
+          <div className="secondary-panels">
+
+          </div>
+
           <LandingAdvertDepartmentList />
       </div>
 

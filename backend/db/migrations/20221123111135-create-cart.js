@@ -4,7 +4,7 @@
 
 module.exports = {
 
-  async up(queryInterface, Sequelize) {
+  up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Carts', {
       id: {
         allowNull: false,
@@ -37,7 +37,7 @@ module.exports = {
     });
   },
 
-  async down(queryInterface, Sequelize) {
+  down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Carts');
   }
 };

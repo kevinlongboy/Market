@@ -3,7 +3,8 @@
 
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
+
+  up: async (queryInterface, Sequelize) => {
     /**
      * Add altering commands here.
      *
@@ -21,7 +22,7 @@ module.exports = {
     )
   },
 
-  async down (queryInterface, Sequelize) {
+  down: async (queryInterface, Sequelize) => {
     /**
      * Add reverting commands here.
      *
