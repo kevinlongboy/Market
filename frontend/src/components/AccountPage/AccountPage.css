@@ -33,12 +33,13 @@
 
 .AccountPage-orders-blurb {
     /* grid-row: 1 / 2; */
+    margin-bottom: 20px;
 }
 
 .AccountPage-reviews-blurb {
     /* grid-row: 2 / 3; */
     /* apply margin if flex; no margin if grid */
-    margin: 40px 0px;
+    margin-top: 20px;
 
 }
 
