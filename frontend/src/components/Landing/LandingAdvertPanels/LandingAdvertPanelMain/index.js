@@ -25,7 +25,7 @@ function LandingAdvertPanelMain() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-      dispatch(thunkReadSingleDepartmentDetails(5));
+      dispatch(thunkReadSingleDepartmentDetails(4));
   }, [dispatch])
 
 
@@ -34,28 +34,37 @@ function LandingAdvertPanelMain() {
 
       <div id="LandingAdvertPanelMain-component">
 
-        <div className="LandingAdvertPanelMain-title">
-            <div>Holiday deals</div>
-            <div>Score incredible deals on holiday must-haves</div>
-            <div><button>Get the deals now</button></div>
+        <div className="LandingAdvertPanelMain-title-container">
+            <div className="LandingAdvertPanelMain-title">Holiday <span style={{color:'#fff'}}>deals</span></div>
+            <div className="LandingAdvertPanelMain-subtitle">Score incredible deals on holiday must-haves</div>
+            {/* <div><button>Get the deals now</button></div> */}
         </div>
 
         <div className="LandingAdvertPanelMain-panel">
-            <div>Holiday Top Picks</div>
+            <div className="main-panel-scroll-title">
+                <p>Holiday</p>
+                <p>Top Picks</p>
+            </div>
 
-            <div>
+            <div className="main-panel-list">
             {products && products.map((product) => (
-                <div>
-                    <img
-                        src={product.previewImage}
-                        id="LandingAdvertPanelMain-thumbnail">
-                    </img>
-                    <div>{product.price}</div>
-                    <div>{product.name}</div>
+
+                <div className="main-panel-list-item-container">
+                    <NavLink
+                    exact
+                    to={`/departments/${product.departmentId}/products/${product.id}`}
+                    >
+                        <img
+                            src={product.previewImage}
+                            id="LandingAdvertPanelMain-thumbnail">
+                        </img>
+                        <div>{product.price}</div>
+                        <div className="main-panel-list-item-name">{product.name}</div>
+                    </NavLink>
                 </div>
             ))}
-
             </div>
+
         </div>
 
 

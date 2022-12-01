@@ -1,4 +1,4 @@
-.LandingAdvertPanelMain-component {
+#LandingAdvertPanelMain-component {
     width: 100%;
     max-width: 1400px;
 
@@ -10,22 +10,88 @@
     align-items: center;
 }
 
-.LandingAdvertPanelMain-title{
+.LandingAdvertPanelMain-title-container {
     width: 100%;
+    height: 200px;
 
     display: flex;
     flex-direction:column;
     align-items: center;
+
+    padding: 40px 0px;
+    background-color: black;
+}
+.LandingAdvertPanelMain-title {
+    font-size: 117px;
+    font-weight: 700;
+    color: #62cbd1;
+}
+.LandingAdvertPanelMain-subtitle {
+    font-size: 29px;
+    color: #fff;
+    font-weight: 700;
 }
 
 .LandingAdvertPanelMain-panel {
     width: 100%;
+    height: 300px;
 
     display: flex;
-    flex-direction:column;
+    flex-direction: row;
     align-items: center;
-    overflow-x: scroll;
+    overflow-y: scroll;
+    background-color: #252525;
+    padding: 5px 0px;
 }
-#LandingAdvertPanelMain-thumbnail {
+.main-panel-scroll-title {
+    height: 280px;
+    min-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+}
+.main-panel-scroll-title > * {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-panel-list {
+    display: flex;
+    flex-direction: row;
+}
+.main-panel-list-item-container{
+    height: 280px;
     width: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 5px;
+    background-color: #fff;
+}
+.main-panel-list-item-container > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 5px;
+    background-color: #fff;
+}
+
+#LandingAdvertPanelMain-thumbnail {
+    width: 130px;
+    object-fit: cover;
+
+    text-decoration: none;
+}
+.main-panel-list-item-name {
 }
