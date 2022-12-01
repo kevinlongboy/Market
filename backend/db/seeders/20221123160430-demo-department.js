@@ -8,42 +8,52 @@ const demoDepartments = [
   {
     id: 1,
     name: "Personal Care",
+    url: 'https://target.scene7.com/is/image/Target/5xu01-OralCare-QUIVER-190614-1560545529967?wid=167&hei=167&qlt=100&fmt=webp'
   },
   {
     id: 2,
     name: "Home",
+    url: 'https://target.scene7.com/is/image/Target/GUEST_9512d468-bf4c-4970-86ca-db3f78cf2136?wid=167&hei=167&qlt=100&fmt=webp'
   },
   {
     id: 3,
     name: "Kitchen & Dining",
+    url: 'https://target.scene7.com/is/image/Target/KitchenDining-210913-1631564122569?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 4,
     name: "Grocery",
+    url: 'https://target.scene7.com/is/image/Target/Grocery219475-200305_1583423555572?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 5,
     name: "Electronics",
+    url: 'https://target.scene7.com/is/image/Target/GUEST_e3b11a2a-a085-4693-853f-c19e52073c94?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 6,
     name: "Video Games",
+    url: 'https://target.scene7.com/is/image/Target/Sept_Wk5-0930-Video_Games-Nintendo-CB-Consoles143381-180910_1536591280324?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 7,
     name: "Sports & Outdoors",
+    url: 'https://target.scene7.com/is/image/Target/Sports_Outdoors219475-200305_1583425943604?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 8,
     name: "Pets",
+    url: 'https://target.scene7.com/is/image/Target/BUBCAT_TemplateBubcat_PetsNewArrivals-210422-1619124416688?wid=167&hei=167&qlt=100&fmt=webp'
   },
   {
     id: 9,
     name: "Furniture",
+    url: 'https://target.scene7.com/is/image/Target/Furniture-210913-1631566212856?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 10,
     name: "Clearance",
+    url: 'https://target.scene7.com/is/image/Target/clearance97188-171020_1508525411214?wid=315&hei=315&qlt=60&fmt=webp'
   },
 ]
 
