@@ -8,12 +8,12 @@ const demoDepartments = [
   {
     id: 1,
     name: "Personal Care",
-    url: 'https://target.scene7.com/is/image/Target/5xu01-OralCare-QUIVER-190614-1560545529967?wid=167&hei=167&qlt=100&fmt=webp'
+    url: 'https://target.scene7.com/is/image/Target/Beauty181103-190722_1563828945271?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 2,
     name: "Home",
-    url: 'https://target.scene7.com/is/image/Target/GUEST_9512d468-bf4c-4970-86ca-db3f78cf2136?wid=167&hei=167&qlt=100&fmt=webp'
+    url: 'https://target.scene7.com/is/image/Target/HouseholdEssentials_Tide-200519-1589915606672?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const demoDepartments = [
   {
     id: 8,
     name: "Pets",
-    url: 'https://target.scene7.com/is/image/Target/BUBCAT_TemplateBubcat_PetsNewArrivals-210422-1619124416688?wid=167&hei=167&qlt=100&fmt=webp'
+    url: 'https://target.scene7.com/is/image/Target/Toys219475-200305_1583423532760?wid=315&hei=315&qlt=60&fmt=webp'
   },
   {
     id: 9,

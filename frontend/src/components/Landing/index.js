@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 // local files
 import { thunkReadAllDepartments } from "../../store/departmentsReducer";
 import "./Landing.css"
+import LandingAdvertDepartmentList from "./LandingAdvertPanels/LandingAdvertDepartmentList";
 
 
 /******************************* COMPONENT *******************************/
@@ -33,15 +34,7 @@ function Landing() {
       <div id="Landing-component">
 
           <h1>Landing</h1>
-
-          {allDepartments && allDepartments.map((dept) => (
-            <Link
-              key={`${dept.id}`}
-              to={`/departments/${dept.id}`}
-            >
-              {dept.name}
-            </Link>
-          ))}
+          <LandingAdvertDepartmentList />
       </div>
 
     </div>
