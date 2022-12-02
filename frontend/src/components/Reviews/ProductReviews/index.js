@@ -9,47 +9,59 @@ import { thunkReadAllProductReviews } from "../../../store/reviewsReducer";
 import "./ProductReviews.css"
 
 /******************************* COMPONENT *******************************/
-function ProductReviews() {
+function ProductReviews({product}) {
 
   /****************** access store *******************/
   const reviewsState = useSelector(state => state.reviews)
-  console.log("reviewsState", reviewsState)
-  const reviews = Object.values(reviewsState.singleProductReviews)
-  console.log("reviews", reviews)
 
   /************ key into pertinent values ************/
-  const { productId } = useParams();
+  const reviews = Object.values(reviewsState.singleProductReviews)
+  console.log("reviews", reviews)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
 
   useEffect(() => {
-      dispatch(thunkReadAllProductReviews(productId));
+      dispatch(thunkReadAllProductReviews(product.id));
   }, [dispatch])
 
   /**************** render component *****************/
 
     return (
-      <div className="page-wrapper-container">
 
         <div id="Reviews-component">
 
-            <h2>Reviews</h2>
+          <div className="Reviews-ratings-blurb-container">
+            <h2>Guest Ratings & Reviews</h2>
+            <div>{product.avgRating}</div>
+            <p>{product.numReviews} start ratings</p>
+          </div>
+
+
+        <div className="Reviews-ratings-count-container">
+          We found {product.numReviews}  matching reviews
+        </div>
+
+        <div className="Reviews-list-container">
 
             {reviews && reviews.map((review) => (
-            <>
-              <h3>{review.title}</h3>
-              <p>Rating: {review.rating}</p>
-              <p>{review.description}</p>
-              <p>{review.User.firstName} {review.User.lastName[0]}</p>
-              <p>{review.createdAt && convertDate(review.createdAt)}</p>
-              <br></br>
-            </>
+              <div className="Reviews-list-item-container">
+                <div id="Reviews-list-item-title">{review.title}</div>
+
+                <p id="Reviews-list-item-rating">Rating: {review.rating}</p>
+
+                <div id="Reviews-list-item-user-info">
+                  <p>{review.User.firstName} {review.User.lastName[0]}</p>
+                  <p>{review.createdAt && convertDate(review.createdAt)}</p>
+                </div>
+
+                <p id="Reviews-list-item-user-description">{review.description}</p>
+            </div>
           ))}
+          </div>
 
         </div>
 
-      </div>
     )
 }
 

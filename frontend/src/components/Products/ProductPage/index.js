@@ -136,10 +136,12 @@ function ProductPage() {
 
         </div>
 
-      <ProductReviews />
+      <ProductReviews product={product}/>
 
       {/* add condition to remove button if users already has reviewed item */}
-      <NavLink exact to={`/products/${product.id}/add-review`}><button>Write a review</button></NavLink>
+      <NavLink exact to={`/products/${product.id}/add-review`} id="review-button-link">
+        <button id="ProductPage-write-a-review-button">Write a review</button>
+      </NavLink>
 
       </div>
     </div>
