@@ -139,10 +139,20 @@ function UserCart() {
         </div>
       </div>
 
+
+        <div className="Cart-checkout-button-container">
+          <NavLink exact to={`/signup`}>
+            <button
+            className='Cart-checkout-button'
+            id='Cart-checkout-button'
+            >
+              Check out
+            </button>
+          </NavLink>
+        </div>
+
         </div>
       </div>
-
-
     </div>
   )
 }
