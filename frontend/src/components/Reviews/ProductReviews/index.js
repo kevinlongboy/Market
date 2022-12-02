@@ -34,7 +34,7 @@ function ProductReviews({product}) {
           <div className="Reviews-ratings-blurb-container">
             <h2>Guest Ratings & Reviews</h2>
             <div>{product.avgRating}</div>
-            <p>{product.numReviews} start ratings</p>
+            <p>{product.numReviews} star ratings</p>
           </div>
 
 

@@ -64,7 +64,7 @@ export const thunkRemoveSingleProductFromCart = (cartId) => async (dispatch) => 
 /***************************** STATE SHAPE *******************************/
 const initialState = {
     allProductsByUser: {
-        Products: []
+        Products: {}
     }
 }
 
@@ -78,10 +78,7 @@ const cartReducer = (state = initialState, action) => {
 
         case CART_READ_CART:
             newState.allProductsByUser = {...action.payload}
-                console.log("action.payload", action.payload)
                 newState.allProductsByUser.Products = [...action.payload.Products]
-                console.log("action.payload", action.payload)
-                console.log("newState", newState)
             return newState
 
         case CART_ADD_SINGLE_PRODUCT_TO_CART:

@@ -80,7 +80,7 @@ router.get('/', requireAuth, async(req, res) => {
         .status(200)
         .json({
             "userId": parseInt(currentUserId),
-            "subtotal": subtotal,
+            "subtotal": (subtotal).toFixed(2),
             "Products": getAllCartItems
         })
 

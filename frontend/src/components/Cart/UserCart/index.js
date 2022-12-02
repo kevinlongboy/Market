@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 // local files
 import { thunkReadCart, thunkRemoveSingleProductFromCart } from "../../../store/cartReducer";
+import RemoveFromCart from "../RemoveFromCart";
 import "./UserCart.css"
 
 /******************************* COMPONENT *******************************/
@@ -17,15 +18,16 @@ function UserCart() {
 
 
   /****************** access store *******************/
-  const cartState = useSelector(state => state.cart)
-  const products = Object.values(cartState.allProductsByUser.Products)
+  const cart = useSelector(state => state.cart.allProductsByUser)
+  const products = Object.values(cart.Products)
+  console.log("products", products)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
 
   useEffect(() => {
       dispatch(thunkReadCart());
-  }, [dispatch, cartState])
+  }, [dispatch, cart])
 
   /***************** handle events *******************/
   function removeItem(cartId) {
@@ -39,18 +41,107 @@ function UserCart() {
 
       <div id="Cart-component">
 
-          <h1>Cart</h1>
-          {products && products.map((product) => (
-            <>
-              <p>{product.name}</p>
-              <button onClick={(e) => removeItem(product.cartId)}>remove from cart</button>
-            </>
+        <div className="Cart-left-panel">
+
+
+
+        <div className="Cart-head-container">
+          <div className="Cart-title">Cart</div>
+          <div className="Cart-details-container">
+            <div>${cart && cart.subtotal} subtotal</div>
+            <div>●</div>
+            <div>{products.length} items</div>
+          </div>
+        </div>
+
+
+
+        <div className='Cart-card-container'>
+
+          <div className='Cart-card-title-container'>
+              <div id="Cart-title-shipping">Shipping</div>
+              <div id="Cart-title-total">{products.length} items</div>
+          </div>
+
+
+          <div className="Cart-list-container">
+          {products && products.map(product => (
+            <div className='Cart-list-item-container'>
+
+              <div className='Cart-list-item-container-left'>
+
+                <div className='Cart-list-item-thumbnail-container'>
+                  <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`}>
+                      <img src={product.previewImage} className="Cart-list-item-thumbnail"></img>
+                  </NavLink>
+                </div>
+
+                <div className="Cart-list-item-itemization-container">
+                  <div>
+                    <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`} id="Cart-product-list-itemization-name">
+                      <div id="Cart-product-list-itemization-name">{product.name}</div>
+                    </NavLink>
+                  </div>
+
+                  <div className="Cart-product-list-item-qty">Qty 1</div>
+                </div>
+
+              </div>
+
+
+              <div className='Cart-list-item-container-right'>
+                <div className="Cart-product-list-price">${product.price}</div>
+                <div className="Cart-product-remove-item-button-container">
+                  <RemoveFromCart
+                    cartId={product.cartId}
+                    text={<i class="fa-solid fa-xmark"></i>}
+                    cssSelector={'UserCart-RemoveFromCart-button'}
+                  />
+                  </div>
+              </div>
+
+            </div>
           ))}
-          <p>{cartState && cartState.allProductsByUser.subtotal}</p>
+          </div>
+
+
+        </div>
+
+
       </div>
-      <NavLink exact to={`/checkout`}>
-        <button>Continue to Checkout</button>
-      </NavLink>
+
+
+
+      <div className="Cart-right-panel">
+        <div className="Cart-total-container">
+
+            <div className="Cart-total-at-a-glance">
+              <div>Order summary</div>
+            </div>
+
+            <div className="Cart-subtotal-breakdown">
+
+            <div className="Cart-subtotal-item">
+              <div>Subtotal ({products.length} items)</div>
+              <div>${cart && cart.subtotal}</div>
+            </div>
+
+            <div className="Cart-subtotal-item" id="Cart-subtotal-tax-item">
+              <div>Estimated Tax</div>
+              <div>$0.00</div>
+            </div>
+
+            <div className="Cart-total-grandtotal">
+              <div>Total</div>
+              <div>${cart && cart.subtotal}</div>
+            </div>
+
+        </div>
+      </div>
+
+        </div>
+      </div>
+
 
     </div>
   )
