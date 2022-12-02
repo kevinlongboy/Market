@@ -29,6 +29,8 @@ function ProductPage() {
   const { productId } = useParams()
   const product = productsState.singleProductDetails;
   const productImages = product.ProductImages
+  const mainImage = productImages[0]
+  console.log("productImages", productImages)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -48,28 +50,61 @@ function ProductPage() {
 
       <div id="ProductPage-component">
 
-          <h1>{product.name}</h1>
+
+          <div className="UserReviews-directory-container" id="header">
+            <NavLink exact to={'/account'} id="UserReviews-Account-redirect-button">
+              Account
+            </NavLink>
+            <p>/</p>
+            <p>Rate & review</p>
+
+
+            <div className="UserReviews-title-container">
+                <div className="UserReviews-title">{product.name}</div>
+            </div>
+          </div>
+
+          <div className="ProductPage-body-container">
+
+            <div className="ProductPage-thumbnails-container">
+              {productImages.map((image) => (
+                <div className="ProductPage-thumbnail-container">
+                  <img src={image.url} id="ProductPage-thumbnail"></img>
+                </div>
+                ))}
+            </div>
+
+            {mainImage && (
+              <div className="ProductPage-main-image-container">
+                <img src={mainImage.url}></img>
+              </div>
+            )}
+
+            <AddToCart
+              productId={productId}
+              text={`Add to cart`}
+              cssSelector={"ProductPage-AddToCart-button"}
+            />
+
+          </div>
+
+
+        <div>
+
           {/* <p>{product && (product.price).toFixed(2)}</p> */}
-          <p>{product.description}</p>
 
-          {productImages.map((image) => (
-            <img src={image.url}></img>
-          ))}
-      </div>
-      <div>
 
-      <AddToCart
-        productId={productId}
-        text={`Add to cart`}
-        cssSelector={"ProductPage-AddToCart-button"}
-        />
-      </div>
+        <p>{product.description}</p>
+
+
+        </div>
 
       <ProductReviews />
 
       {/* add condition to remove button if users already has reviewed item */}
       <NavLink exact to={`/products/${product.id}/add-review`}><button>Write a review</button></NavLink>
 
+      </div>
     </div>
   )
 }

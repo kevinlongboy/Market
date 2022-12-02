@@ -23,7 +23,7 @@ function UserOrders() {
 
   useEffect(() => {
       dispatch(thunkReadAllUserOrders());
-  }, [dispatch])
+  }, [dispatch, ordersState])
 
 
   /**************** render component *****************/
@@ -54,7 +54,7 @@ function UserOrders() {
                 <div className='UserOrders-card-container'>
 
                 <div className='UserOrders-card-title-container'>
-                  <div>{convertExactDate(order.createdAt)}</div>
+                  <div>{order && convertExactDate(order.createdAt)}</div>
 
                   <NavLink
                     exact
