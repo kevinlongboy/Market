@@ -196,7 +196,11 @@ router.post('/', requireAuth, async(req, res) => {
         return res
             .status(200)
             .json({
-                printOrder,
+                "id": printOrder.id,
+                "userId": printOrder.userId,
+                "status": printOrder.status,
+                "total": printOrder.total,
+                "createdAt": printOrder.createdAt,
                 "Products": products
             })
 

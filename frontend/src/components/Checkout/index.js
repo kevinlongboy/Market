@@ -38,15 +38,33 @@ function Checkout() {
 
   /***************** handle events *******************/
   const history = useHistory()
-  function placeOrder(){
+  const placeOrder = async (e) => {
+
+    e.preventDefault();
+
+    let errors = [];
 
     let orderData = {
       total: total,
       products: products,
     }
 
-    dispatch(thunkCreateSingleOrder(orderData))
-    history.push(`/order-confirmation`)
+    const newOrder = await dispatch(thunkCreateSingleOrder(orderData)).catch(
+      async (res) => {
+
+          const data = await res.json();
+
+          if (data && data.errors) {
+              data.errors.forEach(message => errors.push(message));
+              // setValidationErrors(errors);
+          }
+      }
+    )
+
+    if (newOrder) {
+      console.log("newOrder", newOrder);
+        history.push(`/order-confirmation/${newOrder.id}`)
+    }
   }
 
 
