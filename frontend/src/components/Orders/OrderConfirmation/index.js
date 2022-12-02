@@ -1,21 +1,79 @@
 /******************************** IMPORTS ********************************/
 // libraries
-
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux"
+import { NavLink, useParams } from "react-router-dom";
+import { normalizeArray } from "../../../component-resources";
+import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
 // local files
 import "./OrderConfirmation.css"
 
 /******************************* COMPONENT *******************************/
 function OrderConfirmation() {
 
-  // use get all orders API route and filter using orderId param no.
+  /****************** access store *******************/
+  const user = useSelector(state => state.session.user)
+  const allOrders = useSelector(state => state.orders.allOrdersByUser)
+
+  /************ key into pertinent values ************/
+  const { orderId } = useParams();
+  const newOrder = allOrders[orderId]
+  console.log(newOrder)
+
+  /************ reducer/API communication ************/
+  const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(thunkReadAllUserOrders(user.id));
+    }, [dispatch])
+
+
+  /**************** render component *****************/
 
     return (
-      <div className="page-wrapper-container">
+      <div className="OrderConfirmation-page-wrapper-container">
 
         <div id="OrderConfirmation-component">
 
-            <h1>OrderConfirmation</h1>
+            <div className="OrderConfirmation-title">
+              <h1>Thanks for your order!</h1>
+              <p>We’ll send confirmations and order updates to <span>{user.email}</span></p>
+            </div>
 
+            <div className="OrderConfirmation-edit-section">
+              <p>Need to make changes? Act fast!</p>
+              <span>
+                We process orders quickly, so you’ll want to visit your order details page as soon as possible.
+              </span>
+            </div>
+
+            <div className="OrderConfirmation-new-order-details-section">
+              <p>Order# {orderId}</p>
+              <div className="product-thumbnail-list-container">
+                {newOrder && newOrder.Products.map((product) => (
+                  <img src={product.previewImage} id="product-thumbnail"></img>
+                ))}
+              </div>
+            </div>
+
+
+        </div>
+
+        <div className="OrderConfirmation-redirect-section">
+          <div>
+            <button
+              className='OrderConfirmation-redirect-button'
+              id='OrderConfirmation-redirect-button'
+            >
+            <NavLink
+              exact
+              to={'/account/orders'}
+              id='OrderConfirmation-redirect-link'
+            >
+              Visit order history
+            </NavLink>
+            </button>
+          </div>
         </div>
 
       </div>

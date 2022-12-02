@@ -25,6 +25,7 @@ function App() {
 
   const dispatch = useDispatch();
 
+
   // use to load components only after there is a current session
   // and user's details are retrieved from database
   const [isLoaded, setIsLoaded] = useState(false);
@@ -70,7 +71,7 @@ function App() {
             <Checkout />
           </Route>
 
-          <Route exact path={'/order-confirmation'}>
+          <Route exact path={'/order-confirmation/:orderId'}>
             <OrderConfirmation />
           </Route>
 
