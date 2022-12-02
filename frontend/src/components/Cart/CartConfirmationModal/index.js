@@ -9,26 +9,26 @@ import './CartConfirmationModal.css'
 
 
 /******************************* COMPONENT *******************************/
-function CartConfirmationModal({productId}) {
+function CartConfirmationModal({productId, modalFunc}) {
 
-/****************** access store *******************/
-  const product = useSelector(state => state.products.singleProductDetails)
+    /****************** access store *******************/
+    const product = useSelector(state => state.products.singleProductDetails)
 
-  /************ key into pertinent values ************/
-  const images = Object.values(product.ProductImages)
+    /************ key into pertinent values ************/
+    const images = Object.values(product.ProductImages)
 
-  /************ reducer/API communication ************/
-  const dispatch = useDispatch();
+    /************ reducer/API communication ************/
+    const dispatch = useDispatch({productId});
 
     useEffect(() => {
       dispatch(thunkReadSingleProductDetails(productId));
     }, [dispatch])
 
-  /***************** handle events *******************/
-  const history = useHistory();
+    /***************** handle events *******************/
+    const history = useHistory();
 
-  /**************** render component *****************/
-  return (
+    /**************** render component *****************/
+    return (
     <>
         <div className="CartConfirm-modal-container">
 
@@ -52,6 +52,7 @@ function CartConfirmationModal({productId}) {
               type="submit"
               className='CartConfirm-button'
               id='CartConfirm-shopping-button'
+              onClick={(e) => modalFunc(false)}
               >
                 Continue shopping
               </button>

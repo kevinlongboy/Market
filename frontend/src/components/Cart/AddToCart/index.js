@@ -51,7 +51,7 @@ function AddToCart({productId, text, cssSelector}) {
 
                 {showModal && (
                     <Modal onClose={() => setShowModal(false)}>
-                        <CartConfirmationModal productId={productId}/>
+                        <CartConfirmationModal productId={productId} modalFunc={setShowModal}/>
                     </Modal>
                 )}
             </>
