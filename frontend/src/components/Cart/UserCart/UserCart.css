@@ -239,4 +239,5 @@
 
 #Cart-checkout-button:hover {
     background-color: #aa0200;
+    text-decoration: underline;
 }

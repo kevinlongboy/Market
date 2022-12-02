@@ -136,12 +136,12 @@ function UserCart() {
               <div>${cart && cart.subtotal}</div>
             </div>
 
+          </div>
         </div>
-      </div>
 
 
         <div className="Cart-checkout-button-container">
-          <NavLink exact to={`/signup`}>
+          <NavLink exact to={`/checkout`}>
             <button
             className='Cart-checkout-button'
             id='Cart-checkout-button'
