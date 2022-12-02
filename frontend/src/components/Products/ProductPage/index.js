@@ -8,6 +8,7 @@ import ProductReviews from "../../Reviews/ProductReviews";
 import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
 import { thunkReadAllProductReviews } from "../../../store/reviewsReducer";
 import { thunkAddSingleProductToCart } from "../../../store/cartReducer";
+import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
 import "./ProductPage.css"
 import AddToCart from "../../Cart/AddToCart";
 
@@ -30,7 +31,7 @@ function ProductPage() {
   const product = productsState.singleProductDetails;
   const productImages = product.ProductImages
   const mainImage = productImages[0]
-  console.log("productImages", productImages)
+
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -38,6 +39,10 @@ function ProductPage() {
   useEffect(() => {
       dispatch(thunkReadSingleProductDetails(productId));
   }, [dispatch])
+
+
+  console.log('product.departmentId', product)
+
 
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));
@@ -51,18 +56,24 @@ function ProductPage() {
       <div id="ProductPage-component">
 
 
-          <div className="UserReviews-directory-container" id="header">
-            <NavLink exact to={'/account'} id="UserReviews-Account-redirect-button">
-              Account
-            </NavLink>
-            <p>/</p>
-            <p>Rate & review</p>
+          <div className="ProductPage-header-container">
 
+            <div className="ProductPage-directory-container">
+              <NavLink exact to={'/'}>
+                Market
+              </NavLink>
+              <p>/</p>
+              <NavLink exact to={`/departments/${product.Department.id}/`}>
+              {product.Department.name}
+              </NavLink>
+            </div>
 
-            <div className="UserReviews-title-container">
-                <div className="UserReviews-title">{product.name}</div>
+            <div className="ProductPage-title-container">
+                <div className="ProductPage-title">{product.name}</div>
             </div>
           </div>
+
+
 
           <div className="ProductPage-body-container">
 
@@ -80,21 +91,47 @@ function ProductPage() {
               </div>
             )}
 
-            <AddToCart
-              productId={productId}
-              text={`Add to cart`}
-              cssSelector={"ProductPage-AddToCart-button"}
-            />
 
-          </div>
 
+            <div className="ProductPage-review-and-actions-container">
+
+              <div className="ProductPage-price-container">
+                <div>${product.price}</div>
+                <p>When purchased online</p>
+              </div>
+
+              <div className="ProductPage-rating-container">
+                <div>{product.avgRating}</div>
+                <div>{product.numReviews}</div>
+              </div>
+
+              <div>
+                <AddToCart
+                  productId={productId}
+                  text={`Add to cart`}
+                  cssSelector={"ProductPage-AddToCart-button"}
+                  />
+              </div>
+              </div>
+
+            </div>
 
         <div>
 
-          {/* <p>{product && (product.price).toFixed(2)}</p> */}
+        <div className="ProductPage-description-container">
+
+          <div className="ProductPage-description-header-container">
+            <div>About this item</div>
+            <div><p>Details</p></div>
+          </div>
+
+          <div className="ProductPage-description-highlights-container">
+            <div>Highlights</div>
+            <p>{product.description}</p>
+          </div>
 
 
-        <p>{product.description}</p>
+        </div>
 
 
         </div>
