@@ -60,7 +60,7 @@ function CartConfirmationModal({productId}) {
                 <NavLink exact to={`/cart`}>
                     <button
                     className='CartConfirm-button'
-                    id='CartConfirm-proceed-button'
+                    id='CartConfirm-checkout-button'
                     >
                         View cart & check out
                     </button>
