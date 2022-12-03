@@ -95,7 +95,7 @@ function ProductPage() {
             <div className="ProductPage-review-and-actions-container">
 
               <div className="ProductPage-price-container">
-                <div>${product.price}</div>
+                <div>{product && `$${parseInt(product.price).toFixed(2)}`}</div>
                 <p>When purchased online</p>
               </div>
 
