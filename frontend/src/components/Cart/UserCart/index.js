@@ -29,12 +29,6 @@ function UserCart() {
       dispatch(thunkReadCart());
   }, [dispatch, cart])
 
-  /***************** handle events *******************/
-  function removeItem(cartId) {
-    dispatch(thunkRemoveSingleProductFromCart(cartId),
-    [dispatch])
-  }
-
   /**************** render component *****************/
   return (
     <div className="page-wrapper-container">

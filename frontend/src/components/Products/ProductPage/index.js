@@ -44,7 +44,7 @@ function ProductPage() {
 
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));
-}, [dispatch])
+}, [dispatch, reviewsState])
 
 
   /**************** render component *****************/
