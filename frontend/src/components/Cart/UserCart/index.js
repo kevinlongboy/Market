@@ -71,14 +71,14 @@ function UserCart() {
               <div className='Cart-list-item-container-left'>
 
                 <div className='Cart-list-item-thumbnail-container'>
-                  <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`}>
+                  <NavLink exact to={`/departments/${product.departmentId}/products/${product.productId}`}>
                       <img src={product.previewImage} className="Cart-list-item-thumbnail"></img>
                   </NavLink>
                 </div>
 
                 <div className="Cart-list-item-itemization-container">
                   <div>
-                    <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`} id="Cart-product-list-itemization-name">
+                    <NavLink exact to={`/departments/${product.departmentId}/products/${product.productId}`} id="Cart-product-list-itemization-name">
                       <div id="Cart-product-list-itemization-name">{product.name}</div>
                     </NavLink>
                   </div>
