@@ -152,12 +152,10 @@ router.post('/:productId/reviews', requireAuth, async(req, res) => {
             description: description,
         })
         postReview.save();
-        console.log("postReview", postReview)
 
         let printReview = await Review.findByPk(postReview.id, {
             raw: true,
         })
-        console.log("printReview", printReview)
 
         // add User-key
         // let userData = await User.findByPk(currentUserId, {
@@ -226,7 +224,7 @@ router.get('/:productId', async(req, res) => {
                 raw: true,
             });
             let ratingAvg = ratingsSum / reviewCount;
-            ratingAvg ? findProduct.avgRating = ratingAvg : findProduct.avgRating = 0
+            ratingAvg ? findProduct.avgRating = ratingAvg : findProduct.avgRating = 0.0
 
             // add Department-key
             let deptData = await Department.findByPk(findProduct.departmentId, {

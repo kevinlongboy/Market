@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+import  StarRatings from 'react-star-ratings';
 // local files
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
 import AddToCart from "../../Cart/AddToCart";
@@ -25,6 +26,8 @@ function DepartmentPage() {
   /************ key into pertinent values ************/
   const { departmentId } = useParams()
   const department = departmentsState.singleDepartmentDetails;
+  console.log('department', department)
+
   const productsArr = Object.values(department.Products)
 
   /************ reducer/API communication ************/
@@ -52,18 +55,19 @@ function DepartmentPage() {
         {productsArr.map((product) => (
             <div className="product-card">
 
-              <div className="product-card-thumbnail-container">
-              <Link
-                exact
-                to={`/departments/${departmentId}/products/${product.id}`}
-              >
-                <img
-                src={product.previewImage}
-                className="product-card-thumbnail"
-                // onMouseOver={}
-                ></img>
-              </Link>
-              </div>
+            <div className="product-card-thumbnail-container">
+            <Link
+              exact
+              to={`/departments/${departmentId}/products/${product.id}`}
+            >
+              <img
+              src={product.previewImage}
+              className="product-card-thumbnail"
+              // onMouseOver={}
+              ></img>
+            </Link>
+            </div>
+
 
             <div
             className="product-card-name-container"
@@ -81,31 +85,46 @@ function DepartmentPage() {
               </Link>
             </div>
 
+
             <div className="product-card-brand-container">
               <p className="product-card-brand">Brand</p>
             </div>
 
-            <div className="product-card-price-container">
-              <div className="product-card-price">${(product.price).toFixed(2)}</div>
-              <div className="product-card-location">When purchased online</div>
-            </div>
 
-
-            <div className="product-card-CartAdd-container">
-              <div className="product-card-CartAdd-Shipt-offer">
-                <span>Get it as soon as 9am today</span> with Shipt
-              </div>
-
-              <div className="product-card-CartAdd-ISPU-offer">
-                <span>Ready within 2 hours</span> with pickup
-              </div>
-
-              <AddToCart
-                productId={product.id}
-                text={`Deliver it`}
-                cssSelector={"DepartmentPage-AddToCart-button"}
+            <div className="DepartmentPage-rating-container">
+              <StarRatings
+                rating={product.avgRating}
+                starRatedColor="#ffd700"
+                numberOfStars={5}
+                name='rating'
+                starDimension='12px'
+                starSpacing='0'
               />
-            </div>
+                <div id="DepartmentPage-rating-review-count">{product.numReviews}</div>
+              </div>
+
+
+              <div className="product-card-price-container">
+                <div className="product-card-price">${(product.price).toFixed(2)}</div>
+                <div className="product-card-location">When purchased online</div>
+              </div>
+
+
+              <div className="product-card-CartAdd-container">
+                <div className="product-card-CartAdd-Shipt-offer">
+                  <span>Get it as soon as 9am today</span> with Shipt
+                </div>
+
+                <div className="product-card-CartAdd-ISPU-offer">
+                  <span>Ready within 2 hours</span> with pickup
+                </div>
+
+                <AddToCart
+                  productId={product.id}
+                  text={`Deliver it`}
+                  cssSelector={"DepartmentPage-AddToCart-button"}
+                />
+              </div>
 
           </div>
 

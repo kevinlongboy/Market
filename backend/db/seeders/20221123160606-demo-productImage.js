@@ -337,10 +337,6 @@ const demoProductImages = [
     productId: 19,
     url: "https://target.scene7.com/is/image/Target/GUEST_7f6b7e86-a1a9-42de-8ecd-daa962918f23?wid=1000&hei=1000&qlt=80&fmt=webp"
   },
-  {
-    productId: 19,
-    url: "https://www.target.com/p/grade-a-large-eggs-12ct-good-38-gather-8482-packaging-may-vary/-/A-14713534#lnk=sametab"
-  },
   // bread
   {
     productId: 20,

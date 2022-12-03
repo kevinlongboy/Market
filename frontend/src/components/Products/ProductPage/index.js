@@ -42,10 +42,6 @@ function ProductPage() {
       dispatch(thunkReadSingleProductDetails(productId));
   }, [dispatch])
 
-
-  console.log('product.departmentId', product)
-
-
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));
 }, [dispatch])
@@ -53,7 +49,7 @@ function ProductPage() {
 
   /**************** render component *****************/
   return (
-    <div className="page-wrapper-container">
+    <div className="ProductPage-page-wrapper-container">
 
       <div id="ProductPage-component">
 
@@ -89,8 +85,8 @@ function ProductPage() {
             </div>
 
             {mainImage && (
-              <div className="ProductPage-main-image-container">
-                <img src={mainImage.url}></img>
+              <div id="ProductPage-main-image-container">
+                <img src={mainImage.url} id="ProductPage-main-image"></img>
               </div>
             )}
 
@@ -109,10 +105,10 @@ function ProductPage() {
                 starRatedColor="#ffd700"
                 numberOfStars={5}
                 name='rating'
-                starDimension='16px'
+                starDimension='20px'
                 starSpacing='0'
               />
-                <div>{product.numReviews}</div>
+                <div id="ProductPage-rating-review-count">{product.numReviews}</div>
               </div>
 
               <div>

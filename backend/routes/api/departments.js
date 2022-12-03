@@ -6,7 +6,7 @@ const { check } = require('express-validator');
 // local files
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { handleValidationErrors } = require('../../utils/validation');
-const { Department, Product, ProductImage } = require('../../db/models');
+const { Department, Product, ProductImage, Review } = require('../../db/models');
 
 
 /*************************** GLOBAL VARIABLES ****************************/
@@ -65,17 +65,34 @@ router.get('/:departmentId/products', async(req, res) => {
                 raw: true,
             })
 
-            // add previewImage-key to every product
+            // modify keys
             for (let i = 0; i < findAllDepartmentProducts.length; i++) {
                 let product = findAllDepartmentProducts[i];
                 let prevImage = await ProductImage.findOne({
                     where: { productId: product.id },
                     raw: true
                 });
+
+                // add previewImage-key to every product
                 let prevUrl = prevImage.url;
                 product.previewImage = prevUrl
 
-                // modify keys
+                // add numReviews-key
+                let reviewCount = await Review.count({
+                    where: { productId: product.id},
+                    raw: true,
+                });
+                reviewCount ? product.numReviews = reviewCount : product.numReviews = 0 // key into "dataValues" before numReviews?
+
+                // add avgRating-key
+                let ratingsSum = await Review.sum('rating', {
+                    where: { productId: product.id},
+                    raw: true,
+                });
+                let ratingAvg = ratingsSum / reviewCount;
+                ratingAvg ? product.avgRating = ratingAvg : product.avgRating = 0.0
+
+                // delete impertinent information
                 delete product.departmentId
             }
 
