@@ -2,26 +2,26 @@
 // /** @type {import('sequelize-cli').Migration} */
 
 //
-{
-  productId: ,
-  url: "",
-},
-{
-  productId: ,
-  url: "",
-},
-{
-  productId: ,
-  url: "",
-},
-{
-  productId: ,
-  url: "",
-},
-{
-  productId: ,
-  url: "",
-},
+// {
+//   productId: ,
+//   url: "",
+// },
+// {
+//   productId: ,
+//   url: "",
+// },
+// {
+//   productId: ,
+//   url: "",
+// },
+// {
+//   productId: ,
+//   url: "",
+// },
+// {
+//   productId: ,
+//   url: "",
+// },
 
 
 const demoProductImages = [
@@ -73,45 +73,45 @@ const demoProductImages = [
   // toner
   {
     productId: 3,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_c388ab2d-78a7-4f4f-848c-60ad469f0fc3?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 3,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_5db3e308-560d-4996-ab03-cd411fc50ebe?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 3,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_99e67263-cd68-4063-8067-af6fdb640ef5?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 3,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_5d3c6d46-5b45-4597-9703-a889e770105c?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 3,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_ace8d6a7-60bb-43f2-8278-07d9451ee665?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   // lotion
   {
     productId: 4,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_037e8640-c468-4296-8c5c-c4fab8cac82a?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 4,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_48fde037-7cfb-4b4c-81f4-e6e4d1d2387b?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 4,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_9cf76786-c1a3-45c9-884d-a290b345c492?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 4,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_43c73c47-e720-4b9a-a868-098adcf6d497?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 4,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_da2510df-2ce2-4542-b649-0d41e596aec2?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   // solution
@@ -149,45 +149,45 @@ const demoProductImages = [
     // brows
   {
     productId: 7,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_1864b593-45ba-419c-ab25-3a9dc1a102ca?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 7,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_21b8ac0e-0fbd-49d2-863c-1dea3c749e6c?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 7,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_86b32616-c68c-46e3-bcdb-eccfd7e7c1f3?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 7,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_11961e97-2545-455a-88a5-44459b9439a6?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 7,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_d905aa6a-7a12-47ed-a8b8-8262bb01a0b1?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   // razor
   {
     productId: 8,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_daed0537-39e1-408e-b52a-a1115f7135e5?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 8,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_abd68fad-9541-4cb1-b0f4-02c9f80a9a4b?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 8,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_414bb1f5-1466-41bb-8611-11e070a567a7?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 8,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_f70f6a00-cc07-40f6-9d4c-6d9d89cfa373?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 8,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_658b4795-39e3-4dbb-aedb-2139311985a5?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   // cotton balls
@@ -222,8 +222,6 @@ const demoProductImages = [
     productId: 10,
     url: "https://target.scene7.com/is/image/Target/GUEST_f2412a2a-1b7c-4730-ba86-5100cc900020?wid=725&hei=725&qlt=80&fmt=webp"
   },
-
-
   // ibuprofen
   {
     productId: 11,
@@ -245,23 +243,23 @@ const demoProductImages = [
   // first aid
   {
     productId: 12,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_c8acf66e-7edf-4b51-9a2b-5d607ebd8241?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 12,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_b613c57b-bb71-4418-8abe-9466d0849bc4?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 12,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_c184fd71-8e98-489a-a529-03086c1c1e2c?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 12,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_49f90db1-1bcd-43ee-9776-7a2cf93d6665?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 12,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_020c9e8d-eb50-453c-9d48-9fcda00816f3?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   /********************** 2. Home **********************/
@@ -292,49 +290,39 @@ const demoProductImages = [
     productId: 14,
     url: "https://target.scene7.com/is/image/Target/GUEST_068a0975-6957-4ce1-87df-1ebd2cbfbffb?wid=725&hei=725&qlt=80&fmt=webp"
   },
-
   // trash liner
   {
     productId: 15,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_6da9be1c-8f12-419b-9480-737f58bc8daf?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 15,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_1fa1c0b2-426b-4b79-9854-82dd1b9fdb58?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 15,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_9ccc0ccb-8a96-44e0-8240-aa7f5a6f331d?wid=800&hei=800&qlt=80&fmt=webp",
   },
-  {
-    productId: 15,
-    url: "",
-  },
-  {
-    productId: 15,
-    url: "",
-  },
-
   // swiffer
   {
     productId: 16,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_cbec208a-7db1-462c-bf48-666a9c6a0b35?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 16,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_983c2adf-8878-46f7-bb5e-c0a3c649592c?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 16,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2289a499-cdd2-46f0-8cae-1fe890bcb492?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 16,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_7fcb5d6a-0724-4834-97fe-e97ef0258051?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 16,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_c25cb742-7547-4f41-81ae-f34f7f3beaf1?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   // detergent
@@ -398,29 +386,23 @@ const demoProductImages = [
     productId: 19,
     url: "https://target.scene7.com/is/image/Target/GUEST_9f3fa3a4-da13-4084-8cf9-2956108918e1?wid=725&hei=725&qlt=80&fmt=webp"
   },
-
   // pillow
   {
     productId: 20,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_b6d79581-e98b-4ab8-a104-a2355a1c00b0?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 20,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_78ce2e2d-8ee6-4f59-ab5c-19f12efb4b48?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 20,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_b0ea3aaa-4782-4487-ae5b-b987c12441d0?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 20,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_e5336e83-7e2a-446b-b52f-2783662bed77?wid=800&hei=800&qlt=80&fmt=webp",
   },
-  {
-    productId: 20,
-    url: "",
-  },
-
   //  steamer
   {
     productId: 21,
@@ -442,118 +424,94 @@ const demoProductImages = [
     productId: 21,
     url: "https://target.scene7.com/is/image/Target/GUEST_99c37297-31ba-402b-9ded-e50c10584c70?wid=725&hei=725&qlt=80&fmt=webp"
   },
-
   // candle
   {
     productId: 22,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_d8ea166a-d359-4fd2-b221-edc12c9f0c0b?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 22,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_11850877-8577-406f-9f9f-3c202c3a9fad?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 22,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_98a3da72-1c99-4407-8198-24e3f3eb2035?wid=800&hei=800&qlt=80&fmt=webp",
   },
-  {
-    productId: 22,
-    url: "",
-  },
-  {
-    productId: 22,
-    url: "",
-  },
-
-  // candle
+  // command strips
   {
     productId: 23,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_b98d9d66-51c2-46fa-8b35-cd246e3417a8?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 23,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_d38143c3-27bb-49cb-8643-3ddbfd13283b?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 23,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_06417e55-4d5d-448f-a354-c0e5d9e69bb7?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 23,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_4608e8a1-db8f-49a6-afc5-9b0b8fcbea78?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 23,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_98623eeb-9661-487e-9ed0-992a0bd012ae?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   // tools
   {
     productId: 24,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_95eef5b2-ca49-4e67-a5c6-fcb86f9236d0?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 24,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_bb24a02f-b9c8-4e13-adb8-1769cfa114fd?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 24,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_70dd435c-b470-4e4d-9c0a-77a4ac124ba7?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 24,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_c74df33b-1c2c-408c-9992-f2bc9fbd1516?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 24,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_71ff5e78-2e09-4f74-a3a8-1b6508af4b2a?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   /********************** 3. Kitchen & Dining **********************/
-  // cutlery
-  {
-    productId: 25,
-    url: "",
-  },
-  {
-    productId: 25,
-    url: "",
-  },
-  {
-    productId: 25,
-    url: "",
-  },
-  {
-    productId: 25,
-    url: "",
-  },
-  {
-    productId: 25,
-    url: "",
-  },
-
   // flatware
   {
+    productId: 25,
+    url: "https://target.scene7.com/is/image/Target/GUEST_c2a26b2d-95b5-408b-8db9-82ffad756a52?wid=800&hei=800&qlt=80&fmt=webp",
+  },
+  {
+    productId: 25,
+    url: "https://target.scene7.com/is/image/Target/GUEST_df122eef-ee94-441f-95c7-b3895783d707?wid=800&hei=800&qlt=80&fmt=webp",
+  },
+  // dinnerware
+  {
     productId: 26,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2af8fa43-3ce8-409b-9096-4976ac0d1699?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 26,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_635f39b2-7332-477f-98e5-8207c6f15855?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 26,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_4420bd45-19e2-462f-9f50-1da4ac8027e1?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 26,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_46f3d622-c7c7-4591-9786-04bfd80e0af1?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 26,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_bf7b6a4c-96e3-4f9c-96c6-e68f5bdb2ea6?wid=800&hei=800&qlt=80&fmt=webp",
   },
-
   // glasses
   {
     productId: 27,
@@ -619,96 +577,78 @@ const demoProductImages = [
     productId: 29,
     url: "https://target.scene7.com/is/image/Target/GUEST_1a9f6dfe-2cc5-4271-85b5-c771aa2d5bb7?wid=725&hei=725&qlt=80&fmt=webp"
   },
-
-
   // baking sheets
   {
     productId: 30,
-    url: "https://target.scene7.com/is/image/Target/GUEST_c3de7fa2-d876-425d-94dd-c185771b3600?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_382c402f-d3ed-4d30-bbcd-caa056637306?wid=800&hei=800&qlt=80&fmt=webp"
   },
   {
     productId: 30,
-    url: "https://target.scene7.com/is/image/Target/GUEST_5af088b1-da7f-4aff-82bd-504452ac0152?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_71d035f1-168b-4337-be14-16f6f66afb82?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 30,
-    url: "https://target.scene7.com/is/image/Target/GUEST_9b5021b4-38b6-4c6d-8c33-0098ed28783f?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_a177390a-cecf-4eb9-814d-2c71c29fdbd6?wid=800&hei=800&qlt=80&fmt=webp",
+
   },
   {
     productId: 30,
-    url: "https://target.scene7.com/is/image/Target/GUEST_fc8decb7-7944-41c9-bc0d-270559b1c480?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_57e82a14-7df0-41e1-88d5-af9d8efbbbd4?wid=800&hei=800&qlt=80&fmt=webp",
+
   },
   {
     productId: 30,
-    url: "https://target.scene7.com/is/image/Target/GUEST_12b94ce2-deae-44da-ab8d-1f821ce90425?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_d6146240-50af-48c7-aa37-844fc92b2d9c?wid=800&hei=800&qlt=80&fmt=webp",
+
   },
 
   // tupperware
   {
     productId: 31,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_e28debdd-f8d3-4a7a-95ed-e8d91c44567a?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 31,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_181869ee-6567-4b29-8952-209ad5ecc25a?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 31,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_a60a98ac-1941-4b92-8297-c92f54496b79?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 31,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_83482ace-4d54-4e02-9d51-e090bbfe7fff?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 31,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_ac9da363-27f0-4946-9feb-66adbb1d0586?wid=800&hei=800&qlt=80&fmt=webp",
   },
-
   // measuring cup
   {
     productId: 32,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_bf938d47-967e-4afa-a529-2d82110d6d8b?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 32,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_230a37bf-fa63-4866-b26c-ee8734240005?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 32,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2c479fe7-d3bb-4b44-9250-7a0dab1f53b4?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 32,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_f5ad9e44-659f-467d-8349-dd33fe871ef2?wid=800&hei=800&qlt=80&fmt=webp",
   },
-  {
-    productId: 32,
-    url: "",
-  },
-
   // kettle
   {
     productId: 33,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_48a0aec9-8c31-4a6e-aba2-664cec13cfe9?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 33,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_461a3879-3013-4777-8fe7-76262a5b2f1c?wid=800&hei=800&qlt=80&fmt=webp",
   },
-  {
-    productId: 33,
-    url: "",
-  },
-  {
-    productId: 33,
-    url: "",
-  },
-  {
-    productId: 33,
-    url: "",
-  },
-
   // oven
   {
     productId: 34,
@@ -730,7 +670,6 @@ const demoProductImages = [
     productId: 34,
     url: "https://target.scene7.com/is/image/Target/GUEST_c6e1d46f-9ff1-42e0-843b-2b4c09039f8f?wid=725&hei=725&qlt=80&fmt=webp"
   },
-
   // cookware
   {
     productId: 35,
@@ -748,27 +687,10 @@ const demoProductImages = [
     productId: 35,
     url: "https://target.scene7.com/is/image/Target/GUEST_985fcfb2-c106-4fff-b19c-cfb84d3e1021?wid=725&hei=725&qlt=80&fmt=webp"
   },
-
-  // kettle
+  // cookbook
   {
     productId: 36,
-    url: "",
-  },
-  {
-    productId: 36,
-    url: "",
-  },
-  {
-    productId: 36,
-    url: "",
-  },
-  {
-    productId: 36,
-    url: "",
-  },
-  {
-    productId: 36,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_4dd108f7-ee95-48f4-a222-eab3383b4c05?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   /********************** 4. Grocery **********************/
@@ -1045,86 +967,66 @@ const demoProductImages = [
   // Charger
   {
     productId: 53,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_d45ab87e-587f-4133-a13d-6d68eda50aea?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 53,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_608d1570-754e-4283-9bd9-888a24bce454?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 53,
-    url: "",
-  },
-  {
-    productId: 53,
-    url: "",
-  },
-  {
-    productId: 53,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_5b66e271-090e-4861-9a09-1bb56c7b8c0b?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // HDMI
   {
     productId: 54,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_b1366b49-50ad-4022-a44b-09062aabaa1b?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 54,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_57f44afb-5c02-49d0-b70f-5a527b1e548c?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 54,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_c3d722d3-4f98-4203-9fe3-62c8fb2714d1?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 54,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_8015a793-c8da-4d83-978d-0061beb46998?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 54,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_de01e447-948d-4cc2-9dc2-1c88ed21f133?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // Battery
   {
     productId: 55,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_fe1e59c1-192a-42bc-a9e9-72b4819a5798?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 55,
-    url: "",
-  },
-  {
-    productId: 55,
-    url: "",
-  },
-  {
-    productId: 55,
-    url: "",
-  },
-  {
-    productId: 55,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_0f3b32bd-60a6-4b12-a61e-7c15c7a4bc71?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // polaroid
   {
     productId: 56,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_524f0ca9-7fa9-4917-9e4b-d3b18b4beb5a?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 56,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_6cb2096c-924b-4bcd-98a8-fc9e736c2312?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 56,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_8374d015-ce5e-402d-8eda-545e2ef9c1e7?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 56,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_35d4dbbf-2844-44f8-b3af-c1bf2e84162b?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 56,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_757ca630-ceb9-4cfc-aa02-e5b94004c1f9?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // webcam
   {
@@ -1150,23 +1052,23 @@ const demoProductImages = [
   // surveillance camera
   {
     productId: 58,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_d9fc9dc7-55b9-4296-9f11-b00b2cb03b43?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 58,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_b7400fb3-e7a8-40a6-942d-57ca5453c5c2?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 58,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_5d3e3e9a-3884-4ad3-9ab5-257c26faecab?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 58,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_27a79128-d763-4b0a-8bdc-e94b02560b12?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 58,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_8bd194ce-69b6-4387-aa48-0978815f7aa5?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // smart lights
   {
@@ -1271,194 +1173,186 @@ const demoProductImages = [
     productId: 63,
     url: "https://target.scene7.com/is/image/Target/GUEST_c6d20ae0-2914-4641-943c-43ad686dd0c0?wid=725&hei=725&qlt=80&fmt=webp"
   },
+  // controller
+  {
+    productId: 64,
+    url: "https://target.scene7.com/is/image/Target/GUEST_a959e18b-268b-4af5-8f99-58a85d026571?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 64,
+    url: "https://target.scene7.com/is/image/Target/GUEST_5b03664e-0d19-4c7c-b340-471188349f6d?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 64,
+    url: "https://target.scene7.com/is/image/Target/GUEST_1d496664-5a4e-45f6-8ce1-10d8c259a0f3?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 64,
+    url: "https://target.scene7.com/is/image/Target/GUEST_4675cddb-b0df-4eb4-9ee6-6afef6757055?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 64,
+    url: "https://target.scene7.com/is/image/Target/GUEST_b0238e4c-e758-4a64-b33a-d998a73fe082?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
   // external storage
   {
-    productId: 64,
-    url: "",
+    productId: 65,
+    url: "https://target.scene7.com/is/image/Target/GUEST_0c72c7ec-319c-48c2-bd63-1c93f89898e8?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 64,
-    url: "",
+    productId: 65,
+    url: "https://target.scene7.com/is/image/Target/GUEST_b0558345-98a1-41f7-914d-f419cbc4ec02?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 64,
-    url: "",
+    productId: 65,
+    url: "https://target.scene7.com/is/image/Target/GUEST_18a38314-54aa-4fbd-a793-86303f2e3956?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 64,
-    url: "",
+    productId: 65,
+    url: "https://target.scene7.com/is/image/Target/GUEST_6b6de15b-5ff5-4a78-8b5e-ffe8bb45f558?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 64,
-    url: "",
+    productId: 65,
+    url: "https://target.scene7.com/is/image/Target/GUEST_4aa0d312-a653-43f2-b56b-68876359d1ed?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // headset
   {
-    productId: 65,
-    url: "",
+    productId: 66,
+    url: "https://target.scene7.com/is/image/Target/GUEST_aa38d98d-3853-4678-8d31-228f770a0a57?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 65,
-    url: "",
+    productId: 66,
+    url: "https://target.scene7.com/is/image/Target/GUEST_f67018c4-fde1-46d2-a429-4b2cb4081b85?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 65,
-    url: "",
+    productId: 66,
+    url: "https://target.scene7.com/is/image/Target/GUEST_be935d21-9f55-4df3-a918-d5e942a325e9?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 65,
-    url: "",
+    productId: 66,
+    url: "https://target.scene7.com/is/image/Target/GUEST_d2e73d2d-022d-436b-b891-fd2effdd9d72?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 65,
-    url: "",
+    productId: 66,
+    url: "https://target.scene7.com/is/image/Target/GUEST_2a3ba9e1-dc35-4207-a84d-5750aaac5323?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // gaming keyboard
   {
-    productId: 66,
+    productId: 67,
     url: "https://target.scene7.com/is/image/Target/GUEST_8791c2eb-1466-4b55-b8da-8d4f2d8cb9c1?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 66,
+    productId: 67,
     url: "https://target.scene7.com/is/image/Target/GUEST_3a4a1757-89f3-4a50-a39d-d257ebe3749a?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 66,
+    productId: 67,
     url: "https://target.scene7.com/is/image/Target/GUEST_595ad27f-2b82-413d-9003-8499c2bf1ac2?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 66,
+    productId: 67,
     url: "https://target.scene7.com/is/image/Target/GUEST_327616a8-095d-46f0-b45f-828739b86440?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 66,
+    productId: 67,
     url: "https://target.scene7.com/is/image/Target/GUEST_f1bee02e-83cc-4ca6-9818-c398cb00890e?wid=725&hei=725&qlt=80&fmt=webp"
   },
   // monitor
   {
-    productId: 67,
-    url: "",
+    productId: 68,
+    url: "https://target.scene7.com/is/image/Target/GUEST_ad7e7a54-3b41-4c70-8907-d89b5ffd29f4?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 67,
-    url: "",
+    productId: 68,
+    url: "https://target.scene7.com/is/image/Target/GUEST_07664f32-0c74-40ff-9cfb-62d0fe4671de?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 67,
-    url: "",
+    productId: 68,
+    url: "https://target.scene7.com/is/image/Target/GUEST_5d6638c8-7c0b-4cbc-983e-5ebf63fcd777?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 67,
-    url: "",
+    productId: 68,
+    url: "https://target.scene7.com/is/image/Target/GUEST_4f04b972-13ea-43ec-8518-d4d9c98c382c?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
-    productId: 67,
-    url: "",
+    productId: 68,
+    url: "https://target.scene7.com/is/image/Target/GUEST_f5e9a876-b01f-4b6c-a01c-5abcaac0503f?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // gaming chair
   {
-    productId: 68,
+    productId: 69,
     url: "https://target.scene7.com/is/image/Target/GUEST_e9fc6772-46e0-4467-9dbe-ed90b092f691?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 68,
+    productId: 69,
     url: "https://target.scene7.com/is/image/Target/GUEST_d22d1df4-74a2-43fb-a015-4759ada01f67?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 68,
+    productId: 69,
     url: "https://target.scene7.com/is/image/Target/GUEST_5dc90c51-8200-46ac-87a0-fbb040f71ff4?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 68,
+    productId: 69,
     url: "https://target.scene7.com/is/image/Target/GUEST_63aea3ed-1447-445a-97a3-1df96f6de56f?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 68,
+    productId: 69,
     url: "https://target.scene7.com/is/image/Target/GUEST_004ec71d-b437-4217-82ca-fec8e53286b4?wid=725&hei=725&qlt=80&fmt=webp"
   },
   // gaming desk
   {
-    productId: 69,
-    url: "",
+    productId: 70,
+    url: "https://target.scene7.com/is/image/Target/GUEST_d537e090-cb7e-49e4-863d-9f167a75021a?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
-    productId: 69,
-    url: "",
+    productId: 70,
+    url: "https://target.scene7.com/is/image/Target/GUEST_88164dbc-1615-462c-9298-e3cdb927aa7c?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
-    productId: 69,
-    url: "",
+    productId: 70,
+    url: "https://target.scene7.com/is/image/Target/GUEST_4254b1a1-c9e6-4348-ba41-8c24f041e178?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
-    productId: 69,
-    url: "",
+    productId: 70,
+    url: "https://target.scene7.com/is/image/Target/GUEST_bba36239-f0a8-41ac-8bad-d7c68af7e928?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
-    productId: 69,
-    url: "",
+    productId: 70,
+    url: "https://target.scene7.com/is/image/Target/GUEST_88e887f6-f967-4ae8-a6ef-cf7dd1bb0055?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // arcade
   {
-    productId: 70,
+    productId: 71,
     url: "https://target.scene7.com/is/image/Target/GUEST_a70356a5-46c5-4ca2-b044-8433ad633dc7?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 70,
+    productId: 71,
     url: "https://target.scene7.com/is/image/Target/GUEST_643d7c4f-e36e-4086-8dcf-4e1e53ff41e8?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 70,
+    productId: 71,
     url: "https://target.scene7.com/is/image/Target/GUEST_1cf5fdf3-7286-4a6b-87b8-57987b09a09d?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 70,
+    productId: 71,
     url: "https://target.scene7.com/is/image/Target/GUEST_34da2f79-4f43-4174-9fd8-5fba36dbfb83?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 70,
+    productId: 71,
     url: "https://target.scene7.com/is/image/Target/GUEST_ce671651-07c6-4231-b064-def990391001?wid=725&hei=725&qlt=80&fmt=webp"
-  },
-  // collectable
-  {
-    productId: 71,
-    url: "",
-  },
-  {
-    productId: 71,
-    url: "",
-  },
-  {
-    productId: 71,
-    url: "",
-  },
-  {
-    productId: 71,
-    url: "",
-  },
-  {
-    productId: 71,
-    url: "",
   },
   // gift card
   {
     productId: 72,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_7e31745a-12de-45c1-b0ba-3777a6e72063?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 72,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_40685cd1-01ef-4032-a275-0c4d026a665d?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 72,
-    url: "",
-  },
-  {
-    productId: 72,
-    url: "",
-  },
-  {
-    productId: 72,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_63b58627-395f-4388-860e-3f3807460f61?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
 
   /********************** 7. Sports & Outdoors **********************/
@@ -1492,200 +1386,168 @@ const demoProductImages = [
   // tennis
   {
     productId: 75,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_a9307de1-8b92-4b68-a2c3-1affc025b94d?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 75,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_70cbd326-d0be-4d05-860e-c7a877e7a93e?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 75,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_9a74e298-6704-4b23-9c70-8cca2de77471?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 75,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_3d522fb5-18a6-4827-90e3-1712013fa794?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // golf balls
+  {
+    productId: 76,
+    url: "https://target.scene7.com/is/image/Target/GUEST_7c11b4eb-7dbf-45d7-915d-11cf54d7360a?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
-    productId: 75,
-    url: "",
+    productId: 76,
+    url: "https://target.scene7.com/is/image/Target/GUEST_3addb222-1b47-4f00-9bb7-03c7d25e0e61?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 76,
+    url: "https://target.scene7.com/is/image/Target/GUEST_b7919ffb-bbb1-4e65-83f3-194cda1210f7?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // hiking
   {
-    productId: 76,
+    productId: 77,
     url: "https://target.scene7.com/is/image/Target/GUEST_bae5a4c0-93b9-4206-8b57-afd0d1c94218?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 76,
+    productId: 77,
     url: "https://target.scene7.com/is/image/Target/GUEST_2c55db8a-4025-4ddd-b477-a73ba355768a?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 76,
+    productId: 77,
     url: "https://target.scene7.com/is/image/Target/GUEST_7c1e3d72-b817-4baa-8431-d8902c8cc5f2?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 76,
+    productId: 77,
     url: "https://target.scene7.com/is/image/Target/GUEST_57e70487-a425-42ea-9da9-e0da692f32b2?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 76,
+    productId: 77,
     url: "https://target.scene7.com/is/image/Target/GUEST_1758ee75-a8ce-4589-9258-dea5410ae6db?wid=725&hei=725&qlt=80&fmt=webp"
   },
   // water bottle
   {
-    productId: 77,
+    productId: 78,
     url: "https://target.scene7.com/is/image/Target/GUEST_db6caea9-d8b6-437f-9070-3781ace2584c?wid=725&hei=725&qlt=80&fmt=webp"
   },
   {
-    productId: 77,
+    productId: 78,
     url: "https://target.scene7.com/is/image/Target/GUEST_1f4127ff-44b7-41fa-9f79-c04f7c2a4695?wid=725&hei=725&qlt=80&fmt=webp"
-  },
-  // sweatband
-  {
-    productId: 78,
-    url: "",
-  },
-  {
-    productId: 78,
-    url: "",
-  },
-  {
-    productId: 78,
-    url: "",
-  },
-  {
-    productId: 78,
-    url: "",
-  },
-  {
-    productId: 78,
-    url: "",
   },
   // mattress
   {
     productId: 79,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_94fcdf18-9e04-44dc-82e8-b3cf707e07ec?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 79,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_124dba49-ea29-44a8-afac-31f9cdb768ac?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 79,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_494e1d18-752f-45a0-bef2-1b15bc1f0fcf?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 79,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_6c4314bc-ef13-4e22-8039-74650e62dd50?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 79,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_076c5c46-9a42-4f1d-ac30-d6d7774895be?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // tent
   {
     productId: 80,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2bce21e9-1d04-4fc8-ad00-19b1d9f164cf?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 80,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_f9df53b9-ab14-43ea-8a14-5eccd1c37635?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 80,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_71017f49-ddc4-4434-ab53-adb9806ae737?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 80,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_7511e519-ca1d-44b2-bef2-00bc8389ad97?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 80,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_f09448cb-d463-4ed4-8b95-4abfe6e3b4d8?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // backpack
   {
     productId: 81,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_be6daf6d-bff8-4642-94ae-92f59decdf05?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 81,
-    url: "",
-  },
-  {
-    productId: 81,
-    url: "",
-  },
-  {
-    productId: 81,
-    url: "",
-  },
-  {
-    productId: 81,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_0220edde-bc97-4cd0-85f1-7d3baf753e9e?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // luggage
   {
     productId: 82,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_75cfddce-c706-4065-8fb0-6a09fbefb672?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 82,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_f5da5f81-30a5-4e01-852c-12f54e1e6638?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 82,
-    url: "",
-  },
-  {
-    productId: 82,
-    url: "",
-  },
-  {
-    productId: 82,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_3606d027-ce43-4fc1-89e6-8f7be97a3065?wid=800&hei=800&qlt=80&fmt=webp",
   },
     // bike
   {
     productId: 83,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_aacde022-20a0-4705-9574-5800e298dfaf?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 83,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_5c6e16ae-6f04-4eff-9dbe-2741db047cba?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 83,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_514fc445-ef58-4ceb-935a-8a50c80294ef?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 83,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_00c816d8-07a4-4e52-91ea-b6f372d7f3b2?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 83,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_efe641ca-69f3-4fba-b899-d6c392ac86ea?wid=800&hei=800&qlt=80&fmt=webp",
   },
     // fit bit
   {
     productId: 84,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2df9b563-6a03-45df-a697-8dec7df7f413?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 84,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_b2949ffd-c08f-4afb-a795-32ae8fcba6a3?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 84,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_42988866-c3b2-4ba7-9a02-031dad5346d5?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 84,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2382279a-2997-495f-9780-fa8b13ee1729?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 84,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_15fe6307-15ab-4b58-a784-64629504d91e?wid=800&hei=800&qlt=80&fmt=webp",
   },
 
   /********************** 8. Pets **********************/
@@ -1756,107 +1618,75 @@ const demoProductImages = [
   // collar
   {
     productId: 89,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_03d01714-eda1-4cc2-af58-6f7f5cb134d7?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 89,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_409773d4-7078-4871-a66e-5ba5783367b8?wid=800&hei=800&qlt=80&fmt=webp",
   },
   {
     productId: 89,
-    url: "",
-  },
-  {
-    productId: 89,
-    url: "",
-  },
-  {
-    productId: 89,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_607bb56a-54cd-487f-b7ad-ead8e25cd263?wid=800&hei=800&qlt=80&fmt=webp",
   },
   // leash
   {
     productId: 90,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_f2fdecfd-7900-4e28-95a5-b2d6fc1e3e15?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 90,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_f9b7426c-b5e7-4720-a49e-8cc54839db15?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 90,
-    url: "",
-  },
-  {
-    productId: 90,
-    url: "",
-  },
-  {
-    productId: 90,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2170cc1f-ca5b-41a5-825f-54f88543d765?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // cat clothes
   {
     productId: 91,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_6cd9a749-c59a-4887-ac33-52cb56a99852?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 91,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_e1016345-f197-4da2-8262-a9fb81eed73e?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 91,
-    url: "",
-  },
-  {
-    productId: 91,
-    url: "",
-  },
-  {
-    productId: 91,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_1efca48a-aa28-465c-92b5-aad3c74a4a60?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // dog clothes
   {
     productId: 92,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_37cdb59f-d2d3-4fa5-bc89-7a15b2794a37?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 92,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_0456bfeb-7ad8-49f9-ba2a-22e24b3965ce?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 92,
-    url: "",
-  },
-  {
-    productId: 92,
-    url: "",
-  },
-  {
-    productId: 92,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_30b5c1e1-0672-43e3-99a4-c6507d0dd2cb?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // dog bags
   {
     productId: 93,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_636c81f9-c317-4425-bea9-d4dafc861783?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 93,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_9e9ad283-2693-4a28-b14f-b66327e6342d?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 93,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2c335dcd-0bb7-4b89-b438-81032d229fdd?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 93,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_0550c55d-cca0-4393-9c46-9a2bfc77f407?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 93,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_7f8cf60b-fc27-491f-8214-7c9fe142cc67?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // litter
   {
@@ -1882,44 +1712,49 @@ const demoProductImages = [
   // litter box
   {
     productId: 95,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_d59969ce-3d58-428b-9ef6-109da0cc047d?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 95,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_8fe42533-89c1-4b04-a316-39b31b9c68bc?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 95,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_ef8e73a2-a530-463d-88db-2a5a081b67fc?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 95,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_16b1a852-1007-49a1-adb3-28c618564c88?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 95,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_29f0b830-d6a0-429f-8e2b-cf2a6f073541?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // feeder
   {
     productId: 96,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_07edc070-9413-49ee-a5c4-8e518e894451?wid=1000&hei=1000&qlt=80&fmt=webp",
+
   },
   {
     productId: 96,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_664f608e-3426-49b3-9690-7dc9ff1fb8dc?wid=1000&hei=1000&qlt=80&fmt=webp",
+
   },
   {
     productId: 96,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_aadb5f42-30a8-4eab-a472-65125d299305?wid=1000&hei=1000&qlt=80&fmt=webp",
+
   },
   {
     productId: 96,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_80ed1123-a5c4-48c0-83c8-cdb68dec7d3a?wid=1000&hei=1000&qlt=80&fmt=webp",
+
   },
   {
     productId: 96,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_8e9ab985-42c0-4c37-925c-3c6dcb6e0c96?wid=1000&hei=1000&qlt=80&fmt=webp",
+
   },
 
   /********************** 9. Furniture **********************/
@@ -1943,23 +1778,23 @@ const demoProductImages = [
   // dinging chair
   {
     productId: 98,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_7ecb88f7-5ca9-41eb-92cc-f98ec2d71f56?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 98,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_bb97afad-8211-4460-afdc-1834a5cc664e?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 98,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_76953d5f-f2d7-43ba-9abe-385148211677?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 98,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_dd626444-dd74-48c8-b6f0-bad1116b6106?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 98,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_d45d4d04-33d9-40f6-97f4-0e037044fbb4?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // side tables
   {
@@ -2006,65 +1841,45 @@ const demoProductImages = [
   // drawer
   {
     productId: 101,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_b8cba790-05c5-4b7a-9d9f-ba1d38fb3871?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 101,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_610e77a8-6077-4ef4-8ae4-308d72eb29a0?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 101,
-    url: "",
-  },
-  {
-    productId: 101,
-    url: "",
-  },
-  {
-    productId: 101,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_2872c231-6ab5-455d-8a8b-39a6910bc4b0?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // lamp
   {
     productId: 102,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_7388bcf8-9b32-4543-a7ca-027b1be11c80?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 102,
-    url: "",
-  },
-  {
-    productId: 102,
-    url: "",
-  },
-  {
-    productId: 102,
-    url: "",
-  },
-  {
-    productId: 102,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_1352efbf-2749-432b-a85a-4b385f427d86?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // mirror
   {
     productId: 103,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_7d86e436-b2fc-4cb5-9b24-dfb6e5da3c3e?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 103,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_ab7b0124-716f-4572-82a7-89a165440083?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 103,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_d97fd26b-74aa-41ab-8a7a-57432b06da70?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 103,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_068bf581-37f8-4198-9758-7cdb183425df?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 103,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_74f4ef50-1837-418f-857c-35b26d991e4a?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // picture frame
   {
@@ -2103,44 +1918,44 @@ const demoProductImages = [
   // planter
   {
     productId: 106,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_f11f3da4-13d5-4d46-96e3-8ea73936d90a?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 106,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_acbadb6c-ec6a-4bf2-a661-ff1b1c7ae110?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 106,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_a9777f6b-d174-4869-8a1d-026db6fe19f0?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 106,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_a4b5c976-12e5-40ed-ae8a-de6470aa8f76?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 106,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_51e49182-b83c-4d54-ab9b-be63a6316c05?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // trash bin
   {
     productId: 107,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_03b2980c-b072-4c28-9b02-cb7029f0d5bd?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 107,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_7f4f94bc-6e92-420a-ba2c-7637669685a0?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 107,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_c2932993-dbc6-44b6-8472-3b4f6a1aab9f?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 107,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_8d36cdc4-9362-4e81-a474-53869d98c8aa?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
     productId: 107,
-    url: "",
+    url: "https://target.scene7.com/is/image/Target/GUEST_907c3d76-7705-4906-9d9b-4b6af48ae503?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // whiteboard
   {

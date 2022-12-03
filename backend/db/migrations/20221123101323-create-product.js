@@ -25,7 +25,7 @@ module.exports = {
         type: Sequelize.FLOAT,
       },
       description: {
-        type: Sequelize.STRING(500),
+        type: Sequelize.STRING(600),
       },
       createdAt: {
         allowNull: false,
