@@ -81,8 +81,11 @@ function ProfileButtonModal({ user, modalFunc }) {
     <>
         <div className="ProfileButton-modal-container">
 
-          <div className="ProfileButton-modal-title-container">
+          <div className="ProfileButton-modal-title-container" onClick={(e) => modalFunc(false)}>
             <p>Account</p>
+            <div>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
           </div>
 
           <div className="ProfileButton-modal-list-container">

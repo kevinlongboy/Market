@@ -32,8 +32,11 @@ function CartConfirmationModal({productId, modalFunc}) {
     <>
         <div className="CartConfirm-modal-container">
 
-          <div className="CartConfirm-modal-title-container">
+          <div className="CartConfirm-modal-title-container" onClick={(e) => modalFunc(false)}>
             <p>Added to Cart</p>
+            <div>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
           </div>
 
           <div className="CartConfirm-modal-body-container">

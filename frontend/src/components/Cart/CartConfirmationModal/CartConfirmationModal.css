@@ -27,7 +27,8 @@
 
 .CartConfirm-modal-title-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding: 0px 16px;
 }
@@ -39,11 +40,24 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 100%;
-
     /* border: 1px solid red; */
     font-size: 19px;
     text-decoration: none;
+}
+.CartConfirm-modal-title-container > div {
+    width: 40px;
+    height: 40px;
+    border-radius: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    background-color: #f7f7f7;
+    font-size: 20px;
+    cursor: pointer;
+}
+.CartConfirm-modal-title-container > div:hover {
+    background-color: #d6d6d6;
 }
 
 
