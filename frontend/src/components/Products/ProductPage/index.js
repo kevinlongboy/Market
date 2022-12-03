@@ -1,8 +1,9 @@
 /******************************** IMPORTS ********************************/
 // libraries
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
+import  StarRatings from 'react-star-ratings';
 // local files
 import ProductReviews from "../../Reviews/ProductReviews";
 import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
@@ -21,6 +22,7 @@ function ProductPage() {
   // - dispatch add or remove (respectively)
   //   - by however many delta
 
+  const [rating, setRating] = useState(5)
 
   /****************** access store *******************/
   const productsState = useSelector(state => state.products)
@@ -54,6 +56,7 @@ function ProductPage() {
     <div className="page-wrapper-container">
 
       <div id="ProductPage-component">
+
 
 
           <div className="ProductPage-header-container">
@@ -101,7 +104,14 @@ function ProductPage() {
               </div>
 
               <div className="ProductPage-rating-container">
-                <div>{product.avgRating}</div>
+              <StarRatings
+                rating={product.avgRating}
+                starRatedColor="#ffd700"
+                numberOfStars={5}
+                name='rating'
+                starDimension='16px'
+                starSpacing='0'
+              />
                 <div>{product.numReviews}</div>
               </div>
 
