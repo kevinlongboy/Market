@@ -1,13 +1,14 @@
 'use strict';
 const bcrypt = require("bcryptjs");
 
-// {
-//   firstName: '',
-//   lastName: '',
-//   username: '',
-//   hashedPassword: bcrypt.hashSync(''),
-//   email: '@appacademy.io',
-// },
+{
+  firstName: '',
+  lastName: '',
+  username: '',
+  hashedPassword: bcrypt.hashSync(''),
+  email: '@appacademy.io',
+  url: ,
+},
 
 const demoUsers = [
   {
@@ -16,6 +17,7 @@ const demoUsers = [
     lastName: 'User',
     username: 'demo_user',
     hashedPassword: bcrypt.hashSync('demoPassword'),
+    url: '',
     email: 'demo@email.com',
   },
   // Module Leads
@@ -25,6 +27,7 @@ const demoUsers = [
     lastName: 'Adams',
     username: 'wadams',
     hashedPassword: bcrypt.hashSync('wadams'),
+    url: '',
     email: 'wadams@appacademy.io',
   },
   {
@@ -33,6 +36,7 @@ const demoUsers = [
     lastName: 'Wilkey',
     username: 'swilkey',
     hashedPassword: bcrypt.hashSync('swilkey'),
+    url: '',
     email: 'swilkey@appacademy.io',
   },
   {
@@ -41,6 +45,7 @@ const demoUsers = [
     lastName: 'Otieno',
     username: 'gotieno',
     hashedPassword: bcrypt.hashSync('gotieno'),
+    url: '',
     email: 'gotieno@appacademy.io',
   },
   {
@@ -49,6 +54,7 @@ const demoUsers = [
     lastName: 'Purcell',
     username: 'dpurcell',
     hashedPassword: bcrypt.hashSync('dpurcell'),
+    url: '',
     email: 'dpurcell@appacademy.io',
   },
   {
@@ -57,6 +63,7 @@ const demoUsers = [
     lastName: 'Simpson',
     username: 'bsimpson',
     hashedPassword: bcrypt.hashSync('bsimpson'),
+    url: '',
     email: 'bsimpson@appacademy.io',
   },
   {
@@ -65,6 +72,7 @@ const demoUsers = [
     lastName: 'Crespo',
     username: 'hcrespo',
     hashedPassword: bcrypt.hashSync('hcrespo'),
+    url: '',
     email: 'hcrespo@appacademy.io',
   },
   // TA's
@@ -74,6 +82,7 @@ const demoUsers = [
     lastName: 'Lavene',
     username: 'clavene',
     hashedPassword: bcrypt.hashSync('clavene'),
+    url: '',
     email: 'clavene@appacademy.io',
   },
   {
@@ -82,6 +91,7 @@ const demoUsers = [
     lastName: 'Whiteside',
     username: 'cwhiteside',
     hashedPassword: bcrypt.hashSync('cwhiteside'),
+    url: '',
     email: 'cwhiteside@appacademy.io',
   },
   {
@@ -90,6 +100,7 @@ const demoUsers = [
     lastName: 'Shin',
     username: 'pshin',
     hashedPassword: bcrypt.hashSync('pshin'),
+    url: '',
     email: 'pshin@appacademy.io',
   },
   {
@@ -98,6 +109,7 @@ const demoUsers = [
     lastName: 'Kappes',
     username: 'bkappes',
     hashedPassword: bcrypt.hashSync('bkappes'),
+    url: '',
     email: 'bkappes@appacademy.io',
   },
   {
@@ -106,6 +118,7 @@ const demoUsers = [
     lastName: 'Christensen',
     username: 'jchristensen',
     hashedPassword: bcrypt.hashSync('jchristensen'),
+    url: '',
     email: 'jchristensen@appacademy.io',
   },
   {
@@ -114,6 +127,7 @@ const demoUsers = [
     lastName: 'Yih',
     username: 'jyih',
     hashedPassword: bcrypt.hashSync('jyih'),
+    url: '',
     email: 'jyih@appacademy.io',
   },
   {
@@ -122,6 +136,7 @@ const demoUsers = [
     lastName: 'Esqueda',
     username: 'nesqueda',
     hashedPassword: bcrypt.hashSync('nesqueda'),
+    url: '',
     email: 'nesqueda@appacademy.io',
   },
   {
@@ -130,6 +145,7 @@ const demoUsers = [
     lastName: 'Fava',
     username: 'afava',
     hashedPassword: bcrypt.hashSync('afava'),
+    url: '',
     email: 'afava@appacademy.io',
   },
   {
@@ -138,6 +154,7 @@ const demoUsers = [
     lastName: 'Robinson',
     username: 'arobinson',
     hashedPassword: bcrypt.hashSync('arobinson'),
+    url: '',
     email: 'arobinson@appacademy.io',
   },
   {
@@ -146,6 +163,7 @@ const demoUsers = [
     lastName: 'Song',
     username: 'ssong',
     hashedPassword: bcrypt.hashSync('ssong'),
+    url: '',
     email: 'ssong@appacademy.io',
   },
   {
@@ -154,6 +172,7 @@ const demoUsers = [
     lastName: 'Shaw',
     username: 'tshaw',
     hashedPassword: bcrypt.hashSync('tshaw'),
+    url: '',
     email: 'tshaw@appacademy.io',
   },
   {
@@ -162,6 +181,7 @@ const demoUsers = [
     lastName: 'Bir',
     username: 'obir',
     hashedPassword: bcrypt.hashSync('obir'),
+    url: '',
     email: 'obir@appacademy.io',
   },
   {
@@ -170,6 +190,7 @@ const demoUsers = [
     lastName: 'Treadaway',
     username: 'ntreadway',
     hashedPassword: bcrypt.hashSync('ntreadway'),
+    url: '',
     email: 'ntreadway@appacademy.io',
   },
   {
@@ -178,6 +199,7 @@ const demoUsers = [
     lastName: 'Chin',
     username: 'dchin',
     hashedPassword: bcrypt.hashSync('dchin'),
+    url: '',
     email: 'dchin@appacademy.io',
   },
   {
@@ -186,6 +208,7 @@ const demoUsers = [
     lastName: 'Pezzati',
     username: 'apezzati',
     hashedPassword: bcrypt.hashSync('apezzati'),
+    url: '',
     email: 'apezzati@appacademy.io',
   },
   {
@@ -194,6 +217,7 @@ const demoUsers = [
     lastName: 'Yu',
     username: 'syu',
     hashedPassword: bcrypt.hashSync('syu'),
+    url: '',
     email: 'syu@appacademy.io',
   },
   {
@@ -202,6 +226,7 @@ const demoUsers = [
     lastName: 'Memon',
     username: 'rmemon',
     hashedPassword: bcrypt.hashSync('rmemon'),
+    url: '',
     email: 'rmemon@appacademy.io',
   },
   {
@@ -210,6 +235,7 @@ const demoUsers = [
     lastName: 'Minson',
     username: 'wminson',
     hashedPassword: bcrypt.hashSync('wminson'),
+    url: '',
     email: 'wminson@appacademy.io',
   },
   {
@@ -218,6 +244,7 @@ const demoUsers = [
     lastName: 'Flores',
     username: 'dflores',
     hashedPassword: bcrypt.hashSync('dflores'),
+    url: '',
     email: 'dflores@appacademy.io',
   },
   {
@@ -226,6 +253,7 @@ const demoUsers = [
     lastName: 'Nash',
     username: 'dnash',
     hashedPassword: bcrypt.hashSync('dnash'),
+    url: '',
     email: 'dnash@appacademy.io',
   },
   {
@@ -234,6 +262,7 @@ const demoUsers = [
     lastName: 'Lee',
     username: 'jlee',
     hashedPassword: bcrypt.hashSync('jlee'),
+    url: '',
     email: 'jlee@appacademy.io',
   },
   {
@@ -242,6 +271,7 @@ const demoUsers = [
     lastName: 'Tran',
     username: 'atran',
     hashedPassword: bcrypt.hashSync('atran'),
+    url: '',
     email: 'atran@appacademy.io',
   },
   {
@@ -250,6 +280,7 @@ const demoUsers = [
     lastName: 'Solano',
     username: 'csolano',
     hashedPassword: bcrypt.hashSync('csolano'),
+    url: '',
     email: 'csolano@appacademy.io',
   },
   {
@@ -258,6 +289,7 @@ const demoUsers = [
     lastName: 'Schneider',
     username: 'rschneider',
     hashedPassword: bcrypt.hashSync('rschneider'),
+    url: '',
     email: 'rschneider@appacademy.io',
   },
   {
@@ -266,6 +298,7 @@ const demoUsers = [
     lastName: 'Lovern',
     username: 'alovern',
     hashedPassword: bcrypt.hashSync('alovern'),
+    url: '',
     email: 'alovern@appacademy.io',
   },
   {
@@ -274,6 +307,7 @@ const demoUsers = [
     lastName: 'Portin',
     username: 'fportin',
     hashedPassword: bcrypt.hashSync('fportin'),
+    url: '',
     email: 'fportin@appacademy.io',
   },
   {
@@ -282,6 +316,7 @@ const demoUsers = [
     lastName: 'Bartolome',
     username: 'kbartolome',
     hashedPassword: bcrypt.hashSync('kbartolome'),
+    url: '',
     email: 'kbartolome@appacademy.io',
   },
 
@@ -292,6 +327,7 @@ const demoUsers = [
     lastName: 'DeHerrera',
     username: 'ddeherrera',
     hashedPassword: bcrypt.hashSync('ddeherrera'),
+    url: '',
     email: 'ddeherrera@appacademy.io',
   },
   {
@@ -300,6 +336,7 @@ const demoUsers = [
     lastName: 'Thurman',
     username: 'athruman',
     hashedPassword: bcrypt.hashSync('athruman'),
+    url: '',
     email: 'athruman@appacademy.io',
   },
   {
@@ -308,6 +345,7 @@ const demoUsers = [
     lastName: 'Rogers',
     username: 'drogers',
     hashedPassword: bcrypt.hashSync('drogers'),
+    url: '',
     email: 'drogers@appacademy.io',
   },
 
@@ -318,6 +356,7 @@ const demoUsers = [
     lastName: 'Carbajal',
     username: 'jcarbajal',
     hashedPassword: bcrypt.hashSync('jcarbajal'),
+    url: '',
     email: 'jcarbajal@appacademy.io',
   },
   {
@@ -326,6 +365,7 @@ const demoUsers = [
     lastName: 'Yang',
     username: 'tyang',
     hashedPassword: bcrypt.hashSync('tyang'),
+    url: '',
     email: 'tyang@appacademy.io',
   },
   {
@@ -334,6 +374,7 @@ const demoUsers = [
     lastName: 'Lam',
     username: 'lain',
     hashedPassword: bcrypt.hashSync('lain'),
+    url: '',
     email: 'lain@appacademy.io',
   },
   {
@@ -342,6 +383,7 @@ const demoUsers = [
     lastName: 'Song',
     username: 'hustling',
     hashedPassword: bcrypt.hashSync('hustling'),
+    url: '',
     email: 'hustling@appacademy.io',
   },
   {
@@ -350,6 +392,7 @@ const demoUsers = [
     lastName: 'Matillano',
     username: 'doofey',
     hashedPassword: bcrypt.hashSync('doofey'),
+    url: '',
     email: 'doofey@appacademy.io',
   },
   {
@@ -358,6 +401,7 @@ const demoUsers = [
     lastName: 'Carrera',
     username: 'badreg',
     hashedPassword: bcrypt.hashSync('badreg'),
+    url: '',
     email: 'badreg@appacademy.io',
   },
   {
@@ -366,6 +410,7 @@ const demoUsers = [
     lastName: 'Omair',
     username: 'maliha',
     hashedPassword: bcrypt.hashSync('maliha'),
+    url: '',
     email: 'maliha@appacademy.io',
   },
   {
@@ -374,6 +419,7 @@ const demoUsers = [
     lastName: 'Nachiyappan',
     username: 'thenu',
     hashedPassword: bcrypt.hashSync('thenu'),
+    url: '',
     email: 'thenu@appacademy.io',
   },
   {
@@ -382,6 +428,7 @@ const demoUsers = [
     lastName: 'Morris',
     username: 'BrennonMorris',
     hashedPassword: bcrypt.hashSync('BrennonMorris'),
+    url: '',
     email: 'BrennonMorris@appacademy.io',
   },
   {
@@ -390,6 +437,7 @@ const demoUsers = [
     lastName: 'Kay',
     username: 'rewd',
     hashedPassword: bcrypt.hashSync('rewd'),
+    url: '',
     email: 'rewd@appacademy.io',
   },
   {
@@ -398,6 +446,7 @@ const demoUsers = [
     lastName: 'Selki',
     username: 'Damzzz123',
     hashedPassword: bcrypt.hashSync('Damzzz123'),
+    url: '',
     email: 'Damzzz123@appacademy.io',
   },
   {
@@ -406,6 +455,7 @@ const demoUsers = [
     lastName: 'Pannella',
     username: 'goatedIndeed',
     hashedPassword: bcrypt.hashSync('goatedIndeed'),
+    url: '',
     email: 'goatedIndeed@appacademy.io',
   },
   {
@@ -414,6 +464,7 @@ const demoUsers = [
     lastName: 'Grabowski',
     username: 'ChristoGrabowski',
     hashedPassword: bcrypt.hashSync('ChristoGrabowski'),
+    url: '',
     email: 'ChristoGrabowski@appacademy.io',
   },
   {
@@ -422,6 +473,7 @@ const demoUsers = [
     lastName: 'Guzman',
     username: 'Cece',
     hashedPassword: bcrypt.hashSync('CeceRose'),
+    url: '',
     email: 'CeceRose@appacademy.io',
   },
   {
@@ -430,6 +482,7 @@ const demoUsers = [
     lastName: 'Burch',
     username: 'DavidDanielBurch',
     hashedPassword: bcrypt.hashSync('DavidDanielBurch'),
+    url: '',
     email: 'DavidDanielBurch@appacademy.io',
   },
   {
@@ -438,6 +491,7 @@ const demoUsers = [
     lastName: 'Wimberly',
     username: 'ElizaW',
     hashedPassword: bcrypt.hashSync('ElizaW'),
+    url: '',
     email: 'ElizaW@appacademy.io',
   },
   {
@@ -446,6 +500,7 @@ const demoUsers = [
     lastName: 'Lee',
     username: 'JamesLee',
     hashedPassword: bcrypt.hashSync('JamesLee'),
+    url: '',
     email: 'JamesLee@appacademy.io',
   },
   {
@@ -454,6 +509,7 @@ const demoUsers = [
     lastName: 'Kong',
     username: 'JasonKong',
     hashedPassword: bcrypt.hashSync('JasonKong'),
+    url: '',
     email: 'JasonKong@appacademy.io',
   },
   {
@@ -462,6 +518,7 @@ const demoUsers = [
     lastName: 'Gilbert',
     username: 'joanna',
     hashedPassword: bcrypt.hashSync('joanna'),
+    url: '',
     email: 'joanna@appacademy.io',
   },
   {
@@ -470,6 +527,7 @@ const demoUsers = [
     lastName: 'Yaswen',
     username: 'MaxYaswen',
     hashedPassword: bcrypt.hashSync('MaxYaswen'),
+    url: '',
     email: 'MaxYaswen@appacademy.io',
   },
   {
@@ -478,6 +536,7 @@ const demoUsers = [
     lastName: 'Even',
     username: 'MoranEven',
     hashedPassword: bcrypt.hashSync('MoranEven'),
+    url: '',
     email: 'MoranEven@appacademy.io',
   },
   {
@@ -486,6 +545,7 @@ const demoUsers = [
     lastName: 'Yang',
     username: 'yashaY',
     hashedPassword: bcrypt.hashSync('yashaY'),
+    url: '',
     email: 'yashaY@appacademy.io',
   },
   {
@@ -494,6 +554,7 @@ const demoUsers = [
     lastName: 'Guo',
     username: 'YiboGuo',
     hashedPassword: bcrypt.hashSync('YiboGuo'),
+    url: '',
     email: 'YiboGuo@appacademy.io',
   },
   {
@@ -502,6 +563,7 @@ const demoUsers = [
     lastName: 'Auch',
     username: 'Auchie',
     hashedPassword: bcrypt.hashSync('Auchie'),
+    url: '',
     email: 'Auchie@appacademy.io',
   },
 ]

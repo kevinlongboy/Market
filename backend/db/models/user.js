@@ -97,6 +97,13 @@ module.exports = (sequelize, DataTypes) => {
           len: [3, 100]
         }
       },
+      url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          isUrl: true,
+        }
+      },
       hashedPassword: {
         allowNull: false,
         type: DataTypes.STRING.BINARY,

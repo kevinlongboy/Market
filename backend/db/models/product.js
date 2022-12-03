@@ -35,6 +35,13 @@ module.exports = (sequelize, DataTypes) => {
         len: [5, 150],
       }
     },
+    brand: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [5, 70],
+      }
+    },
     price: {
       type: DataTypes.FLOAT,
       allowNull: false,
@@ -46,7 +53,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [5, 255],
+        len: [5, 500],
       }
     }
   },

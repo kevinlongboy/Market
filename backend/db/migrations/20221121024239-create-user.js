@@ -30,6 +30,10 @@ module.exports = {
         allowNull: false,
         unique: true
       },
+      url: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       hashedPassword: {
         type: Sequelize.STRING.BINARY,
         allowNull: false

@@ -16,12 +16,16 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(150),
       },
+      brand: {
+        allowNull: false,
+        type: Sequelize.STRING(70),
+      },
       price: {
         allowNull: false,
         type: Sequelize.FLOAT,
       },
       description: {
-        type: Sequelize.STRING(255),
+        type: Sequelize.STRING(500),
       },
       createdAt: {
         allowNull: false,
