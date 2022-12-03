@@ -34,7 +34,7 @@ function ProfileButton({user}) {
 
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <ProfileButtonModal user={user} />
+          <ProfileButtonModal user={user} modalFunc={setShowModal} />
         </Modal>
       )}
     </>

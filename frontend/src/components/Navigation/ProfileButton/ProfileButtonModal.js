@@ -8,7 +8,7 @@ import * as sessionActions from '../../../store/sessionReducer';
 
 
 /******************************* COMPONENT *******************************/
-function ProfileButtonModal({ user }) {
+function ProfileButtonModal({ user, modalFunc }) {
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -20,6 +20,7 @@ function ProfileButtonModal({ user }) {
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
+    modalFunc(false);
     history.push('/');
   };
 
@@ -29,11 +30,8 @@ function ProfileButtonModal({ user }) {
   if (user) {
     menuOptions = (
       <>
-        {/* <div>
-          <div id="ProfileButton-modal-list-user-greeting">Hello, {user.firstName}</div>
-        </div> */}
 
-        <div>
+        <div onClick={(e) => modalFunc(false)}>
           <NavLink exact to={'/account'}>
             <div>Account </div>
             <div>Hello, {user.firstName}</div>
@@ -41,14 +39,14 @@ function ProfileButtonModal({ user }) {
         </div>
 
 
-        <div>
+        <div onClick={(e) => modalFunc(false)}>
           <NavLink exact to={'/account/orders'}>
             <div>Orders</div>
             <div>Track + manage</div>
           </NavLink>
         </div>
 
-        <div>
+        <div onClick={(e) => modalFunc(false)}>
           <NavLink exact to={'/account/reviews'}>
             <div>Reviews</div>
             <div>See reviews</div>
@@ -67,11 +65,11 @@ function ProfileButtonModal({ user }) {
   } else {
     menuOptions = (
       <>
-        <div>
+        <div onClick={(e) => modalFunc(false)}>
           <NavLink exact to={'/login'}>Sign in</NavLink>
         </div>
 
-        <div>
+        <div onClick={(e) => modalFunc(false)}>
           <NavLink exact to={'/signup'}>Create Account</NavLink>
         </div>
       </>
