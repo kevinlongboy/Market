@@ -112,9 +112,9 @@ Ready to install the Market API? Follow the instructions below:
 ##  ✅ Preview
 
 ### Favorites
-_Still deciding_
+_I always get that_
 
-Favorites will allow shoppers to create keep track of their favorite products by creating lists, then adding and/or removing products from their list. 
+Favorites will allow shoppers to keep track of their favorite products by saving and/or removing products to a personal list. 
   
 <br>
 <br>
@@ -122,7 +122,7 @@ Favorites will allow shoppers to create keep track of their favorite products by
 ### Registries
 _For that special occasion_
 
-Registries will allow shoppers the ability to 
+Registries will allow shoppers the ability to create a public list of items that they wish to recieve for a particular event. Other shoppers will be able view the contents of this list as well.
   
 <br>
 <br>
