@@ -15,7 +15,7 @@ _<p align="center"> Market, and mark it off your list </p>_
 
 ## ✅ Directory
 
-[Description](https://github.com/kevinlongboy/Market#-directory) <br>
+[Overview](https://github.com/kevinlongboy/Market#-directory) <br>
 [Features](https://github.com/kevinlongboy/Market#-lets-go-shopping) <br>
 [Download](https://github.com/kevinlongboy/Market#-guest-services) <br>
 [Upcoming](https://github.com/kevinlongboy/Market#-self-checkout) <br>
