@@ -3,7 +3,7 @@
 <!-- <p align="center">An AirBnB Clone</p> -->
 
 
-_<p align="center"> Market, and mark it off your list </p>_
+_<p align="center"> and mark it off your list </p>_
 
 <div>
 <div>
@@ -32,7 +32,9 @@ _<p align="center"> Market, and mark it off your list </p>_
   
 Welcome to Market, your one-stop shop for everything you need.
 
-Inspired by <a href="https://www.target.com/" alt="Target website">Target</a>, Market gives shoppers the ability to browse products, view past orders, read reviews, and checkout.
+Inspired by <a href="https://www.target.com/" alt="Target website">Target</a>, Market offers a variety of products for shoppers to browse, review, and purchase.
+
+Have a running list of things you need around the house? Market & Market Square.
 
 <br>
 <br>
