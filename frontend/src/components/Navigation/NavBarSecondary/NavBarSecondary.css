@@ -38,6 +38,7 @@
     flex-direction: row;
     justify-content:  left;
     align-items: center;
+    padding-left: 20px;
 }
 #navbar-logo {
     width: 44px;
@@ -53,6 +54,7 @@
     flex-direction: row;
     justify-content:  right;
     align-items: center;
+    padding-right: 20px;
 }
 .NavBarAccount-left > * {
     margin-right: 15px;
