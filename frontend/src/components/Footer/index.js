@@ -3,19 +3,51 @@
 
 // local files
 import "./Footer.css"
+import footerImage from "../../images/branding/market-footer-image.png";
+import { Link, NavLink } from "react-router-dom";
 
 /******************************* COMPONENT *******************************/
 function Footer() {
 
     return (
-      <div className="page-wrapper-container">
-
+      // <div id="Footer-wrapper-container">
         <div id="Footer-component">
 
-            <h1>Footer</h1>
-        </div>
+          <div className="footer-top-section">
 
-      </div>
+          </div>
+
+          <div className="footer-middle-section">
+            <img src={footerImage} id="footer-image"></img>
+
+          </div>
+
+
+
+          <div className="footer-bottom-section">
+
+            <div className="footer-bottom-left-section">
+              <div className="footer-about-links-container">
+                <a href="https://www.linkedin.com/in/kevinlongboy/">
+                  <i class="fa-brands fa-linkedin" id="footer-about-link"></i>
+                </a>
+              </div>
+
+              <div className="footer-about-links-container">
+                <a href="https://github.com/kevinlongboy">
+                  <i class="fa-brands fa-github" id="footer-about-link"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="footer-bottom-right-section">
+              <p>TM & © 2022 Market Brands, Inc.</p>
+            </div>
+          </div>
+
+        </div>
+      // </div>
+
     )
 }
 

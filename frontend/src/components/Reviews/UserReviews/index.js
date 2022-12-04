@@ -51,6 +51,8 @@ function UserReviews() {
               <div className="UserReviews-subtitle">Tell others about your recent purchases.</div>
             </div>
 
+          <div className="UserReviews-card-container">
+
 
             {reviews && reviews.map((review) => (
               <>
@@ -76,7 +78,7 @@ function UserReviews() {
                     <NavLink
                       exact to={`/reviews/${review.id}/edit`}
                       className="UserReviews-modify-review-button"
-                    >
+                      >
                       Edit review
                     </NavLink>
 
@@ -87,6 +89,7 @@ function UserReviews() {
               </div>
             </>
           ))}
+          </div>
 
           </div>
 

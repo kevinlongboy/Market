@@ -7,6 +7,7 @@ import  StarRatings from 'react-star-ratings';
 // local files
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
 import AddToCart from "../../Cart/AddToCart";
+import Footer from "../../Footer";
 import "./DepartmentPage.css"
 
 
@@ -39,6 +40,7 @@ function DepartmentPage() {
 
   /**************** render component *****************/
   return (
+    <>
     <div className="page-wrapper-container">
       <div id="DepartmentPage-component">
 
@@ -133,6 +135,8 @@ function DepartmentPage() {
 
       </div>
     </div>
+    {/* <Footer /> */}
+    </>
   )
 }
 

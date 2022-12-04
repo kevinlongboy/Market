@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 // local files
 import ProfileButton from '../ProfileButton';
 import CategoriesButton from '../CategoriesButton';
-import logo from "../../../images/branding/market-logo.png";
+import logo from "../../../images/branding/logo/market-logo.png";
 import './NavBarSecondary.css';
 
 

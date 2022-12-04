@@ -1,6 +1,6 @@
 #UserReviews-component {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     max-width: 1400px;
 
     margin: 0px;
@@ -17,6 +17,7 @@
     height: 100%;
 
     padding: 12px;
+    /* overflow-y: scroll; */
 }
 
 .UserReviews-directory-container {
@@ -53,6 +54,11 @@
 }
 .UserReviews-subtitle {
     font-size: 16px;
+}
+
+.UserReviews-card-container {
+    height: 85%;
+    overflow-y: scroll;
 }
 
 .review-card-container {

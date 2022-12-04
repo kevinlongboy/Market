@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, Redirect } from "react-router-dom";
 // local files
 import * as sessionActions from "../../../store/sessionReducer";
-import logo from "../../../images/branding/market-logo.png";
+import logo from "../../../images/branding/logo/market-logo.png";
 import "./SignupFormPage.css";
 
 
