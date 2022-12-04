@@ -45,7 +45,7 @@ Inspired by <a href="https://www.target.com/" alt="Target website">Target</a>, M
 
 _Find a something you like?_
 
-The cart feature allows shoppers the ability to add products to their cart, remove any item, and proceed to checkout. 
+The cart feature allows shoppers to add products to their cart, remove any item, and proceed to checkout. 
 
 <br>
 
@@ -53,7 +53,7 @@ The cart feature allows shoppers the ability to add products to their cart, remo
 
 _This one has good reviews_
 
-The review feature allows shoppers the ability to read reviews for a product or write their own. Shoppers can also modify or delete any of their past review.
+The review feature allows shoppers to read reviews for a product or write their own. Shoppers can also modify or delete any of their past review.
   
 <br>
 <br>
