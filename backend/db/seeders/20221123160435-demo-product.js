@@ -594,7 +594,7 @@ const demoProducts = [
   {
     id: 72,
     departmentId: 6,
-    name: "https://target.scene7.com/is/image/Target/GUEST_b0238e4c-e758-4a64-b33a-d998a73fe082?wid=1000&hei=1000&qlt=80&fmt=webp",
+    name: "Steam Gift Card",
     brand: "InComm",
     price: 100.00,
     description: "💖",

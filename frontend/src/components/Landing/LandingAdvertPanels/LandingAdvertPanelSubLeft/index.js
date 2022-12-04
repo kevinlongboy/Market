@@ -31,7 +31,7 @@ function LandingAdvertPanelSubLeft() {
         </div>
 
         <div className="promo-image-container">
-            <NavLink exact to="departments/5/products/33">
+            <NavLink exact to="/departments/5/products/51">
             <img
             src={airpods}
             id="promo-image"></img>

@@ -71,8 +71,10 @@ function ProductReviews({product}) {
                 </p>
 
                 <div id="Reviews-list-item-user-info">
-                  <p>{review.User.firstName} {review.User.lastName[0]} - </p>
-                  <p>{review.createdAt && convertDate(review.createdAt)}</p>
+                  <a href={review.User.url} id='user-link'>
+                    <span>{review.User.firstName} {review.User.lastName}</span>
+                  </a>
+                  <p> - {review.createdAt && convertDate(review.createdAt)}</p>
                 </div>
 
                 <p id="Reviews-list-item-user-description">{review.description}</p>

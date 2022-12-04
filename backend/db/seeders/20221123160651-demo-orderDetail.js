@@ -19,10 +19,10 @@ const demoOrderDetails = [
     productId: 50,
   },
   // Jeff
-  // total:
+  // 2499.99
   {
     orderId: 3,
-    productId: ,
+    productId: 49,
   },
 
   // Shane
@@ -62,10 +62,10 @@ const demoOrderDetails = [
     productId: 34,
   },
   // Alec
-  //
+  // 2499.99
   {
     orderId: 6,
-    productId: ,
+    productId: 49,
   },
   // Dan
   // 2552.47
@@ -462,10 +462,10 @@ const demoOrderDetails = [
     productId: 30,
   },
   // Ryan Webster
-  //
+  // 1399.99
   {
     orderId: 40,
-    productId: ,
+    productId: 68,
   },
   // Jair
   // 389.98
@@ -498,10 +498,10 @@ const demoOrderDetails = [
     productId: 67,
   },
   // Connor Lam
-  //
+  // 19.99
   {
     orderId: 44,
-    productId: ,
+    productId: 75,
   },
 
   // Gary
@@ -561,28 +561,32 @@ const demoOrderDetails = [
     productId: 73,
   },
   // Logan
-  //
+  // 304.99
   {
     orderId: 51,
-    productId: ,
+    productId: 70,
   },
   // Alex Klivecka
-  //
+  // 2499.99
   {
     orderId: 52,
-    productId: ,
+    productId: 49,
   },
   // Jackson
-  //
+  // 27.98
   {
     orderId: 53,
-    productId: ,
+    productId: 89,
+  },
+  {
+    orderId: 53,
+    productId: 48,
   },
   // Tom
-  //
+  // 169.99
   {
     orderId: 54,
-    productId: ,
+    productId: 96,
   },
   // Andrew Kim
   // 21.00
@@ -789,151 +793,214 @@ const demoOrderDetails = [
     productId: 1, //
   },
   // Abel
+  // 1399.99
   {
-   orderId: 69,
-    productId: ,
+    orderId: 69,
+    productId: 68,
   },
   // Aijia
+  // 60.00
   {
    orderId: 70,
-    productId: ,
+    productId: 26,
   },
   // Allen Pham
+  // 79.95
   {
-   orderId: 71,
-    productId: ,
+    orderId: 71,
+    productId: 84,
   },
   // Andrew W
+  // 2499.99
   {
-   orderId: 72,
-    productId: ,
+    orderId: 72,
+    productId: 49,
   },
   // Brad L
+  //  59.99,
   {
-   orderId: 73,
-    productId: ,
+    orderId: 73,
+    productId: 65,
   },
   // Caleb
+  // 105.98
   {
-   orderId: 74,
-    productId: ,
+    orderId: 74,
+    productId: 44,
+  },
+  {
+    orderId: 64,
+    productId: 44,
   },
   // Calvin
+  // 99.99,
   {
-   orderId: 75,
-    productId: ,
+    orderId: 75,
+    productId: 66,
   },
   // Carmelino
+  // 79.99,
   {
-   orderId: 76,
-    productId: ,
+    orderId: 76,
+    productId: 28,
   },
   // Jake Lamar
   {
-   orderId: 77,
-    productId: ,
+    orderId: 77,
+    productId: 24,
   },
   // Jason Arnold
+  // 100.00
   {
-   orderId: 78,
-    productId: ,
+    orderId: 78,
+    productId: 72,
   },
   // Jason Premo
+  // 8.99
   {
-   orderId: 79,
-    productId: ,
+    orderId: 79,
+    productId: 33,
   },
   // Jessie Baron
+  // 399.99
   {
-   orderId: 80,
-    productId: ,
+    orderId: 80,
+    productId: 35,
   },
   // Justin
+  // 1409.98
   {
-   orderId: 81,
-    productId: ,
+    orderId: 81,
+    productId: 90,
+  },
+  {
+    orderId: 81,
+    productId: 68,
   },
   // Keerthana
+  // 52.89
   {
-   orderId: 82,
-    productId: ,
+    orderId: 82,
+    productId: 1,
+  },
+  {
+    orderId: 82,
+    productId: 50,
   },
   // Kelly
+  // 5.00
   {
-   orderId: 83,
-    productId: ,
+    orderId: 83,
+    productId: 91,
   },
   // Kris
+  // 119.99
   {
-   orderId: 84,
-    productId: ,
+    orderId: 84,
+    productId: 56,
   },
   // Matt Hutter
+  // 324.99
   {
-   orderId: 85,
-    productId: ,
+    orderId: 85,
+    productId: 80,
   },
   // Na
+  // 15.79
   {
-   orderId: 86,
-    productId: ,
+    orderId: 86,
+    productId: 36,
   },
   // Nate
+  // 6.00
   {
-   orderId: 87,
-    productId: ,
+    orderId: 87,
+    productId: 20,
   },
   // Matt Baine
+  // 2.59
   {
-   orderId: 88,
-    productId: ,
+    orderId: 88,
+    productId: 12,
   },
   // Sam
+  // 99.99
   {
-   orderId: 89,
-    productId: ,
+    orderId: 89,
+    productId: 66,
   },
   // Schaeffer
+  // 1299.99
   {
-   orderId: 90,
-    productId: ,
+    orderId: 90,
+    productId: 50,
   },
   // Sean Kennedy
+  // 81.00
   {
-   orderId: 91,
-    productId: ,
+    orderId: 91,
+    productId: 101,
   },
   // Sebastian
+  // 67.99,
   {
-   orderId: 92,
-    productId: ,
+    orderId: 92,
+    productId: 69,
   },
   // Simon
+  // 59.99,
   {
-   orderId: 93,
-    productId: ,
+    orderId: 93,
+    productId: 65,
   },
   // Yasamine
+  // 99.99,
   {
-   orderId: 94,
-    productId: ,
+    orderId: 94,
+    productId: 66,
   },
   // David Chou
+  // 99.99,
   {
- orderId: 95,
-  productId: ,
+    orderId: 95,
+    productId: 64,
   },
   // Gabe
+  // 186.38
   {
-  orderId: 96,
-    productId: ,
+    orderId: 96,
+    productId: 96,
+  },
+  {
+    orderId: 96,
+    productId: 85,
   },
   // Erin
+  // 220.15
   {
-  orderId: 97,
-    productId: ,
+    orderId: 97,
+    productId: 86,
   },
-
+  {
+    orderId: 97,
+    productId: 88,
+  },
+  {
+    orderId: 97,
+    productId: 90,
+  },
+  {
+    orderId: 97,
+    productId: 92,
+  },
+  {
+    orderId: 97,
+    productId: 93,
+  },
+  {
+    orderId: 97,
+    productId: 96,
+  },
   // Alex Auch
   // 249.99
   {
@@ -941,14 +1008,16 @@ const demoOrderDetails = [
     productId: 51,
   },
   // Alexis West
+  // 119.99,
   {
-   orderId: 99,
-    productId: ,
+    orderId: 99,
+    productId: 56,
   },
   // Kevin Longboy
+  // 100.00
   {
     orderId: 100,
-    productId: ,
+    productId: 72,
   },
 
   /************************ SECOND ORDERS ************************/

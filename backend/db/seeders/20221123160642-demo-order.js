@@ -17,8 +17,8 @@ const demoOrders = [
   // Jeff
   {
     userId: 3,
-    status: ,
-    total: ,
+    status: "Fulfilled",
+    total: 2499.99,
   },
   // Shane
   {
@@ -35,8 +35,8 @@ const demoOrders = [
   // Alec
   {
     userId: 6,
-    status: ,
-    total: ,
+    status: "Fulfilled",
+    total: 2499.99,
   },
   // Dan
   {
@@ -239,8 +239,8 @@ const demoOrders = [
   // Ryan Webster
   {
     userId: 40,
-    status: ,
-    total: ,
+    status: "Fulfilled",
+    total: 1399.99,
   },
   // Jair
   {
@@ -263,8 +263,8 @@ const demoOrders = [
   // Connor Lam
   {
     userId: 44,
-    status: ,
-    total: ,
+    status: "Fulfilled",
+    total: 19.99,
   },
   // Gary
   {
@@ -306,25 +306,25 @@ const demoOrders = [
   {
     userId: 51,
     status: "Fulfilled",
-    total: ,
+    total: 304.99,
   },
   // Alex Klivecka
   {
     userId: 52,
     status: "Fulfilled",
-    total: ,
+    total: 2499.99,
   },
   // Jackson
   {
     userId: 53,
     status: "Fulfilled",
-    total: ,
+    total: 27.98,
   },
   // Tom
   {
     userId: 54,
     status: "Fulfilled",
-    total: ,
+    total: 169.99,
   },
   // Andrew Kim
   {
@@ -414,175 +414,175 @@ const demoOrders = [
   {
     userId: 69,
     status: "Fulfilled",
-    total: ,
+    total: 1399.99,
   },
   // Aijia
   {
     userId: 70,
     status: "Fulfilled",
-    total: ,
+    total: 60.00,
   },
   // Allen Pham
   {
     userId: 71,
     status: "Fulfilled",
-    total: ,
+    total: 79.95,
   },
   // Andrew W
   {
     userId: 72,
     status: "Fulfilled",
-    total: ,
+    total: 2499.99,
   },
   // Brad L
   {
     userId: 73,
     status: "Fulfilled",
-    total: ,
+    total:  59.99,
   },
   // Caleb
   {
     userId: 74,
     status: "Fulfilled",
-    total: ,
+    total: 105.98,
   },
   // Calvin
   {
     userId: 75,
     status: "Fulfilled",
-    total: ,
+    total: 99.99,
   },
   // Carmelino
   {
     userId: 76,
     status: "Fulfilled",
-    total: ,
+    total: 79.99,
   },
   // Jake Lamar
   {
     userId: 77,
     status: "Fulfilled",
-    total: ,
+    total: 49.99,
   },
   // Jason Arnold
   {
     userId: 78,
     status: "Fulfilled",
-    total: ,
+    total: 100.00,
   },
   // Jason Premo
   {
     userId: 79,
     status: "Fulfilled",
-    total: ,
+    total: 8.99,
   },
   // Jessie Baron
   {
     userId: 80,
     status: "Fulfilled",
-    total: ,
+    total: 399.99,
   },
-  // Juston
+  // Justin
   {
     userId: 81,
     status: "Fulfilled",
-    total: ,
+    total: 1409.98,
   },
   // Keerthana
   {
     userId: 82,
     status: "Fulfilled",
-    total: ,
+    total: 52.89,
   },
   // Kelly
   {
     userId: 83,
     status: "Fulfilled",
-    total: ,
+    total: 5.00,
   },
   // Kris
   {
     userId: 84,
     status: "Fulfilled",
-    total: ,
+    total: 119.99,
   },
   // Matt Hutter
   {
     userId: 85,
     status: "Fulfilled",
-    total: ,
+    total: 324.99,
   },
   // Na
   {
     userId: 86,
     status: "Fulfilled",
-    total: ,
+    total: 15.79,
   },
   // Nate
   {
     userId: 87,
     status: "Fulfilled",
-    total: ,
+    total: 6.00,
   },
   // Matt Baine
   {
     userId: 88,
     status: "Fulfilled",
-    total: ,
+    total: 2.59,
   },
   // Sam
   {
     userId: 89,
     status: "Fulfilled",
-    total: ,
+    total: 99.99,
   },
   // Schaeffer
   {
     userId: 90,
     status: "Fulfilled",
-    total: ,
+    total: 1299.99,
   },
   // Sean Kennedy
   {
     userId: 91,
     status: "Fulfilled",
-    total: ,
+    total: 81.00,
   },
   // Sebastian
   {
     userId: 92,
     status: "Fulfilled",
-    total: ,
+    total: 67.99,
   },
   // Simon
   {
     userId: 93,
     status: "Fulfilled",
-    total: ,
+    total: 59.99,
   },
   // Yasamine
   {
     userId: 94,
     status: "Fulfilled",
-    total: ,
+    total: 66,
   },
   // David Chou
   {
   userId: 95,
   status: "Fulfilled",
-  total: ,
+  total: 99.99,
   },
   // Gabe
   {
   userId: 96,
   status: "Fulfilled",
-  total: ,
+  total: 186.38,
   },
   // Erin
   {
   userId: 97,
   status: "Fulfilled",
-  total: ,
+  total: 220.15,
   },
   // Alex Auch
   {
@@ -594,13 +594,13 @@ const demoOrders = [
   {
   userId: 99,
   status: "Fulfilled",
-  total: ,
+  total: 119.99,
   },
   // Kevin Longboy
   {
   userId: 100,
   status: "Fulfilled",
-  total: ,
+  total: 100.00,
   },
 
   /************************ SECOND ORDERS ************************/

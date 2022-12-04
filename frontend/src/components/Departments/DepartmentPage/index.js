@@ -87,7 +87,7 @@ function DepartmentPage() {
 
 
             <div className="product-card-brand-container">
-              <p className="product-card-brand">Brand</p>
+              <p className="product-card-brand">{product.brand}</p>
             </div>
 
 

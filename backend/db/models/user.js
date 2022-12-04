@@ -66,7 +66,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           isAlpha: true,
-          len: [2, 25]
+          len: [2, 50]
         }
       },
       lastName: {
@@ -74,14 +74,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           isAlpha: true,
-          len: [2, 25]
+          len: [2, 50]
         }
       },
       username: {
         allowNull: false,
         type: DataTypes.STRING,
         validate: {
-          len: [3, 30],
+          len: [2, 50],
           isNotEmail(value) {
             if (Validator.isEmail(value)) {
               throw new Error("Cannot be an email.");
@@ -94,7 +94,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {
           isEmail: true,
-          len: [3, 100]
+          len: [2, 150]
         }
       },
       url: {

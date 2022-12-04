@@ -44,6 +44,9 @@ router.get('/', requireAuth, async(req, res) => {
         for (let i = 0; i < getAllOrders.length; i++) {
             let order = getAllOrders[i];
 
+            // modify outer keys
+            order.total = (order.total).toFixed(2)
+
             let productsPurchased = await OrderDetail.findAll({
                 where: { orderId: order.id },
                 attributes: {

@@ -26,7 +26,7 @@ function LandingAdvertPanelSubRight() {
         </div>
 
         <div className="promo-image-container">
-            <NavLink exact to="departments/5/products/38">
+            <NavLink exact to="/departments/6/products/61">
             <img
             src={xbox}
             id="xbox-image"></img>
