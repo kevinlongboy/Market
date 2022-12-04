@@ -81,6 +81,7 @@ router.get('/', restoreUser, (req, res) => {
             printUser.lastName = user.lastName;
             printUser.email = user.email;
             printUser.username = user.username;
+            printUser.url = user.url;
 
             console.log("✨✨✨✨ printUser ✨✨✨✨", printUser)
 

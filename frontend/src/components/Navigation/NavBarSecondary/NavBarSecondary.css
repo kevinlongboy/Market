@@ -61,7 +61,6 @@
 }
 
 #NavBarAccount-cart-button-container {
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,21 +70,24 @@
 
     color: #333;
     font-size: 16px;
-    text-decoration: none;
-
 }
 #NavBarAccount-cart-button-container:hover {
     background-color: #f7f7f7;
     border-radius: 4px;
+    text-decoration: none;
 }
 #NavBarAccount-cart-button-container:visited {
     text-decoration: none;
-
 }
 #NavBarAccount-cart-button{
     color: #333;
-    text-decoration: none;
     font-size: 20px;
+    text-decoration: none;
+    border: none;
+    /* background-color: red; */
+}
+#NavBarAccount-cart-button:before{
+    text-decoration: none;
 }
 #NavBarAccount-cart-button:visited{
     text-decoration: none;

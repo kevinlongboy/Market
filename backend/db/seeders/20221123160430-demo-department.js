@@ -50,10 +50,15 @@ const demoDepartments = [
     name: "Furniture",
     url: 'https://target.scene7.com/is/image/Target/Furniture-210913-1631566212856?wid=315&hei=315&qlt=60&fmt=webp'
   },
+  // {
+  //   id: 10,
+  //   name: "Clearance",
+  //   url: 'https://target.scene7.com/is/image/Target/clearance97188-171020_1508525411214?wid=315&hei=315&qlt=60&fmt=webp'
+  // },
   {
     id: 10,
-    name: "Clearance",
-    url: 'https://target.scene7.com/is/image/Target/clearance97188-171020_1508525411214?wid=315&hei=315&qlt=60&fmt=webp'
+    name: "Holiday",
+    url: 'https://target.scene7.com/is/image/Target/Gift_Ideas1-211006-1633537219287?wid=315&hei=315&qlt=60&fmt=webp'
   },
 ]
 

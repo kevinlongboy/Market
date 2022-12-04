@@ -1,7 +1,6 @@
 'use strict';
 // /** @type {import('sequelize-cli').Migration} */
 
-//
 // {
 //   productId: ,
 //   url: "",
@@ -1980,12 +1979,182 @@ const demoProductImages = [
   },
 
   /********************** 10. Clearance **********************/
-  // clearance
-  // {
-  //   productId: 59,
-  //   url: ""
-  // },
+  // wreath
+  {
+    productId: 109,
+    url: "https://target.scene7.com/is/image/Target/GUEST_7db6517c-b069-4915-873c-00a393dbd324?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 109,
+    url: "https://target.scene7.com/is/image/Target/GUEST_5f7bb6b7-f1c5-45a4-9f68-5eb999179b69?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 109,
+    url: "https://target.scene7.com/is/image/Target/GUEST_fa74ab5d-54ed-4bcf-8802-71463e417703?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // ornaments
+  {
+    productId: 110,
+    url: "https://target.scene7.com/is/image/Target/GUEST_78e29e1a-3485-4786-9490-9b345d11970e?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 110,
+    url: "https://target.scene7.com/is/image/Target/GUEST_3156ef27-44c6-4163-abf3-6574810edb3a?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 110,
+    url: "https://target.scene7.com/is/image/Target/GUEST_19d26c07-5a71-4e21-9125-b2228a5f1898?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // stocking
+  {
+    productId: 111,
+    url: "https://target.scene7.com/is/image/Target/GUEST_41b48906-b028-456e-8eb5-08508cff3bf5?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 111,
+    url: "https://target.scene7.com/is/image/Target/GUEST_5bf29494-2f13-42a3-aa42-a20bc0f4fdbe?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // lights
+  {
+    productId: 112,
+    url: "https://target.scene7.com/is/image/Target/GUEST_e534435d-e31e-4b92-8e7c-bc6a63c849e0?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 112,
+    url: "https://target.scene7.com/is/image/Target/GUEST_5c86ecc2-4c60-4b3b-b844-978216e7ca69?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 112,
+    url: "https://target.scene7.com/is/image/Target/GUEST_4e7fe0be-1442-4996-b740-3a5d7e6d98d4?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 112,
+    url: "https://target.scene7.com/is/image/Target/GUEST_baaf6ce6-572c-4d4d-8d71-050b2471ff95?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 112,
+    url: "https://target.scene7.com/is/image/Target/GUEST_01f6b51a-652d-4e7d-b89d-e40bdd518f25?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // candy canes
+  {
+    productId: 113,
+    url: "https://target.scene7.com/is/image/Target/GUEST_c87beee5-d32a-4c13-9215-22da08974726?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 113,
+    url: "https://target.scene7.com/is/image/Target/GUEST_404b2056-c723-4d8e-9e2a-169870d8dd6e?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 113,
+    url: "https://target.scene7.com/is/image/Target/GUEST_e3eb42bf-bfb3-40f0-9f04-1b807acb45a9?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 113,
+    url: "https://target.scene7.com/is/image/Target/GUEST_9c0ed759-fdbc-423e-9f51-573b9929ecfe?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // gingerbread house
+  {
+    productId: 114,
+    url: "https://target.scene7.com/is/image/Target/GUEST_c598a21c-b009-4920-b50c-f72f4f956ffd?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 114,
+    url: "https://target.scene7.com/is/image/Target/GUEST_61307d6e-728f-4b2b-8ca1-e9aef519901b?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 114,
+    url: "https://target.scene7.com/is/image/Target/GUEST_06bd0b90-1802-4a44-9bc1-7ad8c6b2dbde?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 114,
+    url: "https://target.scene7.com/is/image/Target/GUEST_e1690b11-3f21-430a-8aa2-2529bca2956f?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // mug
+  {
+    productId: 115,
+    url: "https://target.scene7.com/is/image/Target/GUEST_51915f2c-3254-4333-b1b0-f400d1190f8c?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 115,
+    url: "https://target.scene7.com/is/image/Target/GUEST_d8d78898-aac3-460d-851b-2b462f44dc00?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 115,
+    url: "https://target.scene7.com/is/image/Target/GUEST_0e16e950-b499-4eff-9183-167118f83ef9?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // candles
+  {
+    productId: 116,
+    url: "https://target.scene7.com/is/image/Target/GUEST_45c3b200-2961-40e6-ad39-d3e3a0f619a0?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 116,
+    url: "https://target.scene7.com/is/image/Target/GUEST_7473955f-7701-4a6f-ab2a-eea6040b3d0c?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // menorah
+  {
+    productId: 117,
+    url: "https://target.scene7.com/is/image/Target/GUEST_54c8bae6-40a0-4c0d-bf0f-78abf06495d7?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 117,
+    url: "https://target.scene7.com/is/image/Target/GUEST_ca07e28c-d1d9-4bab-bdcd-c517ecfb2241?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 117,
+    url: "https://target.scene7.com/is/image/Target/GUEST_554a54cf-e278-4c84-967d-c1f8736d172a?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // gift wrap
+  {
+    productId: 118,
+    url: "https://target.scene7.com/is/image/Target/GUEST_4fbc6a07-8d5d-4ed9-9e05-9f6bed95e849?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 118,
+    url: "https://target.scene7.com/is/image/Target/GUEST_0b6b8d89-84db-42c9-a0b7-9f252c2f349f?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // cards
+  {
+    productId: 119,
+    url: "https://target.scene7.com/is/image/Target/GUEST_9a722488-0df7-4555-9039-cde8a1327413?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 119,
+    url: "https://target.scene7.com/is/image/Target/GUEST_b041172e-f002-4ff2-b5b1-fc4713209d32?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 119,
+    url: "https://target.scene7.com/is/image/Target/GUEST_a1022e8a-f40a-4f0a-95e1-ab169bfa5f90?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 119,
+    url: "https://target.scene7.com/is/image/Target/GUEST_51494c7b-8242-4f4b-aaac-04c702566a27?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // tree
+  {
+    productId: 120,
+    url: "https://target.scene7.com/is/image/Target/GUEST_db5ef904-4b7d-47b8-8bff-64ff5d431ba7?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 120,
+    url: "https://target.scene7.com/is/image/Target/GUEST_a2c2e7e9-3de7-4898-8c40-ebeb926549bd?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 120,
+    url: "https://target.scene7.com/is/image/Target/GUEST_5eccb109-9ca9-407d-877e-04eb35828497?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 120,
+    url: "https://target.scene7.com/is/image/Target/GUEST_25a83141-71a8-479d-b730-99bc2d8a50c4?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 120,
+    url: "https://target.scene7.com/is/image/Target/GUEST_776dac9c-8072-4a44-a704-13640c10d28b?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
 ]
+
+
+
 
 
 let prodIds = [];

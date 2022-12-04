@@ -14,9 +14,9 @@ const demoUsers = [
   /********************** 1. Demo **********************/
   {
     id: 1,
-    firstName: 'Demo',
-    lastName: 'User',
-    username: 'demo_user',
+    firstName: 'Smart Shopper',
+    lastName: ' ',
+    username: 'SmartShopper',
     hashedPassword: bcrypt.hashSync('demoPassword'),
     email: 'demo@email.com',
     url: 'https://www.appacademy.io/',

@@ -49,3 +49,10 @@
 .NavBarMain-right-container > p {
     margin-left: 32px;
 }
+.NavBarMain-right-container > p > a {
+    color: white;
+    text-decoration: none;
+}
+.NavBarMain-right-container > p > a:hover {
+    text-decoration: underline;
+}
