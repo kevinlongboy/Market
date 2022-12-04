@@ -13,7 +13,7 @@ _<p align="center"> Market, and mark it off your list </p>_
 <div align="center">
 
 
-## ✅ Directory
+## ✅ Store Directory
 
 [Overview](https://github.com/kevinlongboy/Market#-directory) <br>
 [Features](https://github.com/kevinlongboy/Market#-lets-go-shopping) <br>
