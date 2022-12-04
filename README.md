@@ -160,7 +160,7 @@ Registries will allow shoppers to create a public list of items that they wish t
 
 ##  ✅ Free Sample
 
-Ready for some retail therapy? Click the icon below to be redirected to Heroku, the current hosting site for the fullstack API:
+Need a little retail therapy? Click the icon below to be redirected to Heroku, the current hosting site for the fullstack API:
 <!--
 <p>
 <a href="https://kl-market.herokuapp.com/"><img vertical-align="middle" alt="Market live site hosted via Heroku" width="45px" src="images/social-media-branding/heroku-logo.jpg"/></a>
