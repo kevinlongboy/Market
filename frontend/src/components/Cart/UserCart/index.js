@@ -6,6 +6,7 @@ import { Link, NavLink, Redirect, useParams } from "react-router-dom";
 // local files
 import cartReducer, { thunkReadCart, thunkRemoveSingleProductFromCart } from "../../../store/cartReducer";
 import RemoveFromCart from "../RemoveFromCart";
+import emptyCartImage from "../../../images/branding/market-empty-cart.png";
 import "./UserCart.css"
 
 /******************************* COMPONENT *******************************/

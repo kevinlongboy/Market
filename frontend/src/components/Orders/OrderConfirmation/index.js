@@ -7,6 +7,9 @@ import { normalizeArray } from "../../../component-resources";
 import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
 // local files
 import "./OrderConfirmation.css"
+import thanksImage from "../../../images/branding/market-order-confirmation-image.png";
+import buildingImage from "../../../images/branding/market-building-image.png";
+
 
 /******************************* COMPONENT *******************************/
 function OrderConfirmation() {
@@ -36,6 +39,7 @@ function OrderConfirmation() {
         <div id="OrderConfirmation-component">
 
             <div className="OrderConfirmation-title">
+              <img  src={thanksImage} id="thanksImage"></img>
               <h1>Thanks for your order!</h1>
               <p>We’ll send confirmations and order updates to <span>{user.email}</span></p>
             </div>
@@ -61,6 +65,9 @@ function OrderConfirmation() {
 
         <div className="OrderConfirmation-redirect-section">
           <div>
+            <div>
+              <img src={buildingImage} id="building-image"></img>
+            </div>
             <button
               className='OrderConfirmation-redirect-button'
               id='OrderConfirmation-redirect-button'

@@ -55,6 +55,9 @@
     margin-bottom: 8px;
     padding-bottom: 20px;
 }
+#thanksImage {
+    width: 400px;
+}
 .review-form-item {
     font-size: 29px;
     color: #333;

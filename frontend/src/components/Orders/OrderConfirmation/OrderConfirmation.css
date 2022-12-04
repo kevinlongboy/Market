@@ -38,6 +38,9 @@
 .OrderConfirmation-title > h1 {
     font-size: 29px;
     color: rgb(204, 0, 0);
+    padding-top: 0px;
+    margin-top: 0px;
+
 }
 .OrderConfirmation-title > p > span {
     font-weight: 700;
@@ -97,7 +100,9 @@
 }
 
 
-
+#building-image {
+    width: 80px
+}
 .OrderConfirmation-redirect-button-container {
     display: flex;
     flex-direction: column;
