@@ -154,6 +154,8 @@ Registries will allow shoppers to create a public list of items that they wish t
 <a href="https://sequelize.org/"><img alt="Sequelize" width="45px" src="images/tech-stack/sequelize-logo.png"/></a>
 <a href="https://expressjs.com/"><img alt="Express" width="45px" src="images/tech-stack/express-logo.png"/></a>
 <a href="https://www.postgresql.org/"><img alt="PostgreSQL" width="45px" src="images/tech-stack/postgresql-logo.png"/></a>
+
+<br>
 <br>
   
 ---
