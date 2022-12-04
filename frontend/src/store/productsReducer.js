@@ -30,7 +30,7 @@ export const thunkReadSingleProductDetails = (productId) => async (dispatch) => 
 const initialState = {
     singleProductDetails: {
         Department: {},
-        ProductImages: []
+        ProductImages: {}
     }
 }
 

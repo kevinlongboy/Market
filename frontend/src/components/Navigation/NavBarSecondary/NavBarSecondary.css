@@ -39,6 +39,11 @@
     justify-content:  left;
     align-items: center;
 }
+#navbar-logo {
+    width: 44px;
+    /* padding: 0px; */
+}
+
 .NavBarAccount-right > * {
     margin-left: 20px;
 }
@@ -50,7 +55,7 @@
     align-items: center;
 }
 .NavBarAccount-left > * {
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 #NavBarAccount-cart-button-container {

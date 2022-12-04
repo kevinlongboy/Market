@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 // local files
 import ProfileButton from '../ProfileButton';
 import CategoriesButton from '../CategoriesButton';
+import logo from "../../../images/branding/market-logo.png";
 import './NavBarSecondary.css';
 
 
@@ -23,7 +24,7 @@ function NavBarSecondary({ isLoaded }){
 
 
         <div className='NavBarAccount-left'>
-            <NavLink exact to="/">Logo</NavLink>
+            <NavLink exact to="/"><img src={logo} id="navbar-logo"></img></NavLink>
             <CategoriesButton />
         </div>
 
@@ -50,4 +51,3 @@ function NavBarSecondary({ isLoaded }){
 
 /******************************** EXPORTS ********************************/
 export default NavBarSecondary;
-

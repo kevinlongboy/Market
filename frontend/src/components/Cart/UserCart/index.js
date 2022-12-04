@@ -2,9 +2,9 @@
 // libraries
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, Redirect, useParams } from "react-router-dom";
 // local files
-import { thunkReadCart, thunkRemoveSingleProductFromCart } from "../../../store/cartReducer";
+import cartReducer, { thunkReadCart, thunkRemoveSingleProductFromCart } from "../../../store/cartReducer";
 import RemoveFromCart from "../RemoveFromCart";
 import "./UserCart.css"
 

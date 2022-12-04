@@ -2,7 +2,7 @@
 // libraries
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useHistory, useParams } from "react-router-dom";
+import { Link, NavLink, Redirect, useHistory, useParams } from "react-router-dom";
 // local files
 import { thunkReadCart } from "../../store/cartReducer";
 import { thunkCreateSingleOrder, thunkReadAllUserOrders } from "../../store/ordersReducer";
@@ -69,7 +69,9 @@ function Checkout() {
 
 
   /**************** render component *****************/
-    return (
+  if (products && products.length < 1) return <Redirect to='/cart'></Redirect>
+
+  return (
       <div className="Checkout-page-wrapper-container">
         <div id="Checkout-component">
 
