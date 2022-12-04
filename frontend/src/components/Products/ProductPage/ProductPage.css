@@ -140,6 +140,11 @@
     margin-left: 8px;
 }
 
+
+.random-div {
+    width: 100%;
+
+}
 .ProductPage-description-container {
     width: 100%;
     height: 463.602px;
@@ -179,6 +184,12 @@
 } */
 
 .ProductPage-description-highlights-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width:93%;
     height: 240px;
     background-color: #fff;
     margin: 30px;
@@ -191,7 +202,9 @@
 }
 .ProductPage-description-highlights-container > div {
     font-weight: 700;
-    font-size: 16px
+    font-size: 16px;
+    /* background-color: black; */
+
 }
 .ProductPage-description-highlights-container > p {
     font-size: 14px

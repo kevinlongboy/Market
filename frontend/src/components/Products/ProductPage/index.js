@@ -122,7 +122,7 @@ function ProductPage() {
 
             </div>
 
-        <div>
+        <div className="random-div">
 
         <div className="ProductPage-description-container">
 
