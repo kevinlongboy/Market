@@ -29,7 +29,7 @@ _<p align="center"> Market, and mark it off your list </p>_
   
 Welcome to Market, your one-stop shop for everything you need.
 
-Inspired by <a href="https://www.target.com/" alt="Target website">AirBnB</a>, Market gives shoppers the ability to browse products, view past orders, read reviews, and checkout.
+Inspired by <a href="https://www.target.com/" alt="Target website">Target</a>, Market gives shoppers the ability to browse products, view past orders, read reviews, and checkout.
 
 <br>
 <br>
