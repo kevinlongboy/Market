@@ -229,7 +229,7 @@ function ReviewUpdateForm() {
 
 
                 <button
-                onClick={() => <Redirect to={`/account/reviews`}></Redirect>}
+                onClick={() => history.push(`/account/reviews`)}
                 className="review-form-button"
                 >
                 Cancel
