@@ -85,7 +85,7 @@ function LoginFormPage() {
                   value={credential}
                   onChange={(e) => setCredential(e.target.value)}
                   required
-                  minLength={5}
+                  minLength={3}
                   className='login-or-signup-form-input-field'
                   >
                 </input>
@@ -96,7 +96,7 @@ function LoginFormPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  minLength={5}
+                  minLength={3}
                   className='login-or-signup-form-input-field'
                   >
                 </input>

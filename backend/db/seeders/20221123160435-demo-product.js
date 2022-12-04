@@ -10,8 +10,6 @@
 //   description: "",
 // },
 
-
-
 const demoProducts = [
   /********************** 1. Personal Care **********************/
   {

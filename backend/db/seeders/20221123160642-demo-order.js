@@ -2,7 +2,7 @@
 // /** @type {import('sequelize-cli').Migration} */
 
 const demoOrders = [
-  // demo
+  // Demo
   {
     userId: 1,
     status: "Fulfilled",
@@ -14,368 +14,608 @@ const demoOrders = [
     status: "Fulfilled",
     total: 1299.99,
   },
-  // Shane
+  // Jeff
   {
     userId: 3,
+    status: ,
+    total: ,
+  },
+  // Shane
+  {
+    userId: 4,
     status: "Fulfilled",
     total: 285.25,
   },
   // Geoffrey
   {
-    userId: 4,
+    userId: 5,
     status: "Fulfilled",
     total: 2569.97,
   },
+  // Alec
+  {
+    userId: 6,
+    status: ,
+    total: ,
+  },
   // Dan
   {
-    userId: 5,
+    userId: 7,
     status: "Fulfilled",
     total: 2552.47,
   },
   // Brad
   {
-    userId: 6,
+    userId: 8,
     status: "Fulfilled",
     total: 177.36,
   },
   // Hector
   {
-    userId: 7,
+    userId: 9,
     status: "Fulfilled",
     total: 253.78,
   },
   // Cody
   {
-    userId: 8,
+    userId: 10,
     status: "Fulfilled",
     total: 274.87,
   },
   // Cameron
   {
-    userId: 9,
+    userId: 11,
     status: "Fulfilled",
     total: 1320.98,
   },
   // Peter
   {
-    userId: 10,
+    userId: 12,
     status: "Fulfilled",
     total: 7.00,
   },
   // Braxton
   {
-    userId: 11,
+    userId: 13,
     status: "Fulfilled",
     total: 2525.98,
   },
   // Jesse
   {
-    userId: 12,
+    userId: 14,
     status: "Fulfilled",
     total: 26.48,
   },
   // Jojo
   {
-    userId: 13,
+    userId: 15,
     status: "Fulfilled",
     total: 18.48,
   },
   // Nick
   {
-    userId: 14,
+    userId: 16,
     status: "Fulfilled",
     total: 2897.96,
   },
   // Andrew
   {
-    userId: 15,
+    userId: 17,
     status: "Fulfilled",
     total: 525.98,
   },
   // Ari
   {
-    userId: 16,
+    userId: 18,
     status: "Fulfilled",
     total: 109.27,
   },
   // Sam
   {
-    userId: 17,
+    userId: 19,
     status: "Fulfilled",
     total: 10.97,
   },
   // Tanner
   {
-    userId: 18,
+    userId: 20,
     status: "Fulfilled",
     total: 139.99,
   },
   // Olivia
   {
-    userId: 19,
+    userId: 21,
     status: "Fulfilled",
     total: 279.98,
   },
   // Nate
   {
-    userId: 20,
+    userId: 22,
     status: "Fulfilled",
     total: 2879.34,
   },
-  // Daniel
+  // Daniel Chin
   {
-    userId: 21,
+    userId: 23,
     status: "Fulfilled",
     total: 99.99,
   },
-  // Alex
+  // Alex Pezzati
   {
-    userId: 22,
+    userId: 24,
     status: "Fulfilled",
     total: 188.77,
   },
   // Sherry
   {
-    userId: 23,
+    userId: 25,
     status: "Fulfilled",
     total: 10.28,
   },
   // Rawaha
   {
-    userId: 24,
+    userId: 26,
     status: "Fulfilled",
     total: 1333.97,
   },
   // Whit
   {
-    userId: 25,
+    userId: 27,
     status: "Fulfilled",
     total: 22.99,
   },
   // Daniel Flores
   {
-    userId: 26,
+    userId: 28,
     status: "Fulfilled",
     total: 4299.97,
   },
   // David Nash
   {
-    userId: 27,
+    userId: 29,
     status: "Fulfilled",
     total: 1317.98,
   },
   // John Lee
   {
-    userId: 28,
+    userId: 30,
     status: "Fulfilled",
     total: 499.99,
   },
   // Andrew Tran
   {
-    userId: 29,
+    userId: 31,
     status: "Fulfilled",
     total: 2.89,
   },
   // Cesar
   {
-    userId: 30,
+    userId: 32,
     status: "Fulfilled",
     total: 1299.99,
   },
   // Ryan Schneider
   {
-    userId: 31,
+    userId: 33,
     status: "Fulfilled",
-    total: 1299.99,
+    total: 3799.98,
   },
   // Anthony
   {
-    userId: 32,
+    userId: 34,
     status: "Fulfilled",
     total: 82.47,
   },
   // Franco
   {
-    userId: 33,
+    userId: 35,
     status: "Fulfilled",
     total: 599.98,
   },
   // Kevin
   {
-    userId: 34,
+    userId: 36,
     status: "Fulfilled",
     total: 999.98,
   },
-  // David D.
+  // David DeHerrera
   {
-    userId: 35,
+    userId: 37,
     status: "Fulfilled",
     total: 239.98,
   },
   // Drew
   {
-    userId: 36,
+    userId: 38,
     status: "Fulfilled",
     total: 110.27,
   },
-  // David R.
+  // David Rogers
   {
-    userId: 37,
+    userId: 39,
     status: "Fulfilled",
     total: 111.76,
   },
+  // Ryan Webster
+  {
+    userId: 40,
+    status: ,
+    total: ,
+  },
   // Jair
   {
-    userId: 38,
+    userId: 41,
     status: "Fulfilled",
     total: 389.98,
   },
   // Tiffany
   {
-    userId: 39,
+    userId: 42,
     status: "Fulfilled",
     total: 46.99,
   },
-  // Daniel
+  // Daniel Lam
   {
-    userId: 40,
+    userId: 43,
     status: "Fulfilled",
     total: 139.99,
   },
+  // Connor Lam
+  {
+    userId: 44,
+    status: ,
+    total: ,
+  },
   // Gary
   {
-    userId: 41,
+    userId: 45,
     status: "Fulfilled",
     total: 370.97,
   },
   // Jake
   {
-    userId: 42,
+    userId: 46,
     status: "Fulfilled",
     total: 249.99,
   },
   // John
   {
-    userId: 43,
+    userId: 47,
     status: "Fulfilled",
     total: 105.38,
   },
   // Maliha
   {
-    userId: 44,
+    userId: 48,
     status: "Fulfilled",
     total: 559.99,
   },
   // Thenu
   {
-    userId: 45,
+    userId: 49,
     status: "Fulfilled",
     total: 199.98,
   },
   // Brennon
   {
-    userId: 46,
+    userId: 50,
     status: "Fulfilled",
     total: 30.48,
   },
-  // Andrew
+  // Logan
   {
-    userId: 47,
+    userId: 51,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Alex Klivecka
+  {
+    userId: 52,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Jackson
+  {
+    userId: 53,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Tom
+  {
+    userId: 54,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Andrew Kim
+  {
+    userId: 55,
     status: "Fulfilled",
     total: 21.00,
   },
   // Adam
   {
-    userId: 48,
+    userId: 56,
     status: "Fulfilled",
     total: 389.98,
   },
-  // Chris
+  // Chris P
   {
-    userId: 49,
+    userId: 57,
     status: "Fulfilled",
     total: 5329.91,
   },
   // Christo
   {
-    userId: 50,
+    userId: 58,
     status: "Fulfilled",
-    total: 1859.98,
+    total: 4359.97,
   },
   // Cindy
   {
-    userId: 51,
+    userId: 59,
     status: "Fulfilled",
     total: 20.99,
   },
   // David Burch
   {
-    userId: 52,
+    userId: 60,
     status: "Fulfilled",
     total: 55.99,
   },
   // Eliza
   {
-    userId: 53,
+    userId: 61,
     status: "Fulfilled",
     total: 1092.96,
   },
   // James
   {
-    userId: 54,
+    userId: 62,
     status: "Fulfilled",
     total: 20.99,
   },
   // Jason Kong
   {
-    userId: 55,
+    userId: 63,
     status: "Fulfilled",
     total: 313.97,
   },
   // Joanna
   {
-    userId: 56,
+    userId: 64,
     status: "Fulfilled",
     total: 24.88,
   },
   // Max
   {
-    userId: 57,
+    userId: 65,
     status: "Fulfilled",
     total: 699.99,
   },
   // Moran
   {
-    userId: 58,
+    userId: 66,
     status: "Fulfilled",
     total: 38.87,
   },
   // Yasha
   {
-    userId: 59,
+    userId: 67,
     status: "Fulfilled",
     total: 49.98,
   },
   // Yibo
   {
-    userId: 60,
+    userId: 68,
     status: "Fulfilled",
     total: 1561.85,
   },
-  // Alex
+  // Abel
   {
-    userId: 61,
+    userId: 69,
     status: "Fulfilled",
-    total: 249.99,
+    total: ,
   },
+  // Aijia
+  {
+    userId: 70,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Allen Pham
+  {
+    userId: 71,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Andrew W
+  {
+    userId: 72,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Brad L
+  {
+    userId: 73,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Caleb
+  {
+    userId: 74,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Calvin
+  {
+    userId: 75,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Carmelino
+  {
+    userId: 76,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Jake Lamar
+  {
+    userId: 77,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Jason Arnold
+  {
+    userId: 78,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Jason Premo
+  {
+    userId: 79,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Jessie Baron
+  {
+    userId: 80,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Juston
+  {
+    userId: 81,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Keerthana
+  {
+    userId: 82,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Kelly
+  {
+    userId: 83,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Kris
+  {
+    userId: 84,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Matt Hutter
+  {
+    userId: 85,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Na
+  {
+    userId: 86,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Nate
+  {
+    userId: 87,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Matt Baine
+  {
+    userId: 88,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Sam
+  {
+    userId: 89,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Schaeffer
+  {
+    userId: 90,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Sean Kennedy
+  {
+    userId: 91,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Sebastian
+  {
+    userId: 92,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Simon
+  {
+    userId: 93,
+    status: "Fulfilled",
+    total: ,
+  },
+  // Yasamine
+  {
+    userId: 94,
+    status: "Fulfilled",
+    total: ,
+  },
+  // David Chou
+  {
+  userId: 95,
+  status: "Fulfilled",
+  total: ,
+  },
+  // Gabe
+  {
+  userId: 96,
+  status: "Fulfilled",
+  total: ,
+  },
+  // Erin
+  {
+  userId: 97,
+  status: "Fulfilled",
+  total: ,
+  },
+  // Alex Auch
+  {
+  userId: 98,
+  status: "Fulfilled",
+  total: 249.99,
+  },
+  // Alexis West
+  {
+  userId: 99,
+  status: "Fulfilled",
+  total: ,
+  },
+  // Kevin Longboy
+  {
+  userId: 100,
+  status: "Fulfilled",
+  total: ,
+  },
+
+  /************************ SECOND ORDERS ************************/
+
   // Demo (second order)
   {
-    // id: 62
+    // id: 101
     userId: 1,
     status: "Fulfilled",
     total: 1299.99,
   },
 ]
+
+
+
 
 let userIds = [];
 demoOrders.forEach(order => userIds.push(order.userId))
