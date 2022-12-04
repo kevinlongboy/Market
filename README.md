@@ -15,13 +15,13 @@ _<p align="center"> Market, and mark it off your list </p>_
 
 ## ✅ Directory
 
-[Description](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-welcome-to-seattle) <br>
-[Features](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-api-overview) <br>
-[Download](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-get-started) <br>
-[Upcoming](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-future-implementations) <br>
-[Tech Stack](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-languages-and-libraries-used) <br>
-[Demo](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-visit-the-site) <br>
-[Connect](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-im-listening) <br>
+[Description](https://github.com/kevinlongboy/Market#-directory) <br>
+[Features](https://github.com/kevinlongboy/Market#-lets-go-shopping) <br>
+[Download](https://github.com/kevinlongboy/Market#-guest-services) <br>
+[Upcoming](https://github.com/kevinlongboy/Market#-self-checkout) <br>
+[Tech Stack](https://github.com/kevinlongboy/Market#-preview) <br>
+[Demo](https://github.com/kevinlongboy/Market#-free-sample) <br>
+[Connect](https://github.com/kevinlongboy/Market#-contact-us) <br>
 
 <br>
 <br>
@@ -127,7 +127,7 @@ Images feature will bring life to both Spots and Reviews. Hosts will have the ab
 
 ---
 
-##  ✅ Discount Codes
+##  ✅ Promo Codes
 
 ### Framework:
 
