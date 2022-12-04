@@ -64,6 +64,8 @@ The review feature allows shoppers to read reviews for a product or write their 
 
 Ready to install the Market API? Follow the instructions below:
 
+<!--
+  
 ### 1. Navigate to GitHub:
 * Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub repository link">here</a> to be redirected to the Market page
 <img src="assets/instructions/setup-instructions-step-1.gif" alt="Navigate to GitHub GIF" width="400">
@@ -100,6 +102,7 @@ Ready to install the Market API? Follow the instructions below:
 * Allow React to open the app in your browser
 * Welcome to CraneBnB
 <img src="assets/instructions/setup-instructions-step-6.gif" alt="Launch the app GIF" width="400">
+-->
 
 <br>
 <br>
@@ -109,14 +112,18 @@ Ready to install the Market API? Follow the instructions below:
 ##  ✅ Preview
 
 ### Favorites
+_Still deciding_
 
-Bookings will supplement the Spots feature with functionality. Guests will be able to make, modify, and delete a reservation for a Spot, while Hosts will be able to view and manage any reservations for their own listings.
+Favorites will allow shoppers to create keep track of their favorite products by creating lists, then adding and/or removing products from their list. 
+  
 <br>
 <br>
 
 ### Registries
+_For that special occasion_
 
-Images feature will bring life to both Spots and Reviews. Hosts will have the ability to add, modify, and delete images for their Spot listings, and Guests will be able to do the same for any reviews they've written.
+Registries will allow shoppers the ability to 
+  
 <br>
 <br>
 
