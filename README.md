@@ -43,21 +43,18 @@ Inspired by <a href="https://www.target.com/" alt="Target website">Target</a>, M
 
 ### Cart
 
-_The main feature of Market_
+_Find a something you like?_
 
-As a Host, users are able to list their home on the site and highlight its best qualities in the listing. Hosts should give a brief description of their home, henceforth known as a "Spot", then choose a befitting rate for a nightly stay.
-
-As a Guest, users are able to peruse through CraneBnB to find the perfect place for their stay in Seattle.
+The cart feature allows shoppers to add products to their cart, remove any item, and proceed to checkout. 
 
 <br>
 
 ### Reviews
 
-_Hear the people's voice_
+_This one has good reviews_
 
-CraneBnB gives its members the ability to voice their opinions and share their experiences from previous stays.
-
-Users can also delete any reviews they've previously posted, if they so choose.
+The review feature allows shoppers to read reviews for a product or write their own. Shoppers can also modify or delete any of their past review.
+  
 <br>
 <br>
 
@@ -116,14 +113,12 @@ Ready to install the Market API? Follow the instructions below:
 Bookings will supplement the Spots feature with functionality. Guests will be able to make, modify, and delete a reservation for a Spot, while Hosts will be able to view and manage any reservations for their own listings.
 <br>
 <br>
-<img src="assets/gifs/martin-what-can-i-say.gif" alt="Martin Satisfied GIF" width="250">
 
 ### Registries
 
 Images feature will bring life to both Spots and Reviews. Hosts will have the ability to add, modify, and delete images for their Spot listings, and Guests will be able to do the same for any reviews they've written.
 <br>
 <br>
-<img src="assets/gifs/daphne-victory.gif" alt="Daphne Victorious GIF" width="250">
 
 ---
 
