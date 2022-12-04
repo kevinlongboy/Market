@@ -5,9 +5,12 @@
 
 _<p align="center"> Market, and mark it off your list </p>_
 
+<div>
+<div>
 
 ---
- <div align="center">
+
+<div align="center">
 
 
 ## ✅ Directory
