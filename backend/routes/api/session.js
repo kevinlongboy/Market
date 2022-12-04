@@ -82,11 +82,16 @@ router.get('/', restoreUser, (req, res) => {
             printUser.email = user.email;
             printUser.username = user.username;
 
+            console.log("✨✨✨✨ printUser ✨✨✨✨", printUser)
+
             return res
                 .status(200)
                 .json(printUser)
 
-        } else return res.json({});
+        } else {
+            console.log("✨✨✨✨ no user ✨✨✨✨")
+            return res.status.json({});
+        }
 
     } catch (err) {
         error.err = err;

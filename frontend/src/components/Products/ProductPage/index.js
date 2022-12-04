@@ -17,21 +17,14 @@ import AddToCart from "../../Cart/AddToCart";
 /******************************* COMPONENT *******************************/
 function ProductPage() {
 
-  // When updating qty:
-  // - check if delta is > or <
-  // - dispatch add or remove (respectively)
-  //   - by however many delta
-
-  const [rating, setRating] = useState(5)
-
   /****************** access store *******************/
-  const productsState = useSelector(state => state.products)
+  const product = useSelector(state => state.products.singleProductDetails)
+  const productImages = useSelector(state => state.products.singleProductDetails.ProductImages)
   const reviewsState = useSelector(state => state.reviews);
 
   /************ key into pertinent values ************/
   const { productId } = useParams()
-  const product = productsState.singleProductDetails;
-  const productImages = product.ProductImages
+  console.log("product", product)
   const mainImage = productImages[0]
 
 
@@ -76,13 +69,13 @@ function ProductPage() {
 
           <div className="ProductPage-body-container">
 
-            <div className="ProductPage-thumbnails-container">
-              {productImages.map((image) => (
+            {/* <div className="ProductPage-thumbnails-container">
+              {productImages && productImages.map((image) => (
                 <div className="ProductPage-thumbnail-container">
                   <img src={image.url} id="ProductPage-thumbnail"></img>
                 </div>
                 ))}
-            </div>
+            </div> */}
 
             {mainImage && (
               <div id="ProductPage-main-image-container">

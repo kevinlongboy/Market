@@ -21,11 +21,14 @@ import OrderConfirmation from "./components/Orders/OrderConfirmation";
 import AccountPage from "./components/AccountPage";
 import Footer from "./components/Footer";
 
+
+/******************************* COMPONENT *******************************/
 function App() {
 
+  /************ reducer/API communication ************/
   const dispatch = useDispatch();
 
-
+  /****************** manage state *******************/
   // use to load components only after there is a current session
   // and user's details are retrieved from database
   const [isLoaded, setIsLoaded] = useState(false);
@@ -35,10 +38,12 @@ function App() {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
+
+  /**************** render component *****************/
   return (
     <>
-      <NavBarPrimary isLoaded={isLoaded} />
-      <NavBarSecondary isLoaded={isLoaded} />
+      <NavBarPrimary isLoaded={isLoaded} exact path="/"/>
+      <NavBarSecondary isLoaded={isLoaded} exact path="/"/>
 
       {isLoaded && (
         <Switch>

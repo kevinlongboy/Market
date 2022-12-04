@@ -12,6 +12,11 @@
     align-items: center;
 }
 
+#session-form-logo {
+    width: 42px;
+    margin-bottom: 5px;
+}
+
 .login-or-signup-form-title {
     display: flex;
     flex-direction:column;

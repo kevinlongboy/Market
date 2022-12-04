@@ -57,7 +57,10 @@ return response;
 
 export const restoreUser = () => async dispatch => {
   const response = await csrfFetch('/api/session');
+  console.log("response from session reducer", response)
   const data = await response.json();
+  console.log("data from session reducer", data)
+
   dispatch(setUser(data));
   return response;
 };

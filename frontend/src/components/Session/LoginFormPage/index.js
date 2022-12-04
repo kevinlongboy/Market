@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, Redirect, useHistory } from 'react-router-dom';
 // local files
 import * as sessionActions from '../../../store/sessionReducer';
+import logo from "../../../images/branding/market-logo.png";
 import './LoginFormPage.css';
 
 
@@ -73,7 +74,7 @@ function LoginFormPage() {
         <div id="LoginFormPage-component">
 
           <div className='login-or-signup-form-title'>
-            <div>Logo</div>
+            <div><img src={logo} id="session-form-logo"></img></div>
             <div>Sign into your Market account</div>
           </div>
 

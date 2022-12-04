@@ -13,13 +13,14 @@ function LandingAdvertPanelMain() {
 
   /****************** access store *******************/
   const departmentsState = useSelector(state => state.departments)
-  console.log("departmentsState", departmentsState)
+  const department = useSelector(state => state.departments.singleDepartmentDetails)
+  console.log("department", department)
 
   /************ key into pertinent values ************/
-  const department = departmentsState.singleDepartmentDetails;
-  console.log("department", department)
+//   const department = departmentsState.singleDepartmentDetails;
   const products = Object.values(department.Products)
   console.log("products", products)
+
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -52,7 +53,7 @@ function LandingAdvertPanelMain() {
                 <div className="main-panel-list-item-container">
                     <NavLink
                     exact
-                    to={`/departments/${product.departmentId}/products/${product.id}`}
+                    to={`/departments/5/products/${product.id}`}
                     >
                         <img
                             src={product.previewImage}
