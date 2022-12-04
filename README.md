@@ -10,7 +10,7 @@ _<p align="center"> Market, and mark it off your list </p>_
  <div align="center">
 
 
-## ✅ Contents
+## ✅ Directory
 
 [Description](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-welcome-to-seattle) <br>
 [Features](https://github.com/kevinlongboy/AirBnB/blob/main/README.md#-api-overview) <br>
