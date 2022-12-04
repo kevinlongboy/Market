@@ -122,7 +122,7 @@ Favorites will allow shoppers to keep track of their favorite products by saving
 ### Registries
 _For that special occasion_
 
-Registries will allow shoppers the ability to create a public list of items that they wish to recieve for a particular event. Other shoppers will be able view the contents of this list as well.
+Registries will allow shoppers to create a public list of items that they wish to recieve for a particular event. Other shoppers will be able view the contents of this list as well.
   
 <br>
 <br>
