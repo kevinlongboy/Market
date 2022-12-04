@@ -34,7 +34,7 @@ Welcome to Market, your one-stop shop for everything you need.
 
 Inspired by <a href="https://www.target.com/" alt="Target website">Target</a>, Market offers a variety of products for shoppers to browse, review, and purchase.
 
-Have a running list of things you need around the house? Market & Market Square.
+Have a running list of things you need around the house? Market & Mark It Square.
 
 <br>
 <br>
