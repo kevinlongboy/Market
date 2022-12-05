@@ -83,15 +83,12 @@ router.get('/', restoreUser, (req, res) => {
             printUser.username = user.username;
             printUser.url = user.url;
 
-            console.log("✨✨✨✨ printUser ✨✨✨✨", printUser)
-
             return res
                 .status(200)
                 .json(printUser)
 
         } else {
-            console.log("✨✨✨✨ no user ✨✨✨✨")
-            return res.status.json({});
+            return res.status(404).json({});
         }
 
     } catch (err) {

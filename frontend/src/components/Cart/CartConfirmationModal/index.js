@@ -35,20 +35,18 @@ function CartConfirmationModal({productId, modalFunc}) {
       displayConfirmationMessage = (
         <div className="CartConfirm-modal-container">
 
-        <div className="CartConfirm-modal-title-container" onClick={(e) => modalFunc(false)}>
-          <p>You must be logged in to shop</p>
-          <div>
+        <div className="CartConfirm-modal-title-container-no-session">
+          <div onClick={(e) => modalFunc(false)}>
               <i class="fa-solid fa-xmark"></i>
           </div>
         </div>
 
         <div className="CartConfirm-modal-body-container">
 
-          <div className="CartConfirm-modal-product-details">
-              {/* {images && (
-                  <img src={images[0].url} id="CartConfirm-modal-product-thumbnail"></img>
-              )} */}
+          <div className="CartConfirm-modal-no-session-title">
+              <p>You must be logged in to shop</p>
           </div>
+
 
           <div className="CartConfirm-modal-buttons">
 
