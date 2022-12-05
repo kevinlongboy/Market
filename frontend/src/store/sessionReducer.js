@@ -25,7 +25,7 @@ const removeUser = () => {
 
 /***************************** THUNKS (API) ******************************/
 export const signup = (user) => async (dispatch) => {
-  const { firstName, lastName, username, password, email } = user;
+  const { firstName, lastName, username, password, email, url } = user;
   const response = await csrfFetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
@@ -34,14 +34,12 @@ export const signup = (user) => async (dispatch) => {
       username,
       email,
       password,
+      url,
     }),
   });
-  console.log("response from sessionReducer", response)
-  if (response.ok) {
     const data = await response.json();
     dispatch(setUser(data));
     return response;
-  }
 };
 
 export const login = (user) => async (dispatch) => {
