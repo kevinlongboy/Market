@@ -28,19 +28,17 @@ export const signup = (user) => async (dispatch) => {
   const { firstName, lastName, username, password, email } = user;
   const response = await csrfFetch("/api/users", {
     method: "POST",
-    headers: { 'Content-Type': 'application/json'} ,
     body: JSON.stringify({
-      firstName: firstName,
-      lastName: lastName,
-      username: username,
-      email: email,
-      password: password,
-      url: 'https://kl-market.herokuapp.com/',
+      firstName,
+      lastName,
+      username,
+      email,
+      password,
     }),
   });
-    const data = await response.json();
-    dispatch(setUser(data));
-    return response;
+  const data = await response.json();
+  dispatch(setUser(data));
+  return response;
 };
 
 export const login = (user) => async (dispatch) => {

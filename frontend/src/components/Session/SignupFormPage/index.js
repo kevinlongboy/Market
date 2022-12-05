@@ -41,14 +41,7 @@ function SignupFormPage() {
       let errors = [];
       setErrors([]);
 
-      let userData = {
-        firstName: firstName,
-        lastName: lastName,
-        username: username,
-        password: password,
-        email: email,
-        url: 'https://kl-market.herokuapp.com/'
-      }
+      let userData = {firstName, lastName, username, password, email }
 
       return  dispatch(sessionActions.signup(userData)).catch(
 

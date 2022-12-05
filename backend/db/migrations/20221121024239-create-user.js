@@ -30,11 +30,11 @@ module.exports = {
         allowNull: false,
         unique: true
       },
-      url: {
-        allowNull: true,
-        type: Sequelize.STRING,
-        defaultValue: 'https://kl-market.herokuapp.com/'
-      },
+      // url: {
+      //   allowNull: true,
+      //   type: Sequelize.STRING,
+      //   defaultValue: 'https://kl-market.herokuapp.com/'
+      // },
       hashedPassword: {
         type: Sequelize.STRING.BINARY,
         allowNull: false
