@@ -117,7 +117,7 @@
 #user-link {
     font-size: 12px;
     color: #333;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 #review-button-link {

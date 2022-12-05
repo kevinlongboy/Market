@@ -42,7 +42,7 @@ function ProductPage() {
 
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));
-  }, [dispatch])
+  }, [dispatch, reviewsState])
 
   useEffect(() => {
     dispatch(thunkReadAllUserReviews());
