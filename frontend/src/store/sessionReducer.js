@@ -36,6 +36,7 @@ export const signup = (user) => async (dispatch) => {
       password,
     }),
   });
+  console.log("response from sessionReducer", response)
   if (response.ok) {
     const data = await response.json();
     dispatch(setUser(data));

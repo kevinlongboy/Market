@@ -1198,7 +1198,7 @@ const demoReviews = [
     description: "my family and i are absolutely obsessed with the almond smooth intensive care lotion. we have purchased atleast 6 bottles everytime we get home and lather up until our skin stops soaking it in, we walk away. let's say a cat knocks it just down into the sink? broken. we now have to take all the stuff off the lid and shake the lotion out and use 600 ML of lotion before it dries out.",
   },
   {
-    productId: 5,
+    productId: 4,
     userId: 81, // Justin
     rating: 4,
     title: "Keep me looking sexy",

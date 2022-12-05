@@ -45,7 +45,7 @@ const validateSignup = [
 // Sign up
 router.post('/', validateSignup, async (req, res) => {
 
-    const { firstName, lastName, email, username, password } = req.body;
+    const { firstName, lastName, email, username, password, url} = req.body;
     let error = {};
 
     // validate signup will run before try-code block; will return rejected promise if errors
@@ -81,7 +81,7 @@ router.post('/', validateSignup, async (req, res) => {
         }
 
 
-        let user = await User.signup({ firstName, lastName, email, username, password });
+        let user = await User.signup({ firstName, lastName, email, username, password, url });
         let token = await setTokenCookie(res, user);
 
         returnUser = await User.findByPk(user.id, {
