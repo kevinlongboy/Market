@@ -13,6 +13,7 @@ import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
 function ReviewUpdateForm() {
 
     /****************** access store *******************/
+    const user = useSelector(state => state.session.user);
     const sessionState = useSelector(state => state.session);
     const reviewsState = useSelector(state => state.reviews.allReviewsByUser);
     const product = useSelector(state => state.products.singleProductDetails);
@@ -105,6 +106,7 @@ function ReviewUpdateForm() {
   }
 
   /**************** render component *****************/
+  if (!user.id) return <Redirect to="/"></Redirect>
 
   return (
     <div className="page-wrapper-container">

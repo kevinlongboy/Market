@@ -2,7 +2,7 @@
 // libraries
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, Redirect, useParams } from "react-router-dom";
 import { convertExactDate, normalizeArray } from "../../../component-resources";
 // local files
 import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
@@ -27,6 +27,8 @@ function UserOrders() {
 
 
   /**************** render component *****************/
+  if (!user.id) return <Redirect to="/"></Redirect>
+
   return (
     <div className="page-wrapper-container">
 

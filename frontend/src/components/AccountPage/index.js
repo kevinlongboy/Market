@@ -7,7 +7,7 @@ import NavBarAccount from '../Navigation/NavBarAccount';
 import { thunkReadAllUserOrders } from '../../store/ordersReducer';
 import { thunkReadAllUserReviews } from '../../store/reviewsReducer';
 import "./AccountPage.css"
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { convertExactDate } from '../../component-resources';
 
 /******************************* COMPONENT *******************************/
@@ -137,6 +137,7 @@ function AccountPage() {
 
 
   /**************** render component *****************/
+  if (!user.id) return <Redirect to="/"></Redirect>
 
     return (
       <div className="page-wrapper-container">

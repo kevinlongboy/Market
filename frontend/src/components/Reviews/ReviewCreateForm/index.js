@@ -15,6 +15,7 @@ function ReviewCreateForm() {
     /****************** access store *******************/
     const sessionState = useSelector(state => state.session);
     const reviewsState = useSelector(state => state.reviews);
+    const user = useSelector(state => state.session.user);
     const product = useSelector(state => state.products.singleProductDetails);
 
     /************ key into pertinent values ************/
@@ -101,7 +102,11 @@ function ReviewCreateForm() {
   }
 
   /**************** render component *****************/
-  if (alreadyReviewedByUser) return <Redirect to={`/reviews/${alreadyReviewedByUser.id}/edit`}></Redirect>
+  if (alreadyReviewedByUser) {
+    return <Redirect to={`/reviews/${alreadyReviewedByUser.id}/edit`}></Redirect>
+  } else if (!user.id)  {
+   return <Redirect to="/"></Redirect>
+  }
 
 
   return (

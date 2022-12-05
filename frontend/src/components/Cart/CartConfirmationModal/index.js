@@ -12,6 +12,7 @@ import './CartConfirmationModal.css'
 function CartConfirmationModal({productId, modalFunc}) {
 
     /****************** access store *******************/
+    const user = useSelector(state => state.session.user)
     const product = useSelector(state => state.products.singleProductDetails)
 
     /************ key into pertinent values ************/
@@ -27,54 +28,114 @@ function CartConfirmationModal({productId, modalFunc}) {
     /***************** handle events *******************/
     const history = useHistory();
 
+    /************* conditional components **************/
+    let displayConfirmationMessage;
+
+    if (user == null) {
+      displayConfirmationMessage = (
+        <div className="CartConfirm-modal-container">
+
+        <div className="CartConfirm-modal-title-container" onClick={(e) => modalFunc(false)}>
+          <p>You must be logged in to shop</p>
+          <div>
+              <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+
+        <div className="CartConfirm-modal-body-container">
+
+          <div className="CartConfirm-modal-product-details">
+              {/* {images && (
+                  <img src={images[0].url} id="CartConfirm-modal-product-thumbnail"></img>
+              )} */}
+          </div>
+
+          <div className="CartConfirm-modal-buttons">
+
+            <div>
+              <NavLink exact to={`/login`}>
+                  <button
+                  className='CartConfirm-button'
+                  id='CartConfirm-shopping-button'
+                  >
+                    Log in
+                  </button>
+              </NavLink>
+          </div>
+
+
+          <div>
+              <NavLink exact to={`/signup`}>
+                  <button
+                  className='CartConfirm-button'
+                  id='CartConfirm-checkout-button'
+                  >
+                      Create account
+                  </button>
+              </NavLink>
+          </div>
+
+          </div>
+
+        </div>
+      </div>
+      )
+    } else {
+      displayConfirmationMessage = (
+        <>
+          <div className="CartConfirm-modal-container">
+            <div className="CartConfirm-modal-title-container" onClick={(e) => modalFunc(false)}>
+              <p>Added to Cart</p>
+              <div>
+                  <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+
+            <div className="CartConfirm-modal-body-container">
+
+              <div className="CartConfirm-modal-product-details">
+                  {/* {images && (
+                      <img src={images[0].url} id="CartConfirm-modal-product-thumbnail"></img>
+                  )} */}
+                  <p id="CartConfirm-modal-product-name">{product.name}</p>
+              </div>
+
+              <div className="CartConfirm-modal-buttons">
+
+
+              <button
+                type="submit"
+                className='CartConfirm-button'
+                id='CartConfirm-shopping-button'
+                onClick={(e) => modalFunc(false)}
+                >
+                  Continue shopping
+                </button>
+
+              <div>
+                  <NavLink exact to={`/cart`}>
+                      <button
+                      className='CartConfirm-button'
+                      id='CartConfirm-checkout-button'
+                      >
+                          View cart & check out
+                      </button>
+                  </NavLink>
+              </div>
+
+              </div>
+
+            </div>
+          </div>
+        </>
+      )
+    }
+
+
     /**************** render component *****************/
     return (
     <>
-        <div className="CartConfirm-modal-container">
-
-          <div className="CartConfirm-modal-title-container" onClick={(e) => modalFunc(false)}>
-            <p>Added to Cart</p>
-            <div>
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-          </div>
-
-          <div className="CartConfirm-modal-body-container">
-
-            <div className="CartConfirm-modal-product-details">
-                {/* {images && (
-                    <img src={images[0].url} id="CartConfirm-modal-product-thumbnail"></img>
-                )} */}
-                <p id="CartConfirm-modal-product-name">{product.name}</p>
-            </div>
-
-            <div className="CartConfirm-modal-buttons">
-
-
-            <button
-              type="submit"
-              className='CartConfirm-button'
-              id='CartConfirm-shopping-button'
-              onClick={(e) => modalFunc(false)}
-              >
-                Continue shopping
-              </button>
-
-            <div>
-                <NavLink exact to={`/cart`}>
-                    <button
-                    className='CartConfirm-button'
-                    id='CartConfirm-checkout-button'
-                    >
-                        View cart & check out
-                    </button>
-                </NavLink>
-            </div>
-
-            </div>
-
-          </div>
-        </div>
+    {displayConfirmationMessage}
     </>
   );
 }

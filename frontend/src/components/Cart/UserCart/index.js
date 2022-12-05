@@ -18,6 +18,7 @@ function UserCart() {
     //   - by however many delta
 
   /****************** access store *******************/
+  const user = useSelector(state => state.session.user);
   const cart = useSelector(state => state.cart.allProductsByUser)
   const products = Object.values(cart.Products)
 
@@ -175,6 +176,8 @@ function UserCart() {
 
 
   /**************** render component *****************/
+  // if (!user.id) return <Redirect to="/"></Redirect>
+
   return (
     <div className="page-wrapper-container">
 

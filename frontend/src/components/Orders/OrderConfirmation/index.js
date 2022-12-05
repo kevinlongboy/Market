@@ -2,7 +2,7 @@
 // libraries
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, Redirect, useParams } from "react-router-dom";
 import { normalizeArray } from "../../../component-resources";
 import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
 // local files
@@ -32,6 +32,8 @@ function OrderConfirmation() {
 
 
   /**************** render component *****************/
+    if (newOrder == null) return <Redirect to="/"></Redirect>
+
 
     return (
       <div className="OrderConfirmation-page-wrapper-container">

@@ -23,21 +23,6 @@ function LoginFormPage() {
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
 
-  // useEffect(() => {
-  //   let validationErrors = [];
-  //   setErrors(validationErrors)
-
-  //   if (credential.length > 0 && credential.length < 5) {
-  //     validationErrors.push("Please enter your username or email")
-  //   }
-
-  //   if (password.length > 0 && password.length < 5) {
-  //     validationErrors.push("Please enter your password")
-  //   }
-
-  //   setErrors(validationErrors)
-  // }, [credential, password])
-
 
   /***************** handle events *******************/
   const history = useHistory();
@@ -46,15 +31,21 @@ function LoginFormPage() {
 
     e.preventDefault();
 
-    setErrors([]);
+    let validationErrors = [];
+    setErrors(validationErrors);
 
     dispatch(sessionActions.login({ credential, password })).catch(
       async (res) => {
       const data = await res.json();
-      if (data && data.errors) setErrors(data.errors); // double check key is .errors vs .message
+      console.log("data", data)
+      if (data && data.message) {
+        validationErrors.push(data.message)
+        setErrors(validationErrors); // double check key is .errors vs .message
+        return
+      }
     });
 
-    history.push('/');
+    // history.push('/');
   }
 
   const handleSubmitDemoUser = (e) => {
@@ -63,7 +54,7 @@ function LoginFormPage() {
 
     dispatch(sessionActions.login({ credential: 'demo@email.com', password: 'demoPassword' }))
 
-    history.push('/');
+    // history.push('/');
   };
 
   /**************** render component *****************/

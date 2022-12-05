@@ -2,7 +2,7 @@
 // libraries
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, Redirect, useParams } from "react-router-dom";
 import  StarRatings from 'react-star-ratings';
 // local files
 import DeleteReview from "../DeleteReview"
@@ -29,6 +29,8 @@ function UserReviews() {
 
 
   /**************** render component *****************/
+  if (!user.id) return <Redirect to="/"></Redirect>
+
     return (
       <div className="page-wrapper-container">
 
