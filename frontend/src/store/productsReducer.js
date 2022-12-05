@@ -45,7 +45,10 @@ const productsReducer = (state = initialState, action) => {
         case PRODUCTS_READ_SINGLE_PRODUCT_DETAILS:
             newState.singleProductDetails = {...action.payload}
                 newState.singleProductDetails.Department = {...action.payload.Department}
-                newState.singleProductDetails.ProductImages = [...action.payload.ProductImages]
+                const normalizeImgs = normalizeArray(action.payload.ProductImages)
+                const copyArr = Object.values(normalizeImgs)
+                console.log("copyArr", copyArr)
+                newState.singleProductDetails.ProductImages = copyArr
             return newState
 
         default:

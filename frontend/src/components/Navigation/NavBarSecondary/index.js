@@ -1,13 +1,14 @@
 /******************************** IMPORTS ********************************/
 // libraries
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 // local files
 import ProfileButton from '../ProfileButton';
 import CategoriesButton from '../CategoriesButton';
 import logo from "../../../images/branding/logo/market-logo.png";
 import './NavBarSecondary.css';
+import { thunkReadAllDepartments } from '../../../store/departmentsReducer';
 
 
 /******************************* COMPONENT *******************************/
@@ -15,6 +16,15 @@ function NavBarSecondary({ isLoaded }){
 
   /****************** access store *******************/
   const sessionUser = useSelector(state => state.session.user);
+  // const departmentsState = useSelector(state => state.departments)
+
+  // /************ reducer/API communication ************/
+  // const dispatch = useDispatch();
+
+  // useEffect(()=>{
+  //     dispatch(thunkReadAllDepartments())
+  // }, [dispatch, departmentsState])
+
 
   /**************** render component *****************/
   return (
@@ -26,6 +36,7 @@ function NavBarSecondary({ isLoaded }){
         <div className='NavBarAccount-left'>
             <NavLink exact to="/"><img src={logo} id="navbar-logo"></img></NavLink>
             <CategoriesButton />
+            {/* <CategoriesButton allDepartments={Object.values(departmentsState.allDepartments)} /> */}
         </div>
 
 

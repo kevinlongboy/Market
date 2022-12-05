@@ -28,24 +28,22 @@ function ProductPage() {
   const mainImage = productImages[0]
   // reviews
   const userReviews = Object.values(reviewsState.allReviewsByUser)
-  console.log("userReviews", userReviews)
   let alreadyReviewedByUser = userReviews.find((review) => review.productId == productId)
-  console.log("alreadyReviewedByUser", alreadyReviewedByUser)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
 
   useEffect(() => {
       dispatch(thunkReadSingleProductDetails(productId));
-  }, [dispatch])
+  }, [dispatch, product])
 
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));
-  }, [dispatch, reviewsState])
-
-  useEffect(() => {
-    dispatch(thunkReadAllUserReviews());
   }, [dispatch])
+
+  // useEffect(() => {
+  //   dispatch(thunkReadAllUserReviews());
+  // }, [dispatch])
 
 
   /************* conditional components **************/
@@ -96,13 +94,13 @@ function ProductPage() {
 
           <div className="ProductPage-body-container">
 
-            {/* <div className="ProductPage-thumbnails-container">
-              {productImages && productImages.map((image) => (
+            <div className="ProductPage-thumbnails-container">
+              {productImages.length > 0 && productImages.map((image) => (
                 <div className="ProductPage-thumbnail-container">
                   <img src={image.url} id="ProductPage-thumbnail"></img>
                 </div>
                 ))}
-            </div> */}
+            </div>
 
             {mainImage && (
               <div id="ProductPage-main-image-container">
@@ -162,7 +160,7 @@ function ProductPage() {
 
         </div>
 
-      <ProductReviews product={product}/>
+      <ProductReviews product={product} reviewsState={reviewsState}/>
         {displayReviewButton}
       </div>
     </div>

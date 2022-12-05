@@ -10,21 +10,20 @@ import { thunkReadAllProductReviews } from "../../../store/reviewsReducer";
 import "./ProductReviews.css"
 
 /******************************* COMPONENT *******************************/
-function ProductReviews({product}) {
+function ProductReviews({product, reviewsState}) {
 
   /****************** access store *******************/
-  const reviewsState = useSelector(state => state.reviews)
+  // const reviewsState = useSelector(state => state.reviews)
 
   /************ key into pertinent values ************/
   const reviews = Object.values(reviewsState.singleProductReviews)
-  console.log("reviews", reviews)
 
   /************ reducer/API communication ************/
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-      dispatch(thunkReadAllProductReviews(product.id));
-  }, [dispatch])
+  // useEffect(() => {
+  //     dispatch(thunkReadAllProductReviews(product.id));
+  // }, [dispatch, reviewsState])
 
   /**************** render component *****************/
 

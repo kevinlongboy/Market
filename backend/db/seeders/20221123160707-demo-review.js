@@ -1200,7 +1200,7 @@ const demoReviews = [
   {
     productId: 5,
     userId: 81, // Justin
-    rating: 5,
+    rating: 4,
     title: "Keep me looking sexy",
     description: "At 49 years old I need all the I can get. This lotion keeps my skin hydrated and looking healthy. I put it on every day . I love the way it smells, like coconut. I doesn't make me sticky either so I can put it on before bed and I don't stick to the sheets.",
   },

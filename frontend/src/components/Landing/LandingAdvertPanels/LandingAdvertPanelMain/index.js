@@ -28,7 +28,7 @@ function LandingAdvertPanelMain() {
 
   useEffect(() => {
       dispatch(thunkReadSingleDepartmentDetails(5));
-  }, [dispatch])
+  }, [dispatch, department])
 
 
   /**************** render component *****************/
