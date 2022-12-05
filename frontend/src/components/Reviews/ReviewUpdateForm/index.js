@@ -12,89 +12,66 @@ import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
 /******************************* COMPONENT *******************************/
 function ReviewUpdateForm() {
 
-  /****************** access store *******************/
-  const sessionState = useSelector(state => state.session);
-  const reviewsState = useSelector(state => state.reviews.allReviewsByUser);
-  const product = useSelector(state => state.products.singleProductDetails);
+    /****************** access store *******************/
+    const sessionState = useSelector(state => state.session);
+    const reviewsState = useSelector(state => state.reviews.allReviewsByUser);
+    const product = useSelector(state => state.products.singleProductDetails);
 
-  /************ key into pertinent values ************/
-  const { reviewId } = useParams()
-  const departmentId = product.Department.id
-  const review = reviewsState[parseInt(reviewId)]
-  const imagesArr = product.ProductImages
-  const displayImage = imagesArr[0]
+    /************ key into pertinent values ************/
+    const { reviewId } = useParams()
+    const departmentId = product.Department.id
+    const review = reviewsState[parseInt(reviewId)]
+    const imagesArr = product.ProductImages
+    const displayImage = imagesArr[0]
 
-  /************ reducer/API communication ************/
-  const dispatch = useDispatch();
+    /************ reducer/API communication ************/
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(thunkReadAllUserReviews());
-  }, [dispatch])
+    useEffect(() => {
+        dispatch(thunkReadAllUserReviews());
+    }, [dispatch])
 
-  useEffect(() => {
-    dispatch(thunkReadSingleProductDetails(parseInt(review.productId)))
-  })
+    useEffect(() => {
+        dispatch(thunkReadSingleProductDetails(parseInt(review.productId)))
+    }, [dispatch])
 
-  /****************** manage state *******************/
-  const [rating, setRating] = useState("★★★★★");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [validationErrors, setValidationErrors] = useState([]);
+    /****************** manage state *******************/
+    const [rating, setRating] = useState();
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [validationErrors, setValidationErrors] = useState([]);
 
-
-    // set initial input field values as current spot values
-    //   useEffect(() => {
-    //     setRating(currentReview.rating)
-    //     setTitle(currentReview && currentReview.title)
-    //     setDescription(currentReview && currentReview.description)
-    // }, [reviewsState]);
-
-    //   // change rating-value
-    //   let incrementCounter = () => {
-    //       if (rating.length < 5) setRating(rating.concat("★"));
-    //   }
-    //   let decrementCounter = () => {
-    //       if (rating.length > 1) setRating(rating.slice(0, rating.length-1));
-    //   }
+    useEffect(() => {
+        setRating(review.rating)
+        setTitle(review.title)
+        setDescription(review.description)
+    }, []);
 
     // render errors
     useEffect(() => {
         const errors = [];
 
-        if (rating < 1 || rating > 5) {
-        errors.push("Please enter a rating.")
+        if (!rating) {
+            errors.push("Please enter a rating.")
         }
 
-        if (title.length > 0 && title.length < 2) {
+        if (title.length > 0 && title.length < 5) {
         errors.push("Please write a longer title.")
         } else if (title.length > 50) {
         errors.push("Please write a shorter title.")
         }
 
-        if (description.length > 0 && description.length < 5) {
-            errors.push("Please write a longer review.")
+        if (description.length > 0 && description.length < 20) {
+            errors.push("Please write a longer description.")
         } else if (description.length > 255) {
-            errors.push("Please write a shorter review.")
+            errors.push("Please write a shorter description.")
         }
 
+        if (errors.length) {
+            setValidationErrors([...errors])
+        }
 
-    let displayErrors;
-    if (errors.length) {
-        displayErrors = (
-            <div className="errors">
-            {validationErrors.length > 0 &&
-            validationErrors.map((error) =>
-            <p key={error}>{error}</p>)}
-            </div>
-        )
-    } else {
-        displayErrors = (
-            <div className="errors">
-            </div>
-        )
-    }
-
-    setValidationErrors(errors)
+        setValidationErrors(errors)
   }, [rating, title, description])
 
   /***************** handle events *******************/
@@ -106,10 +83,9 @@ function ReviewUpdateForm() {
 
     let errors = [];
     setValidationErrors(errors);
-    if (errors.length) return
 
     let updateReviewData = {
-      rating: rating.length,
+      rating: rating,
       title: title,
       description: description,
     }
@@ -125,7 +101,7 @@ function ReviewUpdateForm() {
           }
       });
 
-      history.push(`/departments/${departmentId}/products/${product.id}`)
+    //   history.push(`/departments/${departmentId}/products/${product.id}`)
   }
 
   /**************** render component *****************/
@@ -155,13 +131,16 @@ function ReviewUpdateForm() {
                 <div className="review-form-star-section">
                     <h2>First, rate this item</h2>
                     <StarRatings
-                    rating={product.avgRating}
+                    isSelectable={true}
+                    rating={rating}
+                    changeRating={(rating) => setRating(rating)}
                     starRatedColor="#ffd700"
+                    starHoverColor="#ffd700"
                     numberOfStars={5}
                     name='rating'
                     starDimension='32px'
                     starSpacing='0'
-                />
+                    />
                 </div>
 
 
@@ -211,14 +190,8 @@ function ReviewUpdateForm() {
 
 
             <div className="review-form-errors-section">
-            {/* { <div className="errors">
-                    {validationErrors.length > 0 &&
-                        validationErrors.map((error) =>
-                        <p className="error-item" key={error}>{error}</p>)}
-                    </div>} */}
-
                 {validationErrors.map((error, idx) => (
-                    <p className="error-item" key={idx}>{error}</p>
+                    <p key={idx} className="form-validation-errors">{error}</p>
                     ))}
             </div>
 

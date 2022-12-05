@@ -7,7 +7,7 @@ import  StarRatings from 'react-star-ratings';
 // local files
 import ProductReviews from "../../Reviews/ProductReviews";
 import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
-import { thunkReadAllProductReviews } from "../../../store/reviewsReducer";
+import { thunkReadAllProductReviews, thunkReadAllUserReviews } from "../../../store/reviewsReducer";
 import { thunkAddSingleProductToCart } from "../../../store/cartReducer";
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
 import "./ProductPage.css"
@@ -24,9 +24,12 @@ function ProductPage() {
 
   /************ key into pertinent values ************/
   const { productId } = useParams()
-  console.log("product", product)
   const mainImage = productImages[0]
-
+  // reviews
+  const userReviews = Object.values(reviewsState.allReviewsByUser)
+  console.log("userReviews", userReviews)
+  let alreadyReviewedByUser = userReviews.find((review) => review.productId == productId)
+  console.log("alreadyReviewedByUser", alreadyReviewedByUser)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -37,10 +40,33 @@ function ProductPage() {
 
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));
-}, [dispatch, reviewsState])
+  }, [dispatch])
+
+  useEffect(() => {
+    dispatch(thunkReadAllUserReviews());
+  }, [dispatch])
+
+
+  /************* conditional components **************/
+  let displayReviewButton
+  if (alreadyReviewedByUser) {
+    displayReviewButton = (
+      <></>
+      // <NavLink exact to={`/reviews/${alreadyReviewedByUser.id}/edit`} id="review-button-link">
+      //   <button id="ProductPage-write-a-review-button">Edit review</button>
+      // </NavLink>
+      )
+  } else {
+    displayReviewButton = (
+      <NavLink exact to={`/products/${product.id}/add-review`} id="review-button-link">
+        <button id="ProductPage-write-a-review-button">Write a review</button>
+      </NavLink>
+    )
+  }
 
 
   /**************** render component *****************/
+
   return (
     <div className="ProductPage-page-wrapper-container">
 
@@ -136,12 +162,7 @@ function ProductPage() {
         </div>
 
       <ProductReviews product={product}/>
-
-      {/* add condition to remove button if users already has reviewed item */}
-      <NavLink exact to={`/products/${product.id}/add-review`} id="review-button-link">
-        <button id="ProductPage-write-a-review-button">Write a review</button>
-      </NavLink>
-
+        {displayReviewButton}
       </div>
     </div>
   )

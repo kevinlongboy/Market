@@ -15,7 +15,6 @@ function ReviewCreateForm() {
     /****************** access store *******************/
     const sessionState = useSelector(state => state.session);
     const reviewsState = useSelector(state => state.reviews);
-    console.log("reviewsState", reviewsState)
     const product = useSelector(state => state.products.singleProductDetails);
 
     /************ key into pertinent values ************/
@@ -25,7 +24,6 @@ function ReviewCreateForm() {
     const displayImage = imagesArr[0]
     // reviews
     const userReviews = Object.values(reviewsState.allReviewsByUser)
-    let userId = sessionState.user
     let alreadyReviewedByUser = userReviews.find((review) => review.productId == productId)
 
     /************ reducer/API communication ************/
@@ -65,7 +63,6 @@ function ReviewCreateForm() {
             errors.push("Please write a shorter description.")
         }
 
-        // let displayErrors;
         if (errors.length) {
             setValidationErrors([...errors])
         }
@@ -137,7 +134,6 @@ function ReviewCreateForm() {
                     changeRating={(rating) => setRating(rating)}
                     starRatedColor="#ffd700"
                     starHoverColor="#ffd700"
-
                     numberOfStars={5}
                     name='rating'
                     starDimension='32px'

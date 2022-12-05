@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
+import  StarRatings from 'react-star-ratings';
 // local files
 import DeleteReview from "../DeleteReview"
 import { thunkReadAllUserReviews } from "../../../store/reviewsReducer";
@@ -71,7 +72,17 @@ function UserReviews() {
                 <div className="review-card-container-right">
                   <p className="review-card-product-name">{review.Product.name}</p>
                   <p id="review-card-product-details">{review.title}</p>
-                  <p id="review-card-product-details">Rating: {review.rating}</p>
+                  <p id="review-card-product-details">
+                  <StarRatings
+                    isSelectable={false}
+                    rating={review.rating}
+                    starRatedColor="#ffd700"
+                    numberOfStars={5}
+                    name='rating'
+                    starDimension='12px'
+                    starSpacing='0'
+                    />
+                  </p>
                   <p className="review-card-product-description">{review.description}</p>
 
                   <div className="modify-review-options-container">
