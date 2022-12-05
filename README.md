@@ -15,11 +15,11 @@ _<p align="center"> and mark it off your list </p>_
 
 ## ✅ Store Directory
 
-[Overview](https://github.com/kevinlongboy/Market#-directory) <br>
-[Features](https://github.com/kevinlongboy/Market#-lets-go-shopping) <br>
-[Download](https://github.com/kevinlongboy/Market#-guest-services) <br>
-[Upcoming](https://github.com/kevinlongboy/Market#-self-checkout) <br>
-[Tech Stack](https://github.com/kevinlongboy/Market#-preview) <br>
+[Overview](https://github.com/kevinlongboy/Market#-lets-go-shopping) <br>
+[Features](https://github.com/kevinlongboy/Market#-guest-services) <br>
+[Download](https://github.com/kevinlongboy/Market#-self-checkout) <br>
+[Upcoming]https://github.com/kevinlongboy/Market#-new-arrivals) <br>
+[Tech Stack](https://github.com/kevinlongboy/Market#-promo-codes) <br>
 [Demo](https://github.com/kevinlongboy/Market#-free-sample) <br>
 [Connect](https://github.com/kevinlongboy/Market#-contact-us) <br>
 
