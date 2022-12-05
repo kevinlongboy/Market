@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 // local files
+import whiteLogo from "../../../../images/branding/logo/market-logo-white.png";
 import { thunkReadSingleDepartmentDetails } from "../../../../store/departmentsReducer";
 import './LandingAdvertPanelMain.css'
 
@@ -36,7 +37,7 @@ function LandingAdvertPanelMain() {
       <div id="LandingAdvertPanelMain-component">
 
         <div className="LandingAdvertPanelMain-title-container">
-            <div className="LandingAdvertPanelMain-title">Holiday <span style={{color:'#fff'}}>deals</span></div>
+            <div className="LandingAdvertPanelMain-title">Holiday <span style={{color:'#fff'}}><img src={whiteLogo} id="landing-logo"></img>deals</span></div>
             <div className="LandingAdvertPanelMain-subtitle">Score incredible deals on holiday must-haves</div>
             {/* <div><button>Get the deals now</button></div> */}
         </div>
