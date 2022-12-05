@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         username,
         email,
         hashedPassword,
-        // url: 'https://kl-market.herokuapp.com/',
+        url: 'https://kl-market.herokuapp.com/',
       });
       return await User.scope('currentUser').findByPk(user.id);
     };
@@ -98,13 +98,13 @@ module.exports = (sequelize, DataTypes) => {
           len: [2, 150]
         }
       },
-      // url: {
-      //   type: DataTypes.STRING,
-      //   allowNull: true,
-      //   // validate: {
-      //   //   isUrl: true,
-      //   // }
-      // },
+      url: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        // validate: {
+        //   isUrl: true,
+        // }
+      },
       hashedPassword: {
         allowNull: false,
         type: DataTypes.STRING.BINARY,

@@ -19,7 +19,7 @@ const demoUsers = [
     username: 'SmartShopper',
     hashedPassword: bcrypt.hashSync('demoPassword'),
     email: 'demo@email.com',
-    // url: 'https://www.appacademy.io/',
+    url: 'https://www.appacademy.io/',
   },
   /********************** 2. Module Leads **********************/
   {
@@ -29,7 +29,7 @@ const demoUsers = [
     username: 'wadams',
     hashedPassword: bcrypt.hashSync('wadams'),
     email: 'wadams@appacademy.io',
-    // url: 'https://www.linkedin.com/in/bill-adams-40869120b/',
+    url: 'https://www.linkedin.com/in/bill-adams-40869120b/',
   },
   {
     // id: 3,
@@ -38,7 +38,7 @@ const demoUsers = [
     username: 'jgranoff',
     hashedPassword: bcrypt.hashSync('jgranoff'),
     email: 'jgranoff@appacademy.io',
-    // url: 'https://www.linkedin.com/in/jlgranof/',
+    url: 'https://www.linkedin.com/in/jlgranof/',
   },
   {
     // id: 4,
@@ -47,7 +47,7 @@ const demoUsers = [
     username: 'swilkey',
     hashedPassword: bcrypt.hashSync('swilkey'),
     email: 'swilkey@appacademy.io',
-    // url: 'https://www.linkedin.com/in/shane-wilkey-b5822b210/',
+    url: 'https://www.linkedin.com/in/shane-wilkey-b5822b210/',
   },
   {
     // id: 5,
@@ -56,7 +56,7 @@ const demoUsers = [
     username: 'gotieno',
     hashedPassword: bcrypt.hashSync('gotieno'),
     email: 'gotieno@appacademy.io',
-    // url: 'https://www.linkedin.com/in/geoffrey-otieno-57015966/',
+    url: 'https://www.linkedin.com/in/geoffrey-otieno-57015966/',
   },
   {
     // id: 6,
@@ -65,7 +65,7 @@ const demoUsers = [
     username: 'akeeler',
     hashedPassword: bcrypt.hashSync('akeeler'),
     email: 'akeeler@appacademy.io',
-    // url: 'https://www.linkedin.com/in/alec-keeler-a8499083/',
+    url: 'https://www.linkedin.com/in/alec-keeler-a8499083/',
   },
   {
     // id: 7,
@@ -74,7 +74,7 @@ const demoUsers = [
     username: 'dpurcell',
     hashedPassword: bcrypt.hashSync('dpurcell'),
     email: 'dpurcell@appacademy.io',
-    // url: 'https://www.linkedin.com/in/dan-purcell-fifteen/',
+    url: 'https://www.linkedin.com/in/dan-purcell-fifteen/',
   },
   {
     // id: 8,
@@ -83,7 +83,7 @@ const demoUsers = [
     username: 'bsimpson',
     hashedPassword: bcrypt.hashSync('bsimpson'),
     email: 'bsimpson@appacademy.io',
-    // url: 'https://www.linkedin.com/in/brad-simpson-a6b1b7b2/',
+    url: 'https://www.linkedin.com/in/brad-simpson-a6b1b7b2/',
   },
   {
     // id: 9,
@@ -92,7 +92,7 @@ const demoUsers = [
     username: 'hcrespo',
     hashedPassword: bcrypt.hashSync('hcrespo'),
     email: 'hcrespo@appacademy.io',
-    // url: 'https://www.linkedin.com/in/hector-crespo-b0b5b019a/',
+    url: 'https://www.linkedin.com/in/hector-crespo-b0b5b019a/',
   },
 
   /********************** 3. TA's **********************/
@@ -103,7 +103,7 @@ const demoUsers = [
     username: 'clavene',
     hashedPassword: bcrypt.hashSync('clavene'),
     email: 'clavene@appacademy.io',
-    // url: 'https://www.linkedin.com/in/codylavene/',
+    url: 'https://www.linkedin.com/in/codylavene/',
   },
   {
     // id: 11,
@@ -112,7 +112,7 @@ const demoUsers = [
     username: 'cwhiteside',
     hashedPassword: bcrypt.hashSync('cwhiteside'),
     email: 'cwhiteside@appacademy.io',
-    // url: 'https://www.linkedin.com/in/cameronwhiteside/',
+    url: 'https://www.linkedin.com/in/cameronwhiteside/',
   },
   {
     // id: 12,
@@ -121,7 +121,7 @@ const demoUsers = [
     username: 'pshin',
     hashedPassword: bcrypt.hashSync('pshin'),
     email: 'pshin@appacademy.io',
-    // url: 'https://www.linkedin.com/in/petershin731/',
+    url: 'https://www.linkedin.com/in/petershin731/',
   },
   {
     // id: 13,
@@ -130,7 +130,7 @@ const demoUsers = [
     username: 'bkappes',
     hashedPassword: bcrypt.hashSync('bkappes'),
     email: 'bkappes@appacademy.io',
-    // url: 'https://www.linkedin.com/in/braxton-kappes-b68984119/',
+    url: 'https://www.linkedin.com/in/braxton-kappes-b68984119/',
   },
   {
     // id: 14,
@@ -139,7 +139,7 @@ const demoUsers = [
     username: 'jchristensen',
     hashedPassword: bcrypt.hashSync('jchristensen'),
     email: 'jchristensen@appacademy.io',
-    // url: 'https://www.linkedin.com/in/jesse-christensen-204801232/',
+    url: 'https://www.linkedin.com/in/jesse-christensen-204801232/',
   },
   {
     // id: 15,
@@ -148,7 +148,7 @@ const demoUsers = [
     username: 'jyih',
     hashedPassword: bcrypt.hashSync('jyih'),
     email: 'jyih@appacademy.io',
-    // url: 'https://www.appacademy.io/',
+    url: 'https://www.appacademy.io/',
   },
   {
     // id: 16,
@@ -157,7 +157,7 @@ const demoUsers = [
     username: 'nesqueda',
     hashedPassword: bcrypt.hashSync('nesqueda'),
     email: 'nesqueda@appacademy.io',
-    // url: 'https://www.linkedin.com/in/nick-esqueda/',
+    url: 'https://www.linkedin.com/in/nick-esqueda/',
   },
   {
     // id: 17,
@@ -166,7 +166,7 @@ const demoUsers = [
     username: 'afava',
     hashedPassword: bcrypt.hashSync('afava'),
     email: 'afava@appacademy.io',
-    // url: 'https://www.linkedin.com/in/andrewfava/',
+    url: 'https://www.linkedin.com/in/andrewfava/',
   },
   {
     // id: 18,
@@ -175,7 +175,7 @@ const demoUsers = [
     username: 'arobinson',
     hashedPassword: bcrypt.hashSync('arobinson'),
     email: 'arobinson@appacademy.io',
-    // url: 'https://www.appacademy.io/',
+    url: 'https://www.appacademy.io/',
   },
   {
     // id: 19,
@@ -184,7 +184,7 @@ const demoUsers = [
     username: 'ssong',
     hashedPassword: bcrypt.hashSync('ssong'),
     email: 'ssong@appacademy.io',
-    // url: 'https://www.appacademy.io/',
+    url: 'https://www.appacademy.io/',
   },
   {
     // id: 20,
@@ -193,7 +193,7 @@ const demoUsers = [
     username: 'tshaw',
     hashedPassword: bcrypt.hashSync('tshaw'),
     email: 'tshaw@appacademy.io',
-    // url: 'https://www.linkedin.com/in/jtannershaw/',
+    url: 'https://www.linkedin.com/in/jtannershaw/',
   },
   {
     // id: 21,
@@ -202,7 +202,7 @@ const demoUsers = [
     username: 'obir',
     hashedPassword: bcrypt.hashSync('obir'),
     email: 'obir@appacademy.io',
-    // url: 'https://www.linkedin.com/in/olivia-bir-74b16b7b/',
+    url: 'https://www.linkedin.com/in/olivia-bir-74b16b7b/',
   },
   {
     // id: 22,
@@ -211,7 +211,7 @@ const demoUsers = [
     username: 'ntreadway',
     hashedPassword: bcrypt.hashSync('ntreadway'),
     email: 'ntreadway@appacademy.io',
-    // url: 'https://www.linkedin.com/in/nathan-treadaway/',
+    url: 'https://www.linkedin.com/in/nathan-treadaway/',
   },
   {
     // id: 23,
@@ -220,7 +220,7 @@ const demoUsers = [
     username: 'dchin',
     hashedPassword: bcrypt.hashSync('dchin'),
     email: 'dchin@appacademy.io',
-    // url: 'https://www.linkedin.com/in/bongochin/',
+    url: 'https://www.linkedin.com/in/bongochin/',
   },
   {
     // id: 24,
@@ -229,7 +229,7 @@ const demoUsers = [
     username: 'apezzati',
     hashedPassword: bcrypt.hashSync('apezzati'),
     email: 'apezzati@appacademy.io',
-    // url: 'https://www.linkedin.com/in/alex-pezzati/',
+    url: 'https://www.linkedin.com/in/alex-pezzati/',
   },
   {
     // id: 25,
@@ -238,7 +238,7 @@ const demoUsers = [
     username: 'syu',
     hashedPassword: bcrypt.hashSync('syu'),
     email: 'syu@appacademy.io',
-    // url: 'https://www.linkedin.com/in/xiaozhuyu/',
+    url: 'https://www.linkedin.com/in/xiaozhuyu/',
   },
   {
     // id: 26,
@@ -247,7 +247,7 @@ const demoUsers = [
     username: 'rmemon',
     hashedPassword: bcrypt.hashSync('rmemon'),
     email: 'rmemon@appacademy.io',
-    // url: 'https://www.linkedin.com/in/rawaha-m-b280a4204/',
+    url: 'https://www.linkedin.com/in/rawaha-m-b280a4204/',
   },
   {
     // id: 27,
@@ -256,7 +256,7 @@ const demoUsers = [
     username: 'wminson',
     hashedPassword: bcrypt.hashSync('wminson'),
     email: 'wminson@appacademy.io',
-    // url: 'https://www.linkedin.com/in/whitneylynnminson/',
+    url: 'https://www.linkedin.com/in/whitneylynnminson/',
   },
   {
     // id: 28,
@@ -265,7 +265,7 @@ const demoUsers = [
     username: 'dflores',
     hashedPassword: bcrypt.hashSync('dflores'),
     email: 'dflores@appacademy.io',
-    // url: 'https://www.linkedin.com/in/daniel-flores-764a0b21b/',
+    url: 'https://www.linkedin.com/in/daniel-flores-764a0b21b/',
   },
   {
     // id: 29,
@@ -274,7 +274,7 @@ const demoUsers = [
     username: 'dnash',
     hashedPassword: bcrypt.hashSync('dnash'),
     email: 'dnash@appacademy.io',
-    // url: 'https://www.linkedin.com/in/david-nash-9ba507217/',
+    url: 'https://www.linkedin.com/in/david-nash-9ba507217/',
   },
   {
     // id: 30,
@@ -283,7 +283,7 @@ const demoUsers = [
     username: 'jlee',
     hashedPassword: bcrypt.hashSync('jlee'),
     email: 'jlee@appacademy.io',
-    // url: 'https://www.linkedin.com/in/jwily/',
+    url: 'https://www.linkedin.com/in/jwily/',
   },
   {
     // id: 31,
@@ -292,7 +292,7 @@ const demoUsers = [
     username: 'atran',
     hashedPassword: bcrypt.hashSync('atran'),
     email: 'atran@appacademy.io',
-    // url: 'https://www.appacademy.io/',
+    url: 'https://www.appacademy.io/',
   },
   {
     // id: 32,
@@ -301,7 +301,7 @@ const demoUsers = [
     username: 'csolano',
     hashedPassword: bcrypt.hashSync('csolano'),
     email: 'csolano@appacademy.io',
-    // url: 'https://www.linkedin.com/in/171cas/',
+    url: 'https://www.linkedin.com/in/171cas/',
   },
   {
     // id: 33,
@@ -310,7 +310,7 @@ const demoUsers = [
     username: 'rschneider',
     hashedPassword: bcrypt.hashSync('rschneider'),
     email: 'rschneider@appacademy.io',
-    // url: 'https://www.linkedin.com/in/ryan-schneider-90830a217/',
+    url: 'https://www.linkedin.com/in/ryan-schneider-90830a217/',
   },
   {
     // id: 34,
@@ -319,7 +319,7 @@ const demoUsers = [
     username: 'alovern',
     hashedPassword: bcrypt.hashSync('alovern'),
     email: 'alovern@appacademy.io',
-    // url: 'https://www.linkedin.com/in/anthonylovern/',
+    url: 'https://www.linkedin.com/in/anthonylovern/',
   },
   {
     // id: 35,
@@ -328,7 +328,7 @@ const demoUsers = [
     username: 'fportin',
     hashedPassword: bcrypt.hashSync('fportin'),
     email: 'fportin@appacademy.io',
-    // url: 'https://www.linkedin.com/in/franco-portin/',
+    url: 'https://www.linkedin.com/in/franco-portin/',
   },
   {
     // id: 36,
@@ -337,7 +337,7 @@ const demoUsers = [
     username: 'kbartolome',
     hashedPassword: bcrypt.hashSync('kbartolome'),
     email: 'kbartolome@appacademy.io',
-    // url: 'https://www.linkedin.com/in/kevin-bartolome/',
+    url: 'https://www.linkedin.com/in/kevin-bartolome/',
   },
 
   /********************** 4. Cohort Leads **********************/
@@ -348,7 +348,7 @@ const demoUsers = [
     username: 'ddeherrera',
     hashedPassword: bcrypt.hashSync('ddeherrera'),
     email: 'ddeherrera@appacademy.io',
-    // url: 'https://www.linkedin.com/in/david-deherrera-441678208/',
+    url: 'https://www.linkedin.com/in/david-deherrera-441678208/',
   },
   {
     // id: 38,
@@ -357,7 +357,7 @@ const demoUsers = [
     username: 'athruman',
     hashedPassword: bcrypt.hashSync('athruman'),
     email: 'athruman@appacademy.io',
-    // url: 'https://www.linkedin.com/in/drew-thurman/',
+    url: 'https://www.linkedin.com/in/drew-thurman/',
   },
   {
     // id: 39,
@@ -366,7 +366,7 @@ const demoUsers = [
     username: 'drogers',
     hashedPassword: bcrypt.hashSync('drogers'),
     email: 'drogers@appacademy.io',
-    // url: 'https://www.linkedin.com/in/david-rogers-b71595227/',
+    url: 'https://www.linkedin.com/in/david-rogers-b71595227/',
   },
   {
     // id: 40,
@@ -375,7 +375,7 @@ const demoUsers = [
     username: 'rwebster',
     hashedPassword: bcrypt.hashSync('rwebster'),
     email: 'rwebster@appacademy.io',
-    // url: 'https://www.linkedin.com/in/ryan-webster-a784509b/',
+    url: 'https://www.linkedin.com/in/ryan-webster-a784509b/',
   },
 
   /********************** 5. Students **********************/
@@ -386,7 +386,7 @@ const demoUsers = [
     username: 'jcarbajal',
     hashedPassword: bcrypt.hashSync('jcarbajal'),
     email: 'jcarbajal@appacademy.io',
-    // url: 'https://www.linkedin.com/in/jair-carbajal/',
+    url: 'https://www.linkedin.com/in/jair-carbajal/',
   },
   {
     // id: 42,
@@ -395,7 +395,7 @@ const demoUsers = [
     username: 'tyang',
     hashedPassword: bcrypt.hashSync('tyang'),
     email: 'tyang@appacademy.io',
-    // url: 'https://www.linkedin.com/in/tiffany-yang-373140133/',
+    url: 'https://www.linkedin.com/in/tiffany-yang-373140133/',
   },
   {
     // id: 43,
@@ -404,7 +404,7 @@ const demoUsers = [
     username: 'lain',
     hashedPassword: bcrypt.hashSync('lain'),
     email: 'lain@appacademy.io',
-    // url: 'https://www.appacademy.io/',
+    url: 'https://www.appacademy.io/',
   },
   {
     // id: 44,
@@ -413,7 +413,7 @@ const demoUsers = [
     username: 'clam',
     hashedPassword: bcrypt.hashSync('clam'),
     email: 'clam@appacademu.io',
-    // url: 'https://www.linkedin.com/in/connor-lam-a6545a23b/',
+    url: 'https://www.linkedin.com/in/connor-lam-a6545a23b/',
   },
   {
     // id: 45,
@@ -422,7 +422,7 @@ const demoUsers = [
     username: 'hustling',
     hashedPassword: bcrypt.hashSync('hustling'),
     email: 'hustling@appacademy.io',
-    // url: 'https://www.linkedin.com/in/song-gary/',
+    url: 'https://www.linkedin.com/in/song-gary/',
   },
   {
     // id: 46,
@@ -431,7 +431,7 @@ const demoUsers = [
     username: 'doofey',
     hashedPassword: bcrypt.hashSync('doofey'),
     email: 'doofey@appacademy.io',
-    // url: 'https://www.linkedin.com/in/jake-matillano/',
+    url: 'https://www.linkedin.com/in/jake-matillano/',
   },
   {
     // id: 47,
@@ -440,7 +440,7 @@ const demoUsers = [
     username: 'badreg',
     hashedPassword: bcrypt.hashSync('badreg'),
     email: 'badreg@appacademy.io',
-    // url: 'https://www.linkedin.com/in/johncarrera/',
+    url: 'https://www.linkedin.com/in/johncarrera/',
   },
   {
     // id: 48,
@@ -449,7 +449,7 @@ const demoUsers = [
     username: 'maliha',
     hashedPassword: bcrypt.hashSync('maliha'),
     email: 'maliha@appacademy.io',
-    // url: 'https://www.linkedin.com/in/maliha-omair/',
+    url: 'https://www.linkedin.com/in/maliha-omair/',
   },
   {
     // id: 49,
@@ -458,7 +458,7 @@ const demoUsers = [
     username: 'thenu',
     hashedPassword: bcrypt.hashSync('thenu'),
     email: 'thenu@appacademy.io',
-    // url: 'https://www.linkedin.com/in/thenammai-nachiyappan-56bbaa1a2/',
+    url: 'https://www.linkedin.com/in/thenammai-nachiyappan-56bbaa1a2/',
   },
   {
     // id: 50,
@@ -467,7 +467,7 @@ const demoUsers = [
     username: 'BrennonMorris',
     hashedPassword: bcrypt.hashSync('BrennonMorris'),
     email: 'BrennonMorris@appacademy.io',
-    // url: 'https://www.linkedin.com/in/brennonmorris/',
+    url: 'https://www.linkedin.com/in/brennonmorris/',
   },
   {
     // id: 51,
@@ -476,7 +476,7 @@ const demoUsers = [
     username: 'SealOfApproval',
     hashedPassword: bcrypt.hashSync('SealOfApproval'),
     email: 'SealOfApproval@appacademy.io',
-    // url: 'https://www.linkedin.com/in/loganseals/',
+    url: 'https://www.linkedin.com/in/loganseals/',
   },
   {
     // id: 52,
@@ -485,7 +485,7 @@ const demoUsers = [
     username: 'aklivecka',
     hashedPassword: bcrypt.hashSync('aklivecka'),
     email: 'aklivecka@appacademy.io',
-    // url: 'https://www.linkedin.com/in/alexander-klivecka-047221199/',
+    url: 'https://www.linkedin.com/in/alexander-klivecka-047221199/',
   },
   {
     // id: 53,
@@ -494,7 +494,7 @@ const demoUsers = [
     username: 'fisjack',
     hashedPassword: bcrypt.hashSync('fisjack'),
     email: 'fisjack@appacademy.io',
-    // url: 'https://github.com/fisjac',
+    url: 'https://github.com/fisjac',
   },
   {
     // id: 54,
@@ -503,7 +503,7 @@ const demoUsers = [
     username: 'tbluher',
     hashedPassword: bcrypt.hashSync('tbluher'),
     email: 'tbluher@appacademy.io',
-    // url: 'https://www.linkedin.com/in/tom-bluher-172321115/',
+    url: 'https://www.linkedin.com/in/tom-bluher-172321115/',
   },
   {
     // id: 55,
@@ -512,7 +512,7 @@ const demoUsers = [
     username: 'rewd',
     hashedPassword: bcrypt.hashSync('rewd'),
     email: 'rewd@appacademy.io',
-    // url: 'https://www.linkedin.com/in/andrew-k-474479123/',
+    url: 'https://www.linkedin.com/in/andrew-k-474479123/',
   },
   {
     // id: 56,
@@ -521,7 +521,7 @@ const demoUsers = [
     username: 'Damzzz123',
     hashedPassword: bcrypt.hashSync('Damzzz123'),
     email: 'Damzzz123@appacademy.io',
-    // url: 'https://github.com/aselk1',
+    url: 'https://github.com/aselk1',
   },
   {
     // id: 57,
@@ -530,7 +530,7 @@ const demoUsers = [
     username: 'goatedIndeed',
     hashedPassword: bcrypt.hashSync('goatedIndeed'),
     email: 'goatedIndeed@appacademy.io',
-    // url: 'https://github.com/cpannella',
+    url: 'https://github.com/cpannella',
   },
   {
     // id: 58,
@@ -539,7 +539,7 @@ const demoUsers = [
     username: 'ChristoGrabowski',
     hashedPassword: bcrypt.hashSync('ChristoGrabowski'),
     email: 'ChristoGrabowski@appacademy.io',
-    // url: 'https://github.com/ChristoGrab',
+    url: 'https://github.com/ChristoGrab',
   },
   {
     // id: 59,
@@ -548,7 +548,7 @@ const demoUsers = [
     username: 'Cece',
     hashedPassword: bcrypt.hashSync('CeceRose'),
     email: 'CeceRose@appacademy.io',
-    // url: 'https://github.com/c-rose-g',
+    url: 'https://github.com/c-rose-g',
   },
   {
     // id: 60,
@@ -557,7 +557,7 @@ const demoUsers = [
     username: 'DavidDanielBurch',
     hashedPassword: bcrypt.hashSync('DavidDanielBurch'),
     email: 'DavidDanielBurch@appacademy.io',
-    // url: 'https://github.com/ddb048',
+    url: 'https://github.com/ddb048',
   },
   {
     // id: 61,
@@ -566,7 +566,7 @@ const demoUsers = [
     username: 'ElizaW',
     hashedPassword: bcrypt.hashSync('ElizaW'),
     email: 'ElizaW@appacademy.io',
-    // url: 'https://github.com/elizawimberly',
+    url: 'https://github.com/elizawimberly',
   },
   {
     // id: 62,
@@ -575,7 +575,7 @@ const demoUsers = [
     username: 'JamesLee',
     hashedPassword: bcrypt.hashSync('JamesLee'),
     email: 'JamesLee@appacademy.io',
-    // url: 'https://github.com/jameswonlee',
+    url: 'https://github.com/jameswonlee',
   },
   {
     // id: 63,
@@ -584,7 +584,7 @@ const demoUsers = [
     username: 'JasonKong',
     hashedPassword: bcrypt.hashSync('JasonKong'),
     email: 'JasonKong@appacademy.io',
-    // url: 'https://github.com/jrkong216',
+    url: 'https://github.com/jrkong216',
   },
   {
     // id: 64,
@@ -593,7 +593,7 @@ const demoUsers = [
     username: 'joanna',
     hashedPassword: bcrypt.hashSync('joanna'),
     email: 'joanna@appacademy.io',
-    // url: 'https://github.com/jcgilb',
+    url: 'https://github.com/jcgilb',
   },
   {
     // id: 65,
@@ -602,7 +602,7 @@ const demoUsers = [
     username: 'MaxYaswen',
     hashedPassword: bcrypt.hashSync('MaxYaswen'),
     email: 'MaxYaswen@appacademy.io',
-    // url: 'https://github.com/myaswen',
+    url: 'https://github.com/myaswen',
   },
   {
     // id: 66,
@@ -611,7 +611,7 @@ const demoUsers = [
     username: 'MoranEven',
     hashedPassword: bcrypt.hashSync('MoranEven'),
     email: 'MoranEven@appacademy.io',
-    // url: 'https://github.com/MEven44',
+    url: 'https://github.com/MEven44',
   },
   {
     // id: 67,
@@ -620,7 +620,7 @@ const demoUsers = [
     username: 'yashaY',
     hashedPassword: bcrypt.hashSync('yashaY'),
     email: 'yashaY@appacademy.io',
-    // url: 'https://github.com/yashayang',
+    url: 'https://github.com/yashayang',
   },
   {
     // id: 68,
@@ -628,7 +628,7 @@ const demoUsers = [
     lastName: 'Guo',
     username: 'YiboGuo',
     hashedPassword: bcrypt.hashSync('YiboGuo'),
-    // url: 'https://github.com/GUOYIBO',
+    url: 'https://github.com/GUOYIBO',
     email: 'YiboGuo@appacademy.io',
   },
   {
@@ -638,7 +638,7 @@ const demoUsers = [
     username: 'abrianvil',
     hashedPassword: bcrypt.hashSync('abrianvil'),
     email: 'abrianvil@appacademy.io',
-    // url: 'https://github.com/abrianvil',
+    url: 'https://github.com/abrianvil',
   },
   {
     // id: 70,
@@ -647,7 +647,7 @@ const demoUsers = [
     username: 'awang',
     hashedPassword: bcrypt.hashSync('awang'),
     email: 'awang@appacademy.io',
-    // url: 'https://github.com/wangaijia618',
+    url: 'https://github.com/wangaijia618',
   },
   {
     // id: 71,
@@ -656,7 +656,7 @@ const demoUsers = [
     username: 'apham',
     hashedPassword: bcrypt.hashSync('apham'),
     email: 'apham@appacademy.io',
-    // url: 'https://github.com/Allendpham',
+    url: 'https://github.com/Allendpham',
   },
   {
     // id: 72,
@@ -665,7 +665,7 @@ const demoUsers = [
     username: 'awilkinson',
     hashedPassword: bcrypt.hashSync('awilkinson'),
     email: 'awilkinson@appacademy.io',
-    // url: 'https://github.com/adub671',
+    url: 'https://github.com/adub671',
   },
   {
     // id: 73,
@@ -674,7 +674,7 @@ const demoUsers = [
     username: 'blewter',
     hashedPassword: bcrypt.hashSync('blewter'),
     email: 'blewter@appacademy.io',
-    // url: 'https://github.com/DairyDuke',
+    url: 'https://github.com/DairyDuke',
   },
   {
     // id: 74,
@@ -683,7 +683,7 @@ const demoUsers = [
     username: 'cflores',
     hashedPassword: bcrypt.hashSync('cflores'),
     email: 'cflores@appacademy.io',
-    // url: 'https://github.com/Cal-Flores',
+    url: 'https://github.com/Cal-Flores',
   },
   {
     // id: 75,
@@ -692,7 +692,7 @@ const demoUsers = [
     username: 'ctzeng',
     hashedPassword: bcrypt.hashSync('ctzeng'),
     email: 'ctzeng@appacademy.io',
-    // url: 'https://progress.appacademy.io/me/students',
+    url: 'https://progress.appacademy.io/me/students',
   },
   {
     // id: 76,
@@ -701,7 +701,7 @@ const demoUsers = [
     username: 'cgalang',
     hashedPassword: bcrypt.hashSync('cgalang'),
     email: 'cgalang@appacademy.io',
-    // url: 'https://github.com/cgalang9',
+    url: 'https://github.com/cgalang9',
   },
   {
     // id: 77,
@@ -710,7 +710,7 @@ const demoUsers = [
     username: 'jlamar',
     hashedPassword: bcrypt.hashSync('jlamar'),
     email: 'jlamar@appacademy.io',
-    // url: 'https://github.com/lamarjd',
+    url: 'https://github.com/lamarjd',
   },
   {
     // id: 78,
@@ -719,7 +719,7 @@ const demoUsers = [
     username: 'Denji',
     hashedPassword: bcrypt.hashSync('Denji'),
     email: 'Denji@appacademy.io',
-    // url: 'https://github.com/QuantitativeSneezing',
+    url: 'https://github.com/QuantitativeSneezing',
   },
   {
     // id: 79,
@@ -728,7 +728,7 @@ const demoUsers = [
     username: 'jpremo',
     hashedPassword: bcrypt.hashSync('jpremo'),
     email: 'jpremo@appacademy.io',
-    // url: 'https://github.com/jhpremo',
+    url: 'https://github.com/jhpremo',
   },
   {
     // id: 80,
@@ -737,7 +737,7 @@ const demoUsers = [
     username: 'jbaron',
     hashedPassword: bcrypt.hashSync('jbaron'),
     email: 'jbaron@appacademy.io',
-    // url: 'https://github.com/jbaron94',
+    url: 'https://github.com/jbaron94',
   },
   {
     // id: 81,
@@ -746,7 +746,7 @@ const demoUsers = [
     username: 'mancussion',
     hashedPassword: bcrypt.hashSync('mancussion'),
     email: 'mancussion@appacademy.io',
-    // url: 'https://github.com/Mancussion',
+    url: 'https://github.com/Mancussion',
   },
   {
     // id: 82,
@@ -755,7 +755,7 @@ const demoUsers = [
     username: 'kyellapragada',
     hashedPassword: bcrypt.hashSync('kyellapragada'),
     email: 'kyellapragada@appacademy.io',
-    // url: 'https://github.com/Keerthana-Yellapragada',
+    url: 'https://github.com/Keerthana-Yellapragada',
   },
   {
     // id: 83,
@@ -764,7 +764,7 @@ const demoUsers = [
     username: 'kshao',
     hashedPassword: bcrypt.hashSync('kshao'),
     email: 'kshao@appacademy.io',
-    // url: 'https://github.com/keshao728',
+    url: 'https://github.com/keshao728',
   },
   {
     // id: 84,
@@ -773,7 +773,7 @@ const demoUsers = [
     username: 'khan',
     hashedPassword: bcrypt.hashSync('khan'),
     email: 'khan@appacademy.io',
-    // url: 'https://github.com/krispikris',
+    url: 'https://github.com/krispikris',
   },
   {
     // id: 85,
@@ -782,7 +782,7 @@ const demoUsers = [
     username: 'mhutter',
     hashedPassword: bcrypt.hashSync('mhutter'),
     email: 'mhutter@appacademy.io',
-    // url: 'https://github.com/Sparky338',
+    url: 'https://github.com/Sparky338',
   },
   {
     // id: 86,
@@ -791,7 +791,7 @@ const demoUsers = [
     username: 'nchen',
     hashedPassword: bcrypt.hashSync('nchen'),
     email: 'nchen@appacademy.io',
-    // url: 'https://www.appacademy.io/',
+    url: 'https://www.appacademy.io/',
   },
   {
     // id: 87,
@@ -800,7 +800,7 @@ const demoUsers = [
     username: 'nlunpkin',
     hashedPassword: bcrypt.hashSync('nlunpkin'),
     email: 'nlunpkin@appacademy.io',
-    // url: 'https://github.com/natelumpkin',
+    url: 'https://github.com/natelumpkin',
   },
   {
     // id: 88,
@@ -809,7 +809,7 @@ const demoUsers = [
     username: 'mbaine',
     hashedPassword: bcrypt.hashSync('mbaine'),
     email: 'mbaine@appacademy.io',
-    // url: 'https://github.com/s0618345',
+    url: 'https://github.com/s0618345',
   },
   {
     // id: 89,
@@ -818,7 +818,7 @@ const demoUsers = [
     username: 'ssuh',
     hashedPassword: bcrypt.hashSync('ssuh'),
     email: 'ssuh@appacademy.io',
-    // url: 'https://github.com/Samsuhhh',
+    url: 'https://github.com/Samsuhhh',
   },
   {
     // id: 90,
@@ -827,7 +827,7 @@ const demoUsers = [
     username: 'schae',
     hashedPassword: bcrypt.hashSync('schae'),
     email: 'schae@appacademy.io',
-    // url: 'https://github.com/Schaeffy',
+    url: 'https://github.com/Schaeffy',
   },
   {
     // id: 91,
@@ -836,7 +836,7 @@ const demoUsers = [
     username: 'skennedy',
     hashedPassword: bcrypt.hashSync('skennedy'),
     email: 'skennedy@appacademy.io',
-    // url: 'https://github.com/DevSPK',
+    url: 'https://github.com/DevSPK',
   },
   {
     // id: 92,
@@ -845,7 +845,7 @@ const demoUsers = [
     username: 'reptar',
     hashedPassword: bcrypt.hashSync('reptar'),
     email: 'reptar@appacademy.io',
-    // url: 'https://github.com/Reptar007',
+    url: 'https://github.com/Reptar007',
   },
   {
     // id: 93,
@@ -854,7 +854,7 @@ const demoUsers = [
     username: 'stan',
     hashedPassword: bcrypt.hashSync('stan'),
     email: 'stan@appacademy.io',
-    // url: 'https://github.com/SimonMTan',
+    url: 'https://github.com/SimonMTan',
   },
   {
     // id: 94,
@@ -863,7 +863,7 @@ const demoUsers = [
     username: 'yas',
     hashedPassword: bcrypt.hashSync('yas'),
     email: 'yas@appacademy.io',
-    // url: 'https://github.com/YasamineCruz',
+    url: 'https://github.com/YasamineCruz',
   },
   {
     // id: 95,
@@ -872,7 +872,7 @@ const demoUsers = [
     username: 'dchou',
     hashedPassword: bcrypt.hashSync('dchou'),
     email: 'dchou@appacademy.io',
-    // url: 'https://github.com/davidchou0112',
+    url: 'https://github.com/davidchou0112',
   },
   {
     // id: 96,
@@ -881,7 +881,7 @@ const demoUsers = [
     username: 'TomTomDiddy',
     hashedPassword: bcrypt.hashSync('TomTomDiddy'),
     email: 'TomTomDiddy@appacademy.io',
-    // url: 'https://www.linkedin.com/in/gabriel-day-536738201/',
+    url: 'https://www.linkedin.com/in/gabriel-day-536738201/',
   },
   {
     // id: 97,
@@ -890,7 +890,7 @@ const demoUsers = [
     username: 'ErinDuffyOmcikus',
     hashedPassword: bcrypt.hashSync('ErinDuffyOmcikus'),
     email: 'ErinDuffyOmcikus@appacademy.io',
-    // url: 'https://www.linkedin.com/in/erin-duffy-omcikus-5641004a/',
+    url: 'https://www.linkedin.com/in/erin-duffy-omcikus-5641004a/',
   },
   {
     // id: 98,
@@ -899,7 +899,7 @@ const demoUsers = [
     username: 'Auchie',
     hashedPassword: bcrypt.hashSync('Auchie'),
     email: 'Auchie@appacademy.io',
-    // url: 'https://www.linkedin.com/in/alex-auch-568476a2/',
+    url: 'https://www.linkedin.com/in/alex-auch-568476a2/',
   },
   {
     // id: 99,
@@ -908,7 +908,7 @@ const demoUsers = [
     username: 'awest',
     hashedPassword: bcrypt.hashSync('awest'),
     email: 'awest@appacademy.io',
-    // url: 'https://www.linkedin.com/in/alexis-west-596a6b203/',
+    url: 'https://www.linkedin.com/in/alexis-west-596a6b203/',
   },
   {
     // id: 100,
@@ -917,7 +917,7 @@ const demoUsers = [
     username: 'Kevinelle',
     hashedPassword: bcrypt.hashSync('Kevinelle'),
     email: 'Kevinelle@appacademy.io',
-    // url: 'https://www.linkedin.com/in/kevinlongboy/',
+    url: 'https://www.linkedin.com/in/kevinlongboy/',
   },
 ]
 

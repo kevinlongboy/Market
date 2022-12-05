@@ -70,9 +70,9 @@ function ProductReviews({product, reviewsState}) {
                 </p>
 
                 <div id="Reviews-list-item-user-info">
-                  {/* <a href={review.User.url} id='user-link'> */}
+                  <a href={review.User.url} id='user-link'>
                     <span>{review.User.firstName} {review.User.lastName}</span>
-                  {/* </a> */}
+                  </a>
                   <p> - {review.createdAt && convertDate(review.createdAt)}</p>
                 </div>
 
