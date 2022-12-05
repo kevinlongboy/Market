@@ -78,40 +78,40 @@ Ready to install the Market API? Follow the instructions below:
 
   
 ### 1. Navigate to GitHub:
-* Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub repository link">here</a> to be redirected to the Market page
+Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub repository link">here</a> to be redirected to the Market page
 <img src="assets/instructions/setup-instructions-step-1.gif" alt="Navigate to GitHub GIF" width="400">
 
 ### 2. Download the API: 
-* Click the "Code" button
-* Select "Download ZIP" from the dropdown menu
-* Save the file in your desired location
+Click the "Code" button
+Select "Download ZIP" from the dropdown menu
+Save the file in your desired location
 <img src="assets/instructions/setup-instructions-step-2.gif" alt="Download the API GIF" width="400">
 
 ### 3. Open the repository:
-* Navigate to the location where you previously saved your zipped file
-* Unzip the file by double-clicking on the icon, or by right-clicking on the icon and selecting "Open"
-* This unzipped folder is the repository which contains both the backend and frontend components of the API
+Navigate to the location where you previously saved your zipped file
+Unzip the file by double-clicking on the icon, or by right-clicking on the icon and selecting "Open"
+This unzipped folder is the repository which contains both the backend and frontend components of the API
 <img src="assets/instructions/setup-instructions-step-3.gif" alt="Open the repository GIF" width="400">
 
 ### 4. Initialize the backend: 
-* Open a new terminal
-* Navigate to the _backend_ folder
-* Download dependencies by running the command: "npm install"
-* Initialize your database by running "npx dotenv sequelize db:migrate"
-* Populate your database by running "npx dotenv sequelize db:seed:all"
-* Start the backend server by running the command: "npm start"
+Open a new terminal
+Navigate to the _backend_ folder
+Download dependencies by running the command: "npm install"
+Initialize your database by running "npx dotenv sequelize db:migrate"
+Populate your database by running "npx dotenv sequelize db:seed:all"
+Start the backend server by running the command: "npm start"
 <img src="assets/instructions/setup-instructions-step-4.gif" alt="Initialize the backend GIF" width="400">
 
 ### 5. Initialize the frontend: 
-* Open a new terminal
-* Navigate to the _frontend_ folder
-* Download dependencies by running the command: "npm install"
+Open a new terminal
+Navigate to the _frontend_ folder
+Download dependencies by running the command: "npm install"
 <img src="assets/instructions/setup-instructions-step-5.gif" alt="Initialize the frontend GIF" width="400">
 
 ### 6. Launch the app:
-* From the _frontend_ folder, run the command: "npm start"
-* Allow React to open the app in your browser
-* Welcome to Market
+From the _frontend_ folder, run the command: "npm start"
+Allow React to open the app in your browser
+Welcome to Market
 <img src="assets/instructions/setup-instructions-step-6.gif" alt="Launch the app GIF" width="400">
 
 
