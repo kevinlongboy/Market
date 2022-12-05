@@ -100,9 +100,9 @@ module.exports = (sequelize, DataTypes) => {
       url: {
         type: DataTypes.STRING,
         allowNull: true,
-        validate: {
-          isUrl: true,
-        }
+        // validate: {
+        //   isUrl: true,
+        // }
       },
       hashedPassword: {
         allowNull: false,
