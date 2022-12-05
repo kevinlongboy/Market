@@ -42,9 +42,9 @@ function CartConfirmationModal({productId, modalFunc}) {
           <div className="CartConfirm-modal-body-container">
 
             <div className="CartConfirm-modal-product-details">
-                {images && (
+                {/* {images && (
                     <img src={images[0].url} id="CartConfirm-modal-product-thumbnail"></img>
-                )}
+                )} */}
                 <p id="CartConfirm-modal-product-name">{product.name}</p>
             </div>
 
