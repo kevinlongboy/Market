@@ -126,7 +126,7 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 
 ---
 
-##  ✅ Preview
+##  ✅ New Arrivals
 
 ### Favorites
 _I always get that_
