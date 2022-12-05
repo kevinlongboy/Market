@@ -13,17 +13,25 @@ const { Department, Product, ProductImage, Review, User } = require('../../db/mo
 const router = express.Router();
 
 const validateReview = [
-    check('review')
+    check('title')
         // .exists({ checkFalsy: true })
         .isLength({ min: 5 })
         .withMessage("Please write a longer review."),
-    check('review')
+    check('title')
         // .exists({ checkFalsy: true })
         .isLength({ max: 500 })
         .withMessage("Please write a shorter review."),
-    check('stars')
+    check('description')
+        // .exists({ checkFalsy: true })
+        .isLength({ min: 5 })
+        .withMessage("Please write a longer review."),
+    check('description')
+        // .exists({ checkFalsy: true })
+        .isLength({ max: 500 })
+        .withMessage("Please write a shorter review."),
+    check('rating')
         .exists({ checkFalsy: true })
-        .withMessage("Stars must be an integer from 1 to 5."),
+        .withMessage("Rating must be an integer from 1 to 5."),
     handleValidationErrors
 ]
 
@@ -114,7 +122,7 @@ router.post('/:productId/reviews', requireAuth, async(req, res) => {
         if (!rating) {
             error.message = "Validation Error";
             error.status = 400;
-            validationErrorMessages.push("Rating must be an integer from 1 to 5.")
+            validationErrorMessages.push("Please provide a rating.")
         }
         if (!title) {
             error.message = "Validation Error";
@@ -124,7 +132,7 @@ router.post('/:productId/reviews', requireAuth, async(req, res) => {
         if (!description) {
             error.message = "Validation Error";
             error.status = 400;
-            validationErrorMessages.push("Please write a longer review.")
+            validationErrorMessages.push("Please write a longer description.")
         }
         if (error.message) {
             error.errors = validationErrorMessages;

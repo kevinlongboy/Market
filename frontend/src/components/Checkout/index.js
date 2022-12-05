@@ -14,14 +14,10 @@ function Checkout() {
   /****************** access store *******************/
   const cartState = useSelector(state => state.cart.allProductsByUser)
   const user = useSelector(state => state.session.user)
-  console.log("cartState", cartState)
-  const ordersState = useSelector(state => state.orders)
 
   /************ key into pertinent values ************/
   const total = cartState.subtotal
-  console.log("total", total)
   const products = Object.values(cartState.Products)
-  console.log("products", products)
 
 
   /************ reducer/API communication ************/
@@ -30,10 +26,6 @@ function Checkout() {
   useEffect(() => {
       dispatch(thunkReadCart());
   }, [dispatch, cartState])
-
-  useEffect(() => {
-    dispatch(thunkReadAllUserOrders());
-  }, [dispatch])
 
 
   /***************** handle events *******************/

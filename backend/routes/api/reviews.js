@@ -14,7 +14,7 @@ const router = express.Router();
 
 
 /******************************** ROUTES *********************************/
-// Get all orders by current user
+// Get all reviews by current user
 router.get('/current', requireAuth, async(req, res) => {
 
     let currentUser = req.user;

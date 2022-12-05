@@ -43,7 +43,6 @@ const productsReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case PRODUCTS_READ_SINGLE_PRODUCT_DETAILS:
-            console.log("action.payload", action.payload)
             newState.singleProductDetails = {...action.payload}
                 newState.singleProductDetails.Department = {...action.payload.Department}
                 newState.singleProductDetails.ProductImages = [...action.payload.ProductImages]

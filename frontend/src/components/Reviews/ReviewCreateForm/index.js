@@ -6,84 +6,72 @@ import { useDispatch, useSelector } from "react-redux";
 import  StarRatings from 'react-star-ratings';
 // local files
 import "./ReviewCreateForm.css"
-import { thunkCreateSingleReview } from "../../../store/reviewsReducer";
+import { thunkCreateSingleReview, thunkReadAllProductReviews, thunkReadAllUserReviews } from "../../../store/reviewsReducer";
 import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
 
 /******************************* COMPONENT *******************************/
 function ReviewCreateForm() {
 
-  /****************** access store *******************/
-  const sessionState = useSelector(state => state.session);
-  const reviewsState = useSelector(state => state.reviews);
-  const product = useSelector(state => state.products.singleProductDetails);
+    /****************** access store *******************/
+    const sessionState = useSelector(state => state.session);
+    const reviewsState = useSelector(state => state.reviews);
+    console.log("reviewsState", reviewsState)
+    const product = useSelector(state => state.products.singleProductDetails);
 
-  /************ key into pertinent values ************/
-  const { productId } = useParams()
-  const departmentId = product.Department.id
+    /************ key into pertinent values ************/
+    const { productId } = useParams()
+    const departmentId = product.Department.id
     const imagesArr = product.ProductImages
     const displayImage = imagesArr[0]
+    // reviews
+    const userReviews = Object.values(reviewsState.allReviewsByUser)
+    let userId = sessionState.user
+    let alreadyReviewedByUser = userReviews.find((review) => review.productId == productId)
 
-  /************ reducer/API communication ************/
-  const dispatch = useDispatch();
+    /************ reducer/API communication ************/
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(thunkReadSingleProductDetails(productId))
-  }, [dispatch])
+    useEffect(() => {
+        dispatch(thunkReadSingleProductDetails(productId))
+    }, [dispatch])
 
+    useEffect(() => {
+        dispatch(thunkReadAllUserReviews())
+    }, [dispatch])
 
-  /****************** manage state *******************/
-  const [rating, setRating] = useState("★★★★★");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [validationErrors, setValidationErrors] = useState([]);
-
-    // change rating-value
-    //   let incrementCounter = () => {
-    //       if (rating.length < 5) setRating(rating.concat("★"));
-    //   }
-    //   let decrementCounter = () => {
-    //       if (rating.length > 1) setRating(rating.slice(0, rating.length-1));
-    //   }
+    /****************** manage state *******************/
+    const [rating, setRating] = useState(5);
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [validationErrors, setValidationErrors] = useState([]);
 
     // render errors
     useEffect(() => {
         const errors = [];
 
-        if (rating < 1 || rating > 5) {
-        errors.push("Please enter a rating.")
+        if (!rating) {
+            errors.push("Please enter a rating.")
         }
 
-        if (title.length > 0 && title.length < 2) {
+        if (title.length > 0 && title.length < 5) {
         errors.push("Please write a longer title.")
         } else if (title.length > 50) {
         errors.push("Please write a shorter title.")
         }
 
-        if (description.length > 0 && description.length < 5) {
-            errors.push("Please write a longer review.")
+        if (description.length > 0 && description.length < 20) {
+            errors.push("Please write a longer description.")
         } else if (description.length > 255) {
-            errors.push("Please write a shorter review.")
+            errors.push("Please write a shorter description.")
         }
 
+        // let displayErrors;
+        if (errors.length) {
+            setValidationErrors([...errors])
+        }
 
-    let displayErrors;
-    if (errors.length) {
-        displayErrors = (
-            <div className="errors">
-            {validationErrors.length > 0 &&
-            validationErrors.map((error) =>
-            <p key={error}>{error}</p>)}
-            </div>
-        )
-    } else {
-        displayErrors = (
-            <div className="errors">
-            </div>
-        )
-    }
-
-    setValidationErrors(errors)
-  }, [rating, title, description])
+        setValidationErrors([...errors])
+    }, [rating, title, description])
 
   /***************** handle events *******************/
   const history = useHistory();
@@ -94,10 +82,9 @@ function ReviewCreateForm() {
 
     let errors = [];
     setValidationErrors(errors);
-    if (errors.length) return
 
     let createReviewData = {
-      rating: rating.length,
+      rating: rating,
       title: title,
       description: description,
     }
@@ -108,16 +95,18 @@ function ReviewCreateForm() {
           const data = await res.json();
 
           if (data && data.errors) {
-              data.errors.forEach(message => errors.push(message));
-              setValidationErrors(errors);
+            data.errors.forEach(message => errors.push(message));
+            setValidationErrors(errors);
           }
       });
 
-      history.push(`/departments/${departmentId}/products/${productId}`)
+    history.push(`/departments/${departmentId}/products/${productId}`)
   }
 
   /**************** render component *****************/
-  // add redirect error handler: redirect to ReviewUpdateForm component if user already reviewed product
+  if (alreadyReviewedByUser) return <Redirect to={`/reviews/${alreadyReviewedByUser.id}/edit`}></Redirect>
+
+
   return (
     <div className="page-wrapper-container">
       <div id="ReviewCreateForm-component">
@@ -143,8 +132,12 @@ function ReviewCreateForm() {
                 <div className="review-form-star-section">
                     <h2>First, rate this item</h2>
                     <StarRatings
-                    rating={product.avgRating}
+                    isSelectable={true}
+                    rating={rating}
+                    changeRating={(rating) => setRating(rating)}
                     starRatedColor="#ffd700"
+                    starHoverColor="#ffd700"
+
                     numberOfStars={5}
                     name='rating'
                     starDimension='32px'
@@ -168,6 +161,7 @@ function ReviewCreateForm() {
                             placeholder="Review title"
                             onChange={(e) => setTitle(e.target.value)}
                             value={title}
+                            required={true}
                             >
                         </input>
                         <p className="review-form-subtext">summarize your thoughts in a short headline</p>
@@ -179,10 +173,11 @@ function ReviewCreateForm() {
                             className="review-form-textarea-field"
                             type="textarea"
                             name="description"
-                            minLength={20}
                             placeholder="Provide a brief description"
                             onChange={(e) => setDescription(e.target.value)}
                             value={description}
+                            required={true}
+                            minLength={20}
                             >
                         </textarea>
                         <p className="review-form-subtext">Minimum length is 20 characters.
@@ -197,14 +192,8 @@ function ReviewCreateForm() {
 
 
             <div className="review-form-errors-section">
-            {/* { <div className="errors">
-                    {validationErrors.length > 0 &&
-                        validationErrors.map((error) =>
-                        <p className="error-item" key={error}>{error}</p>)}
-                    </div>} */}
-
                 {validationErrors.map((error, idx) => (
-                    <p className="error-item" key={idx}>{error}</p>
+                    <p key={idx} className="form-validation-errors">{error}</p>
                     ))}
             </div>
 
@@ -214,12 +203,12 @@ function ReviewCreateForm() {
                     <span id="review-form-guidelines-link">review guidelines</span></p>
 
 
-                <button
+                {/* <button
                 onClick={() => <Redirect to={`/departments/${departmentId}/products/${productId}`}></Redirect>}
                 className="review-form-button"
                 >
                 Cancel
-                </button>
+                </button> */}
 
                 <button
                 type="submit"

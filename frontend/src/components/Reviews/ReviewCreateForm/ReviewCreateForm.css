@@ -125,6 +125,27 @@
 
 
 
+
+
+
+.review-form-errors-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 535.66px;
+    height: fit-content;
+    padding: 20px 0px;
+    margin: 20px 0px;
+    /* background-color: red; */
+}
+
+
+
+
+
+
+
 .review-form-submit-section {
     border-top: 1px solid rgb(214, 214, 214);
     color: #333;

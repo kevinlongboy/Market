@@ -64,6 +64,7 @@ export const thunkReadAllProductReviews = (productId) => async (dispatch) => {
 
 export const thunkReadAllUserReviews = () => async (dispatch) => {
     const response = await csrfFetch(`/api/reviews/current`);
+    console.log("response", response)
     if (response.ok) {
         const userReviews = await response.json();
         dispatch(actionReadAllUserReviews(userReviews.Reviews))
@@ -77,7 +78,6 @@ export const thunkUpdateSingleReview = (reviewId, updateReviewData) => async (di
         headers: { 'Content-Type': 'application/json'} ,
         body: JSON.stringify(updateReviewData)
     });
-    console.log("response",response)
     if (response.ok) {
         const updateReview = await response.json();
         console.log("updateReview", updateReview)
