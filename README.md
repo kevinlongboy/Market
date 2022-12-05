@@ -76,7 +76,6 @@ The review feature gives shoppers the ability to read reviews for a product or w
 
 Ready to install the Market API? Follow the instructions below:
 
-<!--
   
 ### 1. Navigate to GitHub:
 * Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub repository link">here</a> to be redirected to the Market page
@@ -112,9 +111,9 @@ Ready to install the Market API? Follow the instructions below:
 ### 6. Launch the app:
 * From the _frontend_ folder, run the command: "npm start"
 * Allow React to open the app in your browser
-* Welcome to CraneBnB
+* Welcome to Market
 <img src="assets/instructions/setup-instructions-step-6.gif" alt="Launch the app GIF" width="400">
--->
+
 
 <br>
 <br>
