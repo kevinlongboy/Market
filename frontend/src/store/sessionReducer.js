@@ -29,12 +29,12 @@ export const signup = (user) => async (dispatch) => {
   const response = await csrfFetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
-      firstName,
-      lastName,
-      username,
-      email,
-      password,
-      url,
+      firstName: firstName,
+      lastName: lastName,
+      username: username,
+      email: email,
+      password: password,
+      url: url,
     }),
   });
     const data = await response.json();
