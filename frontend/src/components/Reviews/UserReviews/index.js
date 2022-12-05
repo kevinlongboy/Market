@@ -15,10 +15,10 @@ function UserReviews() {
 
   /****************** access store *******************/
   const user = useSelector(state => state.session.user);
-  const reviewsState = useSelector(state => state.reviews)
+  const reviewsState = useSelector(state => state.reviews.allReviewsByUser)
 
   /************ key into pertinent values ************/
-  const reviews = Object.values(reviewsState.allReviewsByUser)
+  const reviews = Object.values(reviewsState)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ function UserReviews() {
 
 
   /**************** render component *****************/
-  if (!user.id) return <Redirect to="/"></Redirect>
+  if (user && user.id == null) return <Redirect to="/"></Redirect>
 
     return (
       <div className="page-wrapper-container">
@@ -62,13 +62,13 @@ function UserReviews() {
               <div className="review-card-container">
 
                 <div className="review-card-container-left">
-                  <NavLink exact to={`/departments/${review.Product.departmentId}/products/${review.Product.id}`}>
+                  {review && <NavLink exact to={`/departments/${review.Product.departmentId}/products/${review.Product.id}`}>
                     <img
                       src={review.Product.previewImage}
                       id='review-card-thumbnail'
                       >
                     </img>
-                  </NavLink>
+                  </NavLink>}
                 </div>
 
                 <div className="review-card-container-right">

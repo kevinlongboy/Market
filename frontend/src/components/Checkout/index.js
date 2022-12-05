@@ -61,6 +61,7 @@ function Checkout() {
 
 
   /**************** render component *****************/
+  // if (user && user.id == null) return <Redirect to='/cart'></Redirect>
   if (products && products.length < 1) return <Redirect to='/cart'></Redirect>
 
   return (

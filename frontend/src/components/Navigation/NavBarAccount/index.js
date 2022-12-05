@@ -19,10 +19,11 @@ function NavBarAccount({ user }) {
 
   /**************** render component *****************/
   return (
+
         <div className="NavBarAccount-container">
 
             <div className="NavBarAccount-title-container">
-                <div id="NavBarAccount-title-user-greeting">Hello, {user.firstName}</div>
+                <div id="NavBarAccount-title-user-greeting">Hello, {user && user.firstName}</div>
                 <div id="NavBarAccount-title-account-createdAt">Account since May 2, 2012</div>
             </div>
 

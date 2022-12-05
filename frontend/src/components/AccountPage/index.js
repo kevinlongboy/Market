@@ -137,7 +137,7 @@ function AccountPage() {
 
 
   /**************** render component *****************/
-  if (!user.id) return <Redirect to="/"></Redirect>
+  if (user && user.id == null) return <Redirect to="/"></Redirect>
 
     return (
       <div className="page-wrapper-container">

@@ -1,6 +1,17 @@
+.OrderDetails-page-wrapper-container {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 0px;
+    padding: 30px 0px;
+
+    width: 100vw;
+    height: 100vh;
+}
+
 #OrderDetails-component {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     max-width: 1400px;
 
     margin: 0px;
@@ -55,6 +66,7 @@
 }
 .OrderDetails-info-container {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     color: #666;
@@ -82,6 +94,7 @@
 .OrderDetails-card-container {
     width: 929.33px;
     height: 100%;
+    overflow-y: scroll;
 
 
     margin: 16px 0px 0px;

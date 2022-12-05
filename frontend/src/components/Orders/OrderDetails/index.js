@@ -32,10 +32,10 @@ function OrderDetails() {
 
 
   /**************** render component *****************/
-  if (!user.id) return <Redirect to="/"></Redirect>
+  if (user && user.id == null) return <Redirect to="/"></Redirect>
 
   return (
-    <div className="page-wrapper-container">
+    <div className="OrderDetails-page-wrapper-container">
 
       <div id="OrderDetails-component">
 

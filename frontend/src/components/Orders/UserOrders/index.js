@@ -27,7 +27,7 @@ function UserOrders() {
 
 
   /**************** render component *****************/
-  if (!user.id) return <Redirect to="/"></Redirect>
+  if (user && !user.id) return <Redirect to="/"></Redirect>
 
   return (
     <div className="page-wrapper-container">

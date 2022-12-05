@@ -76,7 +76,7 @@ function ReviewCreateForm() {
 
   const handleCancel = (e) => {
     e.preventDefault();
-    history.push('/departments/${departmentId}/products/${productId}')
+    history.push(`/departments/${departmentId}/products/${productId}`)
   }
 
   const handleSubmit = (e) => {
@@ -107,12 +107,12 @@ function ReviewCreateForm() {
   }
 
   /**************** render component *****************/
+  if (sessionState && user == null) {
+    return <Redirect to="/"></Redirect>
+  }
   if (alreadyReviewedByUser) {
     return <Redirect to={`/reviews/${alreadyReviewedByUser.id}/edit`}></Redirect>
-  } else if (user && !user.id)  {
-   return <Redirect to="/"></Redirect>
   }
-
 
   return (
     <div className="page-wrapper-container">
@@ -128,7 +128,7 @@ function ReviewCreateForm() {
             <div className="ReviewCreateForm-title-container">
                 <div className="review-form-title">Review this item</div>
                 <div className="review-form-item">{product.name}</div>
-                <div className="review-form-display-name">Display name: {sessionState.user.username}</div>
+                <div className="review-form-display-name">Display name: {sessionState.user && sessionState.user.username}</div>
             </div>
 
 

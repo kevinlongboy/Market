@@ -26,13 +26,14 @@ function OrderConfirmation() {
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
 
+
     useEffect(() => {
-        dispatch(thunkReadAllUserOrders(user.id));
+      dispatch(thunkReadAllUserOrders());
     }, [dispatch])
 
 
   /**************** render component *****************/
-    if (newOrder == null) return <Redirect to="/"></Redirect>
+    if (user == null) return <Redirect to="/"></Redirect>
 
 
     return (
@@ -43,7 +44,7 @@ function OrderConfirmation() {
             <div className="OrderConfirmation-title">
               <img  src={thanksImage} id="thanksImage"></img>
               <h1>Thanks for your order!</h1>
-              <p>We’ll send confirmations and order updates to <span>{user.email}</span></p>
+              <p>We’ll send confirmations and order updates to <span>{user && user.email}</span></p>
             </div>
 
             <div className="OrderConfirmation-edit-section">

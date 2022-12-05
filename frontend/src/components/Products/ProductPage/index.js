@@ -1,6 +1,6 @@
 /******************************** IMPORTS ********************************/
 // libraries
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 import  StarRatings from 'react-star-ratings';
@@ -28,7 +28,10 @@ function ProductPage() {
   const mainImage = productImages[0]
   // reviews
   const userReviews = Object.values(reviewsState.allReviewsByUser)
+  console.log("userReviews", userReviews)
+
   let alreadyReviewedByUser = userReviews.find((review) => review.productId == productId)
+  console.log("alreadyReviewedByUser", alreadyReviewedByUser)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -41,20 +44,24 @@ function ProductPage() {
     dispatch(thunkReadAllProductReviews(productId));
   }, [dispatch])
 
-  // useEffect(() => {
-  //   dispatch(thunkReadAllUserReviews());
-  // }, [dispatch])
+  useEffect(() => {
+    dispatch(thunkReadAllUserReviews());
+  }, [dispatch])
 
 
   /************* conditional components **************/
   let displayReviewButton
-  if (alreadyReviewedByUser || !user ) {
+  if (user == null) {
     displayReviewButton = (
       <></>
       // <NavLink exact to={`/reviews/${alreadyReviewedByUser.id}/edit`} id="review-button-link">
       //   <button id="ProductPage-write-a-review-button">Edit review</button>
       // </NavLink>
       )
+  } else if (user && alreadyReviewedByUser ) {
+    displayReviewButton = (
+    <></>
+    )
   } else {
     displayReviewButton = (
       <NavLink exact to={`/products/${product.id}/add-review`} id="review-button-link">

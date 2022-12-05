@@ -16,14 +16,16 @@ function ReviewUpdateForm() {
     const user = useSelector(state => state.session.user);
     const sessionState = useSelector(state => state.session);
     const reviewsState = useSelector(state => state.reviews.allReviewsByUser);
-    const product = useSelector(state => state.products.singleProductDetails);
+    // const product = useSelector(state => state.products.singleProductDetails);
 
     /************ key into pertinent values ************/
     const { reviewId } = useParams()
-    const departmentId = product.Department.id
+    // const departmentId = product.Department.id
     const review = reviewsState[parseInt(reviewId)]
-    const imagesArr = product.ProductImages
-    const displayImage = imagesArr[0]
+    // console.log("review", review)
+    // const displayImage = product.previewImage
+    // const imagesArr = product.ProductImages
+    // const displayImage = imagesArr[0]
 
     /************ reducer/API communication ************/
     const dispatch = useDispatch();
@@ -32,9 +34,9 @@ function ReviewUpdateForm() {
         dispatch(thunkReadAllUserReviews());
     }, [dispatch])
 
-    useEffect(() => {
-        dispatch(thunkReadSingleProductDetails(parseInt(review.productId)))
-    }, [dispatch])
+    // useEffect(() => {
+    //     dispatch(thunkReadSingleProductDetails(parseInt(review.productId)))
+    // }, [dispatch])
 
     /****************** manage state *******************/
     const [rating, setRating] = useState();
@@ -43,9 +45,9 @@ function ReviewUpdateForm() {
     const [validationErrors, setValidationErrors] = useState([]);
 
     useEffect(() => {
-        setRating(review.rating)
-        setTitle(review.title)
-        setDescription(review.description)
+        setRating(review && review.rating)
+        setTitle(review && review.title)
+        setDescription(review && review.description)
     }, []);
 
     // render errors
@@ -56,15 +58,15 @@ function ReviewUpdateForm() {
             errors.push("Please enter a rating.")
         }
 
-        if (title.length > 0 && title.length < 5) {
+        if (title && title.length > 0 && title.length < 5) {
         errors.push("Please write a longer title.")
-        } else if (title.length > 50) {
+        } else if (title && title.length > 50) {
         errors.push("Please write a shorter title.")
         }
 
-        if (description.length > 0 && description.length < 20) {
+        if (description && description.length > 0 && description.length < 20) {
             errors.push("Please write a longer description.")
-        } else if (description.length > 255) {
+        } else if (description && description.length > 255) {
             errors.push("Please write a shorter description.")
         }
 
@@ -102,18 +104,18 @@ function ReviewUpdateForm() {
           }
       });
 
-    //   history.push(`/departments/${departmentId}/products/${product.id}`)
+      history.push(`/departments/${review.Product.departmentId}/products/${review.Product.id}`)
   }
 
   /**************** render component *****************/
-  if (!user.id) return <Redirect to="/"></Redirect>
+  if (user && user.id == null) return <Redirect to="/"></Redirect>
 
   return (
     <div className="page-wrapper-container">
       <div id="ReviewCreateForm-component">
 
         <div class="ReviewCreateForm-left-container">
-            {displayImage && <img src={displayImage.url} className="ReviewCreateForm-display-image"></img>}
+            {review && <img src={review.Product.previewImage} className="ReviewCreateForm-display-image"></img>}
         </div>
 
 
@@ -121,8 +123,8 @@ function ReviewUpdateForm() {
 
             <div className="ReviewCreateForm-title-container">
                 <div className="review-form-title">Update your review for this item</div>
-                <div className="review-form-item">{product.name}</div>
-                <div className="review-form-display-name">Display name: {sessionState.user.username}</div>
+                <div className="review-form-item">{review && review.Product.name}</div>
+                <div className="review-form-display-name">Display name: {sessionState.user && sessionState.user.username}</div>
             </div>
 
 

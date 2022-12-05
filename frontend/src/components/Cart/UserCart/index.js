@@ -27,7 +27,11 @@ function UserCart() {
 
   useEffect(() => {
       dispatch(thunkReadCart());
-  }, [dispatch, cart])
+  }, [dispatch])
+  
+  useEffect(() => {
+    dispatch(thunkReadCart());
+}, [user])
 
   /***************** handle events *******************/
   const history = useHistory();
@@ -176,7 +180,7 @@ function UserCart() {
 
 
   /**************** render component *****************/
-  // if (!user.id) return <Redirect to="/"></Redirect>
+  // if (user == null) return <Redirect to="/"></Redirect>
 
   return (
     <div className="page-wrapper-container">

@@ -211,9 +211,9 @@ router.delete('/:cartId', requireAuth, async(req, res) => {
 
 
 /***************************** ERROR HANDLER *****************************/
-router.use((err, req, res, next) => {
-    return res.json(err)
-})
+// router.use((err, req, res, next) => {
+//     return res.json(err)
+// })
 
 
 /******************************** EXPORTS ********************************/

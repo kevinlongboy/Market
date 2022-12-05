@@ -31,7 +31,7 @@ function App() {
   /****************** manage state *******************/
   // use to load components only after there is a current session
   // and user's details are retrieved from database
-  const [isLoaded, setIsLoaded] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
 
 
   useEffect(() => {
@@ -109,7 +109,7 @@ function App() {
           </Route> */}
 
         </Switch>
-        {/* )} */}
+      {/* )} */}
 
         <Footer />
     </>
