@@ -30,11 +30,21 @@ _<p align="center"> and mark it off your list </p>_
 
 ##  ✅ Let's Go Shopping
   
-Welcome to Market, your one-stop shop for everything you need.
+Welcome to Market, your one-stop shop for everything you might need.
 
 Inspired by <a href="https://www.target.com/" alt="Target website">Target</a>, Market offers a variety of products for shoppers to browse, review, and purchase.
 
-Have a running list of things you need around the house? Market & Mark It Square.
+<br>
+
+Running low on a detergent? *check*
+
+Need a last-minute gift for that party? *check*
+
+Looking for a nice bottle of wine to celebrate the weekend? *check*
+
+And for everything else on your list:
+
+Market & Mark It Square.
 
 <br>
 <br>
@@ -47,7 +57,7 @@ Have a running list of things you need around the house? Market & Mark It Square
 
 _Find a something you like?_
 
-The cart feature allows shoppers to add products to their cart, remove any item, and proceed to checkout. 
+The cart feature gives shoppers the ability to add products to their cart, remove any item, and proceed to checkout. 
 
 <br>
 
@@ -55,7 +65,7 @@ The cart feature allows shoppers to add products to their cart, remove any item,
 
 _This one has good reviews_
 
-The review feature allows shoppers to read reviews for a product or write their own. Shoppers can also modify or delete any of their past review.
+The review feature gives shoppers the ability to read reviews for a product or write their own. Shoppers can also modify or delete any of their past reviews.
   
 <br>
 <br>
