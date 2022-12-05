@@ -804,7 +804,7 @@ const demoUsers = [
   },
   {
     id: 88,
-    firstName: 'Matt',
+    firstName: 'Richard',
     lastName: 'Baine',
     username: 'mbaine',
     hashedPassword: bcrypt.hashSync('mbaine'),
