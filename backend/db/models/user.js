@@ -43,7 +43,8 @@ module.exports = (sequelize, DataTypes) => {
         lastName,
         username,
         email,
-        hashedPassword
+        hashedPassword,
+        url: 'https://kl-market.herokuapp.com/',
       });
       return await User.scope('currentUser').findByPk(user.id);
     };

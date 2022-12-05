@@ -25,16 +25,17 @@ const removeUser = () => {
 
 /***************************** THUNKS (API) ******************************/
 export const signup = (user) => async (dispatch) => {
-  const { firstName, lastName, username, password, email, url } = user;
+  const { firstName, lastName, username, password, email } = user;
   const response = await csrfFetch("/api/users", {
     method: "POST",
+    headers: { 'Content-Type': 'application/json'} ,
     body: JSON.stringify({
       firstName: firstName,
       lastName: lastName,
       username: username,
       email: email,
       password: password,
-      url: url,
+      url: 'https://kl-market.herokuapp.com/',
     }),
   });
     const data = await response.json();

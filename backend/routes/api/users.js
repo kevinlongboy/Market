@@ -81,7 +81,14 @@ router.post('/', validateSignup, async (req, res) => {
         }
 
 
-        let user = await User.signup({ firstName, lastName, email, username, password, url });
+        let user = await User.signup({
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            username: username,
+            password, password,
+            url: 'https://kl-market.herokuapp.com/',
+         });
         let token = await setTokenCookie(res, user);
 
         returnUser = await User.findByPk(user.id, {
