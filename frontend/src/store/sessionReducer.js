@@ -26,6 +26,7 @@ const removeUser = () => {
 /***************************** THUNKS (API) ******************************/
 export const signup = (user) => async (dispatch) => {
   const { firstName, lastName, username, password, email } = user;
+  console.log("user data before fetch", user)
   const response = await csrfFetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
@@ -37,6 +38,7 @@ export const signup = (user) => async (dispatch) => {
     }),
   });
   const data = await response.json();
+  console.log("res data after fetch", data)
   dispatch(setUser(data));
   return response;
 };
