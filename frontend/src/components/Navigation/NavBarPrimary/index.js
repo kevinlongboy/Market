@@ -18,9 +18,9 @@ function NavBarPrimary() {
           </div>
 
           <div className="NavBarMain-right-container">
-            <p><Link href="https://weeklyad.target.com/">Weekly Ad</Link></p>
-            <p><Link href="https://www.target.com/redcard/about">Red Card</Link></p>
-            <p><Link href="https://www.target.com/circle">Market Square</Link></p>
+            <p><a href="https://weeklyad.target.com/">Weekly Ad</a></p>
+            <p><a href="https://www.target.com/redcard/about">Red Card</a></p>
+            <p><a href="https://www.target.com/circle">Market Square</a></p>
           </div>
         </div>
 
