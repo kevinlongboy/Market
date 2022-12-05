@@ -52,7 +52,7 @@ router.post('/', validateLogin, async (req, res, next) => {
         const printUser = user.toJSON();
         printUser.token = token;
 
-        return res.json(printUser)
+        return res.status(200).json(printUser)
 
     } catch (err) {
         error.error = err;
@@ -99,9 +99,9 @@ router.get('/', restoreUser, (req, res) => {
 
 
 /***************************** ERROR HANDLER *****************************/
-router.use((err, req, res, next) => {
-    return res.json(err)
-})
+// router.use((err, req, res, next) => {
+//     return res.json(err)
+// })
 
 
 /******************************** EXPORTS ********************************/

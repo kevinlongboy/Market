@@ -132,3 +132,13 @@
 #login-or-signup-form-disclaimer-promotions:hover {
     text-decoration: underline;
 }
+
+
+.login-or-signup-form-display-errors-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    /* padding: 10px 0px; */
+}

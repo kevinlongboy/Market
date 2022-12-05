@@ -105,9 +105,9 @@ router.post('/', validateSignup, async (req, res) => {
 
 
 /***************************** ERROR HANDLER *****************************/
-router.use((err, req, res, next) => {
-    return res.json(err)
-})
+// router.use((err, req, res, next) => {
+//     return res.status(400).json(err)
+// })
 
 
 /******************************** EXPORTS ********************************/

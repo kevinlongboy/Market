@@ -32,16 +32,18 @@ function LoginFormPage() {
     e.preventDefault();
 
     let validationErrors = [];
-    setErrors(validationErrors);
+    setErrors([]);
 
-    dispatch(sessionActions.login({ credential, password })).catch(
+    return dispatch(sessionActions.login({ credential, password })).catch(
+
       async (res) => {
+        console.log(res)
       const data = await res.json();
-      console.log("data", data)
+      console.log("data from loginPage", data)
+
       if (data && data.message) {
         validationErrors.push(data.message)
         setErrors(validationErrors); // double check key is .errors vs .message
-        return
       }
     });
 

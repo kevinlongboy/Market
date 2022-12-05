@@ -31,8 +31,9 @@ module.exports = {
         unique: true
       },
       url: {
-        allowNull: false,
-        type: Sequelize.STRING
+        allowNull: true,
+        type: Sequelize.STRING,
+        defaultValue: 'https://kl-market.herokuapp.com/'
       },
       hashedPassword: {
         type: Sequelize.STRING.BINARY,

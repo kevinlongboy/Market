@@ -18,6 +18,7 @@ import AddToCart from "../../Cart/AddToCart";
 function ProductPage() {
 
   /****************** access store *******************/
+  const user = useSelector(state => state.session.user);
   const product = useSelector(state => state.products.singleProductDetails)
   const productImages = useSelector(state => state.products.singleProductDetails.ProductImages)
   const reviewsState = useSelector(state => state.reviews);
@@ -40,7 +41,7 @@ function ProductPage() {
 
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));
-  }, [dispatch])
+  }, [dispatch, reviewsState])
 
   useEffect(() => {
     dispatch(thunkReadAllUserReviews());
@@ -49,7 +50,7 @@ function ProductPage() {
 
   /************* conditional components **************/
   let displayReviewButton
-  if (alreadyReviewedByUser) {
+  if (alreadyReviewedByUser || !user ) {
     displayReviewButton = (
       <></>
       // <NavLink exact to={`/reviews/${alreadyReviewedByUser.id}/edit`} id="review-button-link">

@@ -74,6 +74,11 @@ function ReviewCreateForm() {
   /***************** handle events *******************/
   const history = useHistory();
 
+  const handleCancel = (e) => {
+    e.preventDefault();
+    history.push('/departments/${departmentId}/products/${productId}')
+  }
+
   const handleSubmit = (e) => {
 
     e.preventDefault();
@@ -104,7 +109,7 @@ function ReviewCreateForm() {
   /**************** render component *****************/
   if (alreadyReviewedByUser) {
     return <Redirect to={`/reviews/${alreadyReviewedByUser.id}/edit`}></Redirect>
-  } else if (!user.id)  {
+  } else if (user && !user.id)  {
    return <Redirect to="/"></Redirect>
   }
 
@@ -204,12 +209,13 @@ function ReviewCreateForm() {
                     <span id="review-form-guidelines-link">review guidelines</span></p>
 
 
-                {/* <button
-                onClick={() => <Redirect to={`/departments/${departmentId}/products/${productId}`}></Redirect>}
+                <button
+                // onClick={() => <Redirect to={`/departments/${departmentId}/products/${productId}`}></Redirect>}
+                onClick={handleCancel}
                 className="review-form-button"
                 >
                 Cancel
-                </button> */}
+                </button>
 
                 <button
                 type="submit"

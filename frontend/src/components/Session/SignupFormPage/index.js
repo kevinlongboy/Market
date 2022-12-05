@@ -36,12 +36,13 @@ function SignupFormPage() {
       setErrors(["Those passwords didn't match. Please try again."]);
       return
 
-    } else {
+    } else if (password === confirmPassword) {
 
       let errors = [];
       setErrors([]);
 
       let userData = {firstName, lastName, username, password, email }
+
       return  dispatch(sessionActions.signup(userData)).catch(
 
         async (res) => {
@@ -167,7 +168,9 @@ function SignupFormPage() {
 
         </div>
 
-        {errors.map((error, idx) => <p key={idx} className='form-validation-errors'>{error}</p>)}
+        <div className="login-or-signup-form-display-errors-container">
+          {errors.map((error, idx) => <p key={idx} className='form-validation-errors'>{error}</p>)}
+        </div>
 
         <button
         type="submit"
