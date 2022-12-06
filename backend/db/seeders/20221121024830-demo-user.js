@@ -481,7 +481,7 @@ const demoUsers = [
   {
     // id: 52,
     firstName: 'Alex',
-    lastName: 'aklivecka',
+    lastName: 'Klivecka',
     username: 'aklivecka',
     hashedPassword: bcrypt.hashSync('aklivecka'),
     email: 'aklivecka@appacademy.io',
@@ -746,7 +746,7 @@ const demoUsers = [
     username: 'mancussion',
     hashedPassword: bcrypt.hashSync('mancussion'),
     email: 'mancussion@appacademy.io',
-    url: 'https://github.com/Mancussion',
+    url: 'https://github.com/JRife458',
   },
   {
     // id: 82,
@@ -919,6 +919,8 @@ const demoUsers = [
     email: 'Kevinelle@appacademy.io',
     url: 'https://www.linkedin.com/in/kevinlongboy/',
   },
+  // Frank
+  // Noah
 ]
 
 
