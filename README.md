@@ -44,7 +44,7 @@ Looking for a nice bottle of wine to celebrate the weekend? *check*
 
 And for everything else on your list:
 
-Market & Mark It Square.
+Market & Mark It Squared.
 
 <br>
 <br>
