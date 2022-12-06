@@ -83,9 +83,9 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 <img src="assets/instructions/setup-instructions-step-1.gif" alt="Navigate to GitHub GIF" width="400">
 
 ### 2. Download the API: 
-  <p>Click the "Code" button</p>
-  <p>Select "Download ZIP" from the dropdown menu</p>
-  <p>Save the file in your desired location</p>
+<p>Click the "Code" button</p>
+<p>Select "Download ZIP" from the dropdown menu</p>
+<p>Save the file in your desired location</p>
 
 <img src="assets/instructions/setup-instructions-step-2.gif" alt="Download the API GIF" width="400">
 
@@ -98,7 +98,7 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 
 ### 4. Initialize the backend: 
 <p>Open a new terminal</p>
-<p>Navigate to the _backend_ folder</p>
+<p>Navigate to the "backend" folder</p>
 <p>Download dependencies by running the command: "npm install"</p>
 <p>Initialize your database by running "npx dotenv sequelize db:migrate"</p>
 <p>Populate your database by running "npx dotenv sequelize db:seed:all"</p>
@@ -108,13 +108,13 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 
 ### 5. Initialize the frontend: 
 <p>Open a new terminal</p>
-<p>Navigate to the _frontend_ folder</p>
+<p>Navigate to the "frontend" folder</p>
 <p>Download dependencies by running the command: "npm install"</p>
 
 <img src="assets/instructions/setup-instructions-step-5.gif" alt="Initialize the frontend GIF" width="400">
 
 ### 6. Launch the app:
-<p>From the _frontend_ folder, run the command: "npm start"</p>
+<p>From the "frontend" folder, run the command: "npm start"</p>
 <p>Allow React to open the app in your browser</p>
 <p>Welcome to Market</p>
 
