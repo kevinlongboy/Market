@@ -8,7 +8,7 @@ import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
 // local files
 import "./OrderConfirmation.css"
 import thanksImage from "../../../images/branding/market-order-confirmation-image.png";
-import buildingImage from "../../../images/branding/market-building-image.png";
+import truckImage from "../../../images/branding/market-village-delivery-truck.png";
 
 
 /******************************* COMPONENT *******************************/
@@ -21,7 +21,7 @@ function OrderConfirmation() {
   /************ key into pertinent values ************/
   const { orderId } = useParams();
   const newOrder = allOrders[orderId]
-  console.log(newOrder)
+  console.log("newOrder", newOrder)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ function OrderConfirmation() {
 
 
   /**************** render component *****************/
-    if (user == null) return <Redirect to="/"></Redirect>
+    if (user.id != newOrder.userId) return <Redirect to="/"></Redirect>
 
 
     return (
@@ -67,23 +67,34 @@ function OrderConfirmation() {
         </div>
 
         <div className="OrderConfirmation-redirect-section">
-          <div>
+
             <div>
-              <img src={buildingImage} id="building-image"></img>
+              <img src={truckImage} id="village-image"></img>
             </div>
+
+            <div className="OrderConfirmation-redirect-section-title">
+              Shipping Details
+            </div>
+
+            <div className="OrderConfirmation-redirect-section-recipient-info-container">
+              <p>{user.firstName} {user.LastName}</p>
+              <p>180 Geary Street</p>
+              <p>San Francisco, CA 94108</p>
+            </div>
+
             <button
               className='OrderConfirmation-redirect-button'
               id='OrderConfirmation-redirect-button'
-            >
+              >
             <NavLink
               exact
               to={'/account/orders'}
               id='OrderConfirmation-redirect-link'
-            >
+              >
               Visit order history
             </NavLink>
             </button>
-          </div>
+
         </div>
 
       </div>
