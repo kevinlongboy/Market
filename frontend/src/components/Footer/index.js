@@ -23,8 +23,6 @@ function Footer() {
 
           </div>
 
-
-
           <div className="footer-bottom-section">
             <div className="footer-bottom-halves-container">
 
