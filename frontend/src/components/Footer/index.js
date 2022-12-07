@@ -5,6 +5,7 @@
 import "./Footer.css"
 import footerImage from "../../images/branding/market-footer-image.png";
 import { Link, NavLink } from "react-router-dom";
+import cranebnbLogo from "../../images/CraneBnB-logo-square.png";
 
 /******************************* COMPONENT *******************************/
 function Footer() {
@@ -37,6 +38,12 @@ function Footer() {
                 <div className="footer-about-links-container">
                   <a href="https://github.com/kevinlongboy">
                     <i class="fa-brands fa-github" id="footer-about-link"></i>
+                  </a>
+                </div>
+
+                <div className="footer-about-links-container">
+                  <a href="https://kl-airbnb.herokuapp.com/">
+                    <img src={cranebnbLogo} id="footer-about-link-image"></img>
                   </a>
                 </div>
               </div>
