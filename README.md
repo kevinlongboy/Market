@@ -60,6 +60,14 @@ _Find a something you like?_
 The cart feature gives shoppers the ability to add products to their cart, remove any item, and proceed to checkout. 
 
 <br>
+  
+### Orders
+
+_Order up!_
+
+The order feature gives shoppers the ability purchase the products in their cart. Users can also view any one or all orders they've made in the past.
+
+<br>
 
 ### Reviews
 
