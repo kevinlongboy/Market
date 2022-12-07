@@ -25,24 +25,28 @@ function Footer() {
 
 
           <div className="footer-bottom-section">
+            <div className="footer-bottom-halves-container">
 
-            <div className="footer-bottom-left-section">
-              <div className="footer-about-links-container">
-                <a href="https://www.linkedin.com/in/kevinlongboy/">
-                  <i class="fa-brands fa-linkedin" id="footer-about-link"></i>
-                </a>
+              <div className="footer-bottom-left-section">
+                <div className="footer-about-links-container">
+                  <a href="https://www.linkedin.com/in/kevinlongboy/">
+                    <i class="fa-brands fa-linkedin" id="footer-about-link"></i>
+                  </a>
+                </div>
+
+                <div className="footer-about-links-container">
+                  <a href="https://github.com/kevinlongboy">
+                    <i class="fa-brands fa-github" id="footer-about-link"></i>
+                  </a>
+                </div>
               </div>
 
-              <div className="footer-about-links-container">
-                <a href="https://github.com/kevinlongboy">
-                  <i class="fa-brands fa-github" id="footer-about-link"></i>
-                </a>
+              <div className="footer-bottom-right-section">
+                <p>TM & © 2022 Market Brands, Inc.</p>
               </div>
             </div>
 
-            <div className="footer-bottom-right-section">
-              <p>TM & © 2022 Market Brands, Inc.</p>
-            </div>
+
           </div>
 
         </div>
