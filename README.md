@@ -64,7 +64,7 @@ The cart feature gives shoppers the ability to add products to their cart, remov
   
 ### Orders
 
-_Order up!_
+_Made to order_
 
 The order feature gives shoppers the ability purchase the products in their cart. Users can also view any one or all orders they've made in the past.
 <p><img src="images/features/market-checkout.gif" alt="checkout-feature gif" width="400"></p>
