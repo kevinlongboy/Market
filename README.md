@@ -58,6 +58,7 @@ Market & Mark It Squared.
 _Find a something you like?_
 
 The cart feature gives shoppers the ability to add products to their cart, remove any item, and proceed to checkout. 
+<p><img src="images/features/market-cart.gif" alt="cart-feature gif" width="400"></p>
 
 <br>
   
@@ -66,6 +67,7 @@ The cart feature gives shoppers the ability to add products to their cart, remov
 _Order up!_
 
 The order feature gives shoppers the ability purchase the products in their cart. Users can also view any one or all orders they've made in the past.
+<p><img src="images/features/market-checkout.gif" alt="checkout-feature gif" width="400"></p>
 
 <br>
 
@@ -74,6 +76,7 @@ The order feature gives shoppers the ability purchase the products in their cart
 _This one has good reviews_
 
 The review feature gives shoppers the ability to read reviews for a product or write their own. Shoppers can also modify or delete any of their past reviews.
+<p><img src="images/features/market-review.gif" alt="review-feature gif" width="400"></p>
   
 <br>
 <br>
