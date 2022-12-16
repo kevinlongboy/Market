@@ -20,13 +20,27 @@ const demoReviews = [
     title: "Right size",
     description: "Just what wanted, right size and price",
   },
+  {
+    productId: 1,
+    userId: 120, // Nhut
+    rating: 5,
+    title: "Minty fresh",
+    description: "Minty fresh feeling, love it!",
+  },
   // ✅ 5. solution
   {
     productId: 5,
     userId: 29, // David Nash
     rating: 1,
     title: "This solution is the devil.",
-    description: "I purchased a small bottle of ths for a weekend trip. The trip ended up being ruined because after soaking my contacts in this solution friday night i could barely see the rest of the weekend. I wouldn't wish this solution on my worst enemy.",
+    description: "I purchased a small bottle of ths for a weekend trip. It isn't the solution I typically use at home. The trip ended up being ruined because after soaking my contacts in this solution friday night i could barely see the rest of the weekend. My eyes became red, irritated, and painful. I don't use this solution at home. I only bought it because it was a small easy to travel with bottle. It cost me a trip to the eye doctor, a new pair of contacts, and it took several weeks for my eyes to get back to normal. I wouldn't wish this solution on my worst enemy.",
+  },
+  {
+    productId: 5,
+    userId: 124, // Trevor Jones
+    rating: 5,
+    title: "sensitive skin",
+    description: "all other brands of solution irritate the skin around my eyes. this brand works great and I never have any irritation!",
   },
   // ✅ 6. softlips
   {
@@ -36,6 +50,13 @@ const demoReviews = [
     title: "Great product!",
     description: "I bought this a month ago and it's been amazing. It smells good, adds the right amount of shine. It moisturizes and keeps my lips soft. It's easy to take one with you everywhere",
   },
+  {
+    productId: 6,
+    userId: 127, // Christy
+    rating: 5,
+    title: "Saves dry cracked lips",
+    description: "The best when it comes to moisturizing your chapped lips. I love these. They're small and easy to fit into a purse, it glides on smoothly and it really works fast.",
+  },
   // ✅ 9. cotton
   {
     productId: 9,
@@ -43,6 +64,13 @@ const demoReviews = [
     rating: 5,
     title: "Good quality cotton balls",
     description: "Nice and good quality cotton",
+  },
+  {
+    productId: 9,
+    userId: 120, // Nhut
+    rating: 1,
+    title: "SHARP PLASTIC IN COTTONBALLS!",
+    description: "I would give zero stars if possible. These cotton balls have not only gotten smaller in size over time but I’ve noticed that the last few bags I bought had some very rough, scratchy ones. I didn’t think much of it at first but the more I used them, the more I’m finding these “rough” ones. So I decided to investigate and I pulled at the rough spot last night and come to find this sharp string of hard plastic in a it. I’m using these to take off my eye makeup and could have seriously damaged my eyes with this! Not cool! Sounds like Target might have a future lawsuit.",
   },
   // ✅ 10. tissue
   {
@@ -66,6 +94,13 @@ const demoReviews = [
     rating: 5,
     title: "our go to pain relief",
     description: "Aleve is our brand we have been using for years. Aches and pains? Stiff back? Kids giving you a headache? Two of these and you are good as new for hours. Product has not changed since we started taking. Love the easy open bottle.",
+  },
+  {
+    productId: 11,
+    userId: 1, // Noah Winzig
+    rating: 3,
+    title: "Ehh it's okay",
+    description: "So these actually aren't the most effective for me. I don't feel better after these & require more to feel better compared to other brands.",
   },
 
   /********************** 2. Home **********************/
@@ -123,6 +158,13 @@ const demoReviews = [
     title: "Okay material",
     description: "Cheap price, quality is okay. Good if you just need some new towels on a budget they’re not very soft but you get what you pay for",
   },
+  {
+    productId: 19,
+    userId: 113, // Jarrod
+    rating: 3,
+    title: "Very nice towels",
+    description: "Great size, wash well, just the right thickness. Amazing price. I want more! 😁",
+  },
   // ✅ 21. steamer
   {
     productId: 21,
@@ -130,6 +172,13 @@ const demoReviews = [
     rating: 5,
     title: "Portable and Reliable",
     description: "This is one of the best steamers that I’ve owned. It takes the wrinkles out of my clothes and it is extremely easy to transport.",
+  },
+  {
+    productId: 21,
+    userId: 114, // Jenny Jiang
+    rating: 4,
+    title: "Awesome!",
+    description: "We have been so pleased with our streamer. So convenient and easy to use.",
   },
   /********************** 3. Kitchen & Dining **********************/
   // ✅ 27. wine glasses
@@ -169,6 +218,13 @@ const demoReviews = [
     title: "No issues!",
     description: "Works great, best basic set I've ever gotten.",
   },
+  {
+    productId: 28,
+    userId: 115, // Jon Park
+    rating: 1,
+    title: "Unsatisfied",
+    description: "Don’t waste your money on this. The handles are hallow & make noise. Never used them, so they’re brand new. My fault I waited so long to open it that the return date had expired. Now my only option is to give it away or sell it for less than what I paid.",
+  },
   // ✅ 29. grilling
   {
     productId: 29,
@@ -206,6 +262,13 @@ const demoReviews = [
     rating: 5,
     title: "Nice",
     description: "Nice design. Easy to use and clean",
+  },
+  {
+    productId: 34,
+    userId: 104, // Ben Thai
+    rating: 5,
+    title: "Buy one",
+    description: "Worked perfectly. Bought one 4 yrs ago and still use it everyday. No problems.",
   },
   // ✅ 35. cookware
   {
@@ -277,6 +340,20 @@ const demoReviews = [
     rating: 5,
     title: "I can’t live without this",
     description: "Omg this is so good. The texture is rich and thick and so creamy. You can put it on toast use as a filling for cake put on fruit it goes well with so much. I would recommend this to everyone.",
+  },
+  {
+    productId: 42,
+    userId: 121, // Noah Winzig
+    rating: 5,
+    title: "Yummy",
+    description: "I love this. I go through a couple of the big containers every year. My favorite is having it as a peanut butter and Nutella sandwich",
+  },
+  {
+    productId: 42,
+    userId: 9, // Hector
+    rating: 5,
+    title: "Perfect snack",
+    description: "I love nutella because I can add it to anything and it will be delicious. I love making a nutella and banana sandwhich as a snack. It's really good.",
   },
   // ✅ 43. Ritter Sport
   {
@@ -895,6 +972,13 @@ const demoReviews = [
     title: "It's legit!",
     description: "Well made table. Exceeded my expectations! Just got it though - we'll see how it holds up.",
   },
+  {
+    productId: 70,
+    userId: 108, // David Siwulec
+    rating: 5,
+    title: "Sturdy, good size and lots of fun",
+    description: "Build was easy. Instructions are very clear to follow. The machine is incredibly well wrapped. Very heavy and sturdy!. Graphics and sound are very clear.",
+  },
 
   /********************** 7. Sports & Outdoors **********************/
   // ✅ 73. weights
@@ -919,6 +1003,13 @@ const demoReviews = [
     title: "Muscle bound",
     description: "Needed heavier workout weights & these were exactly what I wanted & needed.",
   },
+  {
+    productId: 73,
+    userId: 101, // Alex Feinberg
+    rating: 5,
+    title: "Great ddumbells",
+    description: "Love the different colors of each lbs. Sturdy and the Comfort it has when using them. Definitely recommend, it does get pricier as lbs go up (bleh lol).",
+  },
   // ✅ 74. yoga mat
   {
     productId: 74,
@@ -933,6 +1024,13 @@ const demoReviews = [
     rating: 2,
     title: "Slippery",
     description: "Unfortunately this mat is way too slippery for yoga.",
+  },
+  {
+    productId: 74,
+    userId: 116, // Jwad
+    rating: 2,
+    title: "Thin",
+    description: "I found one of these in perfect condition on the curb just before trash day and took it home. I used (in parts) it for everything but yoga, mostly in my shoes to even out a short leg. After a week it was as flat as a piece of construction paper. Overpriced, still there are a hundred uses for a roll of foam such as this, you couldn't go wrong to buy one and tuck it away, but for yoga? I don't think so - get something much thicker.",
   },
   // ✅ 77. hiking
   {
@@ -1080,6 +1178,13 @@ const demoReviews = [
     title: "Sturdy",
     description: "Sturdy legs, metal brackets to secure-no wobbles!!",
   },
+  {
+    productId: 99,
+    userId: 103, // Ashwin
+    rating: 5,
+    title: "Adorable!",
+    description: "These are so stinking cute! I bought them to replace an old end table in my bedroom, and they are very chic. They are also generously sized, enough to fit some decorations.",
+  },
   // ✅ 100. bookcase
   {
     productId: 100,
@@ -1109,6 +1214,13 @@ const demoReviews = [
     rating: 5,
     title: "Frames",
     description: "Looks absolutely amazing on my family photo wall.",
+  },
+  {
+    productId: 104,
+    userId: 106, // Casstiel
+    rating: 5,
+    title: "Looks expensive",
+    description: "These frames are very sturdy, not cheap or thin. I bought 1 at first, once I hung it up, I went back and bought 3 more. I bought these in the store without seeing the reviews in advance. The frame is good and so is the mat that was included. It’s looks expensive, great value. Buy it, you won’t be disappointed,",
   },
   // ✅ 105. vases
   {
@@ -1162,6 +1274,7 @@ const demoReviews = [
     description: "The board is great but the packaging needs some work. I received a damaged board with missing hardware that was obviously caused by insufficient packaging. Thankfully customer service is excellent and they shipped a replacement immediately.",
   },
   /******************* Phase 2 Products *******************/
+    // ✅ 2. face wash
   {
     productId: 2,
     userId: 43, // Daniel Lam
@@ -1176,6 +1289,7 @@ const demoReviews = [
     title: "Returning!",
     description: "since Neutrogena discontinued the Pore Minimizer Scrub in the white tube I thought I'd try this and what a joke. This doesn't even come close to the other scrub. I cannot understand why they would cancel such a great product. This has some type of big uneven ground up type seeds for the scrub and it's terrible. Pore Minimizer scrub had tiny beads that left my skin smooth and clean, not this.",
   },
+    // ✅ 3. toner
   {
     productId: 3,
     userId: 99, // Alexis West
@@ -1190,6 +1304,7 @@ const demoReviews = [
     title: "Liked it",
     description: "I liked that this product wasn’t super expensive and that it didn’t leave my face feeling like a bunch of bees just stung it. It had a slight scent, but nothing abnormal. If using this right after washing my face, I felt like I could feel my face just getting lighter.",
   },
+    // ✅ 4. lotion
   {
     productId: 4,
     userId: 96, // Gabe
@@ -1204,9 +1319,10 @@ const demoReviews = [
     title: "Keep me looking sexy",
     description: "At 49 years old I need all the I can get. This lotion keeps my skin hydrated and looking healthy. I put it on every day . I love the way it smells, like coconut. I doesn't make me sticky either so I can put it on before bed and I don't stick to the sheets.",
   },
+    // ✅ 7. brows
   {
     productId: 7,
-    userId: 82, //Keer
+    userId: 82, // Keer
     rating: 3,
     title: "Not sure",
     description: "I thought midnight brown was a very dark brown but it looks almost reddish on my skin tone. A dark brown pencil usually works ok with my skin tone especially if I line the outside of my eyebrows and lightly shade in any sparse areas before using a brush. I seem to only be able to do a light fill in here & there without the color being too noticeable.",
@@ -1225,6 +1341,22 @@ const demoReviews = [
     title: "RICH BROWN?",
     description: "I've used these pencils for years in Rich Brown but now I don't see that color selection and I'm reading bad reviews about the Midnight Brown which is possibly what replaced Rich Brown. What I DON'T LIKE about these pencils is that some don't sharpen well after a certain point. Most do sharpen well so I'll continue to buy IF I can find Rich Brown.",
   },
+  // ✅ 8. razor
+  {
+    productId: 8,
+    userId: 121, // Noah Kerner
+    rating: 5,
+    title: "10 / 10",
+    description: "This razor is amazing!! I have very sensitive skin and I had no problem with this razed. I highly recommend",
+  },
+  {
+    productId: 8,
+    userId: 122, // Noah Winzig
+    rating: 5,
+    title: "My Boyfriend's Go-To",
+    description: "My boyfriend has multiple of these they’re so good.",
+  },
+    // ✅ first aid
   {
     productId: 12,
     userId: 88, // Richard
@@ -1239,6 +1371,7 @@ const demoReviews = [
     title: "Good for small medical needs",
     description: "Bought this for my beach bag and will get another for my car. Great to have but tiny. Great for price and will refill as needed.",
   },
+    // ✅ trash liners
   {
     productId: 15,
     userId: 93, // Simon
@@ -1254,8 +1387,23 @@ const demoReviews = [
     description: "Nice lawn/trash bags. Love that they don’t come with an odor like many trash cans.",
   },
   {
-    productId: 91,
-    userId: 97, //
+    productId: 15,
+    userId: 124, // Trevor Jones
+    rating: 5,
+    title: "They hold up",
+    description: "these hold up very well to heavy items being thrown away they can be compared as good as the name brand ones",
+  },
+  {
+    productId: 15,
+    userId: 126, // Randy
+    rating: 5,
+    title: "Mom of 2",
+    description: "Used these for moving. Not as sturdy as some others, but got our things from one house to another.",
+  },
+    // ✅ 16. swiffer
+  {
+    productId: 16,
+    userId: 91, // Sean
     rating: 3,
     title: "A bit flimsy to me",
     description: "It’s ok. A little bit flimsy compared to the other style wet mop. The last part of the handle gave some trouble to secure because the little ‘button’ didn’t want to pop in the hole to secure itself. I had to use something to play with it a bit to get it to pop through. That’s frustrated me a bit.",
@@ -1267,6 +1415,14 @@ const demoReviews = [
     title: "Love swifter",
     description: "Always love the starter kits. Just hope one day swifter will make the wipe holder 360 rotation rather than just 180.",
   },
+  {
+    productId: 16,
+    userId: 123, // Tan
+    rating: 5,
+    title: "E",
+    description: "Easy to use for small spaces",
+  },
+    // ✅ 20. pillows
   {
     productId: 20,
     userId: 89, // Sam
@@ -1282,6 +1438,14 @@ const demoReviews = [
     description: "The end of the pillow ripped in 3 days after I got it",
   },
   {
+    productId: 20,
+    userId: 115, // Jon Park
+    rating: 4,
+    title: "Unbeatable price",
+    description: "I use them more for decorative pillows on my bed but I do sleep on them and I think they are perfect comfort with another pillow under them",
+  },
+    // ✅ 22. candle
+  {
     productId: 22,
     userId: 84, // Kris
     rating: 5,
@@ -1295,6 +1459,14 @@ const demoReviews = [
     title: "amazing",
     description: "Absolutely LOVE this scent! I burns nicely but I still can’t get over how good it smells.",
   },
+  {
+    productId: 22,
+    userId: 116, // Jwad
+    rating: 5,
+    title: "Smells wonderful",
+    description: "I have the large candle and usually only light two wicks. It actually makes the living room smell amazing! Usually the candles that I buy don’t smell strong enough but this one is great. Doesn’t smell like string guava, either it’s actually just fruity.",
+  },
+    // ✅ 23. command strips
   {
     productId: 23,
     userId: 87, // Nate
@@ -1310,6 +1482,14 @@ const demoReviews = [
     description: "Used it to hold up posters, art, pennants, etc. in my kids room. Need to order another as I used most of these up and need to have them handy as well.",
   },
   {
+    productId: 23,
+    userId: 104, // Ben Thai
+    rating: 5,
+    title: "Grab it!",
+    description: "Works great! Used it to hang a few 10x14 gallery wraps.",
+  },
+    // ✅ 24. tools
+  {
     productId: 24,
     userId: 76, // Carmelino
     rating: 5,
@@ -1323,6 +1503,7 @@ const demoReviews = [
     title: "Amazing Drill",
     description: "Works like any other Drill, perfect cuz it's portable too.",
   },
+    // ✅ 25. flatware
   {
     productId: 25,
     userId: 79, // Jason P
@@ -1338,6 +1519,14 @@ const demoReviews = [
     description: "Perfect basic set for my daughter’s first apartment. Bought 2 sets. Worked out great for her and her roommates. Great value.",
   },
   {
+    productId: 25,
+    userId: 114, // Jenny Jiang
+    rating: 5,
+    title: "Not heavy",
+    description: "These are so nice, not heavy, and perfect size.",
+  },
+    // ✅ 26. dinnerware
+  {
     productId: 26,
     userId: 70, // Aijia
     rating: 5,
@@ -1351,6 +1540,14 @@ const demoReviews = [
     title: "Beautiful Dinnerware",
     description: "Love this set, they’re beautiful very heavy plates just as a restaurant style plate!",
   },
+  {
+    productId: 26,
+    userId: 105, // Brin
+    rating: 5,
+    title: "Happy and love them",
+    description: "Beautiful dinnerware. I purchased this set after my Peir 1 stoneware set was broken and missing items from years of use. I love the pure white color and heard porcelain is very durable. Looking forward to using these in the many years to come",
+  },
+    // ✅ 31. tupperware
   {
     productId: 31,
     userId: 97, // Erin
@@ -1366,6 +1563,14 @@ const demoReviews = [
     description: "Great product and suction on lid. Held up in freezer and refrigerator. I have not taken it straight from freezer/fridge to microwave. I have always let it rest for awhile at room temp first. So happy I purchased as they are used also for storing trail mix & other pantry items. They also have held up cooking in the oven but the lid is not oven safe.",
   },
   {
+    productId: 31,
+    userId: 112, // Dylan Luu
+    rating: 5,
+    title: "GLASS IS BEST",
+    description: "These containers are perfect for storing anything!",
+  },
+    // ✅ 32. measuring cup
+  {
     productId: 32,
     userId: 83, // Kelly
     rating: 5,
@@ -1379,6 +1584,14 @@ const demoReviews = [
     title: "Love this measuring cup",
     description: "Why would I love this cup? Weird. But I use it for so many things. Small pitcher, measuring, etc. It's worth the money because it isn't glass and you can look at the measurments without squinting at the numbers. Has conversions right there too.",
   },
+  {
+    productId: 32,
+    userId: 113, // Jarrod
+    rating: 5,
+    title: "Great additin to cooking accessories",
+    description: "It’s functional and gives the measurements I need.",
+  },
+    // ✅ 33. kettle
   {
     productId: 33,
     userId: 79, // Jason P
@@ -1394,6 +1607,14 @@ const demoReviews = [
     description: "Believe the reviews! It rusts after just a few uses.",
   },
   {
+    productId: 33,
+    userId: 126, // Randy
+    rating: 5,
+    title: "Are all the negative reviews fake?",
+    description: "People with all the problems with melting the kettle must be putting it on a camp fire. Here it is the truth. It whistles loud! I have tinnitus. It doesn’t melt when using it on a glass stove top even when I use a burner bigger than the kettle to make it heat up faster. It heats up as expected. The others who have melted theirs must have let the water run out. Yes, it will melt the plastic if you run it out of water and keep it on the hot burner. I know I did it to the one I replaced by another company. $8 yeah buy it!",
+  },
+    // ✅ 36. cookbook
+  {
     productId: 36,
     userId: 51, // Logan
     rating: 5,
@@ -1407,6 +1628,7 @@ const demoReviews = [
     title: "Great Book",
     description: "WONDERFUL book and price. It was a Mothers Day gift for a good friend. She loved it!!",
   },
+    // ✅ 53. charging cable
   {
     productId: 53,
     userId: 54, // Tom
@@ -1422,6 +1644,21 @@ const demoReviews = [
     description: "Works great would buy again",
   },
   {
+    productId: 53,
+    userId: 118, // Matt Li
+    rating: 5,
+    title: "Samsung compatible",
+    description: "Works with galaxy note and zflip",
+  },
+  {
+    productId: 53,
+    userId: 119, // Namju
+    rating: 5,
+    title: "Apple charger cable",
+    description: "Charges my iPhone very fast!",
+  },
+    // ✅ 54. HDMI
+  {
     productId: 54,
     userId: 55, // Andrew K
     rating: 1,
@@ -1436,6 +1673,14 @@ const demoReviews = [
     description: "I needed this to connect fire cube to TV. Prefect length so there isn't a lot of extra cord.",
   },
   {
+    productId: 54,
+    userId: 119, // Namju
+    rating: 5,
+    title: "Good cord",
+    description: "Have been using this for about a year (to play Netflix through my laptop onto the TV screen). No problems.",
+  },
+    // ✅ 55. power bank
+  {
     productId: 55,
     userId: 73, // Brad
     rating: 5,
@@ -1449,7 +1694,14 @@ const demoReviews = [
     title: "Very useful power bank",
     description: "Love this beautiful lavender colored power bank came in very handy when my girl drained her whole charging on our recent road trip she had this in the back and her phone charged up pretty quick. Very sleek fits in her backpack and is perfect for busy teens who want to stay connected every second but are lazy to charge their phone lol btw my daughter loves the color.",
   },
-
+  {
+    productId: 55,
+    userId: 102, // Ali
+    rating: 5,
+    title: "..can't complain",
+    description: "It does what it is supposed to do and I don't hate the color...and only $10 so..that is cool",
+  },
+    // ✅ 56. polaroid
   {
     productId: 56,
     userId: 89, // Sam
@@ -1458,12 +1710,20 @@ const demoReviews = [
     description: "I like how portable it is! I got it for my brother for Christmas and he hasn’t stopped using it!",
   },
   {
-    productId: 89,
+    productId: 56,
     userId: 92, // Sebastian
     rating: 5,
     title: "IS INTENDED TO BE A POLAROID CAMERA",
     description: "it's a TON of fun to experience! truly a blast from the past (age?!?)! it's most definitely intended to be a Polaroid camera, as such, realistic expectations you'll be smiling in no time ....perhaps even enjoy a walk down memory lane!",
   },
+  {
+    productId: 56,
+    userId: 106, // Casstiel
+    rating: 5,
+    title: "Lovely camera",
+    description: "The size is perfect, and it looks so cute.",
+  },
+    // ✅ 58. surveillance cam
   {
     productId: 58,
     userId: 91, // Sean
@@ -1479,6 +1739,14 @@ const demoReviews = [
     description: "Biggest waste of money. App is Google Home Not NEST, like my other NEST cameras !! Unit is plugged in at all times with power supply purchased FROM GOOGLE. Yet battery dies and unit stops recording all the time ! Too hot, too cold… same story unit completely shuts down. Garbage ! Unbelievable a company like google can’t build a functioning wireless doorbell, it seems like every other company can & has.",
   },
   {
+    productId: 58,
+    userId: 123, // Tan
+    rating: 1,
+    title: "Doesn't latch on",
+    description: "I’ve had this for about seven months. I took it off to charge (which you have to do every few weeks) and now it won’t latch back on. I’ve tried several times and I can’t get it to work anymore. I did call Target customer service and they had to transfer me. The girl I spoke with was very helpful and out in a request with the manufacturer. Waiting to see what they say.",
+  },
+    // ✅ 64. controller
+  {
     productId: 64,
     userId: 74, // Caleb
     rating: 5,
@@ -1492,6 +1760,14 @@ const demoReviews = [
     title: "Great gift idea",
     description: "Goos price point for a great holiday gift. It works well and makes playing games fun on phones.",
   },
+  {
+    productId: 64,
+    userId: 127, // Christy
+    rating: 5,
+    title: "Great controller for iphones",
+    description: "This controller really keeps you in the game when you play on your iPhone. You can connect to your GamePAss account and play all your games thru your phone anywhere you go.",
+  },
+    // ✅ 65. external storage
   {
     productId: 65,
     userId: 87, // Nate
@@ -1507,6 +1783,14 @@ const demoReviews = [
     description: "I’m a photographer and producer and i use these drives to do delivery to my clients or editors, they do the trick for that light lift",
   },
   {
+    productId: 65,
+    userId: 103, // Ashwin
+    rating: 5,
+    title: "Great HARD Drive",
+    description: "Great Find! Worked Perfect With My Ps4. Now I can Play All The Call Of Duty I WANT",
+  },
+    // ✅ 66. headset
+  {
     productId: 66,
     userId: 93, // Yas
     rating: 3,
@@ -1520,6 +1804,7 @@ const demoReviews = [
     title: "Not xbox compatible",
     description: "IS NOT COMPATIBLE WITH XBOX. ONLY WILL WORK WITH 3.5mm cable. Misleading title in ad.",
   },
+    // ✅ 68. monitor
   {
     productId: 68,
     userId: 6, // Alec
@@ -1535,6 +1820,14 @@ const demoReviews = [
     description: "Been using this monitor for about a week and so far, knock-on wood, have had zero issues with it. No dead pixels, beautiful bright screen, and smooth 240Hz. I had the CRG9 prior to this (which also gave me no issues) so I'm hopeful this one will stand the test of time. Love these monitors and can't imagine going back to anything smaller.",
   },
   {
+    productId: 68,
+    userId: 105, // Brin
+    rating: 5,
+    title: "Perfect for simulation racing",
+    description: "Purchased this about a year ago now. I was worried about it's longevity but I must say, I'm happer then expected. This monitor has been extremely reliable with no issues. Perfect for simulation racing and flying",
+  },
+    // ✅ 70. gaming desk
+  {
     productId: 70,
     userId: 44, // Connor Lam
     rating: 4,
@@ -1548,6 +1841,7 @@ const demoReviews = [
     title: "Gaming deck",
     description: "My son loves his gaming deck. We put his gaming deck together. It was fun working with my son. It was his Christmas gift.",
   },
+    // ✅ 72. gift card
   {
     productId: 72,
     userId: 78, // Jason A
@@ -1562,6 +1856,7 @@ const demoReviews = [
     title: "Steam gift card",
     description: "Why would anyone not like this it’s perfect",
   },
+    // ✅ 75. tennis racket
   {
     productId: 75,
     userId: 98, // Alex A
@@ -1577,6 +1872,14 @@ const demoReviews = [
     description: "I’m starting tennis for fun and just wanted an affordable racket before investing in a nice one and this one is perfect!",
   },
   {
+    productId: 75,
+    userId: 108, // David C
+    rating: 4,
+    title: "Great buy for a casual or beginner player",
+    description: "Excellent value for the price! Obviously, it's not the same experience as playing with a higher end racket, but it holds up surprisingly well given the super low price. A great buy if for a casual or beginner player.",
+  },
+    // ✅ 76. golf balls
+  {
     productId: 76,
     userId: 77, // Jake L
     rating: 5,
@@ -1590,6 +1893,14 @@ const demoReviews = [
     title: "Great ball for older players like me who have a slower swing. Love it .",
     description: "I have used this ball for about three years as I am in a 87 year old golfer and have a slower swing, this is a great ball for me and I think it would be great for other seniors.",
   },
+  {
+    productId: 76,
+    userId: 101, // Alex Feinberg
+    rating: 5,
+    title: "Excellant Ball",
+    description: "I have played them for a 3 years and I do not plan to Change............",
+  },
+    // ✅ 79. mattress
   {
     productId: 79,
     userId: 83, // Kelly
@@ -1605,6 +1916,14 @@ const demoReviews = [
     description: "Easy and quick to inflate and deflate. No issues turning off the pump and keeping air in - unlike some other air mattresses I've used before, where you have to scramble quickly to close the cap. The pump goes inside and turns off when the cap is closed, and then you use the foot pump to top it off to your preferred fullness.",
   },
   {
+    productId: 79,
+    userId: 117, // Kyle Solano
+    rating: 5,
+    title: "Twin air mattress",
+    description: "Very easy to inflate.",
+  },
+    // ✅ 80. tent
+  {
     productId: 80,
     userId: 60, // David B
     rating: 5,
@@ -1618,6 +1937,7 @@ const demoReviews = [
     title: "Efficient, dependable!",
     description: "The Coleman Sunlodge cabin tent is really easy to set up and I love that everything is color coded. The quality is amazing and I love that with the cabin style, I can fully stand up inside of it. The tent is nice and spacious, with plenty of room for my family of five and room to spare. Coleman has been my families go to brand for all of our camping equipment for years and it will continue to be because they are always high quality and affordable.",
   },
+    // ✅ 81. duffle bag
   {
     productId: 81,
     userId: 48, // Ryan W
@@ -1633,6 +1953,14 @@ const demoReviews = [
     description: "Not very durable. I was expecting a little more for the price.",
   },
   {
+    productId: 81,
+    userId: 111, // Donovan
+    rating: 5,
+    title: "Ms donna",
+    description: "It helps my grandson to put his football stuff in",
+  },
+    // ✅ 82. luggage
+  {
     productId: 82,
     userId: 59, // Cindy
     rating: 3,
@@ -1647,12 +1975,21 @@ const demoReviews = [
     description: "Very good manufacture quality..Gorgeous.",
   },
   {
+    productId: 82,
+    userId: 110, // Frank Song
+    rating: 5,
+    title: "Greag suitcase!",
+    description: "Love this suitcase. I got it in blue and it’s a really nice pale color. It isn’t very heavy which makes it easy to put in the overhead bins. It fits a lot as well which is nice.",
+  },
+    // ✅ 83. bike
+  {
     productId: 83,
     userId: 84, // Kris
     rating: 1,
     title: "Absolute junk, sold broken, assembled broke",
     description: "Got bike, its crank was broken in the manufacturing process. Almost impossible to get help on it. Did a video on you tube to show it",
   },
+    // ✅ 84. fit bit
   {
     productId: 84,
     userId: 74, // Caleb
@@ -1667,6 +2004,7 @@ const demoReviews = [
     title: "Easy to use",
     description: "Works for my lifestyle",
   },
+    // ✅ 89. cat collar
   {
     productId: 89,
     userId: 83, // Kelly
@@ -1681,20 +2019,22 @@ const demoReviews = [
     title: "Mia approved! I think...",
     description: "Cat would scratch at it so it would fray easily. Maybe it was too itchy for her. Beautiful green matched perfectly with her eyes. The clasp is good enough and the bell has saved me so much time looking for her.",
   },
+    // ✅ 90. dog leash
   {
-    productId: 89,
+    productId: 90,
     userId: 60, // David B
     rating: 4,
     title: "Decent!",
     description: "I like this especially for the price but my lab keeps chewing through them. So do not recommend if your dog is an avid chewer.",
   },
   {
-    productId: 89,
+    productId: 90,
     userId: 97, // Erin
     rating: 5,
     title: "Look No Further for a Good Quality Leash",
     description: "I wish the shorter loop was shorter but the padding helps me keep hold of the leash without hurting my hands. Very nice look and happy it is reflective.",
   },
+    // ✅ 91. cat clotes
   {
     productId: 91,
     userId: 98, // Alex A
@@ -1710,6 +2050,14 @@ const demoReviews = [
     description: "Super cute but didn’t fit my cats head right … looked funky",
   },
   {
+    productId: 91,
+    userId: 112, // Dylan Luu
+    rating: 5,
+    title: "Woof",
+    description: "Got this for a small/medium dog and it works.",
+  },
+    // ✅ 92. dog clothes
+  {
     productId: 92,
     userId: 92, // Seb
     rating: 4,
@@ -1723,6 +2071,7 @@ const demoReviews = [
     title: "Good product",
     description: "Soft material a little bigger than the other one I ordered",
   },
+    // ✅ 93. dog bags
   {
     productId: 93,
     userId: 81, // Justin
@@ -1737,6 +2086,7 @@ const demoReviews = [
     title: "love",
     description: "love these bags!!! ollie has the world’s largest poops but that’s okay because they fit nicely in these. bags easily come apart but don’t rip. i get unscented now but lavender is ok too",
   },
+    // ✅ 95. litter box
   {
     productId: 95,
     userId: 39, // David R
@@ -1751,6 +2101,7 @@ const demoReviews = [
     title: "Clever Design!",
     description: "I love the top entry design as it keeps the litter from getting all over the floor. I needed to help my kitten into it the first time she used it. Now she is able to jump right in and out by herself. I really appreciate the scoop handle on the outside of the box. The bags are so easy to replace. This is a perfect litter box for clean freak pet owners.",
   },
+    // ✅ 96. dog feeder
   {
     productId: 96,
     userId: 54, // tom
@@ -1760,11 +2111,19 @@ const demoReviews = [
   },
   {
     productId: 96,
+    userId: 125, // William Ngo
+    rating: 5,
+    title: "Love the design!",
+    description: "We love the original design of this feeder. It reminds us our expresso machine. Love the camera too.",
+  },
+  {
+    productId: 96,
     userId: 72, // Andrew W
     rating: 5,
     title: "Best Purchase!",
     description: "My puppy and I are so happy with this Cam Feeder. I can be out with no worries because I can always check on her thru the Cam. :)",
   },
+    // ✅ 98. dining chairs
   {
     productId: 98,
     userId: 76, // Carmel
@@ -1779,230 +2138,317 @@ const demoReviews = [
     title: "LOVE!",
     description: "I got these in the green and I am so pleased! I really like the linen. They are the perfect size, and super comfortable. They are shipped unassembled and packaged very well. Assembling could not be easier. If I had the room I would buy more!",
   },
- {
-  productId: 101,
-  userId: 80, // Jesse
-  rating: 5,
-  title: "White dresser",
-  description: "Fast delivery easy set up Looks very nice",
-},
-{
-  productId: 101,
-  userId: 49, // Thenu
-  rating: 4,
-  title: "Okay but not great",
-  description: "Decent for what it’s worth. Check for damaged pieces BEFORE you begin assembly!",
-},
-{
-  productId: 102,
-  userId: 50, // Brennon
-  rating: 5,
-  title: "Great price, works prefect.",
-  description: "Needed a simple, modern look, inexpensive lamp for the living room and searched on Target.com. Read the reviews, ordered the lamp, and so far no complaints at all. Just what we needed.",
-},
-{
-  productId: 102,
-  userId: 51, // Logan
-  rating: 5,
-  title: "Glad I Bought It",
-  description: "Easy assembly, very cozy light, good price.",
-},
-{
-  productId: 103,
-  userId: 32, // Cesar
-  rating: 5,
-  title: "Awesome for small spaces",
-  description: "This mirror never fails; if you leave it leaning against a wall it might be slightly distorted because it’s a little flimsy, but if you hang it up on a wall it’s perfect for a small space",
-},
-{
-  productId: 103,
-  userId: 41, // Jair
-  rating: 5,
-  title: "Nice product",
-  description: "Good product and very useful.",
-},
-{
-  productId: 106,
-  userId: 45, // Gary
-  rating: 5,
-  title: "Perfect little planters!",
-  description: "These were an awesome addition to our front yard this year! I filled them with a mix of annuals and hung them all the way along a railing that runs across the front of our house, and I got so many compliments!! They were an amazing price, and made such a huge difference to our home, I’ll definitely be using these again next year!",
-},
-{
-  productId: 106,
-  userId: 44, // Connor
-  rating: 5,
-  title: "Great price with so many options!",
-  description: "Excellent price, and even better is how multi use these are. I hung one against a tree with a nail. I hung the others from a fence. I just looped clear zip ties through the hole that's already provided on the planter. I fit one little impatient in each and they are thriving! Honestly the self watering compartment doesn't hold much water but I don't mind, I like watering my plants!",
-},
-{
-  productId: 107,
-  userId: 6, // Alec
-  rating: 5,
-  title: "Serve its purpose",
-  description: "Serve its purpose. It’s a trash can, perfect for our house, but taking the trash bag out when it’s full might need some patience. The same goes with placing new trash bag in the can so that it’s clipped and don’t fall down. Impatient people please look elsewhere.",
-},
-{
-  productId: 107,
-  userId: 25, // Sherry
-  rating: 5,
-  title: "Great for the price",
-  description: "Great trash can and price. Looks great without taking up too much space.",
-},
-{
-  productId: 109,
-  userId: 27, // Whit
-  rating: 4,
-  title: "Beautiful 😍",
-  description: "Beautiful wreath!!!! I just add a poinsettia flower to match the Christmas 🎄 😉 Thank you target...",
-},
-{
-  productId: 109,
-  userId: 28, // Daniel F
-  rating: 5,
-  title: "Cute & simple",
-  description: "Love this LED wreath! I added a gift bow for a little something extra. You may have to arrange the branches to hide the wiring and switch, but it’s super easy.",
-},
-{
-  productId: 110,
-  userId: 52, // Alex K
-  rating: 5,
-  title: "Gingerbread Ornaments",
-  description: "Beautiful ornaments. Nicer quality than I expected!",
-},
-{
-  productId: 110,
-  userId: 73, // Brad
-  rating: 5,
-  title: "Good buy",
-  description: "These look so cute and festive on the tree. They feel sturdy and hang nicely.",
-},
-{
-  productId: 111,
-  userId: 53, // Jackson
-  rating: 5,
-  title: "classy knit stocking",
-  description: "beautiful and great price",
-},
-{
-  productId: 111,
-  userId: 88, // Richard
-  rating: 5,
-  title: "Adorable Stocking!",
-  description: "I love this stocking! Great colors to match a wide range of decor. Durable fabric built to last. Will match with other older and newer designs. Great product through and through! Will definitely purchase more to make a set",
-},
-{
-  productId: 112,
-  userId: 42, // Tiff
-  rating: 4,
-  title: "Color isn't warm",
-  description: "The size is very cute but the color is just not 'warm' like vintage bulbs. Which was disappointing. The light is also very bright. It's so frustrating that none of these LED light makers can get the actual warm glow of incandescent looking Christmas lights when they are available as regular house bulbs. I did keep them because there's not many alternatives, but I was hoping for better.",
-},
-{
-  productId: 112,
-  userId: 60, // David B
-  rating: 5,
-  title: "Cozy lights",
-  description: "Love the larger sized bulbs. They really pop on our 6ft tree; one package covers it well.",
-},
-{
-  productId: 113,
-  userId: 69, // Abel
-  rating: 5,
-  title: "Great item",
-  description: "I love the mini candy canes! They are the perfect size!",
-},
-{
-  productId: 113,
-  userId: 73, // Brad
-  rating: 5,
-  title: "Great value & perfect size!",
-  description: "Yummy! And perfect size.",
-},
-{
-  productId: 114,
-  userId: 70, // Aijia
-  rating: 5,
-  title: "Just Right!",
-  description: "I’m a fan of this set because you can split it up and everyone does a small house. I helped my younger kids assemble the houses, and then they did all the decorating. I recommend purchasing additional white icing. It comes with just enough, and it would be nice to have more for decorating and more “snow”. Recommend buying some extra candies like sprinkles and m&ms, too!",
-},
-{
-  productId: 114,
-  userId: 71, // Allen
-  rating: 1,
-  title: "Dont buy!!",
-  description: "Every house broke when I tried getting the pieces apart. There were broken bases as well. There was NO saving them.",
-},
-{
-  productId: 115,
-  userId: 49, // Thenu
-  rating: 5,
-  title: "Christmas Tree Mug!!!",
-  description: "So happy that I saw this in my local Target that I has to have it. I saw a similar one and the price was outrageous. Using this as part of my decorating. Very Cute Indeed!!!",
-},
-{
-  productId: 115,
-  userId: 62, // James
-  rating: 5,
-  title: "Festive mug",
-  description: "Love this cup! So festive",
-},
-{
-  productId: 116,
-  userId: 66, // Mroan
-  rating: 4,
-  title: "Cute but too large for some",
-  description: "Adorable but do not fit the menorah we have and says they will..",
-},
-{
-  productId: 117,
-  userId: 66, // Mroan
-  rating: 5,
-  title: "Gorgeous!",
-  description: "I absolutely love mine. I bought it in store, so I obviously didn’t have any issues with shipping that some others have had. That being said, it has held up nicely and I keep it on display all year long! Gorgeous menorah.",
-},
-{
-  productId: 118,
-  userId: 52, // Alex K
-  rating: 5,
-  title: "Quality",
-  description: "I love the Sugar Paper brand. The wrapping paper is very well made and the designs all coordinate from year to year.",
-},
-{
-  productId: 118,
-  userId: 47, // John C
-  rating: 5,
-  title: "Get this",
-  description: "Great quality the red roll too",
-},
-{
-  productId: 119,
-  userId: 47, // John C
-  rating: 5,
-  title: "Love it!",
-  description: "I love that it’s 3D and has glitter. Deft recommend it.",
-},
-{
-  productId: 119,
-  userId: 96, // Gabe
-  rating: 5,
-  title: "good",
-  description: "cute glittery nice quality",
-},
-{
-  productId: 120,
-  userId: 78, // Jason
-  rating: 5,
-  title: "Very happy",
-  description: "tree was very easy to put together 3 sections that well labeled a, b, c along with visual instructions",
-},
-{
-  productId: 120,
-  userId: 100, // Kevin
-  rating: 5,
-  title: "Stunning",
-  description: "Tree is stunning in person and looks real",
-},
+  {
+    productId: 98,
+    userId: 125, // William Ngo
+    rating: 5,
+    title: "LOVE these chairs!",
+    description: "We bought 6 of the dark gray upholstered dining chairs and they are perfect! Super easy to assemble and they look even better than we'd hoped. Also very comfortable. Definitely recommend!",
+  },
+    // ✅ 101. chest drawer
+  {
+    productId: 101,
+    userId: 80, // Jesse
+    rating: 5,
+    title: "White dresser",
+    description: "Fast delivery easy set up Looks very nice",
+  },
+  {
+    productId: 101,
+    userId: 49, // Thenu
+    rating: 4,
+    title: "Okay but not great",
+    description: "Decent for what it’s worth. Check for damaged pieces BEFORE you begin assembly!",
+  },
+  {
+    productId: 101,
+    userId: 107, // Curtis
+    rating: 5,
+    title: "Love It!",
+    description: "Easy Assembly, Perfect for any room",
+  },
+    // ✅ 102. lamp
+  {
+    productId: 102,
+    userId: 50, // Brennon
+    rating: 5,
+    title: "Great price, works prefect.",
+    description: "Needed a simple, modern look, inexpensive lamp for the living room and searched on Target.com. Read the reviews, ordered the lamp, and so far no complaints at all. Just what we needed.",
+  },
+  {
+    productId: 102,
+    userId: 51, // Logan
+    rating: 5,
+    title: "Glad I Bought It",
+    description: "Easy assembly, very cozy light, good price.",
+  },
+  {
+    productId: 102,
+    userId: 110, // Frank
+    rating: 5,
+    title: "Glad I Bought It",
+    description: "Easy assembly, very cozy light, good price.",
+  },
+    // ✅ 103. mirror
+  {
+    productId: 103,
+    userId: 32, // Cesar
+    rating: 5,
+    title: "Awesome for small spaces",
+    description: "This mirror never fails; if you leave it leaning against a wall it might be slightly distorted because it’s a little flimsy, but if you hang it up on a wall it’s perfect for a small space",
+  },
+  {
+    productId: 103,
+    userId: 41, // Jair
+    rating: 5,
+    title: "Nice product",
+    description: "Good product and very useful.",
+  },
+  {
+    productId: 103,
+    userId: 107, // Curtis
+    rating: 5,
+    title: "Sleek mirror",
+    description: "Simple and inexpensive it is thin.",
+  },
+    // ✅ 106. planter
+  {
+    productId: 106,
+    userId: 45, // Gary
+    rating: 5,
+    title: "Perfect little planters!",
+    description: "These were an awesome addition to our front yard this year! I filled them with a mix of annuals and hung them all the way along a railing that runs across the front of our house, and I got so many compliments!! They were an amazing price, and made such a huge difference to our home, I’ll definitely be using these again next year!",
+  },
+  {
+    productId: 106,
+    userId: 44, // Connor
+    rating: 5,
+    title: "Great price with so many options!",
+    description: "Excellent price, and even better is how multi use these are. I hung one against a tree with a nail. I hung the others from a fence. I just looped clear zip ties through the hole that's already provided on the planter. I fit one little impatient in each and they are thriving! Honestly the self watering compartment doesn't hold much water but I don't mind, I like watering my plants!",
+  },
+  {
+    productId: 106,
+    userId: 109, // Dion
+    rating: 5,
+    title: "Mainly for outdoor use",
+    description: "They’re perfect for any plant lover, however I wouldn’t recommend using them indoors unless you have it leveled flat on something. The bottom revisor isn’t big but if you “overwater” it will come pouring out. I bought a lot and hung them along my fence and they look great!!",
+  },
+    // ✅ 107. trash bin
+  {
+    productId: 107,
+    userId: 6, // Alec
+    rating: 5,
+    title: "Serve its purpose",
+    description: "Serve its purpose. It’s a trash can, perfect for our house, but taking the trash bag out when it’s full might need some patience. The same goes with placing new trash bag in the can so that it’s clipped and don’t fall down. Impatient people please look elsewhere.",
+  },
+  {
+    productId: 107,
+    userId: 25, // Sherry
+    rating: 5,
+    title: "Great for the price",
+    description: "Great trash can and price. Looks great without taking up too much space.",
+  },
+  {
+    productId: 107,
+    userId: 109, // Dion
+    rating: 5,
+    title: "I absolutely love this trash can",
+    description: "when I order this online I was worry that will would be small , cause the picture online kinda make it look small. When the item arrive it was the perfect size and plus it gave me more space under my sink. Also it nice to have a trash that doesn't take over to much space",
+  },
+    // ✅ 109. wreath
+  {
+    productId: 109,
+    userId: 27, // Whit
+    rating: 4,
+    title: "Beautiful 😍",
+    description: "Beautiful wreath!!!! I just add a poinsettia flower to match the Christmas 🎄 😉 Thank you target...",
+  },
+  {
+    productId: 109,
+    userId: 28, // Daniel F
+    rating: 5,
+    title: "Cute & simple",
+    description: "Love this LED wreath! I added a gift bow for a little something extra. You may have to arrange the branches to hide the wiring and switch, but it’s super easy.",
+  },
+    // ✅ 110. ornaments
+  {
+    productId: 110,
+    userId: 52, // Alex K
+    rating: 5,
+    title: "Gingerbread Ornaments",
+    description: "Beautiful ornaments. Nicer quality than I expected!",
+  },
+  {
+    productId: 110,
+    userId: 73, // Brad
+    rating: 5,
+    title: "Good buy",
+    description: "These look so cute and festive on the tree. They feel sturdy and hang nicely.",
+  },
+  {
+    productId: 110,
+    userId: 117, // Kyle Solano
+    rating: 5,
+    title: "Great details",
+    description: "They are really high quality, I liked them from photos but when I received them I was shocked to see how amazing they were. They are ceramic not plastic.",
+  },
+  {
+    productId: 110,
+    userId: 117, // Matt Li
+    rating: 5,
+    title: "So cute",
+    description: "I really love these gingerbread Christmas ornaments. They are so cute, and look exactly like gingerbread cookies. I am extremely excited to use them later this year when I add them to our Christmas tree.",
+  },
+    // ✅ 111. stocking
+  {
+    productId: 111,
+    userId: 53, // Jackson
+    rating: 5,
+    title: "classy knit stocking",
+    description: "beautiful and great price",
+  },
+  {
+    productId: 111,
+    userId: 88, // Richard
+    rating: 5,
+    title: "Adorable Stocking!",
+    description: "I love this stocking! Great colors to match a wide range of decor. Durable fabric built to last. Will match with other older and newer designs. Great product through and through! Will definitely purchase more to make a set",
+  },
+    // ✅ 112. lights
+  {
+    productId: 112,
+    userId: 42, // Tiff
+    rating: 4,
+    title: "Color isn't warm",
+    description: "The size is very cute but the color is just not 'warm' like vintage bulbs. Which was disappointing. The light is also very bright. It's so frustrating that none of these LED light makers can get the actual warm glow of incandescent looking Christmas lights when they are available as regular house bulbs. I did keep them because there's not many alternatives, but I was hoping for better.",
+  },
+  {
+    productId: 112,
+    userId: 60, // David B
+    rating: 5,
+    title: "Cozy lights",
+    description: "Love the larger sized bulbs. They really pop on our 6ft tree; one package covers it well.",
+  },
+    // ✅ 113. candy cane
+  {
+    productId: 113,
+    userId: 69, // Abel
+    rating: 5,
+    title: "Great item",
+    description: "I love the mini candy canes! They are the perfect size!",
+  },
+  {
+    productId: 113,
+    userId: 73, // Brad
+    rating: 5,
+    title: "Great value & perfect size!",
+    description: "Yummy! And perfect size.",
+  },
+  {
+    productId: 113,
+    userId: 111, // Donovan
+    rating: 5,
+    title: "Not 50 candy canes",
+    description: "My box only had 45 candy canes and I needed 48. This was very annoying.",
+  },
+    // ✅ 114. gingerbread house
+  {
+    productId: 114,
+    userId: 70, // Aijia
+    rating: 5,
+    title: "Just Right!",
+    description: "I’m a fan of this set because you can split it up and everyone does a small house. I helped my younger kids assemble the houses, and then they did all the decorating. I recommend purchasing additional white icing. It comes with just enough, and it would be nice to have more for decorating and more “snow”. Recommend buying some extra candies like sprinkles and m&ms, too!",
+  },
+  {
+    productId: 114,
+    userId: 71, // Allen
+    rating: 1,
+    title: "Dont buy!!",
+    description: "Every house broke when I tried getting the pieces apart. There were broken bases as well. There was NO saving them.",
+  },
+  {
+    productId: 114,
+    userId: 102, // Ali E
+    rating: 4,
+    title: "The cutest little gingerbread houses",
+    description: "These mini gingerbread houses are so cute!! Perfect size for my 2, 4, and 6 yo kids. Just enough to decorate and they each get their own to work on. We used a dremel to separate the pieces and then hot glued the pieces to assemble the houses. I gave it 4 stars because I can’t imagine breaking all the pieces apart and not everyone has the tools to make it easier.",
+  },
+    // ✅ 115. mug
+  {
+    productId: 115,
+    userId: 49, // Thenu
+    rating: 5,
+    title: "Christmas Tree Mug!!!",
+    description: "So happy that I saw this in my local Target that I has to have it. I saw a similar one and the price was outrageous. Using this as part of my decorating. Very Cute Indeed!!!",
+  },
+  {
+    productId: 115,
+    userId: 62, // James
+    rating: 5,
+    title: "Festive mug",
+    description: "Love this cup! So festive",
+  },
+    // ✅ 116. candles
+  {
+    productId: 116,
+    userId: 66, // Mroan
+    rating: 4,
+    title: "Cute but too large for some",
+    description: "Adorable but do not fit the menorah we have and says they will..",
+  },
+    // ✅ 117. menorah
+  {
+    productId: 117,
+    userId: 66, // Mroan
+    rating: 5,
+    title: "Gorgeous!",
+    description: "I absolutely love mine. I bought it in store, so I obviously didn’t have any issues with shipping that some others have had. That being said, it has held up nicely and I keep it on display all year long! Gorgeous menorah.",
+  },
+    // ✅ 118. gift wrap
+  {
+    productId: 118,
+    userId: 52, // Alex K
+    rating: 5,
+    title: "Quality",
+    description: "I love the Sugar Paper brand. The wrapping paper is very well made and the designs all coordinate from year to year.",
+  },
+  {
+    productId: 118,
+    userId: 47, // John C
+    rating: 5,
+    title: "Get this",
+    description: "Great quality the red roll too",
+  },
+    // ✅ 119. cards
+  {
+    productId: 119,
+    userId: 47, // John C
+    rating: 5,
+    title: "Love it!",
+    description: "I love that it’s 3D and has glitter. Deft recommend it.",
+  },
+  {
+    productId: 119,
+    userId: 96, // Gabe
+    rating: 5,
+    title: "good",
+    description: "cute glittery nice quality",
+  },
+    // ✅ christmas tree
+  {
+    productId: 120,
+    userId: 78, // Jason
+    rating: 5,
+    title: "Very happy",
+    description: "tree was very easy to put together 3 sections that well labeled a, b, c along with visual instructions",
+  },
+  {
+    productId: 120,
+    userId: 100, // Kevin
+    rating: 5,
+    title: "Stunning",
+    description: "Tree is stunning in person and looks real",
+  },
 ]
 
 

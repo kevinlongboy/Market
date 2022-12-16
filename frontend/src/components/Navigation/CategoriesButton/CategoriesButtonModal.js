@@ -23,7 +23,9 @@ function CategoriesButtonModal({allDepartments}) {
 
     useEffect(()=>{
         dispatch(thunkReadAllDepartments())
-    }, [dispatch, departmentsState])
+    // }, [dispatch, departmentsState])
+    }, [dispatch])
+
 
     /****************** manage state *******************/
     // const [showMenu, setShowMenu] = useState(false);
