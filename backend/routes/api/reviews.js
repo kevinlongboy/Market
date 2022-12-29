@@ -10,7 +10,7 @@ const { Order, OrderDetail, Product, ProductImage, Review, User } = require('../
 
 
 /*************************** GLOBAL VARIABLES ****************************/
-const router = express.Router();
+const router = express.Router(); 
 
 
 /******************************** ROUTES *********************************/

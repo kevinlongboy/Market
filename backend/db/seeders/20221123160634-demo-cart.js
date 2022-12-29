@@ -8,15 +8,23 @@
 const demoCart = [
   {
     userId: 1,
-    productId: 1,
+    productId: 36,
   },
   {
     userId: 1,
-    productId: 1,
+    productId: 84,
   },
   {
     userId: 1,
-    productId: 30,
+    productId: 106,
+  },
+  {
+    userId: 1,
+    productId: 52,
+  },
+  {
+    userId: 1,
+    productId: 62,
   },
 ]
 
