@@ -573,8 +573,8 @@ const demoUsers = [
     firstName: 'James',
     lastName: 'Lee',
     username: 'JamesLee',
-    hashedPassword: bcrypt.hashSync('jlee'),
-    email: 'jlee@appacademy.io',
+    hashedPassword: bcrypt.hashSync('jwlee'),
+    email: 'jwlee@appacademy.io',
     url: 'https://github.com/jameswonlee',
   },
   {
@@ -1171,7 +1171,7 @@ const demoUsers = [
     username: 'wtrinh',
     hashedPassword: bcrypt.hashSync('wtrinh'),
     email: 'wtrinh@appacademy.io',
-    url: 'appacademy.io',
+    url: 'https://www.appacademy.io/',
   },
   {
     // id: 129,
@@ -1180,7 +1180,7 @@ const demoUsers = [
     username: 'avillarreal',
     hashedPassword: bcrypt.hashSync('avillarreal'),
     email: 'avillarreal@appacademy.io',
-    url: 'appacademy.io',
+    url: 'https://www.appacademy.io/',
   },
   {
     // id: 130,
@@ -1189,7 +1189,7 @@ const demoUsers = [
     username: 'mrodriguez',
     hashedPassword: bcrypt.hashSync('mrodriguez'),
     email: 'mrodriguez@appacademy.io',
-    url: 'appacademy.io',
+    url: 'https://www.appacademy.io/',
   },
 ]
 

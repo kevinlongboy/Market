@@ -6,7 +6,7 @@ const { check } = require('express-validator');
 // local files
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { handleValidationErrors } = require('../../utils/validation');
-const { Department, Product, ProductImage, Review, User } = require('../../db/models');
+const { Department, Product, ProductImage, Review, SeedReview, User } = require('../../db/models');
 
 
 /*************************** GLOBAL VARIABLES ****************************/
@@ -57,16 +57,25 @@ router.get('/:productId/reviews', async(req, res) => {
             return res.status(404).json(error);
         }
 
+        // query database
         let findAllProductReviews = await Review.findAll({
             where: { productId: currProdId },
             order: [['id', 'DESC']],
             raw: true,
         })
 
+        let findAllSeedReviews = await SeedReview.findAll({
+            where: { productId: currProdId },
+            order: [['id', 'DESC']],
+            raw: true,
+        })
+
+        let findAllReviews = findAllProductReviews.concat(findAllSeedReviews)
+
 
         // add User-key
-        for (let i = 0; i < findAllProductReviews.length; i++) {
-            let review = findAllProductReviews[i];
+        for (let i = 0; i < findAllReviews.length; i++) {
+            let review = findAllReviews[i];
             let userData = await User.findByPk(review.userId, {
                 attributes: {
                     exclude: ["createdAt", "updatedAt"]
@@ -80,7 +89,7 @@ router.get('/:productId/reviews', async(req, res) => {
         return res
             .status(200)
             .json({
-                "Reviews": findAllProductReviews
+                "Reviews": findAllReviews
             })
 
 
@@ -140,9 +149,15 @@ router.post('/:productId/reviews', requireAuth, async(req, res) => {
         }
 
         // handle error: review exits
-        let reviewExists = await Review.findAll({ // returns array of review for req. spot
+        let userReviewExists = await Review.findAll({ // returns array of review for req. product
             where: { userId: currentUserId, productId: currProdId }
         });
+        let seedReviewExists = await SeedReview.findAll({ // returns array of review for req. product
+            where: { userId: currentUserId, productId: currProdId }
+        });
+
+        let reviewExists = userReviewExists.concat(seedReviewExists)
+
         if (reviewExists.length > 0) {
             error.message = "Validation Error";
             error.statusCode = 403;
@@ -205,7 +220,7 @@ router.get('/:productId', async(req, res) => {
     let error = {};
 
     try {
-        // handle error: missing spot
+        // handle error: missing product
         let findProduct = await Product.findByPk(currProdId, {
             attributes: {
                 exclude: ["createdAt", "updatedAt"]
@@ -220,18 +235,35 @@ router.get('/:productId', async(req, res) => {
 
         } else {
             // add numReviews-key
-            let reviewCount = await Review.count({
+            let userReviewCount = await Review.count({
                 where: { productId: currProdId},
                 raw: true,
             });
+
+            let seedReviewCount = await SeedReview.count({
+                where: { productId: currProdId},
+                raw: true,
+            });
+
+            let reviewCount = userReviewCount + seedReviewCount
+
             reviewCount ? findProduct.numReviews = reviewCount : findProduct.numReviews = 0 // key into "dataValues" before numReviews?
 
             // add avgRating-key
-            let ratingsSum = await Review.sum('rating', {
+            let userRatingsSum = await Review.sum('rating', {
                 where: { productId: currProdId},
                 raw: true,
             });
+
+            let seedRatingsSum = await SeedReview.sum('rating', {
+                where: { productId: currProdId},
+                raw: true,
+            });
+
+            let ratingsSum = userRatingsSum + seedRatingsSum
+
             let ratingAvg = ratingsSum / reviewCount;
+
             ratingAvg ? findProduct.avgRating = ratingAvg : findProduct.avgRating = 0.0
 
             // add Department-key
