@@ -26,10 +26,6 @@ const demoCart = [
     userId: 1,
     productId: 62,
   },
-  {
-    userId: 1,
-    productId: 106,
-  },
 ]
 
 
