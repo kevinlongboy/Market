@@ -53,7 +53,7 @@ router.get('/', requireAuth, async(req, res) => {
             });
 
             // modify existing keys
-            product.cartId = product.id // changing key-name to be more descriptive
+            product.cartId = product.id // change key's name to be more descriptive
             delete product.id
 
             // add keys
@@ -75,6 +75,9 @@ router.get('/', requireAuth, async(req, res) => {
             // update subtotal
             subtotal += product.price;
         }
+
+        // console.log("getAllCartItems", getAllCartItems)
+
 
         return res
         .status(200)

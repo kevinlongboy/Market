@@ -28,7 +28,7 @@ function UserCart() {
   useEffect(() => {
       dispatch(thunkReadCart());
   }, [dispatch])
-  
+
   useEffect(() => {
     dispatch(thunkReadCart());
 }, [user])
@@ -91,7 +91,7 @@ function UserCart() {
 
 
                 <div className='Cart-list-item-container-right'>
-                  <div className="Cart-product-list-price">${product.price}</div>
+                  <div className="Cart-product-list-price">${(product.price).toFixed(2)}</div>
                   <div className="Cart-product-remove-item-button-container">
                     <RemoveFromCart
                       cartId={product.cartId}
