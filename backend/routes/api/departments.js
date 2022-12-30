@@ -27,6 +27,9 @@ router.get('/', async(req, res) => {
             raw: true,
         })
 
+        let spotlightDept = getAllDepartments.pop()
+        getAllDepartments.unshift(spotlightDept)
+
         return res
             .status(200)
             .json({

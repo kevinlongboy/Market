@@ -17,17 +17,16 @@ function Landing() {
 
   /****************** access store *******************/
   const departmentsState = useSelector(state => state.departments)
-  console.log("departmentsState", departmentsState)
 
   /************ key into pertinent values ************/
-  const allDepartments = Object.values(departmentsState.allDepartments);
+  // const allDepartments = Object.values(departmentsState.allDepartments);
 
   /************ reducer/API communication ************/
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-      dispatch(thunkReadAllDepartments());
-  }, [dispatch])
+  // useEffect(() => {
+  //     dispatch(thunkReadAllDepartments());
+  // }, [dispatch])
 
 
   /**************** render component *****************/

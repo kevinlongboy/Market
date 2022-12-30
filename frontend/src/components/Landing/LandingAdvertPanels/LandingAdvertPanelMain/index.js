@@ -15,12 +15,10 @@ function LandingAdvertPanelMain() {
   /****************** access store *******************/
   const departmentsState = useSelector(state => state.departments)
   const department = useSelector(state => state.departments.singleDepartmentDetails)
-  console.log("department", department)
 
   /************ key into pertinent values ************/
-//   const department = departmentsState.singleDepartmentDetails;
+  //   const department = departmentsState.singleDepartmentDetails;
   const products = Object.values(department.Products)
-  console.log("products", products)
 
 
   /************ reducer/API communication ************/
@@ -28,7 +26,7 @@ function LandingAdvertPanelMain() {
 
   useEffect(() => {
       dispatch(thunkReadSingleDepartmentDetails(5));
-  }, [dispatch, department])
+  }, [dispatch])
 
 
   /**************** render component *****************/
