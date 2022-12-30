@@ -6,7 +6,7 @@ const { check } = require('express-validator');
 // local files
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { handleValidationErrors } = require('../../utils/validation');
-const { Department, Product, ProductImage, Review } = require('../../db/models');
+const { Department, Product, ProductImage, Review, SeedReview } = require('../../db/models');
 
 
 /*************************** GLOBAL VARIABLES ****************************/
@@ -81,18 +81,35 @@ router.get('/:departmentId/products', async(req, res) => {
                 product.previewImage = prevUrl
 
                 // add numReviews-key
-                let reviewCount = await Review.count({
+                let userReviewCount = await Review.count({
                     where: { productId: product.id},
                     raw: true,
                 });
+
+                let seedReviewCount = await SeedReview.count({
+                    where: { productId: product.id},
+                    raw: true,
+                });
+
+                let reviewCount = userReviewCount + seedReviewCount
+
                 reviewCount ? product.numReviews = reviewCount : product.numReviews = 0 // key into "dataValues" before numReviews?
 
                 // add avgRating-key
-                let ratingsSum = await Review.sum('rating', {
+                let userRatingsSum = await Review.sum('rating', {
                     where: { productId: product.id},
                     raw: true,
                 });
+
+                let seedRatingsSum = await SeedReview.sum('rating', {
+                    where: { productId: product.id},
+                    raw: true,
+                });
+
+                let ratingsSum = userRatingsSum + seedRatingsSum
+
                 let ratingAvg = ratingsSum / reviewCount;
+
                 ratingAvg ? product.avgRating = ratingAvg : product.avgRating = 0.0
 
                 // delete impertinent information

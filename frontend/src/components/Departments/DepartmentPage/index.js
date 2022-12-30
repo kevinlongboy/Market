@@ -27,8 +27,6 @@ function DepartmentPage() {
   /************ key into pertinent values ************/
   const { departmentId } = useParams()
   const department = departmentsState.singleDepartmentDetails;
-  console.log('department', department)
-
   const productsArr = Object.values(department.Products)
 
   /************ reducer/API communication ************/
