@@ -329,7 +329,7 @@ const demoReviews = [
   // ✅ 42. Nutella
   {
     productId: 42,
-    userId: 121, // Noah Winzig
+    userId: 122, // Noah Winzig
     rating: 5,
     title: "Yummy",
     description: "I love this. I go through a couple of the big containers every year. My favorite is having it as a peanut butter and Nutella sandwich",

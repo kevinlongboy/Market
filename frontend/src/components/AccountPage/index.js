@@ -2,6 +2,7 @@
 // libraries
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import  StarRatings from 'react-star-ratings';
 // local files
 import NavBarAccount from '../Navigation/NavBarAccount';
 import { thunkReadAllUserOrders } from '../../store/ordersReducer';
@@ -103,7 +104,17 @@ function AccountPage() {
         </div>
 
         <div className='blurb-card-details-container'>
-          <p>{mostRecentReview.rating}</p>
+          <p>
+            <StarRatings
+              isSelectable={false}
+              rating={mostRecentReview.rating}
+              starRatedColor="#ffd700"
+              numberOfStars={5}
+              name='rating'
+              starDimension='12px'
+              starSpacing='0'
+            />
+          </p>
           <p>{mostRecentReview && convertExactDate(mostRecentReview.createdAt)}</p>
         </div>
 
