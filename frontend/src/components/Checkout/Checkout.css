@@ -26,6 +26,19 @@
     /* background-color: red; */
 }
 
+/****************** CARD SHARED STYLING ******************/
+.Checkout-product-list-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid rgb(214, 214, 214);
+    padding-bottom: 16px;
+}
+
+
+/****************** CART CARD ******************/
 .Checkout-product-list-card {
     height: fit-content;
     width: 480px;
@@ -44,24 +57,17 @@
 
     box-shadow: rgb(0 0 0 / 4%) 0px 6px 12px 4px, rgb(0 0 0 / 4%) 0px 4px 10px 2px, rgb(0 0 0 / 6%) 0px 2px 8px, rgb(0 0 0 / 4%) 0px 2px 4px;
 }
-.Checkout-product-list-header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    border-bottom: 1px solid rgb(214, 214, 214);
-    padding-bottom: 16px;
-}
 .Checkout-product-list-text-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 #Checkout-cart-icon {
     width: 40px;
     color: rgb(204, 0, 0);
     font-size: 24px;
+    padding-right: 12px;
 }
 .Checkout-product-list-header{
     font-size: 19px;
@@ -86,7 +92,65 @@
     text-decoration: none;
 }
 
+.shipping-ETA-container {
+    font-size: 16px;
+    color: #008300;
+    margin-top: 20px;
+}
 
+
+/****************** SHIPPING ADDRESS CARD ******************/
+#shipping-address-card-header {
+    padding-bottom: 5px;
+}
+
+.card-icon {
+    width: 32px;
+    margin-right: 20px;
+}
+
+.shipping-address > p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    color: #333;
+}
+
+.default-address-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 101.64px;
+    height: 26.14px;
+    border-radius: 4px;
+    margin-top: 4px;
+
+    font-size: 12px;
+    color: #008300;
+    border: 1px solid #008300;
+    background-color: #ecf9ec;
+}
+
+/****************** PAYMENT INFO CARD ******************/
+.payment-information {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+
+    color: #333;
+    font-size: 16px;
+}
+.redCard-icon {
+    width: 40px;
+    margin-right: 15px;
+}
+
+
+/****************** ORDER SUMMARY CARD ******************/
 .Checkout-total-container {
     height: fit-content;
     width: 375px;

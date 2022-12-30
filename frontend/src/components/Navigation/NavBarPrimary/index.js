@@ -19,7 +19,7 @@ function NavBarPrimary() {
 
           <div className="NavBarMain-right-container">
             <p><a href="https://weeklyad.target.com/">Weekly Ad</a></p>
-            <p><a href="https://www.target.com/redcard/about">Red Card</a></p>
+            <p><a href="https://www.target.com/redcard/about">RedCard</a></p>
             <p><a href="https://www.target.com/circle">Market Square</a></p>
           </div>
         </div>

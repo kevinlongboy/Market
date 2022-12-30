@@ -23,6 +23,12 @@ export function findItemIndex(arr, idNo ) {
 }
 
 
+/************************************ CALCULATE ESTIMATED SHIPPING DATE ************************************/
+export function ShippingETA() {
+    let today = Date()
+}
+
+
 /*********************************** CONVERT ISO STRING TO "Month Year" ************************************/
 export function convertDate(iso) {
 

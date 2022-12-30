@@ -6,6 +6,8 @@ import { Link, NavLink, Redirect, useHistory, useParams } from "react-router-dom
 // local files
 import { thunkReadCart } from "../../store/cartReducer";
 import { thunkCreateSingleOrder, thunkReadAllUserOrders } from "../../store/ordersReducer";
+import boxImage from "../../images/branding/market-village/market-village-box.png"
+import redCardImage from "../../images/branding/market-village/market-village-redcard.png"
 import "./Checkout.css"
 
 /******************************* COMPONENT *******************************/
@@ -89,12 +91,56 @@ function Checkout() {
                 </div>
               </div>
 
+              {/* <div className="shipping-ETA-container">
+                Arrives by Date
+              </div> */}
+
               <div className="product-list-thumbnail-container">
                 {products && products.map((product) => (
                     <img src={product.previewImage} className="product-list-thumbnail"></img>
                 ))}
               </div>
             </div>
+
+
+            <div className="Checkout-product-list-card">
+                <div className="Checkout-product-list-header-container">
+                  <div className="Checkout-product-list-text-container" id="shipping-address-card-header">
+                    <img src={boxImage} className="card-icon"></img>
+                    <div className="Checkout-product-list-header">Shipping address</div>
+                  </div>
+                </div>
+
+                <div className="product-list-thumbnail-container">
+                  <div className="shipping-address">
+                    <p>{user.firstName} {user.lastName}</p>
+                    <p>180 Geary Street</p>
+                    <p>San Francisco, CA 94108</p>
+                  </div>
+                  <div className="default-address-container">
+                    Default address
+                  </div>
+                </div>
+              </div>
+
+
+              <div className="Checkout-product-list-card">
+                <div className="Checkout-product-list-header-container">
+                  <div className="Checkout-product-list-text-container" id="shipping-address-card-header">
+                    <div className="Checkout-product-list-header">Payment</div>
+                  </div>
+                </div>
+
+                <div className="product-list-thumbnail-container">
+                  <div className="payment-information">
+                    <img src={redCardImage} className="redCard-icon"></img>
+                    <p>RedCard *9999</p>
+                  </div>
+                </div>
+              </div>
+
+
+
           </div>
 
 

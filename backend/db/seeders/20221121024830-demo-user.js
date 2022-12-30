@@ -1166,6 +1166,15 @@ const demoUsers = [
   },
   {
     // id: 128,
+    firstName: 'Calvin',
+    lastName: 'Liu',
+    username: 'cliu',
+    hashedPassword: bcrypt.hashSync('cliu'),
+    email: 'cliu@appacademy.io',
+    url: 'https://www.appacademy.io/',
+  },
+  {
+    // id: 129,
     firstName: 'Wes',
     lastName: 'Trinh',
     username: 'wtrinh',
@@ -1174,7 +1183,7 @@ const demoUsers = [
     url: 'https://www.appacademy.io/',
   },
   {
-    // id: 129,
+    // id: 130,
     firstName: 'Allie',
     lastName: 'Villarreal',
     username: 'avillarreal',
@@ -1183,7 +1192,7 @@ const demoUsers = [
     url: 'https://www.appacademy.io/',
   },
   {
-    // id: 130,
+    // id: 131,
     firstName: 'Mark',
     lastName: 'Rodriguez',
     username: 'mrodriguez',
