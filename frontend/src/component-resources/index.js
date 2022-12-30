@@ -29,6 +29,22 @@ export function ShippingETA() {
 }
 
 
+/************************************** CALCULATE 5% REDCARD DISCOUNT **************************************/
+export function calculateRedCardDiscount(subtotal) {
+    let rawDiscount = subtotal * 0.05
+    let discount = parseFloat(rawDiscount).toFixed(2)
+    return discount
+}
+
+
+/********************************* CALCULATE GRAND TOTAL (AFTER DISCOUNTS) *********************************/
+export function calculateGrandTotal(subtotal, discount) {
+    let rawTotal = subtotal - discount
+    let grandTotal = parseFloat(rawTotal).toFixed(2)
+    return grandTotal
+}
+
+
 /*********************************** CONVERT ISO STRING TO "Month Year" ************************************/
 export function convertDate(iso) {
 

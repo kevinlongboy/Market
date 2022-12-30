@@ -9,6 +9,7 @@ import { thunkCreateSingleOrder, thunkReadAllUserOrders } from "../../store/orde
 import boxImage from "../../images/branding/market-village/market-village-box.png"
 import redCardImage from "../../images/branding/market-village/market-village-redcard.png"
 import "./Checkout.css"
+import { calculateGrandTotal, calculateRedCardDiscount } from "../../component-resources";
 
 /******************************* COMPONENT *******************************/
 function Checkout() {
@@ -18,8 +19,10 @@ function Checkout() {
   const user = useSelector(state => state.session.user)
 
   /************ key into pertinent values ************/
-  const total = cartState.subtotal
   const products = Object.values(cartState.Products)
+  const subtotal = cartState.subtotal
+  const discount = calculateRedCardDiscount(cartState.subtotal)
+  const total = calculateGrandTotal(subtotal, discount)
 
 
   /************ reducer/API communication ************/
@@ -27,7 +30,7 @@ function Checkout() {
 
   useEffect(() => {
       dispatch(thunkReadCart());
-  }, [dispatch, cartState])
+  }, [dispatch])
 
 
   /***************** handle events *******************/
@@ -155,17 +158,28 @@ function Checkout() {
               <div className="Checkout-subtotal-breakdown">
                 <div className="Checkout-subtotal-item">
                   <div>Subtotal ({products.length} items)</div>
-                  <div>${cartState && cartState.subtotal}</div>
+                  <div>${subtotal}</div>
                 </div>
 
-                <div className="Checkout-subtotal-item" id="Checkout-subtotal-tax-item">
-                  <div>Estimated Tax</div>
+                <div className="Checkout-subtotal-item">
+                  <div>Discounts</div>
+                  <div className="redCard-discount">-${discount}</div>
+                </div>
+                <p id="redCard-discount-subtext">RedCard 5% Discount</p>
+
+                <div className="Checkout-subtotal-item">
+                  <div>Delivery</div>
+                  <div className="redCard-discount">Free</div>
+                </div>
+
+                <div className="Checkout-subtotal-item">
+                  <div>Estimated tax</div>
                   <div>$0.00</div>
                 </div>
 
                 <div className="Checkout-total-grandtotal">
                   <div>Total</div>
-                  <div>${cartState && cartState.subtotal}</div>
+                  <div>${total}</div>
                 </div>
               </div>
 
@@ -185,7 +199,7 @@ function Checkout() {
                   onClick={placeOrder}
                   className='Checkout-checkout-button'
                   id='Checkout-checkout-button'
-                  >Place Order</button>
+                  >Place your order</button>
               </div>
 
               <div className="Checkout-disclaimer-wrapper">

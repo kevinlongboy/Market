@@ -190,10 +190,8 @@
     flex-direction: row;
     justify-content: space-between;
     /* background-color: red; */
-    padding: 2.5px 0px;
-}
-#Checkout-subtotal-tax-item {
     margin-bottom: 8px;
+    padding: 2.5px 0px;
 }
 .Checkout-total-grandtotal {
     width: 100%;
@@ -207,6 +205,16 @@
 
     font-size: 19px;
     font-weight: 700;
+}
+#redCard-discount-subtext {
+    font-size: 12px;
+    color: #333;
+    padding: 2.5px 0px;
+    margin: 0px 0px 8px 12px;
+}
+.redCard-discount {
+    font-size: 16px;
+    color: #CC0000;
 }
 
 
