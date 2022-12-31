@@ -130,7 +130,7 @@ const demoReviews = [
   },
   {
     productId: 17,
-    userId: 8, // Brad S
+    userId: 8, // Brad Simpson
     rating: 5,
     title: "Woolite - needs no introduction!",
     description: "This is the only detergent for dark delicates I use (and the White bottle for light delicates). Woolite is the best - hands down for keeping fabrics looking new and gently washing away soil. The scent is pleasant and not overpowering.",
@@ -228,7 +228,7 @@ const demoReviews = [
   },
   {
     productId: 29,
-    userId: 8, // Brad S
+    userId: 8, // Brad Simpson
     rating: 4,
     title: "Would be great scaled down a bit ...",
     description: "I love OXO utensils, but the size of this set is overkill (unusable) for my small hands and Weber Smokey Joe grill.",
@@ -711,7 +711,7 @@ const demoReviews = [
   // ✅ 52. homepod mini
   {
     productId: 52,
-    userId: 8, // Brad S
+    userId: 8, // Brad Simpson
     rating: 5,
     title: "Amazing product",
     description: "For those who say “Hur Hur. It needs PlUgGeD in Fer PoWeR”, they need to go back to elementary school to learn that power is needed to make anything work and needs to be plugged into some sort of power source. This is a great product.",
@@ -1240,7 +1240,7 @@ const demoReviews = [
   },
   {
     productId: 108,
-    userId: 8, // Brad S
+    userId: 8, // Brad Simpson
     rating: 4,
     title: "Great product",
     description: "I got this dry erase board to put in my home office and it is absolutely amazing. It was easy to install and hang. I am able to put important dates and reminders and have a constant visual of upcoming appointments. Writing on it is a breeze.",
@@ -1668,7 +1668,7 @@ const demoReviews = [
     // ✅ 55. power bank
   {
     productId: 55,
-    userId: 73, // Brad
+    userId: 73, // Brad Lewter
     rating: 5,
     title: "Cutest little power bank",
     description: "There’s not many things that drive me as crazy as being out and about and having my phone die. Chances are, I’m in the process of using it for taking family, photos and videos or something else that is relatively important. With this power bank, I don’t have to worry about that. it is small and convenient for being portable whether I’m carrying in my pocket or purse. It’s powerful enough to charge my phone with a 5 volt 2.1 output. I also love that it’s cute and petite vs a standard large and bulky power bank.",
@@ -2119,7 +2119,7 @@ const demoReviews = [
   },
   {
     productId: 98,
-    userId: 73, // brad
+    userId: 73, // Brad Lewter
     rating: 5,
     title: "LOVE!",
     description: "I got these in the green and I am so pleased! I really like the linen. They are the perfect size, and super comfortable. They are shipped unassembled and packaged very well. Assembling could not be easier. If I had the room I would buy more!",
@@ -2172,8 +2172,8 @@ const demoReviews = [
     productId: 102,
     userId: 110, // Frank
     rating: 5,
-    title: "Glad I Bought It",
-    description: "Easy assembly, very cozy light, good price.",
+    title: "Love it",
+    description: "will probably get a second one",
   },
     // ✅ 103. mirror
   {
@@ -2266,7 +2266,7 @@ const demoReviews = [
   },
   {
     productId: 110,
-    userId: 73, // Brad
+    userId: 73, // Brad Lewter
     rating: 5,
     title: "Good buy",
     description: "These look so cute and festive on the tree. They feel sturdy and hang nicely.",
@@ -2325,7 +2325,7 @@ const demoReviews = [
   },
   {
     productId: 113,
-    userId: 73, // Brad
+    userId: 73, // Brad Lewter
     rating: 5,
     title: "Great value & perfect size!",
     description: "Yummy! And perfect size.",

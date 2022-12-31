@@ -56,7 +56,8 @@ module.exports = (sequelize, DataTypes) => {
       User.hasMany(models.Review, { foreignKey: 'userId', onDelete: 'CASCADE', hooks: true }),
       User.hasMany(models.SeedReview, { foreignKey: 'userId', onDelete: 'CASCADE', hooks: true }),
       // join table
-      User.belongsToMany(models.Product, { through: models.Cart , foreignKey: 'userId', otherKey: 'productId'})
+      User.belongsToMany(models.Product, { through: models.Cart , foreignKey: 'userId', otherKey: 'productId'}),
+      User.belongsToMany(models.Product, { through: models.Favorite , foreignKey: 'userId', otherKey: 'productId'})
     }
   };
 
