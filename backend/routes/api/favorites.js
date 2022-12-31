@@ -6,7 +6,7 @@ const { check } = require('express-validator');
 // local files
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { handleValidationErrors } = require('../../utils/validation');
-const { Favorite, Product, ProductImage } = require('../../db/models');
+const { Favorite, Product, ProductImage, Review, SeedReview } = require('../../db/models');
 
 
 /*************************** GLOBAL VARIABLES ****************************/
@@ -20,6 +20,7 @@ router.get('/', requireAuth, async(req, res) => {
     let currentUser = req.user;
     let currentUserId = req.user.id;
     let error = {};
+
 
     try {
 
@@ -53,12 +54,12 @@ router.get('/', requireAuth, async(req, res) => {
             delete product.id
 
             // add keys
-            let { departmentId, name, price, description } = productDetails;
+            let { departmentId, name, brand, price, description } = productDetails;
             product.departmentId = departmentId
             product.name = name
+            product.brand = brand
             product.price = price
             product.description = description
-
 
             // add previewImage-key to every product
             let prevImage = await ProductImage.findOne({
@@ -67,6 +68,39 @@ router.get('/', requireAuth, async(req, res) => {
             });
             let prevUrl = prevImage.url;
             product.previewImage = prevUrl
+
+            // add numReviews-key
+            let userReviewCount = await Review.count({
+                where: { productId: product.productId},
+                raw: true,
+            });
+
+            let seedReviewCount = await SeedReview.count({
+                where: { productId: product.productId},
+                raw: true,
+            });
+
+            let reviewCount = userReviewCount + seedReviewCount
+
+            reviewCount ? product.numReviews = reviewCount : product.numReviews = 0 // key into "dataValues" before numReviews?
+
+            // add avgRating-key
+            let userRatingsSum = await Review.sum('rating', {
+                where: { productId: product.productId},
+                raw: true,
+            });
+
+            let seedRatingsSum = await SeedReview.sum('rating', {
+                where: { productId: product.productId},
+                raw: true,
+            });
+
+            let ratingsSum = userRatingsSum + seedRatingsSum
+
+            let ratingAvg = ratingsSum / reviewCount;
+
+            ratingAvg ? product.avgRating = ratingAvg : product.avgRating = 0.0
+
         }
 
         return res

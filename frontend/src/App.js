@@ -19,6 +19,7 @@ import ReviewUpdateForm from "./components/Reviews/ReviewUpdateForm";
 import OrderDetails from "./components/Orders/OrderDetails";
 import OrderConfirmation from "./components/Orders/OrderConfirmation";
 import AccountPage from "./components/AccountPage";
+import UserFavorites from "./components/Favorites/UserFavorites";
 import Footer from "./components/Footer";
 
 
@@ -102,6 +103,10 @@ function App() {
 
           <Route exact path={'/reviews/:reviewId/edit'}>
             <ReviewUpdateForm />
+          </Route>
+
+          <Route exact path={'/favorites'}>
+            <UserFavorites />
           </Route>
 
           {/* <Route>

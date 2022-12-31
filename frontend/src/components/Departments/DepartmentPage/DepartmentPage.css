@@ -25,8 +25,11 @@
     color: #333;
     /* background-color: red; */
     width: 100%;
-
 }
+
+
+/* Following properties are shared with Favorites/UserFavorites.css */
+/******************** START SHARE ********************/
 
 .product-card-container {
     display: flex;
@@ -173,3 +176,5 @@
 .product-card-CartAdd-ISPU-offer > span{
     color: #006601;
 }
+
+/******************** END SHARE ********************/
