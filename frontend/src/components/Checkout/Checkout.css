@@ -193,6 +193,9 @@
     margin-bottom: 8px;
     padding: 2.5px 0px;
 }
+#last-Checkout-subtotal-item {
+    margin-bottom: 16px;
+}
 .Checkout-grandtotal {
     width: 100%;
     display: flex;

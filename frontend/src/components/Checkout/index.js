@@ -172,7 +172,7 @@ function Checkout() {
                   <div className="redCard-discount">Free</div>
                 </div>
 
-                <div className="Checkout-subtotal-item">
+                <div className="Checkout-subtotal-item" id="last-Checkout-subtotal-item">
                   <div>Estimated tax</div>
                   <div>$0.00</div>
                 </div>
