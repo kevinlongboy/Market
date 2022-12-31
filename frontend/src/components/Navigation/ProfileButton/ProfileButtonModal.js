@@ -47,6 +47,13 @@ function ProfileButtonModal({ user, modalFunc }) {
         </div>
 
         <div onClick={(e) => modalFunc(false)}>
+          <NavLink exact to={'/favorites'}>
+            <div><i class="fa-regular fa-heart" id="heart-icon-ProfileButtonModal"></i>Favorites</div>
+            <div></div>
+          </NavLink>
+        </div>
+
+        <div onClick={(e) => modalFunc(false)}>
           <NavLink exact to={'/account/reviews'}>
             <div>Reviews</div>
             <div>See reviews</div>

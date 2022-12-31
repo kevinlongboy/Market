@@ -88,7 +88,7 @@
     background-color: #d6d6d6;
 }
 
-
+/********** MENU OPTIONS **********/
 .ProfileButton-modal-list-container > * {
     height: 49.71px;
     display: flex;
@@ -137,4 +137,8 @@
 #ProfileButton-modal-list-SignOut-button:hover{
     text-decoration: underline;
     color: #333;
+}
+
+#heart-icon-ProfileButtonModal {
+    padding-right: 7px;
 }

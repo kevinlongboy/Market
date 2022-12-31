@@ -35,7 +35,7 @@ function UserFavorites() {
       <div id="UserFavorites-component">
 
       <div className='UserFavorites-title'>
-        <div><i class="fa-solid fa-heart" id="heart-icon"></i> {'  '} Favorites</div>
+        <div><i class="fa-solid fa-heart" id="heart-icon-UserFavorites"></i> {'  '} Favorites</div>
 
         <div id="UserFavorites-directory-container">
               <NavLink exact to={'/'}>
