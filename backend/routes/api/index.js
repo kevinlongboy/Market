@@ -15,6 +15,7 @@ const productsRouter = require('./products.js');
 const cartRouter = require('./cart.js');
 const ordersRouter = require('./orders.js');
 const reviewsRouter = require('./reviews.js');
+const favoritesRouter = require('./reviews.js');
 
 // Connect restoreUser middleware to the API router
 // If current user session is valid, set req.user to the user in the database
@@ -28,6 +29,7 @@ router.use('/products', productsRouter);
 router.use('/cart', cartRouter);
 router.use('/orders', ordersRouter);
 router.use('/reviews', reviewsRouter);
+router.use('/favorites', favoritesRouter);
 
 
 /************************* TEST ROUTES *************************/
