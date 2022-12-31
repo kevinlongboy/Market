@@ -27,7 +27,7 @@ function UserCart() {
 
   useEffect(() => {
       dispatch(thunkReadCart());
-  }, [dispatch])
+  }, [dispatch, cart])
 
   useEffect(() => {
     dispatch(thunkReadCart());

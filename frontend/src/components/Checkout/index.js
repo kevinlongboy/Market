@@ -84,7 +84,7 @@ function Checkout() {
                     <div className="Checkout-details-container">
                       <div>${cartState && cartState.subtotal} subtotal</div>
                       <div>●</div>
-                      <div>{products.length} items</div>
+                      <div>{products.length} item{products.length === 1 ? '' : 's'}</div>
                     </div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@ function Checkout() {
                 <div className="product-list-thumbnail-container">
                   <div className="payment-information">
                     <img src={redCardImage} className="redCard-icon"></img>
-                    <p>RedCard *9999</p>
+                    <p>RedCard *1234</p>
                   </div>
                 </div>
               </div>
@@ -157,7 +157,7 @@ function Checkout() {
 
               <div className="Checkout-subtotal-breakdown">
                 <div className="Checkout-subtotal-item">
-                  <div>Subtotal ({products.length} items)</div>
+                  <div>Subtotal ({products.length} item{products.length === 1 ? '' : 's'})</div>
                   <div>${subtotal}</div>
                 </div>
 
@@ -177,10 +177,22 @@ function Checkout() {
                   <div>$0.00</div>
                 </div>
 
-                <div className="Checkout-total-grandtotal">
+                <div className="Checkout-grandtotal">
                   <div>Total</div>
                   <div>${total}</div>
                 </div>
+
+                <div className="payment-confirmation-container">
+                  <div>
+                    <img src={redCardImage} className="redCard-icon"></img>
+                  </div>
+                  <div>
+                    <p id="payment-confirmation-total">${total}</p>
+                    <p id="payment-confirmation-method"> RedCard *1234</p>
+                  </div>
+                </div>
+
+
               </div>
 
               <div className="Checkout-disclaimer-wrapper">

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 // local files
-import { thunkRemoveSingleProductFromCart } from "../../../store/cartReducer";
+import { thunkReadCart, thunkRemoveSingleProductFromCart } from "../../../store/cartReducer";
 import "./RemoveFromCart.css"
 
 
