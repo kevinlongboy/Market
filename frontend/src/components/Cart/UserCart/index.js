@@ -51,7 +51,7 @@ function UserCart() {
             <div className="Cart-details-container">
               <div>${cart && cart.subtotal} subtotal</div>
               <div>●</div>
-              <div>{products.length} items</div>
+              <div>{products.length} item{products.length === 1 ? '' : 's'}</div>
             </div>
           </div>
 
@@ -61,7 +61,7 @@ function UserCart() {
 
             <div className='Cart-card-title-container'>
                 <div id="Cart-title-shipping">Shipping</div>
-                <div id="Cart-title-total">{products.length} items</div>
+                <div id="Cart-title-total">{products.length} item{products.length === 1 ? '' : 's'}</div>
             </div>
 
 
@@ -120,7 +120,7 @@ function UserCart() {
               <div className="Cart-subtotal-breakdown">
 
               <div className="Cart-subtotal-item">
-                <div>Subtotal ({products.length} items)</div>
+                <div>Subtotal ({products.length} item{products.length === 1 ? '' : 's'})</div>
                 <div>${cart && cart.subtotal}</div>
               </div>
 
