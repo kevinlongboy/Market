@@ -6,7 +6,7 @@ const { check } = require('express-validator');
 // local files
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { handleValidationErrors } = require('../../utils/validation');
-const { Cart, Order, OrderDetail, Product, ProductImage } = require('../../db/models');
+const { Favorite, Product, ProductImage } = require('../../db/models');
 
 
 /*************************** GLOBAL VARIABLES ****************************/
@@ -14,10 +14,8 @@ const router = express.Router();
 
 
 /******************************** ROUTES *********************************/
-// Get all items in cart by current user
+// Get all favorite items by current user
 router.get('/', requireAuth, async(req, res) => {
-    // ^ remember to add pass requireAuth and remove wildcard ^
-    // let currentUserId = req.params.userId;
 
     let currentUser = req.user;
     let currentUserId = req.user.id;
@@ -25,7 +23,7 @@ router.get('/', requireAuth, async(req, res) => {
 
     try {
 
-        let getAllCartItems = await Cart.findAll({
+        let getAllFavorites = await Favorite.findAll({
             where: { userId: currentUserId },
             attributes: {
                 include: ['id'],
@@ -34,16 +32,14 @@ router.get('/', requireAuth, async(req, res) => {
             raw: true,
 
             // returns:
-                // id (cartID) - use this PK to delete
+                // id (favoriteID) - use this PK to delete
                 // userId
                 // productId
         })
 
-        let subtotal = 0;
-
         // add product details to every product in array
-        for (let j = 0; j < getAllCartItems.length; j++) {
-            let product = getAllCartItems[j];
+        for (let j = 0; j < getAllFavorites.length; j++) {
+            let product = getAllFavorites[j];
 
             let productDetails = await Product.findByPk(product.productId, {
                 // attributes: {
@@ -53,7 +49,7 @@ router.get('/', requireAuth, async(req, res) => {
             });
 
             // modify existing keys
-            product.cartId = product.id // change key's name to be more descriptive
+            product.favoriteId = product.id // change key's name to be more descriptive
             delete product.id
 
             // add keys
@@ -71,22 +67,14 @@ router.get('/', requireAuth, async(req, res) => {
             });
             let prevUrl = prevImage.url;
             product.previewImage = prevUrl
-
-            // update subtotal
-            subtotal += product.price;
         }
-
-        // console.log("getAllCartItems", getAllCartItems)
-
 
         return res
         .status(200)
         .json({
             "userId": parseInt(currentUserId),
-            "subtotal": (subtotal).toFixed(2),
-            "Products": getAllCartItems
+            "Products": getAllFavorites
         })
-
 
 
     } catch (err) {
@@ -95,7 +83,7 @@ router.get('/', requireAuth, async(req, res) => {
     };
 });
 
-// Add item to cart
+// Add item to Favorites
 router.post('/', requireAuth, async(req, res) => {
 
     let currentUser = req.user;
@@ -132,19 +120,26 @@ router.post('/', requireAuth, async(req, res) => {
             return res.status(404).json(error);
         }
 
-        console.log("reach")
-        // instantiate cart-object
-        let postCartProduct = await Cart.create(
+        // handle error: product is already a favorite
+        let isFavorite = await Favorite.findOne({
+            where: {
+                userId: currentUserId,
+                productId: productId
+            },
+            raw: true,
+        })
+
+        if (isFavorite) {
+            error.message = "Product is already a favorite";
+            error.statusCode = 400;
+            return res.status(400).json(error);
+        }
+
+        // instantiate favorite-object
+        let postFavoriteProduct = await Favorite.create(
             { userId: currentUserId, productId: productId },
         );
-        postCartProduct.save();
-        console.log("postCartProduct", postCartProduct)
-
-        // dataValues are null & _previousDataValues are not null
-        // findCart is not null, but record is in DataBase
-        // ???
-        // let findCart = await Cart.findByPk(postCartProduct.id)
-        // console.log("findCart", findCart)
+        postFavoriteProduct.save();
 
         // add previewImage-key
         let prevImage = await ProductImage.findOne({
@@ -165,22 +160,21 @@ router.post('/', requireAuth, async(req, res) => {
     };
 });
 
-// Remove item from cart
-// should route be specific to cartId?
-router.delete('/:cartId', requireAuth, async(req, res) => {
+// Remove item from favorites
+router.delete('/:favoriteId', requireAuth, async(req, res) => {
 
     let currentUser = req.user;
     let currentUserId = parseInt(req.user.id);
-    let cartId = req.params.cartId
-    cartId = parseInt(cartId)
+    let favoriteId = req.params.favoriteId
+    favoriteId = parseInt(favoriteId)
 
     let error = {};
 
     try {
-        let deleteProduct = await Cart.findOne({
+        let deleteProduct = await Favorite.findOne({
             where: {
                 userId: currentUserId,
-                id: cartId
+                id: favoriteId
             },
             raw: true,
         })
@@ -193,9 +187,9 @@ router.delete('/:cartId', requireAuth, async(req, res) => {
         }
 
         // delete record
-        Cart.destroy({
+        Favorite.destroy({
             where: {
-                id: cartId, // use params, not deleteProduct.id
+                id: favoriteId, // use params, not deleteProduct.id
             },
         })
 

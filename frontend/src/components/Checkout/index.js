@@ -137,7 +137,7 @@ function Checkout() {
                 <div className="product-list-thumbnail-container">
                   <div className="payment-information">
                     <img src={redCardImage} className="redCard-icon"></img>
-                    <p>RedCard *1234</p>
+                    <p>RedCard *5678</p>
                   </div>
                 </div>
               </div>
@@ -188,7 +188,7 @@ function Checkout() {
                   </div>
                   <div>
                     <p id="payment-confirmation-total">${total}</p>
-                    <p id="payment-confirmation-method"> RedCard *1234</p>
+                    <p id="payment-confirmation-method"> RedCard *5678</p>
                   </div>
                 </div>
 
