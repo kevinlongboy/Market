@@ -111,8 +111,12 @@ function DepartmentPage() {
 
 
               <div className="product-card-CartAdd-container">
-                <div className="product-card-CartAdd-Shipt-offer">
-                  <span>Get it as soon as 9am today</span> with Shipt
+                {/* <div className="product-card-CartAdd-shipping-offer">
+                  <span>Get it as soon as 9am next day</span> with Shipt
+                </div> */}
+
+                <div className="product-card-CartAdd-shipping-offer">
+                  <span>Free shipping</span> with RedCard
                 </div>
 
                 <div className="product-card-CartAdd-ISPU-offer">

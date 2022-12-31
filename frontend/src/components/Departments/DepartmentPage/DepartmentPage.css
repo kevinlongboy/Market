@@ -158,16 +158,17 @@
     margin: 8px 0px;
 }
 .product-card-CartAdd-container > div {
-    margin: 10px 0px;
+    margin: 6px 0px;
 }
-.product-card-CartAdd-Shipt-offer {
+.product-card-CartAdd-shipping-offer {
     font-size: 12px;
 }
-.product-card-CartAdd-Shipt-offer > span{
+.product-card-CartAdd-shipping-offer > span{
     color: #006601;
 }
 .product-card-CartAdd-ISPU-offer{
     font-size: 12px;
+    padding-bottom: 7px;
 }
 .product-card-CartAdd-ISPU-offer > span{
     color: #006601;
