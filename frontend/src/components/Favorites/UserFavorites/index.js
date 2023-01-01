@@ -20,7 +20,7 @@ function UserFavorites() {
 
   /************ key into pertinent values ************/
   // const products = favoritesState.allProductsByUser.Products;
-  const products = [];
+  const products = []; // uncomment to test for condition (no favorites)
 
 
   /************ reducer/API communication ************/
@@ -148,7 +148,7 @@ function UserFavorites() {
   /**************** render component *****************/
   return (
     <div className="UserFavorites-page-wrapper-container">
-      <div id="UserFavorites-component">
+      <div id={products.length > 0 ? "UserFavorites-component" : "UserFavorites-component-empty"}>
 
         <div className='UserFavorites-title'>
             <div><i class="fa-solid fa-heart" id="heart-icon-UserFavorites"></i> {'  '} Favorites</div>
