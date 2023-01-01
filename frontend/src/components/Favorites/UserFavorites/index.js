@@ -19,8 +19,8 @@ function UserFavorites() {
   console.log("favoritesState", favoritesState)
 
   /************ key into pertinent values ************/
-  // const products = favoritesState.allProductsByUser.Products;
-  const products = []; // uncomment to test for condition (no favorites)
+  const products = favoritesState.allProductsByUser.Products;
+  // const products = []; // uncomment to test for condition (no favorites)
 
 
   /************ reducer/API communication ************/
