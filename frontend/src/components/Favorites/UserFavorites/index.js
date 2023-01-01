@@ -19,7 +19,9 @@ function UserFavorites() {
   console.log("favoritesState", favoritesState)
 
   /************ key into pertinent values ************/
-  const products = favoritesState.allProductsByUser.Products;
+  // const products = favoritesState.allProductsByUser.Products;
+  const products = [];
+
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -28,117 +30,142 @@ function UserFavorites() {
       dispatch(thunkReadFavorites());
   }, [dispatch])
 
-  /**************** render component *****************/
-  return (
-    <>
-    <div className="page-wrapper-container">
-      <div id="UserFavorites-component">
-
-      <div className='UserFavorites-title'>
-        <div><i class="fa-solid fa-heart" id="heart-icon-UserFavorites"></i> {'  '} Favorites</div>
-
-        <div id="UserFavorites-directory-container">
-              <NavLink exact to={'/'}>
-                Market
-              </NavLink>
-              <p>/</p>
-              <p>Favorites</p>
-            </div>
-      </div>
-
-      {/* <div className="DepartmentPage-product-quantity-results">
-        <p>{productsArr.length} results</p>
-      </div> */}
-
-      <div className="product-card-container">
-
-        {products.length > 0 && products.map((product) => (
-            <div className="product-card">
-
-            <div className="product-card-thumbnail-container">
-            <Link
-              exact
-              to={`/departments/${product.departmentId}/products/${product.productId}`}
-            >
-              <img
-              src={product.previewImage}
-              className="product-card-thumbnail"
-              // onMouseOver={}
-              ></img>
-            </Link>
-            </div>
 
 
-            <div
-            className="product-card-name-container"
-            >
-              <Link
-                key={`${product.id}`}
+  let favorites
+
+  if (products.length > 0) {
+    favorites = (
+        <>
+            <div className="product-card-container">
+
+            {products.length > 0 && products.map((product) => (
+                <div className="product-card">
+
+                <div className="product-card-thumbnail-container">
+                <Link
                 exact
                 to={`/departments/${product.departmentId}/products/${product.productId}`}
-                className="product-card-name"
-                // className="product-card-name-container"
                 >
-                {/* <p className="product-card-name"> */}
-                  {product.name}
-                {/* </p> */}
-              </Link>
-            </div>
-
-
-            <div className="product-card-brand-container">
-              <p className="product-card-brand">{product.brand}</p>
-            </div>
-
-
-            <div className="DepartmentPage-rating-container">
-              <StarRatings
-                rating={product.avgRating}
-                starRatedColor="#ffd700"
-                numberOfStars={5}
-                name='rating'
-                starDimension='12px'
-                starSpacing='0'
-              />
-                <div id="DepartmentPage-rating-review-count">{product.numReviews}</div>
-              </div>
-
-
-              <div className="product-card-price-container">
-                <div className="product-card-price">${(product.price).toFixed(2)}</div>
-                <div className="product-card-location">When purchased online</div>
-              </div>
-
-
-              <div className="product-card-CartAdd-container">
-                {/* <div className="product-card-CartAdd-shipping-offer">
-                  <span>Get it as soon as 9am next day</span> with Shipt
-                </div> */}
-
-                <div className="product-card-CartAdd-shipping-offer">
-                  <span>Free shipping</span> with RedCard
+                <img
+                src={product.previewImage}
+                className="product-card-thumbnail"
+                // onMouseOver={}
+                ></img>
+                </Link>
                 </div>
 
-                <div className="product-card-CartAdd-ISPU-offer">
-                  <span>Ready within 2 hours</span> with pickup
+
+                <div
+                className="product-card-name-container"
+                >
+                <Link
+                    key={`${product.id}`}
+                    exact
+                    to={`/departments/${product.departmentId}/products/${product.productId}`}
+                    className="product-card-name"
+                    // className="product-card-name-container"
+                    >
+                    {/* <p className="product-card-name"> */}
+                    {product.name}
+                    {/* </p> */}
+                </Link>
                 </div>
 
-                <AddToCart
-                  productId={product.productId}
-                  text={`Add to cart`}
-                  cssSelector={"UserFavorites-AddToCart-button"}
+
+                <div className="product-card-brand-container">
+                <p className="product-card-brand">{product.brand}</p>
+                </div>
+
+
+                <div className="DepartmentPage-rating-container">
+                <StarRatings
+                    rating={product.avgRating}
+                    starRatedColor="#ffd700"
+                    numberOfStars={5}
+                    name='rating'
+                    starDimension='12px'
+                    starSpacing='0'
                 />
-              </div>
+                    <div id="DepartmentPage-rating-review-count">{product.numReviews}</div>
+                </div>
 
-          </div>
 
-        ))}
-      </div>
+                <div className="product-card-price-container">
+                    <div className="product-card-price">${(product.price).toFixed(2)}</div>
+                    <div className="product-card-location">When purchased online</div>
+                </div>
+
+
+                <div className="product-card-CartAdd-container">
+
+                    <div className="product-card-CartAdd-shipping-offer">
+                    <span>Free shipping</span> with RedCard
+                    </div>
+
+                    <div className="product-card-CartAdd-ISPU-offer">
+                    <span>Ready within 2 hours</span> with pickup
+                    </div>
+
+                    <AddToCart
+                    productId={product.productId}
+                    text={`Add to cart`}
+                    cssSelector={"UserFavorites-AddToCart-button"}
+                    />
+                </div>
+
+            </div>
+
+            ))}
+            </div>
+        </>
+    )
+
+  } else {
+    favorites = (
+        <>
+        <div className="no-favorites-message-container">
+
+            <i class="fa-solid fa-heart" id="heart-icon-UserFavorites-no-favorites"></i>
+
+            <p className="no-favorites-message-title">Show some love!</p>
+
+            <p className="no-favorites-message-main">You currently don't have any favorited items. Once you've favorited items that you love or want to keep track of, they will be shown here.</p>
+
+            <p className="no-favorites-message-subtext">Here are some popular categories to get you started</p>
+
+            <div className="no-favorites-message-suggested-categories">
+              <NavLink exact to={'/departments/5'}>Electronics</NavLink>
+              <NavLink exact to={'/departments/6'}>Video Games</NavLink>
+              <NavLink exact to={'/departments/9'}>Furniture</NavLink>
+              <NavLink exact to={'/departments/8'}>Pets</NavLink>
+            </div>
+        </div>
+        </>
+    )
+  }
+
+  /**************** render component *****************/
+  return (
+    <div className="UserFavorites-page-wrapper-container">
+      <div id="UserFavorites-component">
+
+        <div className='UserFavorites-title'>
+            <div><i class="fa-solid fa-heart" id="heart-icon-UserFavorites"></i> {'  '} Favorites</div>
+
+            <div id="UserFavorites-directory-container">
+                <NavLink exact to={'/'}>
+                    Market
+                </NavLink>
+                <p>/</p>
+                <p>Favorites</p>
+                </div>
+        </div>
+
+        {favorites}
 
       </div>
     </div>
-    {/* <Footer /> */}
-    </>
   )
 }
 
