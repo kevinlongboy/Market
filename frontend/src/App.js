@@ -19,7 +19,7 @@ import ReviewUpdateForm from "./components/Reviews/ReviewUpdateForm";
 import OrderDetails from "./components/Orders/OrderDetails";
 import OrderConfirmation from "./components/Orders/OrderConfirmation";
 import AccountPage from "./components/AccountPage";
-import UserFavorites from "./components/Favorites/UserFavorites";
+import FavoritesPage from "./components/Favorites/FavoritesPage";
 import Footer from "./components/Footer";
 
 
@@ -106,7 +106,7 @@ function App() {
           </Route>
 
           <Route exact path={'/favorites'}>
-            <UserFavorites />
+            <FavoritesPage />
           </Route>
 
           {/* <Route>

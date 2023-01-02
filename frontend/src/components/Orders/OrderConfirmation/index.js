@@ -44,7 +44,7 @@ function OrderConfirmation() {
             <div className="OrderConfirmation-title">
               <img  src={thanksImage} id="thanksImage"></img>
               <h1>Thanks for your order!</h1>
-              <p>We’ll send confirmations and order updates to <span>{user && user.email}</span></p>
+              <p>We’ll send confirma=tions and order updates to <span>{user && user.email}</span></p>
             </div>
 
             <div className="OrderConfirmation-edit-section">
