@@ -8,6 +8,7 @@ import cartReducer, { thunkReadCart, thunkRemoveSingleProductFromCart } from "..
 import RemoveFromCart from "../RemoveFromCart";
 import emptyCartImage from "../../../images/branding/market-empty-cart.png";
 import "./UserCart.css"
+import CartFavorites from "../../Favorites/CartFavorites";
 
 /******************************* COMPONENT *******************************/
 function UserCart() {
@@ -186,7 +187,12 @@ function UserCart() {
     <div className="page-wrapper-container">
 
       <div id="Cart-component">
-        {displayCart}
+
+        <div className="cart-top-container">
+          {displayCart}
+        </div>
+
+        <CartFavorites />
       </div>
     </div>
   )

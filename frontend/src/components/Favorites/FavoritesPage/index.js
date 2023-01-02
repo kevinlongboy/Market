@@ -30,7 +30,7 @@ function FavoritesPage() {
       dispatch(thunkReadFavorites());
   }, [dispatch])
 
-
+  /************* conditional components **************/
 
   let favorites
 

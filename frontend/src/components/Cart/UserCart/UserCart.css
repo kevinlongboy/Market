@@ -7,12 +7,29 @@
     /* padding: 0px 20px; */
 
     display: flex;
-    flex-direction:row;
+    flex-direction: column;
     /* align-items: center; */
     /* justify-content: center; */
     /* background-color: red; */
 
 }
+
+.cart-top-container {
+    width: 100%;
+    /* height: 100%; */
+    /* max-width: 1400px; */
+
+    margin: 0px;
+    /* padding: 0px 20px; */
+
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* background-color: red; */
+
+}
+
 
 .Cart-left-panel {
     width: 100%;

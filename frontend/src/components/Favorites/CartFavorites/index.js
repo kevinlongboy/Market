@@ -30,141 +30,73 @@ function CartFavorites() {
       dispatch(thunkReadFavorites());
   }, [dispatch])
 
-
-
+  /************* conditional components **************/
   let favorites
 
   if (products.length > 0) {
     favorites = (
         <>
-            <div className="product-card-container">
 
             {products.length > 0 && products.map((product) => (
-                <div className="product-card">
+              <div className="favorite-card" id="favorite-card-empty">
 
-                <div className="product-card-thumbnail-container">
-                <Link
-                exact
-                to={`/departments/${product.departmentId}/products/${product.productId}`}
-                >
-                <img
-                src={product.previewImage}
-                className="product-card-thumbnail"
-                // onMouseOver={}
-                ></img>
-                </Link>
+                <div>
+                  <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`}>
+                    <img src={product.previewImage} id="cart-favorites-thumbnail"></img>
+                  </NavLink>
                 </div>
 
-
-                <div
-                className="product-card-name-container"
-                >
-                <Link
-                    key={`${product.id}`}
-                    exact
-                    to={`/departments/${product.departmentId}/products/${product.productId}`}
-                    className="product-card-name"
-                    // className="product-card-name-container"
-                    >
-                    {/* <p className="product-card-name"> */}
-                    {product.name}
-                    {/* </p> */}
-                </Link>
-                </div>
-
-
-                <div className="product-card-brand-container">
-                <p className="product-card-brand">{product.brand}</p>
-                </div>
-
-
-                <div className="DepartmentPage-rating-container">
-                <StarRatings
-                    rating={product.avgRating}
-                    starRatedColor="#ffd700"
-                    numberOfStars={5}
-                    name='rating'
-                    starDimension='12px'
-                    starSpacing='0'
-                />
-                    <div id="DepartmentPage-rating-review-count">{product.numReviews}</div>
-                </div>
-
-
-                <div className="product-card-price-container">
-                    <div className="product-card-price">${(product.price).toFixed(2)}</div>
-                    <div className="product-card-location">When purchased online</div>
-                </div>
-
-
-                <div className="product-card-CartAdd-container">
-
-                    <div className="product-card-CartAdd-shipping-offer">
-                    <span>Free shipping</span> with RedCard
-                    </div>
-
-                    <div className="product-card-CartAdd-ISPU-offer">
-                    <span>Ready within 2 hours</span> with pickup
-                    </div>
-
-                    <AddToCart
-                    productId={product.productId}
-                    text={`Add to cart`}
-                    cssSelector={"UserFavorites-AddToCart-button"}
+                <div className="cart-favorites-product-info-container">
+                    <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`}>
+                      <p>{product.name}</p>
+                    </NavLink>
+                  <div>
+                    <StarRatings
+                      rating={product.avgRating}
+                      starRatedColor="#ffd700"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='12px'
+                      starSpacing='0'
                     />
+                    <span>{product.numReviews}</span>
+                  </div>
+                  <div>
+                    <AddToCart
+                      productId={product.id}
+                      text={`Add to cart`}
+                      cssSelector={"UserFavorites-AddToCart-button"}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <p>${(product.price).toFixed(2)}</p>
                 </div>
 
             </div>
-
             ))}
-            </div>
         </>
     )
 
   } else {
     favorites = (
         <>
-        <div className="no-favorites-message-container">
-
-            <i class="fa-solid fa-heart" id="heart-icon-UserFavorites-no-favorites"></i>
-
-            <p className="no-favorites-message-title">Show some love!</p>
-
-            <p className="no-favorites-message-main">You currently don't have any favorited items. Once you've favorited items that you love or want to keep track of, they will be shown here.</p>
-
-            <p className="no-favorites-message-subtext">Here are some popular categories to get you started</p>
-
-            <div className="no-favorites-message-suggested-categories">
-              <NavLink exact to={'/departments/5'}>Electronics</NavLink>
-              <NavLink exact to={'/departments/6'}>Video Games</NavLink>
-              <NavLink exact to={'/departments/9'}>Furniture</NavLink>
-              <NavLink exact to={'/departments/8'}>Pets</NavLink>
-            </div>
-        </div>
+          <div className="favorite-card" id="favorite-card-empty">
+            <img src="https://target.scene7.com/is/content/Target/GUEST_812be4e4-60a2-449f-8488-8db14c0ce443?wid=40&hei=40&qlt=80&fmt=webp" className="empty-cart-favorites-graphic"></img>
+            <p>Track your favorite items</p>
+            <p>While browsing, select the heart icon on your favorite items to keep tabs on availability and new sale prices.</p>
+          </div>
         </>
     )
   }
 
   /**************** render component *****************/
   return (
-    <div className="UserFavorites-page-wrapper-container">
-      <div id={products.length > 0 ? "UserFavorites-component" : "UserFavorites-component-empty"}>
+    <div className="CartFavorites-component">
 
-        <div className='UserFavorites-title'>
-            <div><i class="fa-solid fa-heart" id="heart-icon-UserFavorites"></i> {'  '} Favorites</div>
+      {favorites}
 
-            <div id="UserFavorites-directory-container">
-                <NavLink exact to={'/'}>
-                    Market
-                </NavLink>
-                <p>/</p>
-                <p>Favorites</p>
-                </div>
-        </div>
-
-        {favorites}
-
-      </div>
     </div>
   )
 }
