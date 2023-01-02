@@ -19,13 +19,14 @@
     text-decoration: underline;
 }
 
+
+/********** CONDITIONAL STYLING PER COMPONENT **********/
 #DepartmentPage-AddToCart-button {
     height: 32px;
     width: 68px;
     margin: 15px 0px;
     font-size: 12px;
 }
-
 
 #ProductPage-AddToCart-button {
     height: 44px;
@@ -38,6 +39,14 @@
     height: 32px;
     width: 82.3594px;
     margin: 15px 0px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#CartFavorites-AddToCart-button {
+    height: 32px;
+    width: 82.36px;
+    padding: 0px 8px;
     font-size: 12px;
     font-weight: 700;
 }

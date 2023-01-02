@@ -143,10 +143,7 @@ function Checkout() {
                 </div>
               </div>
 
-
-
           </div>
-
 
 
           <div className="Checkout-right">

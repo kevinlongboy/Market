@@ -65,7 +65,7 @@ function CartFavorites() {
                     <AddToCart
                       productId={product.id}
                       text={`Add to cart`}
-                      cssSelector={"UserFavorites-AddToCart-button"}
+                      cssSelector={"CartFavorites-AddToCart-button"}
                     />
                   </div>
                 </div>
