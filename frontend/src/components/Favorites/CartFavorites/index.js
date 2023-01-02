@@ -8,11 +8,11 @@ import  StarRatings from 'react-star-ratings';
 import { thunkReadFavorites } from "../../../store/favoritesReducer";
 import AddToCart from "../../Cart/AddToCart";
 import Footer from "../../Footer";
-import "./ReadFavorites.css"
+import "./CartFavorites.css"
 
 
 /******************************* COMPONENT *******************************/
-function ReadFavorites() {
+function CartFavorites() {
 
   /****************** access store *******************/
   const favoritesState = useSelector(state => state.favorites)
@@ -171,4 +171,4 @@ function ReadFavorites() {
 
 
 /******************************** EXPORTS ********************************/
-export default ReadFavorites
+export default CartFavorites
