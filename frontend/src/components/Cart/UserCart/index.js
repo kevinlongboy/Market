@@ -9,6 +9,7 @@ import RemoveFromCart from "../RemoveFromCart";
 import emptyCartImage from "../../../images/branding/market-empty-cart.png";
 import "./UserCart.css"
 import CartFavorites from "../../Favorites/CartFavorites";
+import GrandTotal from "../../../abstracted-structures/GrandTotal";
 
 /******************************* COMPONENT *******************************/
 function UserCart() {
@@ -22,6 +23,7 @@ function UserCart() {
   const user = useSelector(state => state.session.user);
   const cart = useSelector(state => state.cart.allProductsByUser)
   const products = Object.values(cart.Products)
+  const subtotal = cart.subtotal
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -113,29 +115,7 @@ function UserCart() {
 
         <div className="Cart-right-panel">
           <div className="Cart-total-container">
-
-              <div className="Cart-total-at-a-glance">
-                <div>Order summary</div>
-              </div>
-
-              <div className="Cart-subtotal-breakdown">
-
-              <div className="Cart-subtotal-item">
-                <div>Subtotal ({products.length} item{products.length === 1 ? '' : 's'})</div>
-                <div>${cart && cart.subtotal}</div>
-              </div>
-
-              <div className="Cart-subtotal-item" id="Cart-subtotal-tax-item">
-                <div>Estimated Tax</div>
-                <div>$0.00</div>
-              </div>
-
-              <div className="Cart-total-grandtotal">
-                <div>Total</div>
-                <div>${cart && cart.subtotal}</div>
-              </div>
-
-            </div>
+              <GrandTotal products={products} subtotal={subtotal} />
           </div>
 
 

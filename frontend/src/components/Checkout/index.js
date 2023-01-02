@@ -10,6 +10,7 @@ import boxImage from "../../images/branding/market-village/market-village-box.pn
 import redCardImage from "../../images/branding/market-village/market-village-redcard.png"
 import "./Checkout.css"
 import { calculateGrandTotal, calculateRedCardDiscount } from "../../component-resources";
+import GrandTotal from "../../abstracted-structures/GrandTotal";
 
 /******************************* COMPONENT *******************************/
 function Checkout() {
@@ -151,36 +152,9 @@ function Checkout() {
           <div className="Checkout-right">
             <div className="Checkout-total-container">
 
-              <div className="Checkout-total-at-a-glance">
-                <div>Order summary</div>
-              </div>
-
               <div className="Checkout-subtotal-breakdown">
-                <div className="Checkout-subtotal-item">
-                  <div>Subtotal ({products.length} item{products.length === 1 ? '' : 's'})</div>
-                  <div>${subtotal}</div>
-                </div>
 
-                <div className="Checkout-subtotal-item">
-                  <div>Discounts</div>
-                  <div className="redCard-discount">-${discount}</div>
-                </div>
-                <p id="redCard-discount-subtext">RedCard 5% Discount</p>
-
-                <div className="Checkout-subtotal-item">
-                  <div>Delivery</div>
-                  <div className="redCard-discount">Free</div>
-                </div>
-
-                <div className="Checkout-subtotal-item" id="last-Checkout-subtotal-item">
-                  <div>Estimated tax</div>
-                  <div>$0.00</div>
-                </div>
-
-                <div className="Checkout-grandtotal">
-                  <div>Total</div>
-                  <div>${total}</div>
-                </div>
+                <GrandTotal products={products} subtotal={subtotal} />
 
                 <div className="payment-confirmation-container">
                   <div>
@@ -191,7 +165,6 @@ function Checkout() {
                     <p id="payment-confirmation-method"> RedCard *5678</p>
                   </div>
                 </div>
-
 
               </div>
 
