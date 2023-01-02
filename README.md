@@ -75,8 +75,10 @@ The order feature gives shoppers the ability purchase the products in their cart
 
 _This one has good reviews_
 
-The review feature gives shoppers the ability to read reviews for a product or write their own. Shoppers can also modify or delete any of their past reviews.
+The review feature gives shoppers the ability to read reviews for a product or write their own. Shoppers can also modify or delete any of their past reviews.*
 <p><img src="images/features/market-review.gif" alt="review-feature gif" width="400"></p>
+
+*Seed reviews are sourced directly from <a href="https://www.target.com/" alt="Target website">Target</a> website
   
 <br>
 <br>
@@ -112,7 +114,6 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 <p>Navigate to the "backend" folder</p>
 <p>Download dependencies by running the command: "npm install"</p>
 <p>Initialize your database by running "npx dotenv sequelize db:migrate"</p>
-<p>Populate your database by running "npx dotenv sequelize db:seed:all"</p>
 <p>Start the backend server by running the command: "npm start"</p>
 
 <img src="assets/instructions/setup-instructions-step-4.gif" alt="Initialize the backend GIF" width="400">
