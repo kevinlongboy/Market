@@ -8,6 +8,7 @@ import  StarRatings from 'react-star-ratings';
 import { thunkReadFavorites } from "../../../store/favoritesReducer";
 import AddToCart from "../../Cart/AddToCart";
 import Footer from "../../Footer";
+import UpdateFavorite from "../UpdateFavorite";
 import "./CartFavorites.css"
 
 
@@ -19,8 +20,8 @@ function CartFavorites() {
   console.log("favoritesState", favoritesState)
 
   /************ key into pertinent values ************/
-  // const products = favoritesState.allProductsByUser.Products;
-  const products = []; // uncomment to test for condition (no favorites)
+  const products = favoritesState.allProductsByUser.Products;
+  // const products = []; // uncomment to test for condition (no favorites)
 
 
   /************ reducer/API communication ************/
@@ -72,12 +73,13 @@ function CartFavorites() {
                       />
                     <span id="cart-favorites-product-numReviews">{product.numReviews}</span>
                   </div>
-                  <div>
+                  <div className="cart-favorites-action-buttons-container">
                     <AddToCart
-                      productId={product.id}
+                      productId={product.productId}
                       text={`Add to cart`}
                       cssSelector={"CartFavorites-AddToCart-button"}
-                      />
+                    />
+                    <UpdateFavorite productId={product.productId} cssSelector={"CartFavorites-UpdateFavorite-button"} />
                   </div>
                 </div>
               </div>

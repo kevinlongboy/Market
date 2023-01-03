@@ -70,20 +70,20 @@ function DepartmentPage() {
             </div>
 
 
-            <div
-            className="product-card-name-container"
-            >
-              <Link
-                key={`${product.id}`}
-                exact
-                to={`/departments/${departmentId}/products/${product.id}`}
-                className="product-card-name"
-                // className="product-card-name-container"
-                >
-                {/* <p className="product-card-name"> */}
-                  {product.name}
-                {/* </p> */}
-              </Link>
+            <div className="product-card-title-container">
+              <div className="product-card-name-container">
+                <Link
+                  key={`${product.id}`}
+                  exact
+                  to={`/departments/${departmentId}/products/${product.id}`}
+                  className="product-card-name"
+                  >
+                    {product.name}
+                </Link>
+              </div>
+              <div className="product-card-favorite-button-container">
+                  <UpdateFavorite productId={product.id}/>
+              </div>
             </div>
 
 
@@ -129,10 +129,6 @@ function DepartmentPage() {
                   text={`Deliver it`}
                   cssSelector={"DepartmentPage-AddToCart-button"}
                 />
-              </div>
-
-              <div>
-                  <UpdateFavorite productId={product.id}/>
               </div>
 
           </div>

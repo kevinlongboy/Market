@@ -57,20 +57,20 @@ function FavoritesPage() {
                 </div>
 
 
-                <div
-                className="product-card-name-container"
-                >
-                <Link
-                    key={`${product.id}`}
-                    exact
-                    to={`/departments/${product.departmentId}/products/${product.productId}`}
-                    className="product-card-name"
-                    // className="product-card-name-container"
-                    >
-                    {/* <p className="product-card-name"> */}
-                    {product.name}
-                    {/* </p> */}
-                </Link>
+                <div className="product-card-title-container">
+                  <div className="product-card-name-container">
+                    <Link
+                        key={`${product.id}`}
+                        exact
+                        to={`/departments/${product.departmentId}/products/${product.productId}`}
+                        className="product-card-name"
+                        >
+                        {product.name}
+                    </Link>
+                  </div>
+                  <div className="product-card-favorite-button-container">
+                      <UpdateFavorite productId={product.productId}/>
+                  </div>
                 </div>
 
 
@@ -113,10 +113,6 @@ function FavoritesPage() {
                     text={`Add to cart`}
                     cssSelector={"UserFavorites-AddToCart-button"}
                     />
-                </div>
-
-                <div>
-                    <UpdateFavorite productId={product.productId}/>
                 </div>
 
             </div>

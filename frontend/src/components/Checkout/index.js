@@ -12,6 +12,7 @@ import "./Checkout.css"
 import { calculateGrandTotal, calculateRedCardDiscount } from "../../component-resources";
 import GrandTotal from "../../abstracted-structures/GrandTotal";
 import UpdateFavorite from "../Favorites/UpdateFavorite";
+import { thunkReadFavorites } from "../../store/favoritesReducer";
 
 /******************************* COMPONENT *******************************/
 function Checkout() {
@@ -19,6 +20,7 @@ function Checkout() {
   /****************** access store *******************/
   const cartState = useSelector(state => state.cart.allProductsByUser)
   const user = useSelector(state => state.session.user)
+
 
   /************ key into pertinent values ************/
   const products = Object.values(cartState.Products)

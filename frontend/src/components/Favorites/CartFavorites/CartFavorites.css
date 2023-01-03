@@ -137,6 +137,12 @@
     font-size: 12px;
     color: #666;
 }
+.cart-favorites-action-buttons-container {
+    display: flex;
+}
+.cart-favorites-action-buttons-container > * {
+    margin-right: 14px;
+}
 
 
 .cart-favorites-product-price-container {

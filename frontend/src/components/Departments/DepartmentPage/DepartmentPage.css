@@ -30,7 +30,6 @@
 
 /* Following properties are shared with Favorites/UserFavorites.css */
 /******************** START SHARE ********************/
-
 .product-card-container {
     display: flex;
     flex-flow: row wrap;
@@ -65,35 +64,49 @@
 }
 
 
+.product-card-title-container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 47px;
+}
 .product-card-name-container{
+    grid-column: 1 / 2;
+
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    justify-content: start;
+    text-align: left;
 
     height: 60px;
-    width: 100%;
-    /* background-color: aqua; */
-    /* padding: 10px 0px; */
-    margin-top: 10px;
 
-    /* word-wrap:inherit; */
-    text-overflow: ellipsis;
-    /* word-break:break-all; */
+    /* background-color: aqua; */
 }
 .product-card-name {
+    height: 40px;
+    width: 100%;
+
     margin: 0px;
     padding: 0px;
 
-    height: 40px;
-
+    text-align: left;
     font-size: 16px;
     font-weight: 700;
 
     color: #333;
     text-decoration: none;
 
+    /* word-wrap:inherit; */
+    /* text-overflow: ellipsis; */
+    /* word-break:break-all; */
+
     /* background-color: yellow; */
+}
+.product-card-favorite-button-container{
+    grid-column: 2 / 3;
+
+    display: flex;
+    justify-content: center;
 }
 
 .product-card-brand-container{
@@ -139,9 +152,11 @@
     align-items:flex-start;
     width: 100%;
     height: 22px;
-    /* background-color: red; */
-    /* padding: 10px 0px; */
+
     margin: 20px 0px;
+    /* padding: 10px 0px; */
+
+    /* background-color: red; */
 }
 .product-card-price-container > div {
     /* background-color: red; */
