@@ -7,7 +7,7 @@
     /* padding: 0px 20px; */
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     /* align-items: center; */
     /* justify-content: center; */
     /* background-color: red; */
@@ -173,10 +173,10 @@
     /* align-self: flex-start; */
     /* background-color: yellow; */
 }
-
-
-
-
+.Cart-right-panel-hidden {
+    width: 0px;
+    visibility: hidden;
+}
 
 
 .Cart-total-container {
@@ -187,8 +187,8 @@
     flex-direction: column;
 
 
-    margin: 16px;
-    padding: 16px;
+    margin: 0px 16px 16px;
+    padding: 0px 16px 16px;
 
     background-color: #fff;
     color: #333;

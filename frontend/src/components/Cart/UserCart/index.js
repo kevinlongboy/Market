@@ -46,9 +46,6 @@ function UserCart() {
 
     displayCart = (
       <>
-
-      <div className="Cart-left-panel">
-
           <div className="Cart-head-container">
             <div className="Cart-title">Cart</div>
             <div className="Cart-details-container">
@@ -67,72 +64,48 @@ function UserCart() {
                 <div id="Cart-title-total">{products.length} item{products.length === 1 ? '' : 's'}</div>
             </div>
 
-
             <div className="Cart-list-container">
-            {products && products.map(product => (
-              <div className='Cart-list-item-container'>
+              {products && products.map(product => (
+                <div className='Cart-list-item-container'>
 
-                <div className='Cart-list-item-container-left'>
+                  <div className='Cart-list-item-container-left'>
 
-                  <div className='Cart-list-item-thumbnail-container'>
-                    <NavLink exact to={`/departments/${product.departmentId}/products/${product.productId}`}>
-                        <img src={product.previewImage} className="Cart-list-item-thumbnail"></img>
-                    </NavLink>
-                  </div>
-
-                  <div className="Cart-list-item-itemization-container">
-                    <div>
-                      <NavLink exact to={`/departments/${product.departmentId}/products/${product.productId}`} id="Cart-product-list-itemization-name">
-                        <div id="Cart-product-list-itemization-name">{product.name}</div>
+                    <div className='Cart-list-item-thumbnail-container'>
+                      <NavLink exact to={`/departments/${product.departmentId}/products/${product.productId}`}>
+                          <img src={product.previewImage} className="Cart-list-item-thumbnail"></img>
                       </NavLink>
                     </div>
 
-                    <div className="Cart-product-list-item-qty">Qty 1</div>
+                    <div className="Cart-list-item-itemization-container">
+                      <div>
+                        <NavLink exact to={`/departments/${product.departmentId}/products/${product.productId}`} id="Cart-product-list-itemization-name">
+                          <div id="Cart-product-list-itemization-name">{product.name}</div>
+                        </NavLink>
+                      </div>
+
+                      <div className="Cart-product-list-item-qty">Qty 1</div>
+                    </div>
+
+                  </div>
+
+                  <div className='Cart-list-item-container-right'>
+                    <div className="Cart-product-list-price">${(product.price).toFixed(2)}</div>
+                    <div className="Cart-product-remove-item-button-container">
+                      <RemoveFromCart
+                        cartId={product.cartId}
+                        text={<i class="fa-solid fa-xmark"></i>}
+                        cssSelector={'UserCart-RemoveFromCart-button'}
+                      />
+                      </div>
                   </div>
 
                 </div>
-
-
-                <div className='Cart-list-item-container-right'>
-                  <div className="Cart-product-list-price">${(product.price).toFixed(2)}</div>
-                  <div className="Cart-product-remove-item-button-container">
-                    <RemoveFromCart
-                      cartId={product.cartId}
-                      text={<i class="fa-solid fa-xmark"></i>}
-                      cssSelector={'UserCart-RemoveFromCart-button'}
-                    />
-                    </div>
-                </div>
-
-              </div>
-            ))}
+              ))}
             </div>
-
-          </div>
-        </div>
-
-
-
-        <div className="Cart-right-panel">
-          <div className="Cart-total-container">
-              <GrandTotal products={products} subtotal={subtotal} />
-          </div>
-
-
-          <div className="Cart-checkout-button-container">
-            <NavLink exact to={`/checkout`}>
-              <button
-              className='Cart-checkout-button'
-              id='Cart-checkout-button'
-              >
-                Check out
-              </button>
-            </NavLink>
-          </div>
-
           </div>
     </>
     )
+
   } else {
     displayCart = (
       <div className="empty-cart-page-container">
@@ -165,14 +138,33 @@ function UserCart() {
 
   return (
     <div className="page-wrapper-container">
-
       <div id="Cart-component">
 
-        <div className="cart-top-container">
+
+        <div className="Cart-left-panel">
           {displayCart}
+          <CartFavorites />
         </div>
 
-        <CartFavorites />
+
+        <div className={products.length > 0 ? "Cart-right-panel": "Cart-right-panel-hidden"}>
+          <div className="Cart-total-container">
+              <GrandTotal products={products} subtotal={subtotal} />
+          </div>
+
+          <div className="Cart-checkout-button-container">
+            <NavLink exact to={`/checkout`}>
+              <button
+              className='Cart-checkout-button'
+              id='Cart-checkout-button'
+              >
+                Check out
+              </button>
+            </NavLink>
+          </div>
+        </div>
+
+
       </div>
     </div>
   )

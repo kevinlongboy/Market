@@ -33,53 +33,7 @@ function CartFavorites() {
   /************* conditional components **************/
   let favorites
 
-  if (products.length > 0) {
-    favorites = (
-        <>
-
-            {products.length > 0 && products.map((product) => (
-              <div className="favorite-card" id="favorite-card-empty">
-
-                <div>
-                  <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`}>
-                    <img src={product.previewImage} id="cart-favorites-thumbnail"></img>
-                  </NavLink>
-                </div>
-
-                <div className="cart-favorites-product-info-container">
-                    <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`}>
-                      <p>{product.name}</p>
-                    </NavLink>
-                  <div>
-                    <StarRatings
-                      rating={product.avgRating}
-                      starRatedColor="#ffd700"
-                      numberOfStars={5}
-                      name='rating'
-                      starDimension='12px'
-                      starSpacing='0'
-                    />
-                    <span>{product.numReviews}</span>
-                  </div>
-                  <div>
-                    <AddToCart
-                      productId={product.id}
-                      text={`Add to cart`}
-                      cssSelector={"CartFavorites-AddToCart-button"}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <p>${(product.price).toFixed(2)}</p>
-                </div>
-
-            </div>
-            ))}
-        </>
-    )
-
-  } else {
+  if (products.length === 0) {
     favorites = (
         <>
           <div className="favorite-card" id="favorite-card-empty">
@@ -89,11 +43,64 @@ function CartFavorites() {
           </div>
         </>
     )
+
+  } else {
+    favorites = (
+      <>
+          {products.length > 0 && products.map((product) => (
+            <div className="favorite-card" id="favorite-card-contents">
+
+              <div className="favorite-card-contents-left-container">
+                <div id="cart-favorites-thumbnail-container">
+                  <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`}>
+                    <img src={product.previewImage} id="cart-favorites-thumbnail"></img>
+                  </NavLink>
+                </div>
+
+                <div className="cart-favorites-product-info-container">
+                    <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`} id="cart-favorites-product-name">
+                      <p>{product.name}</p>
+                    </NavLink>
+                  <div className="cart-favorites-ratings">
+                    <StarRatings
+                      rating={product.avgRating}
+                      starRatedColor="#ffd700"
+                      numberOfStars={5}
+                      name='rating'
+                      starDimension='12px'
+                      starSpacing='0'
+                      />
+                    <span id="cart-favorites-product-numReviews">{product.numReviews}</span>
+                  </div>
+                  <div>
+                    <AddToCart
+                      productId={product.id}
+                      text={`Add to cart`}
+                      cssSelector={"CartFavorites-AddToCart-button"}
+                      />
+                  </div>
+                </div>
+              </div>
+
+              <div className="favorite-card-contents-right-container">
+                <div className="cart-favorites-product-price-container">
+                  <p>${(product.price).toFixed(2)}</p>
+                </div>
+              </div>
+
+          </div>
+          ))}
+      </>
+  )
   }
 
   /**************** render component *****************/
   return (
     <div className="CartFavorites-component">
+
+      <div className="CartFavorites-header-container">
+        <p>Favorites ({products.length})</p>
+      </div>
 
       {favorites}
 
