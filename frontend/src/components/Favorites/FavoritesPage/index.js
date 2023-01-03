@@ -8,6 +8,7 @@ import  StarRatings from 'react-star-ratings';
 import { thunkReadFavorites } from "../../../store/favoritesReducer";
 import AddToCart from "../../Cart/AddToCart";
 import Footer from "../../Footer";
+import UpdateFavorite from "../UpdateFavorite";
 import "./FavoritesPage.css"
 
 
@@ -112,6 +113,10 @@ function FavoritesPage() {
                     text={`Add to cart`}
                     cssSelector={"UserFavorites-AddToCart-button"}
                     />
+                </div>
+
+                <div>
+                    <UpdateFavorite productId={product.productId}/>
                 </div>
 
             </div>

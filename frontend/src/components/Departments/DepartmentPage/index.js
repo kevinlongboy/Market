@@ -7,6 +7,7 @@ import  StarRatings from 'react-star-ratings';
 // local files
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
 import AddToCart from "../../Cart/AddToCart";
+import UpdateFavorite from "../../Favorites/UpdateFavorite";
 import Footer from "../../Footer";
 import "./DepartmentPage.css"
 
@@ -128,6 +129,10 @@ function DepartmentPage() {
                   text={`Deliver it`}
                   cssSelector={"DepartmentPage-AddToCart-button"}
                 />
+              </div>
+
+              <div>
+                  <UpdateFavorite productId={product.id}/>
               </div>
 
           </div>

@@ -41,6 +41,12 @@
     /* background-color: blue; */
     padding: 0px 10px;
 }
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    /* padding-bottom: 20px; */
+}
 
 .Cart-head-container {
     width: 100%;

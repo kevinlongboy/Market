@@ -12,6 +12,7 @@ import { thunkAddSingleProductToCart } from "../../../store/cartReducer";
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
 import "./ProductPage.css"
 import AddToCart from "../../Cart/AddToCart";
+import UpdateFavorite from "../../Favorites/UpdateFavorite";
 
 
 /******************************* COMPONENT *******************************/
@@ -119,30 +120,34 @@ function ProductPage() {
 
             <div className="ProductPage-review-and-actions-container">
 
-              <div className="ProductPage-price-container">
-                <div>{product && `$${parseInt(product.price).toFixed(2)}`}</div>
-                <p>When purchased online</p>
-              </div>
+                <div className="ProductPage-price-container">
+                  <div>{product && `$${parseInt(product.price).toFixed(2)}`}</div>
+                  <p>When purchased online</p>
+                </div>
 
-              <div className="ProductPage-rating-container">
-              <StarRatings
-                rating={product.avgRating}
-                starRatedColor="#ffd700"
-                numberOfStars={5}
-                name='rating'
-                starDimension='20px'
-                starSpacing='0'
-              />
-                <div id="ProductPage-rating-review-count">{product.numReviews}</div>
-              </div>
+                <div className="ProductPage-rating-container">
+                <StarRatings
+                  rating={product.avgRating}
+                  starRatedColor="#ffd700"
+                  numberOfStars={5}
+                  name='rating'
+                  starDimension='20px'
+                  starSpacing='0'
+                />
+                  <div id="ProductPage-rating-review-count">{product.numReviews}</div>
+                </div>
 
-              <div>
-                <AddToCart
-                  productId={productId}
-                  text={`Add to cart`}
-                  cssSelector={"ProductPage-AddToCart-button"}
-                  />
-              </div>
+                <div>
+                  <AddToCart
+                    productId={productId}
+                    text={`Add to cart`}
+                    cssSelector={"ProductPage-AddToCart-button"}
+                    />
+                </div>
+
+                <div>
+                  <UpdateFavorite productId={productId}/>
+                </div>
               </div>
 
             </div>

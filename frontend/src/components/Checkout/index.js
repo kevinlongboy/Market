@@ -11,6 +11,7 @@ import redCardImage from "../../images/branding/market-village/market-village-re
 import "./Checkout.css"
 import { calculateGrandTotal, calculateRedCardDiscount } from "../../component-resources";
 import GrandTotal from "../../abstracted-structures/GrandTotal";
+import UpdateFavorite from "../Favorites/UpdateFavorite";
 
 /******************************* COMPONENT *******************************/
 function Checkout() {
@@ -101,7 +102,10 @@ function Checkout() {
 
               <div className="product-list-thumbnail-container">
                 {products && products.map((product) => (
+                  <>
                     <img src={product.previewImage} className="product-list-thumbnail"></img>
+                    <UpdateFavorite productId={product.productId}/>
+                  </>
                 ))}
               </div>
             </div>

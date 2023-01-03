@@ -142,7 +142,9 @@ function UserCart() {
 
 
         <div className="Cart-left-panel">
-          {displayCart}
+          <div className="cart-container">
+            {displayCart}
+          </div>
           <CartFavorites />
         </div>
 
