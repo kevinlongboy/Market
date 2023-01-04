@@ -78,7 +78,7 @@
     align-items: flex-start;
     text-align: left;
 
-    height: 60px;
+    height: 45.7px;
 
     /* background-color: aqua; */
 }
@@ -97,7 +97,13 @@
     text-decoration: none;
 
     /* word-wrap:inherit; */
-    /* text-overflow: ellipsis; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+
     /* word-break:break-all; */
 
     /* background-color: yellow; */
