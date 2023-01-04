@@ -29,10 +29,7 @@ function ProductPage() {
   const mainImage = productImages[0]
   // reviews
   const userReviews = Object.values(reviewsState.allReviewsByUser)
-  console.log("userReviews", userReviews)
-
   let alreadyReviewedByUser = userReviews.find((review) => review.productId == productId)
-  console.log("alreadyReviewedByUser", alreadyReviewedByUser)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -43,7 +40,7 @@ function ProductPage() {
 
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));
-  }, [dispatch, reviewsState])
+  }, [dispatch])
 
   useEffect(() => {
     dispatch(thunkReadAllUserReviews());
