@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         username,
         email,
         hashedPassword,
-        url: 'https://kl-market.herokuapp.com/',
+        url: 'linkedin.com/in/kevinlongboy/',
       });
       return await User.scope('currentUser').findByPk(user.id);
     };
@@ -122,8 +122,8 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "User",
       defaultScope: {
         attributes: {
-          exclude: ["hashedPassword", "email", "createdAt", "updatedAt"]
-          // exclude: ["hashedPassword", "email", "updatedAt"]
+          // exclude: ["hashedPassword", "email", "createdAt", "updatedAt"]
+          exclude: ["hashedPassword", "email", "updatedAt"]
         }
       },
       scopes: {

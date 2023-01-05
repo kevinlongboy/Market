@@ -110,6 +110,9 @@ function ProductPage() {
             {mainImage && (
               <div id="ProductPage-main-image-container">
                 <img src={mainImage.url} id="ProductPage-main-image"></img>
+                <div id="ProductPage-UpdateFavorite-button">
+                  <UpdateFavorite productId={productId}/>
+                </div>
               </div>
             )}
 
@@ -140,10 +143,6 @@ function ProductPage() {
                     text={`Add to cart`}
                     cssSelector={"ProductPage-AddToCart-button"}
                     />
-                </div>
-
-                <div>
-                  <UpdateFavorite productId={productId}/>
                 </div>
               </div>
 

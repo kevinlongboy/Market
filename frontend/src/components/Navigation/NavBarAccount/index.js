@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import { NavLink, Redirect, useHistory } from "react-router-dom";
+import { convertExactDate } from "../../../component-resources";
 // local files
 import * as sessionActions from '../../../store/sessionReducer';
 import './NavBarAccount.css'
@@ -11,11 +12,9 @@ import './NavBarAccount.css'
 /******************************* COMPONENT *******************************/
 function NavBarAccount({ user }) {
 
-  /************ reducer/API communication ************/
-  const dispatch = useDispatch();
-
-  /***************** handle events *******************/
-  const history = useHistory();
+    /************ reducer/API communication ************/
+    const dispatch = useDispatch();
+    console.log("user", user)
 
   /**************** render component *****************/
   return (
@@ -24,7 +23,8 @@ function NavBarAccount({ user }) {
 
             <div className="NavBarAccount-title-container">
                 <div id="NavBarAccount-title-user-greeting">Hello, {user && user.firstName}</div>
-                <div id="NavBarAccount-title-account-createdAt">Account since May 2, 2012</div>
+                <div id="NavBarAccount-title-account-createdAt">Account since {user && convertExactDate(user.createdAt)}</div>
+                {/* <div id="NavBarAccount-title-account-createdAt">Account since May 2, 2012</div> */}
             </div>
 
             <div className="NavBarAccount-list-container">

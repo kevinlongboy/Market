@@ -82,6 +82,7 @@ router.get('/', restoreUser, (req, res) => {
             printUser.email = user.email;
             printUser.username = user.username;
             printUser.url = user.url;
+            printUser.createdAt = user.createdAt
 
             return res
                 .status(200)

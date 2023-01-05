@@ -114,6 +114,10 @@ export function convertExactDate(iso) {
         month = 'December'
     }
 
+    if (day.length == 2 && day[0] == '0') {
+        day = day[1]
+    }
+
     return `${month} ${day}, ${year}`
 }
 
