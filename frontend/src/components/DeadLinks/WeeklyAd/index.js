@@ -1,25 +1,38 @@
 /******************************** IMPORTS ********************************/
 // libraries
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import ImageGallery from 'react-image-gallery';
 // local files
 import "./WeeklyAd.css"
-import advert from "../../../images/WeeklyAd/weeklyAd.png";
-import calendarBackground from "../../../images/WeeklyAd/weeklyAd-calendar-background.png";
+import { Modal } from "../../../context/Modal";
 import reminderBanner from "../../../images/WeeklyAd/weeklyAd-reminder-banner.jpeg";
 import expectMoreBanner from "../../../images/WeeklyAd/weeklyAd-expect-more-banner.jpeg";
+import weeklyAdPage1 from "../../../images/WeeklyAd/weeklyAd-1.png";
+import weeklyAdPage2 from "../../../images/WeeklyAd/weeklyAd-2.jpeg";
+import weeklyAdPage3 from "../../../images/WeeklyAd/weeklyAd-3.jpeg";
+import weeklyAdPage4 from "../../../images/WeeklyAd/weeklyAd-4.jpeg";
+
 
 
 /******************************* COMPONENT *******************************/
 function WeeklyAd() {
 
-  /****************** access store *******************/
+    /************ key into pertinent values ************/
+    const images = [
+        {original: weeklyAdPage1},
+        {original: weeklyAdPage2},
+        {original: weeklyAdPage3},
+        {original: weeklyAdPage4},
+    ]
+
+    /****************** manage state *******************/
+    const [showModal, setShowModal] = useState(false);
 
   /**************** render component *****************/
   return (
     <div className="landing-wrapper-container">
-
       <div id="WeeklyAd-component">
 
         <div className="WeeklyAd-header">
@@ -28,14 +41,30 @@ function WeeklyAd() {
 
         <div className="WeeklyAd-main">
             <div className="WeeklyAd-main-left">
-                <img src={advert} id="WeeklyAd-advert-image"></img>
+                <img
+                    src={weeklyAdPage1}
+                    // onClick={()=> setShowModal(true)}
+                    id="WeeklyAd-advert-image"
+                >
+                </img>
             </div>
 
             <div className="WeeklyAd-main-right">
                 <h2>Weekly Ad</h2>
                 <h4>Prices Valid Jan 1 - Jan 7</h4>
                 <div className="View-WeeklyAd-button-container">
-                    <button className="View-WeeklyAd-button">View the Weekly Ad</button>
+                    <button
+                        className="View-WeeklyAd-button"
+                        onClick={()=> setShowModal(true)}
+                    >
+                        View the Weekly Ad
+                    </button>
+
+                    {showModal && (
+                        <Modal onClose={() => setShowModal(false)}>
+                            <ImageGallery items={images} showPlayButton={false} />
+                        </Modal>
+                    )}
                 </div>
                 <div className="days-to-save-container">
                     <span>07</span>
@@ -70,11 +99,9 @@ function WeeklyAd() {
             <div className="WeeklyAd-footer-line-2">
                 <p>© 2023 Market Brands, Inc.</p>
             </div>
-
         </div>
 
       </div>
-
     </div>
   )
 }
