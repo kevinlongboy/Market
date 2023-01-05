@@ -21,6 +21,8 @@ import OrderConfirmation from "./components/Orders/OrderConfirmation";
 import AccountPage from "./components/AccountPage";
 import FavoritesPage from "./components/Favorites/FavoritesPage";
 import Footer from "./components/Footer";
+import RedCard from "./components/DeadLinks/RedCard";
+import WeeklyAd from "./components/DeadLinks/WeeklyAd";
 
 
 /******************************* COMPONENT *******************************/
@@ -108,6 +110,18 @@ function App() {
           <Route exact path={'/favorites'}>
             <FavoritesPage />
           </Route>
+
+          <Route exact path={'/weeklyad'}>
+            <WeeklyAd />
+          </Route>
+
+          <Route exact path={'/redcard'}>
+            <RedCard />
+          </Route>
+
+          {/* <Route exact path={'/square'}>
+            <Square />
+          </Route> */}
 
           {/* <Route>
             Page Not Found

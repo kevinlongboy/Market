@@ -1,6 +1,6 @@
 /******************************** IMPORTS ********************************/
 // libraries
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // local files
 import "./NavBarPrimary.css"
 
@@ -18,8 +18,8 @@ function NavBarPrimary() {
           </div>
 
           <div className="NavBarMain-right-container">
-            <p><a href="https://weeklyad.target.com/">Weekly Ad</a></p>
-            <p><a href="https://www.target.com/redcard/about">RedCard</a></p>
+            <p><NavLink exact to={'/weeklyad'}>Weekly Ad</NavLink></p>
+            <p><NavLink exact to={'/redcard'}>RedCard</NavLink></p>
             <p><a href="https://www.target.com/circle">Market Square</a></p>
           </div>
         </div>

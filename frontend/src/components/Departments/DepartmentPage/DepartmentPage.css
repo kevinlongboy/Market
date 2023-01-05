@@ -110,6 +110,8 @@
 
     display: flex;
     justify-content: center;
+    padding: 0px 7.5px;
+    /* background-color: red; */
 }
 
 .product-card-brand-container{

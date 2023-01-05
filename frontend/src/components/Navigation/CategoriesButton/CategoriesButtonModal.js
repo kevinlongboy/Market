@@ -21,10 +21,9 @@ function CategoriesButtonModal({allDepartments}) {
     /************ reducer/API communication ************/
     const dispatch = useDispatch();
 
-    useEffect(()=>{
-        dispatch(thunkReadAllDepartments())
-    // }, [dispatch, departmentsState])
-    }, [dispatch])
+    // useEffect(()=>{
+        // dispatch(thunkReadAllDepartments())
+    // }, [dispatch])
 
 
     /****************** manage state *******************/
