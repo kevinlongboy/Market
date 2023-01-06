@@ -9,7 +9,10 @@ import shoppingBasket from "../../../../../images/branding/market-village/market
 import deliveryTruck from "../../../../../images/branding/market-village/market-village-delivery-truck.png"
 import calendar from "../../../../../images/branding/market-village/market-village-calendar.png"
 import gifts from "../../../../../images/branding/market-village/market-village-gifts.png"
-
+import starbucks from "../../../../../images/RedCard/icon-starbucks.png"
+import giftCard from "../../../../../images/RedCard/icon-disney.png"
+import driveUp from "../../../../../images/RedCard/icon-drive-up.png"
+import shipt from "../../../../../images/RedCard/icon-shipt-delivery.png"
 
 /******************************* COMPONENT *******************************/
 function RedCardPanelBenefits() {
@@ -73,28 +76,28 @@ function RedCardPanelBenefits() {
                 <div className="RedCardPanelBenefits-cards-container">
                     <div className="RedCardPanelBenefits-card">
                         <div id="icon-container">
-                            <img src={shoppingBasket} alt="shopping basket" id="shopping-basket-icon"></img>
+                            <img src={starbucks} alt="shopping basket" id="shopping-basket-icon"></img>
                         </div>
                         <p>Starbucks</p>
                         <p>Save 5% at any in store location.<sup className="RedCard-benefits-superscript">1</sup></p>
                     </div>
                     <div className="RedCardPanelBenefits-card">
                         <div id="icon-container">
-                            <img src={deliveryTruck} alt="delivery truck" id="delivery-truck-icon"></img>
+                            <img src={giftCard} alt="delivery truck" id="delivery-truck-icon"></img>
                         </div>
                         <p>Specialty gift cards</p>
                         <p>Save 5% on specialty gift cards for travel, restaurants, movie tickets, and more.<sup className="RedCard-benefits-superscript">1</sup></p>
                     </div>
                     <div className="RedCardPanelBenefits-card">
                         <div id="icon-container">
-                            <img src={calendar} alt="calendar" id="calender-icon"></img>
+                            <img src={driveUp} alt="calendar" id="calender-icon"></img>
                         </div>
                         <p>Drive Up</p>
                         <p>Stay in your car and save 5%.<sup className="RedCard-benefits-superscript">1</sup></p>
                     </div>
                     <div    className="RedCardPanelBenefits-card">
                         <div id="icon-container">
-                            <img src={gifts} alt="gifts" id="gifts-icon"></img>
+                            <img src={shipt} alt="gifts" id="gifts-icon"></img>
                         </div>
                         <p>Shipt</p>
                         <p>Save 5% on your same day delivery order placed on Target.com.<sup className="RedCard-benefits-superscript">1</sup></p>

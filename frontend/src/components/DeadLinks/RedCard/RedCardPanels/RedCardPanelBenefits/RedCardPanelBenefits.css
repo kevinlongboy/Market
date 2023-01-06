@@ -79,8 +79,7 @@
 }
 #shopping-basket-icon {
     /* width: 157.14px; */
-    width: 700px;
-    height: 700px;
+    width: 250px;
     object-fit: cover;
 }
 #delivery-truck-icon {
@@ -90,11 +89,11 @@
 }
 #calender-icon {
     /* width: 155.35px; */
-    width: 755.35px;
+    width: 255.35px;
 }
 #gifts-icon {
     /* width: 142.85px; */
-    width: 742.85px;
+    width: 242.85px;
 }
 
 /********** DISCLAIMER **********/
