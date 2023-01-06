@@ -10,13 +10,25 @@
     align-items: center;
 }
 
+.RedCardPanelBenefits-panel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .RedCardPanelBenefits-caption-container {
     margin: 0px 0px 8px;
     padding: 0px 0px 44px;
 
     font-size: 45px;
-    color: #CC0000;
     font-weight: 700;
+}
+#core-benefits {
+    color: #CC0000;
+}
+#more-benefits {
+    color: #333;
 }
 
 /********** CARDS **********/
@@ -27,6 +39,7 @@
     align-items: center;
 }
 .RedCardPanelBenefits-card {
+    width: 295px;
     padding: 20px;
 
     display: flex;
@@ -72,13 +85,16 @@
 }
 #delivery-truck-icon {
     /* width: 234.14px; */
-    width: 23.14px;
+    padding-top: 25px;
+    width: 290px;
 }
 #calender-icon {
-    width: 155.35px;
+    /* width: 155.35px; */
+    width: 755.35px;
 }
 #gifts-icon {
-    width: 142.85px;
+    /* width: 142.85px; */
+    width: 742.85px;
 }
 
 /********** DISCLAIMER **********/

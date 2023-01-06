@@ -19,17 +19,18 @@ function RedCardPanelBenefits() {
     return (
         <div className="RedCardPanelBenefits-component">
 
-            <div className="RedCardPanelBenefits-caption-container">
-                Everyday RedCard benefits:
-            </div>
+            <div className="RedCardPanelBenefits-panel-container">
 
-            <div className="RedCardPanelBenefits-table-">
+                <div className="RedCardPanelBenefits-caption-container" id="core-benefits">
+                    Everyday RedCard benefits:
+                </div>
+
                 <div className="RedCardPanelBenefits-cards-container">
                     <div className="RedCardPanelBenefits-card">
                         <div id="icon-container">
                             <img src={shoppingBasket} alt="shopping basket" id="shopping-basket-icon"></img>
                         </div>
-                        <p>5% off at Target</p>
+                        <p>5% off at Market</p>
                         <p>In store. Online. Every time.<sup className="RedCard-benefits-superscript">1</sup></p>
                     </div>
                     <div className="RedCardPanelBenefits-card">
@@ -37,7 +38,7 @@ function RedCardPanelBenefits() {
                             <img src={deliveryTruck} alt="delivery truck" id="delivery-truck-icon"></img>
                         </div>
                         <p>More to your door</p>
-                        <p>Free shipping on most items at Target.com.<sup className="RedCard-benefits-superscript">1</sup></p>
+                        <p>Free shipping on most items at Market.com.<sup className="RedCard-benefits-superscript">1</sup></p>
                     </div>
                     <div className="RedCardPanelBenefits-card">
                         <div id="icon-container">
@@ -52,6 +53,51 @@ function RedCardPanelBenefits() {
                         </div>
                         <p>More exclusives</p>
                         <p>Including special items and offers.<sup className="RedCard-benefits-superscript">1</sup></p>
+                    </div>
+                </div>
+
+                <div className="RedCardPanelBenefits-disclaimer-container">
+                <sup caleid="RedCard-benefits-foot-note-superscript">1</sup>Some restrictions apply. See below for RedCard benefits & program rules.
+                </div>
+            </div>
+
+
+
+            <div className="RedCardPanelBenefits-panel-container">
+
+            <div className="RedCardPanelBenefits-caption-container" id="more-benefits">
+                Your everyday 5% discount
+                applies to so much more.1
+            </div>
+
+                <div className="RedCardPanelBenefits-cards-container">
+                    <div className="RedCardPanelBenefits-card">
+                        <div id="icon-container">
+                            <img src={shoppingBasket} alt="shopping basket" id="shopping-basket-icon"></img>
+                        </div>
+                        <p>Starbucks</p>
+                        <p>Save 5% at any in store location.<sup className="RedCard-benefits-superscript">1</sup></p>
+                    </div>
+                    <div className="RedCardPanelBenefits-card">
+                        <div id="icon-container">
+                            <img src={deliveryTruck} alt="delivery truck" id="delivery-truck-icon"></img>
+                        </div>
+                        <p>Specialty gift cards</p>
+                        <p>Save 5% on specialty gift cards for travel, restaurants, movie tickets, and more.<sup className="RedCard-benefits-superscript">1</sup></p>
+                    </div>
+                    <div className="RedCardPanelBenefits-card">
+                        <div id="icon-container">
+                            <img src={calendar} alt="calendar" id="calender-icon"></img>
+                        </div>
+                        <p>Drive Up</p>
+                        <p>Stay in your car and save 5%.<sup className="RedCard-benefits-superscript">1</sup></p>
+                    </div>
+                    <div    className="RedCardPanelBenefits-card">
+                        <div id="icon-container">
+                            <img src={gifts} alt="gifts" id="gifts-icon"></img>
+                        </div>
+                        <p>Shipt</p>
+                        <p>Save 5% on your same day delivery order placed on Target.com.<sup className="RedCard-benefits-superscript">1</sup></p>
                     </div>
                 </div>
 

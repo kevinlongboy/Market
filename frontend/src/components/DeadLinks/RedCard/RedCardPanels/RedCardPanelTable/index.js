@@ -94,7 +94,7 @@ function RedCardPanelTable() {
                                         5% off
                                         <sup id="table-superscript">1 </sup>
                                         every day
-                                    </span> at Target and Target.com
+                                    </span> at Market and Market.com
                                 </p>
                             </th>
                             {check}
@@ -114,7 +114,7 @@ function RedCardPanelTable() {
                             <th>
                                 <p>Free 2-day shipping
                                     <sup id="table-superscript">1 </sup>
-                                on hundreds of thousands of items at Target.com
+                                on hundreds of thousands of items at Market.com
                                 </p>
                             </th>
                             {check}
@@ -133,7 +133,7 @@ function RedCardPanelTable() {
                         </tr>
                         <tr>
                             <th>
-                                <p>More return time at Target — get an additional 30 days for returns and exchanges
+                                <p>More return time at Market — get an additional 30 days for returns and exchanges
                                     <sup id="table-superscript">1 </sup>
                                 </p>
                             </th>
@@ -142,14 +142,14 @@ function RedCardPanelTable() {
                             {check}
                         </tr>
                         <tr className="RedCardPanelTable-even-row">
-                            <th><p>Pay for your Target purchases directly from your existing checking account (purchases generally take 1-3 days to process)</p>
+                            <th><p>Pay for your Market purchases directly from your existing checking account (purchases generally take 1-3 days to process)</p>
                             </th>
                             {dash}
                             {check}
                             {dash}
                         </tr>
                         <tr>
-                            <th><p>Add cash for free at Target and spend anywhere Visa® debit cards are accepted</p>
+                            <th><p>Add cash for free at Market and spend anywhere Visa® debit cards are accepted</p>
                             </th>
                             {dash}
                             {dash}
@@ -160,9 +160,9 @@ function RedCardPanelTable() {
                             <th>
                                 <p>Earn 2% on dining and gas purchases
                                     <sup id="table-superscript">3 </sup>
-                                    and 1% everywhere else outside of Target
+                                    and 1% everywhere else outside of Market
                                     <sup id="table-superscript">3</sup>
-                                    : Target Mastercard exclusive
+                                    : Market Mastercard exclusive
                                 </p>
                             </th>
                             {check}
@@ -180,7 +180,7 @@ function RedCardPanelTable() {
                             <th>
                                 <p>1 Some restrictions apply. <span id="see-below">See below</span> for RedCard benefits and program rules.</p>
                                 <p>2 <span id="see-below">See below</span> for credit card rates and fees. <span id="see-below">See below</span> for debit card agreement and fees. <span id="see-below">See below</span> for Reloadable Account rates and fees.</p>
-                                <p>3 Only for guests approved for a Target Mastercard. Restrictions apply. <span id="see-below">Learn more.</span></p>
+                                <p>3 Only for guests approved for a Market Mastercard. Restrictions apply. <span id="see-below">Learn more.</span></p>
                             </th>
                             <td>{CTACreditButton}</td>
                             <td>{CTADebitButton}</td>
