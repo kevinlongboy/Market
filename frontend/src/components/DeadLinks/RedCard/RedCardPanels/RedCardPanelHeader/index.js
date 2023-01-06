@@ -6,10 +6,11 @@ import { Link, NavLink } from "react-router-dom";
 // local files
 import "./RedCardPanelHeader.css"
 import cardStack from "../../../../../images/RedCard/RedCard-full-stack.png"
-
+import { CTACreditButton, CTADebitButton, CTAReloadableButton } from "../../abtracted-buttons";
 
 /******************************* COMPONENT *******************************/
 function RedCardPanelHeader() {
+
 
     /**************** render component *****************/
     return (
@@ -28,24 +29,10 @@ function RedCardPanelHeader() {
                 <div className="RedCardPanelHeader-left-disclaimer">
                     <span><sup id="RedCardPanelHeader-left-disclaimer-footnote">1</sup> Some restrictions apply. <span id="RedCardPanelHeader-see-below-text">See below</span> for RedCard benefits & program rules</span>
                 </div>
-
                 <div className="RedCardPanelHeader-buttons-container">
-                    <button className="RedCardPanelHeader-CTA-button"
-                    id="CTA-button-credit"
-                    >
-                        <NavLink exact to="/">Apply for Credit</NavLink>
-                    </button>
-                    <button className="RedCardPanelHeader-CTA-button"
-                    id="CTA-button-debit"
-                    >
-                        <NavLink exact to="/">Apply for Debit</NavLink>
-                    </button>
-                    <button className="RedCardPanelHeader-CTA-button"
-                    id="CTA-button-reloadable"
-                    >
-                        <NavLink exact to="/">Open a Reloadable</NavLink>
-                    </button>
-
+                    {CTACreditButton}
+                    {CTADebitButton}
+                    {CTAReloadableButton}
                 </div>
             </div>
 

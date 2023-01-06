@@ -9,6 +9,7 @@ import cardStack from "../../../../../images/RedCard/RedCard-full-stack.png"
 import credit from "../../../../../images/RedCard/RedCard-credit.png";
 import debit from "../../../../../images/RedCard/RedCard-debit.png";
 import reloadable from "../../../../../images/RedCard/RedCard-reloadable.png";
+import { CTACreditButton, CTADebitButton, CTAReloadableButton } from "../../abtracted-buttons";
 
 
 /******************************* COMPONENT *******************************/
@@ -56,8 +57,7 @@ function RedCardPanelTable() {
                         </tr> */}
                         <tr className="RedCardPanelTable-head-row">
                             <th id="RedCardPanelTable-heading-column">Benefits</th>
-                            <td>
-                                Credit Card</td>
+                            <td>Credit Card</td>
                             <td>Debit Card</td>
                             <td>Reloadable Account</td>
                         </tr>
@@ -137,7 +137,7 @@ function RedCardPanelTable() {
                                 <p>Earn 2% on dining and gas purchases
                                     <sup id="table-superscript">3 </sup>
                                     and 1% everywhere else outside of Target
-                                    <sup id="table-superscript">3 </sup>
+                                    <sup id="table-superscript">3</sup>
                                     : Target Mastercard exclusive
                                 </p>
                             </th>
@@ -151,6 +151,16 @@ function RedCardPanelTable() {
                             {dash}
                             {check}
                             {check}
+                        </tr>
+                        <tr id="table-disclaimer-row">
+                            <th>
+                                <p>1 Some restrictions apply. <span id="see-below">See below</span> for RedCard benefits and program rules.</p>
+                                <p>2 <span id="see-below">See below</span> for credit card rates and fees. <span id="see-below">See below</span> for debit card agreement and fees. <span id="see-below">See below</span> for Reloadable Account rates and fees.</p>
+                                <p>3 Only for guests approved for a Target Mastercard. Restrictions apply. <span id="see-below">Learn more.</span></p>
+                            </th>
+                            <td>{CTACreditButton}</td>
+                            <td>{CTADebitButton}</td>
+                            <td>{CTAReloadableButton}</td>
                         </tr>
                     </tbody>
                 </table>
