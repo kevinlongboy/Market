@@ -1,6 +1,4 @@
-/* TODO Add site wide styles */
-@import "~react-image-gallery/styles/css/image-gallery.css";
-
+/********** TODO Add site wide styles **********/
 * {
     z-index: 1;
 }
@@ -38,9 +36,6 @@ body {
     align-items: center;
 */
 
-#StarRatings{
-    z-index: -1;
-}
 
 .form-validation-errors {
     font-size: 12px;
@@ -49,8 +44,15 @@ body {
     padding-bottom: 10px;
 }
 
-
 /* scrollbar
 height: 350px;
 height: 100vh;
 overflow-y: scroll; */
+
+/********** 3rd PARTY LIBRARIES **********/
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+#StarRatings{
+    z-index: -1;
+}

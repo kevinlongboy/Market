@@ -4,13 +4,15 @@ import { useEffect, useReducer, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useParams } from "react-router-dom";
 import  StarRatings from 'react-star-ratings';
+import ImageGallery from 'react-image-gallery';
 // local files
+import { Modal } from "../../../context/Modal";
+import "./ProductPage.css"
 import ProductReviews from "../../Reviews/ProductReviews";
 import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
 import { thunkReadAllProductReviews, thunkReadAllUserReviews } from "../../../store/reviewsReducer";
 import { thunkAddSingleProductToCart } from "../../../store/cartReducer";
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
-import "./ProductPage.css"
 import AddToCart from "../../Cart/AddToCart";
 import UpdateFavorite from "../../Favorites/UpdateFavorite";
 
@@ -22,6 +24,7 @@ function ProductPage() {
   const user = useSelector(state => state.session.user);
   const product = useSelector(state => state.products.singleProductDetails)
   const productImages = useSelector(state => state.products.singleProductDetails.ProductImages)
+  // console.log("productImages", productImages)
   const reviewsState = useSelector(state => state.reviews);
 
   /************ key into pertinent values ************/
@@ -30,6 +33,15 @@ function ProductPage() {
   // reviews
   const userReviews = Object.values(reviewsState.allReviewsByUser)
   let alreadyReviewedByUser = userReviews.find((review) => review.productId == productId)
+  // images for modal
+  // const images = [];
+  // productImages.forEach((obj) =>  {
+  //   let image = {}
+  //   image.original = obj.url
+  //   image.thumbnail = obj.url
+  //   images.push(image)
+  // })
+  // console.log("images", images)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -46,6 +58,8 @@ function ProductPage() {
     dispatch(thunkReadAllUserReviews());
   }, [dispatch])
 
+  /****************** manage state *******************/
+  const [showModal, setShowModal] = useState(false);
 
   /************* conditional components **************/
   let displayReviewButton
@@ -109,7 +123,16 @@ function ProductPage() {
 
             {mainImage && (
               <div id="ProductPage-main-image-container">
-                <img src={mainImage.url} id="ProductPage-main-image"></img>
+                <img
+                  src={mainImage.url}
+                  id="ProductPage-main-image"
+                >
+                </img>
+
+                {/* <Modal onClose={() => setShowModal(false)}>
+                  <ImageGallery items={images} showPlayButton={false} />
+                </Modal> */}
+
                 <div id="ProductPage-UpdateFavorite-button">
                   <UpdateFavorite productId={productId}/>
                 </div>
