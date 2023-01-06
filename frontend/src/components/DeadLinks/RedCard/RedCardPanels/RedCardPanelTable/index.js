@@ -1,0 +1,166 @@
+/******************************** IMPORTS ********************************/
+// libraries
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, NavLink } from "react-router-dom";
+// local files
+import "./RedCardPanelTable.css"
+import cardStack from "../../../../../images/RedCard/RedCard-full-stack.png"
+import credit from "../../../../../images/RedCard/RedCard-credit.png";
+import debit from "../../../../../images/RedCard/RedCard-debit.png";
+import reloadable from "../../../../../images/RedCard/RedCard-reloadable.png";
+
+
+/******************************* COMPONENT *******************************/
+function RedCardPanelTable() {
+
+
+    const check = (
+        <td>
+            <div className="check-mark-container">
+                <i
+                    class="fa-solid fa-check"
+                    id="RedCardPanelTable-check-mark-icon"
+                >
+                </i>
+            </div>
+        </td>
+    )
+
+    const dash = (
+        <td>
+            <i
+                class="fa-solid fa-minus"
+                id="RedCardPanelTable-dash-icon"
+                >
+            </i>
+        </td>
+    )
+
+    /**************** render component *****************/
+    return (
+        <div className="RedCardPanelTable-component">
+
+            <div className="RedCardPanelTable-caption-container">
+                Find the RedCard that's right for you.
+            </div>
+
+            <div className="RedCardPanelTable-table-container">
+                <table className="RedCardPanelTable-table">
+                    <thead>
+                        {/* <tr id="card-images-row">
+                            <th></th>
+                            <td><img src={credit} className="RedCard-table-card-image"></img></td>
+                            <td><img src={debit} className="RedCard-table-card-image"></img></td>
+                            <td><img src={reloadable} className="RedCard-table-card-image"></img></td>
+                        </tr> */}
+                        <tr className="RedCardPanelTable-head-row">
+                            <th id="RedCardPanelTable-heading-column">Benefits</th>
+                            <td>
+                                Credit Card</td>
+                            <td>Debit Card</td>
+                            <td>Reloadable Account</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <p>
+                                    <span id="RedCard-every-day-discount">
+                                        5% off
+                                        <sup id="table-superscript">1 </sup>
+                                        every day
+                                    </span> at Target and Target.com
+                                </p>
+                            </th>
+                            {check}
+                            {check}
+                            {check}
+                        </tr>
+                        <tr className="RedCardPanelTable-even-row">
+                            <th>
+                                <p>No annual or monthly fees<sup id="table-superscript">2</sup>
+                                </p>
+                            </th>
+                            {check}
+                            {check}
+                            {check}
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Free 2-day shipping
+                                    <sup id="table-superscript">1 </sup>
+                                on hundreds of thousands of items at Target.com
+                                </p>
+                            </th>
+                            {check}
+                            {check}
+                            {check}
+                        </tr>
+                        <tr className="RedCardPanelTable-even-row">
+                            <th>
+                                <p>RedCard Exclusives including special items and offers
+                                    <sup id="table-superscript">1</sup>
+                                </p>
+                            </th>
+                            {check}
+                            {check}
+                            {check}
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>More return time at Target — get an additional 30 days for returns and exchanges
+                                    <sup id="table-superscript">1 </sup>
+                                </p>
+                            </th>
+                            {check}
+                            {check}
+                            {check}
+                        </tr>
+                        <tr className="RedCardPanelTable-even-row">
+                            <th><p>Pay for your Target purchases directly from your existing checking account (purchases generally take 1-3 days to process)</p>
+                            </th>
+                            {dash}
+                            {check}
+                            {dash}
+                        </tr>
+                        <tr>
+                            <th><p>Add cash for free at Target and spend anywhere Visa® debit cards are accepted</p>
+                            </th>
+                            {dash}
+                            {dash}
+                            {check}
+
+                        </tr>
+                        <tr className="RedCardPanelTable-even-row">
+                            <th>
+                                <p>Earn 2% on dining and gas purchases
+                                    <sup id="table-superscript">3 </sup>
+                                    and 1% everywhere else outside of Target
+                                    <sup id="table-superscript">3 </sup>
+                                    : Target Mastercard exclusive
+                                </p>
+                            </th>
+                            {check}
+                            {dash}
+                            {dash}
+                        </tr>
+                        <tr>
+                            <th><p>Cash withdrawal of up to $40 at checkout</p>
+                            </th>
+                            {dash}
+                            {check}
+                            {check}
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    )
+}
+
+
+/******************************** EXPORTS ********************************/
+export default RedCardPanelTable

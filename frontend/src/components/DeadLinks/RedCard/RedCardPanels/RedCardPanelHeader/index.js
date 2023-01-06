@@ -11,17 +11,12 @@ import cardStack from "../../../../../images/RedCard/RedCard-full-stack.png"
 /******************************* COMPONENT *******************************/
 function RedCardPanelHeader() {
 
-    /************ key into pertinent values ************/
-
-
-    /****************** manage state *******************/
-
     /**************** render component *****************/
     return (
         <div className="RedCardPanelHeader-component">
 
             <div className="RedCardPanelHeader-left">
-                <span>Save 5%<span id="RedCardPanelHeader-superscript">¹</span></span>
+                <span>Save 5%<sup id="RedCardPanelHeader-superscript">1</sup></span>
                 <span>today &</span>
                 <span>every day.</span>
 
@@ -31,7 +26,7 @@ function RedCardPanelHeader() {
                 </div>
 
                 <div className="RedCardPanelHeader-left-disclaimer">
-                    <span><span id="RedCardPanelHeader-left-disclaimer-footnote">¹</span> Some restrictions apply. <span id="RedCardPanelHeader-see-below-text">See below</span> for RedCard benefits & program rules</span>
+                    <span><sup id="RedCardPanelHeader-left-disclaimer-footnote">1</sup> Some restrictions apply. <span id="RedCardPanelHeader-see-below-text">See below</span> for RedCard benefits & program rules</span>
                 </div>
 
                 <div className="RedCardPanelHeader-buttons-container">
