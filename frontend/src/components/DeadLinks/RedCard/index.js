@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // local files
 import "./RedCard.css"
+import RedCardPanelBenefits from "./RedCardPanels/RedCardPanelBenefits";
 import RedCardPanelHeader from "./RedCardPanels/RedCardPanelHeader";
 import RedCardPanelTable from "./RedCardPanels/RedCardPanelTable";
 
@@ -28,7 +29,7 @@ function RedCard() {
         </div>
 
         <div className="RedCard-panel-container">
-
+          <RedCardPanelBenefits />
         </div>
 
         <div className="RedCard-panel-container">

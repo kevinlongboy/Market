@@ -53,20 +53,53 @@
     border-collapse: collapse;
 }
 
-/* Table Head */
+/* card row */
 #card-images-row {
     height: 0px;
 }
 #card-images-row > * {
-    height: 0px;
     background-color: #fff;
 }
+#card-images-row > th {
+    height: 10px;
+    /* background-color: yellow; */
+
+    padding: 0px 28px 20px;
+
+    font-size: 23px;
+    font-weight: 700;
+    color: #333;
+    text-align: left;
+}
+#card-images-row > td:last-of-type {
+    padding-right: 32px;
+}
+.card-container {
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    /* background-color: red; */
+}
+
 .RedCard-table-card-image {
+    width: 200px;
+    height: 100px;
+
     display: block;
-    width: 186px;
-    /* height: 223px; */
     object-fit: cover;
 }
+#RedCard-table-single-image {
+    width: 160px;
+    height: 100px;
+
+    display: block;
+    object-fit: cover;
+}
+
+/* Table Head */
 .RedCardPanelTable-table > thead {
     width: 547.2px;
     height: 90px;
@@ -74,11 +107,10 @@
     padding: 28px 0px 28px 32px;
     background-color: #d6d6d6;
 }
-
 .RedCardPanelTable-head-row > * {
     margin: 0px 0px 8px;
     /* border: 1px solid red; */
-    padding: 0px 28px;
+    padding: 34px 28px;
 
     font-size: 19px;
     color: #333;
@@ -117,7 +149,6 @@ tbody > tr > th > p {
 tbody > tr > td:last-of-type {
     padding: 28px 32px 28px 0px;
 }
-
 
 /* alternating rows */
 .RedCardPanelTable-even-row {

@@ -42,19 +42,43 @@ function RedCardPanelTable() {
     return (
         <div className="RedCardPanelTable-component">
 
-            <div className="RedCardPanelTable-caption-container">
-                Find the RedCard that's right for you.
-            </div>
-
             <div className="RedCardPanelTable-table-container">
                 <table className="RedCardPanelTable-table">
                     <thead>
-                        {/* <tr id="card-images-row">
-                            <th></th>
-                            <td><img src={credit} className="RedCard-table-card-image"></img></td>
-                            <td><img src={debit} className="RedCard-table-card-image"></img></td>
-                            <td><img src={reloadable} className="RedCard-table-card-image"></img></td>
-                        </tr> */}
+                        <tr id="card-images-row">
+                            <th>
+                                <div>
+                                Find the RedCard that's right for you.
+                                </div>
+                            </th>
+                            <td>
+                                <div className="card-container"
+                                id="credit-card-container"
+                                >
+                                    <img
+                                    src={credit} alt="RedCard credit"
+                                    className="RedCard-table-card-image"
+                                    id="RedCard-table-stack-image"
+                                    ></img>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="card-container">
+                                    <img src={debit} alt="RedCard debit"
+                                    className="RedCard-table-card-image"
+                                    id="RedCard-table-single-image"
+                                    ></img>
+                                </div>
+                            </td>
+                            <td>
+                                <div className="card-container">
+                                    <img src={reloadable} alt="reloadable"
+                                    className="RedCard-table-card-image"
+                                    id="RedCard-table-single-image"
+                                    ></img>
+                                </div>
+                            </td>
+                        </tr>
                         <tr className="RedCardPanelTable-head-row">
                             <th id="RedCardPanelTable-heading-column">Benefits</th>
                             <td>Credit Card</td>
