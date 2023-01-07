@@ -9,7 +9,7 @@ import cardStack from "../../../../../images/RedCard/RedCard-full-stack.png"
 import credit from "../../../../../images/RedCard/RedCard-credit.png";
 import debit from "../../../../../images/RedCard/RedCard-debit.png";
 import reloadable from "../../../../../images/RedCard/RedCard-reloadable.png";
-import { CTACreditButton, CTADebitButton, CTAReloadableButton } from "../../abtracted-buttons";
+import { CTACreditButton, CTADebitButton, CTAReloadableButton } from "../../abstracted-buttons";
 
 
 /******************************* COMPONENT *******************************/

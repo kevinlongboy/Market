@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 // local files
 import "./RedCard.css"
 import RedCardPanelBenefits from "./RedCardPanels/RedCardPanelBenefits";
+import RedCardPanelDebitCard from "./RedCardPanels/RedCardPanelDebitCard";
 import RedCardPanelHeader from "./RedCardPanels/RedCardPanelHeader";
 import RedCardPanelTable from "./RedCardPanels/RedCardPanelTable";
 
@@ -30,6 +31,14 @@ function RedCard() {
 
         <div className="RedCard-panel-container">
           <RedCardPanelBenefits />
+        </div>
+
+        <div className="RedCard-panel-container">
+          <RedCardPanelDebitCard />
+        </div>
+
+        <div className="RedCard-panel-container">
+
         </div>
 
         <div className="RedCard-panel-container">

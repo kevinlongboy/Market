@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 // local files
 import "./RedCardPanelHeader.css"
 import cardStack from "../../../../../images/RedCard/RedCard-full-stack.png"
-import { CTACreditButton, CTADebitButton, CTAReloadableButton } from "../../abtracted-buttons";
+import { CTACreditButton, CTADebitButton, CTAReloadableButton } from "../../abstracted-buttons";
 
 /******************************* COMPONENT *******************************/
 function RedCardPanelHeader() {
