@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // local files
 import "./RedCard.css"
+import RedCardPanelAnnualSavings from "./RedCardPanels/RedCardPanelAnnualSavings";
 import RedCardPanelApplyNow from "./RedCardPanels/RedCardPanelApplyNow";
 import RedCardPanelBenefits from "./RedCardPanels/RedCardPanelBenefits";
 import RedCardPanelDebitCard from "./RedCardPanels/RedCardPanelDebitCard";
@@ -43,7 +44,7 @@ function RedCard() {
         </div>
 
         <div className="RedCard-panel-container">
-
+          <RedCardPanelAnnualSavings />
         </div>
 
       </div>
