@@ -18,7 +18,7 @@ function RedCardPanelDebitCard() {
 
             <div className="RedCardPanelDebitCard-left">
                 <h2>Save 5% with a Debit RedCard.<sup id="RedCardPanelDebitCard-title-superscript"><u >1</u></sup></h2>
-                <h3>Pay for your Target purchases directly from your existing checking account.</h3>
+                <h3>Pay for your Market purchases directly from your existing checking account.</h3>
                 <p><sup id="RedCardPanelDebitCard-footnote-superscript"><u>1</u></sup>Some restrictions apply. <u>See below</u> for RedCard benefits & program rules.</p>
                 <button id="RedCard-CTA-button-black">
                     <NavLink exact to="/">Apply for Debit</NavLink>

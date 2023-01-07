@@ -15,7 +15,6 @@ import { CTACreditButton, CTADebitButton, CTAReloadableButton } from "../../abst
 /******************************* COMPONENT *******************************/
 function RedCardPanelTable() {
 
-
     const check = (
         <td>
             <div className="check-mark-container">

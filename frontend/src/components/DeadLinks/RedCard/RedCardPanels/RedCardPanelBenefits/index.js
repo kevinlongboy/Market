@@ -100,7 +100,7 @@ function RedCardPanelBenefits() {
                             <img src={shipt} alt="gifts" id="more-benefits-icon"></img>
                         </div>
                         <p>Shipt</p>
-                        <p id="wider-details">Save 5% on your same day delivery order placed on Target.com.<sup className="RedCard-benefits-superscript">1</sup></p>
+                        <p id="wider-details">Save 5% on your same day delivery order placed on Market.com.<sup className="RedCard-benefits-superscript">1</sup></p>
                     </div>
                 </div>
 

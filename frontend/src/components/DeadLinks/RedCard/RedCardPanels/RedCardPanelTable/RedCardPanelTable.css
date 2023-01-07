@@ -86,7 +86,7 @@
 
 .RedCard-table-card-image {
     width: 200px;
-    height: 100px;
+    height: 127px;
 
     display: block;
     object-fit: cover;
@@ -97,6 +97,9 @@
 
     display: block;
     object-fit: cover;
+}
+#RedCard-table-stack-image {
+    object-fit: contain;
 }
 
 /* Table Head */

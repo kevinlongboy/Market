@@ -1,5 +1,6 @@
 .RedCardPanelDebitCard-component {
     width: 100%;
+    max-width: 1400px;
 
     margin: 90px 16px 16px;
     padding: 0px 40px 32px;
