@@ -18,7 +18,7 @@ function Square() {
 
   /**************** render component *****************/
   return (
-    <div className="landing-wrapper-container">
+    // <div className="landing-wrapper-container">
       <div id="Square-component">
 
         <div className="Square-panel-container" id="Square-panel-container-full-width">
@@ -38,7 +38,7 @@ function Square() {
         </div>
 
       </div>
-    </div>
+    // </div>
   )
 }
 

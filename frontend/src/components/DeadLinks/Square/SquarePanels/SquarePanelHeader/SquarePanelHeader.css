@@ -1,12 +1,14 @@
 #SquarePanelHeader-component {
     width: 100%;
-    max-width: 1400px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 
 /********** NavBar **********/
 .SquarePanelHeader-navbar-container {
-    width: 100%;
+    width: 100vw;
 
     padding: 20px 0px;
 
@@ -33,7 +35,9 @@
 
 /********** CTA **********/
 .SquarePanelHeader-CTA-container {
-    width: 100%;
+    width: 100vw;
+    /* max-width: 1400px; */
+
     background-color: #cb0200;
 
     padding-top: 16px;
@@ -41,6 +45,7 @@
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     color: #fff;
     font-weight: 700;

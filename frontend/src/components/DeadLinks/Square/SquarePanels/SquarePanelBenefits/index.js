@@ -14,6 +14,8 @@ function SquarePanelBenefits() {
     /**************** render component *****************/
     return (
         <div className="SquarePanelBenefits-component">
+            <div className="SquarePanelBenefits-content-component">
+
 
             <div className="SquarePanelBenefits-header-container">
                 <h2>Benefits you'll love</h2>
@@ -73,6 +75,7 @@ function SquarePanelBenefits() {
                 </div>
             </div>
 
+            </div>
         </div>
     )
 }

@@ -1,9 +1,21 @@
 .SquarePanelBenefits-component {
-    width: 100%;
+    width: 100vw;
+    /* max-width: 1400px; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.SquarePanelBenefits-content-component {
+    width: 100vw;
+    max-width: 1400px;
+
     padding: 32px;
 
     display: flex;
     flex-direction: column;
+
 }
 #SquarePanelBenefits-superscript {
     font-size: 10px;

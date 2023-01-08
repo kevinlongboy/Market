@@ -19,6 +19,9 @@ function SquarePanelRedemption() {
     /**************** render component *****************/
     return (
         <div className="SquarePanelRedemption-component">
+        <div className="SquarePanelRedemption-content-container">
+
+
             <div className="SquarePanelRedemption-section-container">
                 <div className="SquarePanelRedemption-section-header-container">
                     <h2>How to earn</h2>
@@ -105,6 +108,8 @@ function SquarePanelRedemption() {
                     </div>
                 </div>
             </div>
+
+        </div>
         </div>
     )
 }

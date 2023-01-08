@@ -1,17 +1,27 @@
 .SquarePanelRedCard-component {
-    width: 100%;
+    width: 100vw;
+    /* max-width: 1400px; */
+
+    padding: 0px 0px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SquarePanelRedCard-content-container {
+    width: 100vw;
     max-width: 1400px;
     background-color: #f7f7f7;
 
     margin: 0px 4px;
     padding: 32px 0px;
 
-
     display: flex;
     flex-direction: row;
-
-
 }
+
 
 
 /********** IMAGE **********/
