@@ -17,7 +17,7 @@ function SquarePanelBenefits() {
 
             <div className="SquarePanelBenefits-header-container">
                 <h2>Benefits you'll love</h2>
-                <p>Use them in store or online too. <u>See Target Circle program rules.</u></p>
+                <p>Use them in store or online too. <u>See Market Square program rules.</u></p>
             </div>
 
             <div className="SquarePanelBenefits-cards-container">
@@ -28,7 +28,7 @@ function SquarePanelBenefits() {
                             <img src={benefitsIcon1} alt="Square benefits icon" id="Square-benefits-icon"></img>
                         </div>
                         <h3>1% earnings</h3>
-                        <p className="line-1A-text-body">Earn 1% <sup id="SquarePanelBenefits-superscript">1</sup> when you shop to redeem at Target later or continue saving 5% <sup id="SquarePanelBenefits-superscript">2</sup> with RedCard™.</p>
+                        <p className="line-1A-text-body">Earn 1% <sup id="SquarePanelBenefits-superscript">1</sup> when you shop to redeem at Market later or continue saving 5% <sup id="SquarePanelBenefits-superscript">2</sup> with RedCard™.</p>
                     </div>
 
                     <div className="SquarePanelBenefits-card">
@@ -57,15 +57,15 @@ function SquarePanelBenefits() {
                             <img src={benefitsIcon4} alt="Square benefits icon" id="Square-benefits-icon"></img>
                         </div>
                         <h3 className="line-2-header">Community support votes</h3>
-                        <p>Earn a community support vote with every trip & use them to help direct where Target gives. <sup id="SquarePanelBenefits-superscript">3</sup></p>
+                        <p>Earn a community support vote with every trip & use them to help direct where Market gives. <sup id="SquarePanelBenefits-superscript">3</sup></p>
                         <span>View nonprofits</span>
                     </div>
 
-                    <div className="SquarePanelBenefits-card">
+                    <div className="SquarePanelBenefits-card" id="SquarePanelBenefits-card-2C">
                         <div id="Square-benefits-icon-container">
                             <img src={benefitsIcon5} alt="Square benefits icon" id="Square-benefits-icon"></img>
                         </div>
-                        <h3 className="line-2-header">Target Circle Partnerships</h3>
+                        <h3 className="line-2-header">Market Square Partnerships</h3>
                         <p className="line-2C-text-body">We’ve teamed up with some of your favorite brands to bring you even more fantastic deals.</p>
                         <span>View partners</span>
                     </div>

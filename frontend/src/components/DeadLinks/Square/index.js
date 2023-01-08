@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import "./Square.css"
 import SquarePanelBenefits from "./SquarePanels/SquarePanelBenefits";
 import SquarePanelHeader from "./SquarePanels/SquarePanelHeader";
+import SquarePanelRedemption from "./SquarePanels/SquarePanelRedemption";
 
 
 /******************************* COMPONENT *******************************/
@@ -28,6 +29,7 @@ function Square() {
         </div>
 
         <div className="Square-panel-container">
+          <SquarePanelRedemption />
         </div>
 
         <div className="Square-panel-container">

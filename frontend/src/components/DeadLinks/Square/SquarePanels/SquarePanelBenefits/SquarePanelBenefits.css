@@ -104,6 +104,7 @@
     object-fit: contain;
 }
 
+/* Exceptions */
 /* Line 1 */
 .line-1A-text-body {
     width: 300px;
@@ -118,4 +119,7 @@
 }
 .line-2C-text-body {
     width: 230.67px;
+}
+#SquarePanelBenefits-card-2C {
+    padding: 16px 25.5px 20px;
 }
