@@ -23,6 +23,7 @@ import FavoritesPage from "./components/Favorites/FavoritesPage";
 import Footer from "./components/Footer";
 import RedCard from "./components/DeadLinks/RedCard";
 import WeeklyAd from "./components/DeadLinks/WeeklyAd";
+import Square from "./components/DeadLinks/Square";
 
 
 /******************************* COMPONENT *******************************/
@@ -117,6 +118,10 @@ function App() {
 
           <Route exact path={'/redcard'}>
             <RedCard />
+          </Route>
+
+          <Route exact path={'/square'}>
+            <Square />
           </Route>
 
           {/* <Route exact path={'/square'}>

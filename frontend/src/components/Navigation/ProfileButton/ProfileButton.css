@@ -139,6 +139,21 @@
     color: #333;
 }
 
+#Profile-nav-square-logo-container {
+    width: 93.38px;
+
+    display: flex;
+
+    /* border: 1px solid red; */
+}
+#Profile-nav-square-logo {
+    width: 100px;
+    height: 45px;
+
+    padding: 0px;
+    object-fit: cover;
+}
+
 #heart-icon-ProfileButtonModal {
     padding-right: 7px;
 }

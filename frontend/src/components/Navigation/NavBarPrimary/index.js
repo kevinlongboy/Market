@@ -20,7 +20,7 @@ function NavBarPrimary() {
           <div className="NavBarMain-right-container">
             <p><NavLink exact to={'/weeklyad'}>Weekly Ad</NavLink></p>
             <p><NavLink exact to={'/redcard'}>RedCard</NavLink></p>
-            <p><a href="https://www.target.com/circle">Market Square</a></p>
+            <p><NavLink exact to={'/square'}>Market Square</NavLink></p>
           </div>
         </div>
 

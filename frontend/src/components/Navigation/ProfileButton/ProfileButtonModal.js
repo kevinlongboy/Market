@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { NavLink, Redirect, useHistory } from "react-router-dom";
 // local files
 import * as sessionActions from '../../../store/sessionReducer';
+import square from "../../../images/Square/square-logo.png"
 
 
 /******************************* COMPONENT *******************************/
@@ -38,7 +39,6 @@ function ProfileButtonModal({ user, modalFunc }) {
           </NavLink>
         </div>
 
-
         <div onClick={(e) => modalFunc(false)}>
           <NavLink exact to={'/account/orders'}>
             <div>Orders</div>
@@ -47,8 +47,8 @@ function ProfileButtonModal({ user, modalFunc }) {
         </div>
 
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/favorites'}>
-            <div><i class="fa-regular fa-heart" id="heart-icon-ProfileButtonModal"></i>Favorites</div>
+          <NavLink exact to={'/square'}>
+            <div id="Profile-nav-square-logo-container"><img src={square} alt="Square logo" id="Profile-nav-square-logo"></img></div>
             <div></div>
           </NavLink>
         </div>
@@ -60,12 +60,26 @@ function ProfileButtonModal({ user, modalFunc }) {
           </NavLink>
         </div>
 
-          <button
-            onClick={logout}
-            id='ProfileButton-modal-list-SignOut-button'
-          >
-            Sign Out
-          </button>
+        <div onClick={(e) => modalFunc(false)}>
+          <NavLink exact to={'/favorites'}>
+            <div><i class="fa-regular fa-heart" id="heart-icon-ProfileButtonModal"></i>Favorites</div>
+            <div></div>
+          </NavLink>
+        </div>
+
+        <div onClick={(e) => modalFunc(false)}>
+          <NavLink exact to={'/redcard'}>
+            <div>RedCard</div>
+            <div>Exclusives</div>
+          </NavLink>
+        </div>
+
+        <button
+          onClick={logout}
+          id='ProfileButton-modal-list-SignOut-button'
+        >
+          Sign Out
+        </button>
       </>
     )
 
