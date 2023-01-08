@@ -8,6 +8,7 @@ import icon4 from "../../../../../images/Square/square-redemption-4.png";
 import icon5 from "../../../../../images/Square/square-redemption-5.png";
 import icon6 from "../../../../../images/Square/square-redemption-6.png";
 import icon7 from "../../../../../images/Square/square-redemption-7.png";
+import icon8 from "../../../../../images/Square/square-redemption-8.png";
 
 
 
@@ -97,7 +98,7 @@ function SquarePanelRedemption() {
 
                     <div className="SquarePanelRedemption-section-card">
                         <div id="redemption-icon-container">
-                            <img src={icon4} alt="Square redemption icon" id="redemption-icon-image"></img>
+                            <img src={icon8} alt="Square redemption icon" id="redemption-icon-image"></img>
                         </div>
                         <h3 id="redemption-card2-title">After a purchase</h3>
                         <p>Enter receipt numbers within 7 days to collect earnings from eligible in-store purchases.</p>
