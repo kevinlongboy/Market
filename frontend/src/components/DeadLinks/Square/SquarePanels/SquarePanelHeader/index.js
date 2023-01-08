@@ -48,7 +48,7 @@ function SquarePanelHeader() {
 
         <div className="SquarePanelHeader-CTA-container">
             <div className="SquarePanelHeader-CTA-container-left">
-                <span>Meet Market rewards program</span>
+                <span>Meet Market's rewards program</span>
                 <h1>Join Market Square™ to get perks, deals & a whole lot more every time you shop</h1>
                 <div className="SquarePanelHeader-CTA-buttons-container">
                     {buttons}

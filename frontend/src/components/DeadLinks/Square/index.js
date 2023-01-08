@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // local files
 import "./Square.css"
+import SquarePanelBenefits from "./SquarePanels/SquarePanelBenefits";
 import SquarePanelHeader from "./SquarePanels/SquarePanelHeader";
 
 
@@ -23,6 +24,7 @@ function Square() {
         </div>
 
         <div className="Square-panel-container">
+          <SquarePanelBenefits />
         </div>
 
         <div className="Square-panel-container">
