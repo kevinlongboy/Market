@@ -174,7 +174,7 @@ function AccountPage() {
 
           <h2>No reviews found</h2>
 
-          <p>Reviews will appear here after you’ve written a review.</p>
+          <p>Reviews will appear here after you’ve made a post.</p>
         </div>
       </>
     )
