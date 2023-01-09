@@ -48,7 +48,7 @@ function SquarePanelHeader() {
         </div>
 
         <div className="SquarePanelHeader-CTA-container">
-            <div className="SquarePanelHeader-CTA-container" style={{maxWidth:'1400px'}}>
+            <div className="SquarePanelHeader-CTA-container" style={{maxWidth:'1250px'}}>
 
                 <div className="SquarePanelHeader-CTA-container-left">
                     <span>Meet Market's rewards program</span>

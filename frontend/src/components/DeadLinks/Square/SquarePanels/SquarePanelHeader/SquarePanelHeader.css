@@ -56,7 +56,7 @@
 
 /* CTA Left */
 .SquarePanelHeader-CTA-container-left  {
-    padding-left: 80px;
+    padding-left: 100px;
 
     display: flex;
     flex-direction: column;
