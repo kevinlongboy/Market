@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 // local files
 import './LandingAdvertPanelSubRight.css'
-import xbox from '../../../../images/xbox-s.png'
+import xbox from '../../../../images/Landing/xbox-s.png'
 
 
 /******************************* COMPONENT *******************************/

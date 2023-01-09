@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 // local files
 import './LandingAdvertPanelSubLeft.css'
-import airpods from '../../../../images/airpods-pro.png'
+import airpods from '../../../../images/Landing/airpods-pro.png'
 
 
 /******************************* COMPONENT *******************************/

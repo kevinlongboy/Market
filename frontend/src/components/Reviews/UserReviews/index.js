@@ -5,10 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, Redirect, useParams } from "react-router-dom";
 import  StarRatings from 'react-star-ratings';
 // local files
-import DeleteReview from "../DeleteReview"
-import { thunkReadAllUserReviews } from "../../../store/reviewsReducer";
 import "./UserReviews.css"
 import NavBarAccount from "../../Navigation/NavBarAccount";
+import DeleteReview from "../DeleteReview"
+import { thunkReadAllUserReviews } from "../../../store/reviewsReducer";
+import noReviewsIcon from "../../../images/Account/account-no-reviews.png";
 
 /******************************* COMPONENT *******************************/
 function UserReviews() {
@@ -19,13 +20,84 @@ function UserReviews() {
 
   /************ key into pertinent values ************/
   const reviews = Object.values(reviewsState)
+  console.log("reviews", reviews)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
 
   useEffect(() => {
       dispatch(thunkReadAllUserReviews());
-  }, [dispatch, reviewsState])
+  }, [dispatch])
+
+  /************* conditional components **************/
+  let reviewsCard;
+
+  if (reviews && reviews.length) {
+    reviewsCard =  (
+        <>
+        {reviews && reviews.map((review) => (
+          <>
+            <div className="review-card-container">
+
+              <div className="review-card-container-left">
+                {review && <NavLink exact to={`/departments/${review.Product.departmentId}/products/${review.Product.id}`}>
+                  <img
+                    src={review.Product.previewImage}
+                    id='review-card-thumbnail'
+                    >
+                  </img>
+                </NavLink>}
+              </div>
+
+              <div className="review-card-container-right">
+                <p className="review-card-product-name">{review.Product.name}</p>
+                <p id="review-card-product-details">{review.title}</p>
+                <p id="review-card-product-details">
+                <StarRatings
+                  isSelectable={false}
+                  rating={review.rating}
+                  starRatedColor="#ffd700"
+                  numberOfStars={5}
+                  name='rating'
+                  starDimension='12px'
+                  starSpacing='0'
+                  />
+                </p>
+                <p className="review-card-product-description">{review.description}</p>
+
+                <div className="modify-review-options-container">
+                  <NavLink
+                    exact to={`/reviews/${review.id}/edit`}
+                    className="UserReviews-modify-review-button"
+                    >
+                    Edit review
+                  </NavLink>
+
+                  <DeleteReview reviewId={review.id} className={'UserReviews-modify-review-button'}/>
+                </div>
+              </div>
+
+            </div>
+          </>
+        ))}
+      </>
+    )
+  } else {
+    reviewsCard = (
+      <>
+        <div className='AccountPage-empty-card'>
+
+          <div className='AccountPage-empty-card-image-container'>
+            <img src={noReviewsIcon} alt="No orders icon" className='AccountPage-empty-card-image'></img>
+          </div>
+
+          <h2>No reviews found</h2>
+
+          <p>Reviews will appear here after you’ve written a review.</p>
+        </div>
+      </>
+    )
+  }
 
 
   /**************** render component *****************/
@@ -55,53 +127,7 @@ function UserReviews() {
             </div>
 
           <div className="UserReviews-card-container">
-
-
-            {reviews && reviews.map((review) => (
-              <>
-              <div className="review-card-container">
-
-                <div className="review-card-container-left">
-                  {review && <NavLink exact to={`/departments/${review.Product.departmentId}/products/${review.Product.id}`}>
-                    <img
-                      src={review.Product.previewImage}
-                      id='review-card-thumbnail'
-                      >
-                    </img>
-                  </NavLink>}
-                </div>
-
-                <div className="review-card-container-right">
-                  <p className="review-card-product-name">{review.Product.name}</p>
-                  <p id="review-card-product-details">{review.title}</p>
-                  <p id="review-card-product-details">
-                  <StarRatings
-                    isSelectable={false}
-                    rating={review.rating}
-                    starRatedColor="#ffd700"
-                    numberOfStars={5}
-                    name='rating'
-                    starDimension='12px'
-                    starSpacing='0'
-                    />
-                  </p>
-                  <p className="review-card-product-description">{review.description}</p>
-
-                  <div className="modify-review-options-container">
-                    <NavLink
-                      exact to={`/reviews/${review.id}/edit`}
-                      className="UserReviews-modify-review-button"
-                      >
-                      Edit review
-                    </NavLink>
-
-                    <DeleteReview reviewId={review.id} className={'UserReviews-modify-review-button'}/>
-                  </div>
-                </div>
-
-              </div>
-            </>
-          ))}
+            {reviewsCard}
           </div>
 
           </div>

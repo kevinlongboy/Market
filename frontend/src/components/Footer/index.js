@@ -3,9 +3,9 @@
 
 // local files
 import "./Footer.css"
-import footerImage from "../../images/branding/market-footer-image.png";
 import { Link, NavLink } from "react-router-dom";
-import cranebnbLogo from "../../images/CraneBnB-logo-square.png";
+import footerImage from "../../images/Footer/market-footer-image.png";
+import cranebnbLogo from "../../images/Footer/CraneBnB-logo-square.png";
 
 /******************************* COMPONENT *******************************/
 function Footer() {

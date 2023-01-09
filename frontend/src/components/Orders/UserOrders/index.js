@@ -5,8 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, Redirect, useParams } from "react-router-dom";
 import { convertExactDate, normalizeArray } from "../../../component-resources";
 // local files
-import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
 import "./UserOrders.css"
+import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
+import noOrdersIcon from "../../../images/Account/account-no-orders.png";
+
 
 /******************************* COMPONENT *******************************/
 function UserOrders() {
@@ -23,7 +25,69 @@ function UserOrders() {
 
   useEffect(() => {
       dispatch(thunkReadAllUserOrders());
-  }, [dispatch, ordersState])
+  }, [dispatch])
+
+  /************* conditional components **************/
+  let ordersCard;
+
+  if (orders && orders.length) {
+    ordersCard = (
+      <>
+        {orders && orders.map((order) => {
+          return (
+            <div className='UserOrders-card-container'>
+              <div className='UserOrders-card-title-container'>
+
+                <div>{order && convertExactDate(order.createdAt)}</div>
+                  <NavLink
+                    exact
+                    to={`/orders/${order.id}`}
+                    id='UserOrders-card-title-redirect'
+                  >
+                    View order
+                  </NavLink>
+                </div>
+
+                <div className='UserOrders-card-details-container'>
+                  <p>${order.total}</p>
+                  <p>Order: {order.id}</p>
+                  <div>
+                    <i class="fa-solid fa-check"></i>
+                    {order.status}
+                  </div>
+                </div>
+
+              <div className="UserOrders-card-thumbnail-container">
+                {order && Object.values(order.Products).map(product => {
+                  return (
+                  <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`}>
+                    <img src={product.previewImage} className="UserOrders-card-thumbnail"></img>
+                  </NavLink>
+                  )
+                })}
+              </div>
+          </div>
+          )
+        })}
+      </>
+    )
+
+  } else {
+    ordersCard = (
+      <>
+        <div className='AccountPage-empty-card'>
+
+          <div className='AccountPage-empty-card-image-container'>
+            <img src={noOrdersIcon} alt="No orders icon" className='AccountPage-empty-card-image'></img>
+          </div>
+
+          <h2>No orders found</h2>
+
+          <p>Orders will appear here after you’ve made a purchase.</p>
+        </div>
+      </>
+    )
+  }
 
 
   /**************** render component *****************/
@@ -48,51 +112,8 @@ function UserOrders() {
           </div>
 
           <div className="UserOrders-cards-list-container">
-
-            {orders && orders.map((order) => {
-
-              return (
-
-                <div className='UserOrders-card-container'>
-
-                <div className='UserOrders-card-title-container'>
-                  <div>{order && convertExactDate(order.createdAt)}</div>
-
-                  <NavLink
-                    exact
-                    to={`/orders/${order.id}`}
-                    id='UserOrders-card-title-redirect'
-                    >
-                    View order
-                  </NavLink>
-                </div>
-
-                <div className='UserOrders-card-details-container'>
-                  <p>${order.total}</p>
-                  <p>Order: {order.id}</p>
-                  <div>
-                    <i class="fa-solid fa-check"></i>
-                    {order.status}
-                  </div>
-                </div>
-
-                <div className="UserOrders-card-thumbnail-container">
-                {order && Object.values(order.Products).map(product => {
-                  return (
-
-                    <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`}>
-                        <img src={product.previewImage} className="UserOrders-card-thumbnail"></img>
-                      </NavLink>
-                    )
-                  })}
-                </div>
-
-              </div>
-          )
-          })}
+            {ordersCard}
           </div>
-
-
       </div>
     </div>
   )

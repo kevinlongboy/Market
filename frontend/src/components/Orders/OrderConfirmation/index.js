@@ -7,8 +7,8 @@ import { normalizeArray } from "../../../component-resources";
 import { thunkReadAllUserOrders } from "../../../store/ordersReducer";
 // local files
 import "./OrderConfirmation.css"
-import thanksImage from "../../../images/branding/market-order-confirmation-image.png";
-import truckImage from "../../../images/branding/market-village-delivery-truck.png";
+import thanksImage from "../../../images/Orders/market-order-confirmation-image.png";
+import truckImage from "../../../images/branding/market-village/market-village-delivery-truck-2.png";
 
 
 /******************************* COMPONENT *******************************/

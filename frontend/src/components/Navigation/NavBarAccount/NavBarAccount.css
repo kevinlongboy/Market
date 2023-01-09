@@ -18,7 +18,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../../../images/account-wallpaper.jpeg");
+    background-image: url("../../../images/Account/account-wallpaper.jpeg");
     background-position: center;
     background-size: 215%;
 
@@ -39,7 +39,7 @@
     /* width: 210.42px; */
     width: 250px;
     height: 25.59;
-    background-image: url("../../../images/account-ribbon.png");
+    background-image: url("../../../images/Account/account-ribbon.png");
     background-position: center;
     background-size: 262px 35px;
     /* background-color: #CC0000; */

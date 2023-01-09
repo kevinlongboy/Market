@@ -2,14 +2,16 @@
 // libraries
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { NavLink, Redirect } from 'react-router-dom';
 import  StarRatings from 'react-star-ratings';
 // local files
+import "./AccountPage.css"
 import NavBarAccount from '../Navigation/NavBarAccount';
 import { thunkReadAllUserOrders } from '../../store/ordersReducer';
 import { thunkReadAllUserReviews } from '../../store/reviewsReducer';
-import "./AccountPage.css"
-import { NavLink, Redirect } from 'react-router-dom';
 import { convertExactDate } from '../../component-resources';
+import noOrdersIcon from "../../images/Account/account-no-orders.png";
+import noReviewsIcon from "../../images/Account/account-no-reviews.png";
 
 /******************************* COMPONENT *******************************/
 function AccountPage() {
@@ -37,6 +39,7 @@ function AccountPage() {
 
   /************* conditional components **************/
   let ordersCard;
+
   if (orders && orders.length) {
     let mostRecentOrder = orders[orders.length - 1]
     let products = Object.values(mostRecentOrder.Products)
@@ -80,7 +83,25 @@ function AccountPage() {
 
       </>
     )
+
+  } else {
+    ordersCard = (
+      <>
+        <div className='AccountPage-empty-card'>
+
+          <div className='AccountPage-empty-card-image-container'>
+            <img src={noOrdersIcon} alt="No orders icon" className='AccountPage-empty-card-image'></img>
+          </div>
+
+          <h2>No orders found</h2>
+
+          <p>Orders will appear here after you’ve made a purchase.</p>
+        </div>
+      </>
+    )
   }
+
+
 
   let reviewsCard;
 
@@ -140,6 +161,21 @@ function AccountPage() {
         </div>
 
 
+      </>
+    )
+  } else {
+    reviewsCard =(
+      <>
+        <div className='AccountPage-empty-card'>
+
+          <div className='AccountPage-empty-card-image-container'>
+            <img src={noReviewsIcon} alt="No orders icon" className='AccountPage-empty-card-image'></img>
+          </div>
+
+          <h2>No reviews found</h2>
+
+          <p>Reviews will appear here after you’ve written a review.</p>
+        </div>
       </>
     )
   }
