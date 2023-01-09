@@ -18,9 +18,9 @@ function NavBarPrimary() {
           </div>
 
           <div className="NavBarMain-right-container">
-            <p><NavLink exact to={'/weeklyad'}>Weekly Ad</NavLink></p>
-            <p><NavLink exact to={'/redcard'}>RedCard</NavLink></p>
-            <p><NavLink exact to={'/square'}>Market Square</NavLink></p>
+            <p><NavLink exact to={'/weeklyad'} onClick={(e) => window.scrollTo(0,0)}>Weekly Ad</NavLink></p>
+            <p><NavLink exact to={'/redcard'} onClick={(e) => window.scrollTo(0,0)}>RedCard</NavLink></p>
+            <p><NavLink exact to={'/square'} onClick={(e) => window.scrollTo(0,0)}>Market Square</NavLink></p>
           </div>
         </div>
 

@@ -116,6 +116,7 @@ function LoginFormPage() {
               <button
               className='login-or-signup-form-button'
               id='login-or-signup-form-proceed-button'
+              onClick={(e) => window.scrollTo(0,0)}
               >
                 Create your Market account
               </button>

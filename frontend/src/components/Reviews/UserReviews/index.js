@@ -39,7 +39,7 @@ function UserReviews() {
             <div className="review-card-container">
 
               <div className="review-card-container-left">
-                {review && <NavLink exact to={`/departments/${review.Product.departmentId}/products/${review.Product.id}`}>
+                {review && <NavLink exact to={`/departments/${review.Product.departmentId}/products/${review.Product.id}`} onClick={(e) => window.scrollTo(0,0)}>
                   <img
                     src={review.Product.previewImage}
                     id='review-card-thumbnail'
@@ -68,6 +68,7 @@ function UserReviews() {
                   <NavLink
                     exact to={`/reviews/${review.id}/edit`}
                     className="UserReviews-modify-review-button"
+                    onClick={(e) => window.scrollTo(0,0)}
                     >
                     Edit review
                   </NavLink>
@@ -112,7 +113,11 @@ function UserReviews() {
             <div className='UserReviews-right'>
 
               <div className="UserReviews-directory-container">
-                <NavLink exact to={'/account'} id="UserReviews-Account-redirect-button">
+                <NavLink
+                  exact to={'/account'}
+                  id="UserReviews-Account-redirect-button"
+                  onClick={(e) => window.scrollTo(0,0)}
+                >
                   Account
                 </NavLink>
                 <p>/</p>

@@ -80,7 +80,11 @@ function ProductPage() {
     )
   } else {
     displayReviewButton = (
-      <NavLink exact to={`/products/${product.id}/add-review`} id="review-button-link">
+      <NavLink
+        exact to={`/products/${product.id}/add-review`}
+        id="review-button-link"
+        onClick={(e) => window.scrollTo(0,0)}
+      >
         <button id="ProductPage-write-a-review-button">Write a review</button>
       </NavLink>
     )
@@ -98,12 +102,20 @@ function ProductPage() {
           <div className="ProductPage-header-container">
 
             <div className="ProductPage-directory-container">
-              <NavLink exact to={'/'}>
+              <NavLink
+                exact to={'/'}
+                onClick={(e) => window.scrollTo(0,0)}
+              >
                 Market
               </NavLink>
+
               <p>/</p>
-              <NavLink exact to={`/departments/${product.Department.id}/`}>
-              {product.Department.name}
+
+              <NavLink
+                exact to={`/departments/${product.Department.id}/`}
+                onClick={(e) => window.scrollTo(0,0)}
+              >
+                {product.Department.name}
               </NavLink>
             </div>
 

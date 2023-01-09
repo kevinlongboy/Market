@@ -89,6 +89,7 @@ function OrderConfirmation() {
               exact
               to={'/account/orders'}
               id='OrderConfirmation-redirect-link'
+              onClick={(e) => window.scrollTo(0,0)}
               >
               Visit order history
             </NavLink>

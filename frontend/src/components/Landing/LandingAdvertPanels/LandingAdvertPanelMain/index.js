@@ -53,6 +53,7 @@ function LandingAdvertPanelMain() {
                     <NavLink
                     exact
                     to={`/departments/5/products/${product.id}`}
+                    onClick={(e) => window.scrollTo(0,0)}
                     >
                         <img
                             src={product.previewImage}

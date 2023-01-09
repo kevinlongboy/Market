@@ -46,6 +46,7 @@ function FavoritesPage() {
                 <Link
                 exact
                 to={`/departments/${product.departmentId}/products/${product.productId}`}
+                onClick={(e) => window.scrollTo(0,0)}
                 >
                 <img
                 src={product.previewImage}
@@ -60,9 +61,9 @@ function FavoritesPage() {
                   <div className="product-card-name-container">
                     <Link
                         key={`${product.id}`}
-                        exact
-                        to={`/departments/${product.departmentId}/products/${product.productId}`}
+                        exact to={`/departments/${product.departmentId}/products/${product.productId}`}
                         className="product-card-name"
+                        onClick={(e) => window.scrollTo(0,0)}
                         >
                         {product.name}
                     </Link>
@@ -135,10 +136,10 @@ function FavoritesPage() {
             <p className="no-favorites-message-subtext">Here are some popular categories to get you started</p>
 
             <div className="no-favorites-message-suggested-categories">
-              <NavLink exact to={'/departments/5'}>Electronics</NavLink>
-              <NavLink exact to={'/departments/6'}>Video Games</NavLink>
-              <NavLink exact to={'/departments/9'}>Furniture</NavLink>
-              <NavLink exact to={'/departments/8'}>Pets</NavLink>
+              <NavLink exact to={'/departments/5'} onClick={(e) => window.scrollTo(0,0)}>Electronics</NavLink>
+              <NavLink exact to={'/departments/6'} onClick={(e) => window.scrollTo(0,0)}>Video Games</NavLink>
+              <NavLink exact to={'/departments/9'} onClick={(e) => window.scrollTo(0,0)}>Furniture</NavLink>
+              <NavLink exact to={'/departments/8'} onClick={(e) => window.scrollTo(0,0)}>Pets</NavLink>
             </div>
         </div>
         </>
@@ -154,7 +155,7 @@ function FavoritesPage() {
             <div><i class="fa-solid fa-heart" id="heart-icon-UserFavorites"></i> {'  '} Favorites</div>
 
             <div id="UserFavorites-directory-container">
-                <NavLink exact to={'/'}>
+                <NavLink exact to={'/'} onClick={(e) => window.scrollTo(0,0)}>
                     Market
                 </NavLink>
                 <p>/</p>

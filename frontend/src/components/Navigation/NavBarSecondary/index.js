@@ -34,7 +34,7 @@ function NavBarSecondary({ isLoaded }){
 
 
         <div className='NavBarAccount-left'>
-            <NavLink exact to="/"><img src={logo} id="navbar-logo"></img></NavLink>
+            <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}><img src={logo} id="navbar-logo"></img></NavLink>
             <CategoriesButton />
             {/* <CategoriesButton allDepartments={Object.values(departmentsState.allDepartments)} /> */}
         </div>
@@ -45,7 +45,7 @@ function NavBarSecondary({ isLoaded }){
           {/* <ProfileButton /> */}
 
 
-          <NavLink exact to="/cart">
+          <NavLink exact to="/cart" onClick={(e) => window.scrollTo(0,0)}>
             <div id="NavBarAccount-cart-button-container">
               <i class="fa-solid fa-cart-shopping" id='NavBarAccount-cart-button'></i>
             </div>

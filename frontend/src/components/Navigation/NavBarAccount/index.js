@@ -29,21 +29,21 @@ function NavBarAccount({ user }) {
             <div className="NavBarAccount-list-container">
 
                 <div>
-                <NavLink exact to={'/account'}>
+                <NavLink exact to={'/account'} onClick={(e) => window.scrollTo(0,0)}>
                     <div>Account </div>
                     <div>Overview</div>
                 </NavLink>
                 </div>
 
                 <div>
-                <NavLink exact to={'/account/orders'}>
+                <NavLink exact to={'/account/orders'} onClick={(e) => window.scrollTo(0,0)}>
                     <div>Orders</div>
                     <div>Track, manage, & return</div>
                 </NavLink>
                 </div>
 
                 <div>
-                <NavLink exact to={'/account/reviews'}>
+                <NavLink exact to={'/account/reviews'} onClick={(e) => window.scrollTo(0,0)}>
                     <div>Rate & review</div>
                     <div>See reviews</div>
                 </NavLink>

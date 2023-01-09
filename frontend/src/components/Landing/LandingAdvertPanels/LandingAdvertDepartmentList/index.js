@@ -40,14 +40,14 @@ function LandingAdvertDepartmentList() {
                         key={`${dept.id}`}
                         to={`/departments/${dept.id}`}
                         className="department-card"
+                        onClick={(e) => window.scrollTo(0,0)}
                         >
-
-                        <img
-                        src={dept.url}
-                        className='department-card-thumbnail'
-                        >
-                        </img>
-                        {dept.name}
+                            <img
+                                src={dept.url}
+                                className='department-card-thumbnail'
+                            >
+                            </img>
+                            {dept.name}
                     </NavLink>
                 </div>
             ))}

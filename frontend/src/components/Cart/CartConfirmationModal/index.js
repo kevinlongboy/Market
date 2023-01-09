@@ -55,6 +55,7 @@ function CartConfirmationModal({productId, modalFunc}) {
                   <button
                   className='CartConfirm-button'
                   id='CartConfirm-shopping-button'
+                  onClick={(e) => window.scrollTo(0,0)}
                   >
                     Log in
                   </button>
@@ -67,6 +68,7 @@ function CartConfirmationModal({productId, modalFunc}) {
                   <button
                   className='CartConfirm-button'
                   id='CartConfirm-checkout-button'
+                  onClick={(e) => window.scrollTo(0,0)}
                   >
                       Create account
                   </button>
@@ -115,6 +117,7 @@ function CartConfirmationModal({productId, modalFunc}) {
                       <button
                       className='CartConfirm-button'
                       id='CartConfirm-checkout-button'
+                      onClick={(e) => window.scrollTo(0,0)}
                       >
                           View cart & check out
                       </button>

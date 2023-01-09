@@ -43,6 +43,7 @@ function UserOrders() {
                     exact
                     to={`/orders/${order.id}`}
                     id='UserOrders-card-title-redirect'
+                    onClick={(e) => window.scrollTo(0,0)}
                   >
                     View order
                   </NavLink>
@@ -60,8 +61,11 @@ function UserOrders() {
               <div className="UserOrders-card-thumbnail-container">
                 {order && Object.values(order.Products).map(product => {
                   return (
-                  <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`}>
-                    <img src={product.previewImage} className="UserOrders-card-thumbnail"></img>
+                  <NavLink
+                    exact to={`/departments/${product.departmentId}/products/${product.id}`}
+                    onClick={(e) => window.scrollTo(0,0)}
+                  >
+                      <img src={product.previewImage} className="UserOrders-card-thumbnail"></img>
                   </NavLink>
                   )
                 })}
@@ -100,9 +104,13 @@ function UserOrders() {
           {/* <NavBarAccount user={user} /> */}
 
           <div className="UserOrders-directory-container">
-              <NavLink exact to={'/account'} id="UserOrders-Account-redirect-button">
-                <i class="fa-solid fa-chevron-left"></i>
-                Account
+              <NavLink
+                exact to={'/account'}
+                id="UserOrders-Account-redirect-button"
+                onClick={(e) => window.scrollTo(0,0)}
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                  Account
               </NavLink>
           </div>
 

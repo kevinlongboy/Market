@@ -183,8 +183,7 @@ function SignupFormPage() {
       </form>
 
       <div id='signup-form-proceed-button'>
-        <NavLink exact to={`/login`} id='signup-form-proceed-button'>
-
+        <NavLink exact to={`/login`} id='signup-form-proceed-button' onClick={(e) => window.scrollTo(0,0)}>
             Or sign in
         </NavLink>
       </div>

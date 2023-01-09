@@ -60,6 +60,7 @@ function CategoriesButton() {
                 exact
                 to={`/departments/${department.id}`}
                 className="categories-menu-side-panel-list-item"
+                onClick={(e) => window.scrollTo(0,0)}
                 >
                 <div>{department.name}</div>
               </NavLink>

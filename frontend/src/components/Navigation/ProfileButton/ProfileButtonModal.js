@@ -33,42 +33,42 @@ function ProfileButtonModal({ user, modalFunc }) {
       <>
 
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/account'}>
+          <NavLink exact to={'/account'} onClick={(e) => window.scrollTo(0,0)}>
             <div>Account </div>
             <div>Hello, {user.firstName}</div>
           </NavLink>
         </div>
 
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/account/orders'}>
+          <NavLink exact to={'/account/orders'} onClick={(e) => window.scrollTo(0,0)}>
             <div>Orders</div>
             <div>Track + manage</div>
           </NavLink>
         </div>
 
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/square'}>
+          <NavLink exact to={'/square'} onClick={(e) => window.scrollTo(0,0)}>
             <div id="Profile-nav-square-logo-container"><img src={square} alt="Square logo" id="Profile-nav-square-logo"></img></div>
             <div></div>
           </NavLink>
         </div>
 
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/account/reviews'}>
+          <NavLink exact to={'/account/reviews'} onClick={(e) => window.scrollTo(0,0)}>
             <div>Reviews</div>
             <div>See reviews</div>
           </NavLink>
         </div>
 
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/favorites'}>
+          <NavLink exact to={'/favorites'} onClick={(e) => window.scrollTo(0,0)}>
             <div><i class="fa-regular fa-heart" id="heart-icon-ProfileButtonModal"></i>Favorites</div>
             <div></div>
           </NavLink>
         </div>
 
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/redcard'}>
+          <NavLink exact to={'/redcard'} onClick={(e) => window.scrollTo(0,0)}>
             <div>RedCard</div>
             <div>Exclusives</div>
           </NavLink>
@@ -87,11 +87,11 @@ function ProfileButtonModal({ user, modalFunc }) {
     menuOptions = (
       <>
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/login'}>Sign in</NavLink>
+          <NavLink exact to={'/login'} onClick={(e) => window.scrollTo(0,0)}>Sign in</NavLink>
         </div>
 
         <div onClick={(e) => modalFunc(false)}>
-          <NavLink exact to={'/signup'}>Create Account</NavLink>
+          <NavLink exact to={'/signup'} onClick={(e) => window.scrollTo(0,0)}>Create Account</NavLink>
         </div>
       </>
     )

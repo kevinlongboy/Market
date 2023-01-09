@@ -41,7 +41,11 @@ function OrderDetails() {
       <div className="OrderDetails-head-container">
 
         <div className="OrderDetails-directory-container">
-          <NavLink exact to={'/account/orders'} id="OrderDetails-Account-redirect-button">
+          <NavLink
+            exact to={'/account/orders'}
+            id="OrderDetails-Account-redirect-button"
+            onClick={(e) => window.scrollTo(0,0)}
+          >
             Orders
           </NavLink>
           <p>/</p>
@@ -84,6 +88,7 @@ function OrderDetails() {
                     exact
                     to={`/departments/${product.departmentId}/products/${product.id}`}
                     className='OrderDetails-product-purchase-list-item-container'
+                    onClick={(e) => window.scrollTo(0,0)}
                     >
 
                       <div  className="OrderDetails-product-purchase-list-thumbnail-container">

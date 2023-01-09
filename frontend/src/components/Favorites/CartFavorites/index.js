@@ -52,13 +52,13 @@ function CartFavorites() {
 
               <div className="favorite-card-contents-left-container">
                 <div id="cart-favorites-thumbnail-container">
-                  <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`}>
+                  <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`} onClick={(e) => window.scrollTo(0,0)}>
                     <img src={product.previewImage} id="cart-favorites-thumbnail"></img>
                   </NavLink>
                 </div>
 
                 <div className="cart-favorites-product-info-container">
-                    <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`} id="cart-favorites-product-name">
+                    <NavLink exact to={`departments/${product.departmentId}/products/${product.productId}`} id="cart-favorites-product-name" onClick={(e) => window.scrollTo(0,0)}>
                       <p>{product.name}</p>
                     </NavLink>
                   <div className="cart-favorites-ratings">

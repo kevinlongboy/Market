@@ -53,6 +53,7 @@ function AccountPage() {
               exact
               to={`/orders/${mostRecentOrder.id}`}
               id='blurb-card-title-redirect'
+              onClick={(e) => window.scrollTo(0,0)}
               >
               View order
             </NavLink>
@@ -71,7 +72,11 @@ function AccountPage() {
 
         <div className='blurb-card-thumbnail-container'>
           { products && products.map((product) => (
-            <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`}>
+            <NavLink
+              exact
+              to={`/departments/${product.departmentId}/products/${product.id}`}
+              onClick={(e) => window.scrollTo(0,0)}
+            >
               <img
                 src={product.previewImage}
                 id='blurb-card-order-thumbnail'
@@ -117,6 +122,7 @@ function AccountPage() {
               exact
               to={`/reviews/${mostRecentReview.id}/edit`}
               id='blurb-card-title-redirect'
+              onClick={(e) => window.scrollTo(0,0)}
               >
               View review
             </NavLink>
@@ -148,6 +154,7 @@ function AccountPage() {
               exact
               to={`/departments/${mostRecentReview.Product.departmentId}/products/${mostRecentReview.Product.id}`}
               className='blurb-card-review-product-container'
+              onClick={(e) => window.scrollTo(0,0)}
               >
               <img
                 src={mostRecentReview.Product.previewImage}
@@ -204,6 +211,7 @@ function AccountPage() {
                     exact
                     to={'/account/orders'}
                     id='AccountPage-blurb-title-redirect'
+                    onClick={(e) => window.scrollTo(0,0)}
                   >
                     VIEW ALL
                     <i class="fa-solid fa-chevron-right"></i>
@@ -226,6 +234,7 @@ function AccountPage() {
                     exact
                     to={'/account/reviews'}
                     id='AccountPage-blurb-title-redirect'
+                    onClick={(e) => window.scrollTo(0,0)}
                   >
                     VIEW ALL
                     <i class="fa-solid fa-chevron-right"></i>
@@ -237,12 +246,6 @@ function AccountPage() {
                 </div>
 
               </div>
-
-
-
-
-
-
 
             </div>
 

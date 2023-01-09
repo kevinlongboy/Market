@@ -2,7 +2,7 @@
 // libraries
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import  StarRatings from 'react-star-ratings';
 // local files
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
@@ -63,29 +63,31 @@ function DepartmentPage() {
             <div className="product-card">
 
             <div className="product-card-thumbnail-container">
-            <Link
+            <NavLink
               exact
               to={`/departments/${departmentId}/products/${product.id}`}
+              onClick={(e) => window.scrollTo(0,0)}
             >
               <img
               src={product.previewImage}
               className="product-card-thumbnail"
               // onMouseOver={}
               ></img>
-            </Link>
+            </NavLink>
             </div>
 
 
             <div className="product-card-title-container">
               <div className="product-card-name-container">
-                <Link
+                <NavLink
                   key={`${product.id}`}
                   exact
                   to={`/departments/${departmentId}/products/${product.id}`}
                   className="product-card-name"
+                  onClick={(e) => window.scrollTo(0,0)}
                   >
                     {product.name}
-                </Link>
+                </NavLink>
               </div>
               <div className="product-card-favorite-button-container">
                   <UpdateFavorite productId={product.id}/>
