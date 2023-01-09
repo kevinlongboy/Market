@@ -1327,7 +1327,7 @@ const demoReviews = [
   {
     productId: 2,
     userId: 129, // Wes Trinh
-    rating: 1,
+    rating: 5,
     title: "Soft skin + goodbye pimples!",
     description: "I've been using this product since 2015, literally no regrets until now. It really helps reducing acne if you use it at least twice a week, leaves your face extremely soft and also improves erasing of dark spots. 5/5",
   },
