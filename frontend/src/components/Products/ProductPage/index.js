@@ -1,20 +1,18 @@
 /******************************** IMPORTS ********************************/
 // libraries
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import  StarRatings from 'react-star-ratings';
 import ImageGallery from 'react-image-gallery';
 // local files
-import { Modal } from "../../../context/Modal";
 import "./ProductPage.css"
+import { Modal } from "../../../context/Modal";
 import ProductReviews from "../../Reviews/ProductReviews";
-import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
-import { thunkReadAllProductReviews, thunkReadAllUserReviews } from "../../../store/reviewsReducer";
-import { thunkAddSingleProductToCart } from "../../../store/cartReducer";
-import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
 import AddToCart from "../../Cart/AddToCart";
 import UpdateFavorite from "../../Favorites/UpdateFavorite";
+import { thunkReadSingleProductDetails } from "../../../store/productsReducer";
+import { thunkReadAllProductReviews, thunkReadAllUserReviews } from "../../../store/reviewsReducer";
 import { thunkReadFavorites } from "../../../store/favoritesReducer";
 
 
@@ -50,7 +48,7 @@ function ProductPage() {
 
   useEffect(() => {
       dispatch(thunkReadSingleProductDetails(productId));
-  }, [dispatch, product])
+  }, [dispatch])
 
   useEffect(() => {
     dispatch(thunkReadAllProductReviews(productId));

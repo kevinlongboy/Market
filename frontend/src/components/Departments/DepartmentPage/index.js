@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import  StarRatings from 'react-star-ratings';
 // local files
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
+import { thunkReadFavorites } from "../../../store/favoritesReducer";
 import AddToCart from "../../Cart/AddToCart";
 import UpdateFavorite from "../../Favorites/UpdateFavorite";
 import Footer from "../../Footer";
@@ -17,7 +18,7 @@ function DepartmentPage() {
 
   /****************** access store *******************/
   const departmentsState = useSelector(state => state.departments)
-
+  const favoritesState = useSelector(state => state.favorites)
 
   // const [thumbnail, setThumbnail] = useState()
   // 'https://target.scene7.com/is/content/Target/GUEST_26eaf754-af71-48ba-9286-d884b7fed1d8'
@@ -35,7 +36,12 @@ function DepartmentPage() {
 
   useEffect(() => {
       dispatch(thunkReadSingleDepartmentDetails(departmentId));
-  }, [dispatch, departmentsState])
+  }, [dispatch, departmentId])
+
+  // useEffect(() => {
+  //   dispatch(thunkReadFavorites())
+  // })
+
 
   /**************** render component *****************/
   return (

@@ -20,7 +20,6 @@ function UpdateFavorite({productId, cssSelector}) {
     /************ key into pertinent values ************/
     const products = favoritesState.allProductsByUser.Products;
     // const products = []; // uncomment to test for condition (no favorites)
-
     const alreadyFavorite = products.find(obj => obj.productId == productId)
 
     /************ reducer/API communication ************/
@@ -28,10 +27,7 @@ function UpdateFavorite({productId, cssSelector}) {
 
     useEffect(() => {
         dispatch(thunkReadFavorites());
-    }, [dispatch])
-
-    /************* conditional components **************/
-
+    }, [dispatch, products])
 
     /***************** handle events *******************/
     const history = useHistory()
@@ -63,7 +59,7 @@ function UpdateFavorite({productId, cssSelector}) {
                 className="favorite-button"
                 id={cssSelector}
                 type="submit"
-                onClick={(e) => dispatchAppropriateThunk(productId).then(thunkReadFavorites())}
+                onClick={(e) => dispatchAppropriateThunk(productId)}
             >
                 {alreadyFavorite ?
                     <i class="fa-solid fa-heart" id="is-favorite"></i> :
