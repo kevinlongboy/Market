@@ -20,7 +20,6 @@ function UserReviews() {
 
   /************ key into pertinent values ************/
   const reviews = Object.values(reviewsState)
-  console.log("reviews", reviews)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
