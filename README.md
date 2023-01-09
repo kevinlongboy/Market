@@ -1,7 +1,7 @@
 <p align="center"><img align="justify" src="https://github.com/kevinlongboy/Market/blob/main/images/branding/market-logo-full.png" alt="CraneBnB Logo" width="500"></p>
 
 <!-- <p align="center">An AirBnB Clone</p> -->
- 
+
 
 _<p align="center"> and mark it off your list </p>_
 
@@ -11,7 +11,7 @@ _<p align="center"> and mark it off your list </p>_
 ---
 
 <div align="center">
- 
+
 
 ## ✅ Store Directory
 
@@ -29,7 +29,7 @@ _<p align="center"> and mark it off your list </p>_
 ---
 
 ##  ✅ Let's Go Shopping
-  
+
 Welcome to Market, your one-stop shop for everything you might need.
 
 Inspired by <a href="https://www.target.com/" alt="Target website">Target</a>, Market offers a variety of products for shoppers to browse, review, and purchase.
@@ -57,11 +57,11 @@ Market & Mark It Squared.
 
 _Find a something you like?_
 
-The cart feature gives shoppers the ability to add products to their cart, remove any item, and proceed to checkout. 
+The cart feature gives shoppers the ability to add products to their cart, remove any item, and proceed to checkout.
 <p><img src="images/features/market-cart.gif" alt="cart-feature gif" width="400"></p>
 
 <br>
-  
+
 ### Orders
 
 _Made to order_
@@ -75,11 +75,19 @@ The order feature gives shoppers the ability purchase the products in their cart
 
 _This one has good reviews_
 
-The review feature gives shoppers the ability to read reviews for a product or write their own. Shoppers can also modify or delete any of their past reviews.*
-<p><img src="images/features/market-review.gif" alt="review-feature gif" width="400"></p>
+The review feature gives shoppers the ability to read reviews for a product or write their own. Shoppers can also modify or delete any of their past reviews.<sup>*</sup>
+<p><img src="images/features/market-reviews.gif" alt="review-feature gif" width="400"></p>
 
-*Seed reviews are sourced directly from <a href="https://www.target.com/" alt="Target website">Target</a> website
-  
+<sup>*</sup>Seed reviews are sourced directly from <a href="https://www.target.com/" alt="Target website">Target</a> website
+
+<br>
+
+### Favorites
+_I always get that_
+
+The Favorites feature allows shoppers to keep track of their favorite products by saving and/or removing products to a personal list.
+<p><img src="images/features/market-favorites.gif" alt="favorites-feature gif" width="400"></p>
+
 <br>
 <br>
 
@@ -89,13 +97,13 @@ The review feature gives shoppers the ability to read reviews for a product or w
 
 Ready to install the Market API? Follow the instructions below:
 
-  
+
 ### 1. Navigate to GitHub:
 Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub repository link">here</a> to be redirected to the Market page
 
 <img src="assets/instructions/setup-instructions-step-1.gif" alt="Navigate to GitHub GIF" width="400">
 
-### 2. Download the API: 
+### 2. Download the API:
 <p>Click the "Code" button</p>
 <p>Select "Download ZIP" from the dropdown menu</p>
 <p>Save the file in your desired location</p>
@@ -109,7 +117,7 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 
 <img src="assets/instructions/setup-instructions-step-3.gif" alt="Open the repository GIF" width="400">
 
-### 4. Initialize the backend: 
+### 4. Initialize the backend:
 <p>Open a new terminal</p>
 <p>Navigate to the "backend" folder</p>
 <p>Download dependencies by running the command: "npm install"</p>
@@ -118,7 +126,7 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 
 <img src="assets/instructions/setup-instructions-step-4.gif" alt="Initialize the backend GIF" width="400">
 
-### 5. Initialize the frontend: 
+### 5. Initialize the frontend:
 <p>Open a new terminal</p>
 <p>Navigate to the "frontend" folder</p>
 <p>Download dependencies by running the command: "npm install"</p>
@@ -140,11 +148,11 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 
 ##  ✅ New Arrivals
 
-### Favorites
-_I always get that_
+### Search
+_Where the fu_
 
-Favorites will allow shoppers to keep track of their favorite products by saving and/or removing products to a personal list. 
-  
+Search feature will allow shoppers to quickly find products that are available on Market, by typing in keywords and phrases through the search bar.
+
 <br>
 <br>
 
@@ -152,7 +160,7 @@ Favorites will allow shoppers to keep track of their favorite products by saving
 _For that special occasion_
 
 Registries will allow shoppers to create a public list of items that they wish to recieve for a particular event. Other shoppers will be able view the contents of this list as well.
-  
+
 <br>
 <br>
 
@@ -186,7 +194,7 @@ Registries will allow shoppers to create a public list of items that they wish t
 
 <br>
 <br>
-  
+
 ---
 
 ##  ✅ Free Sample
@@ -197,7 +205,7 @@ Need a little retail therapy? Click the icon below to be redirected to Heroku, t
 <br>
 <br>
 
----  
+---
 ##  ✅ Contact Us
 
 <a href="https://github.com/kevinlongboy"><img vertical-align="middle" alt="Developer's GitHub Page" width="45px" src="images/social-media-branding/github-logo.png"/></a>
