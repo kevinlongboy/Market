@@ -34,6 +34,7 @@ function UpdateFavorite({productId, cssSelector}) {
     function dispatchAppropriateThunk(productId) {
 
         if (user == null) {
+            window.scrollTo(0,0)
             history.push('/login')
         }
 
@@ -45,10 +46,8 @@ function UpdateFavorite({productId, cssSelector}) {
 
         if (alreadyFavorite) {
             dispatch(thunkRemoveSingleProductFromFavorites(alreadyFavorite.favoriteId))
-            dispatch(thunkReadFavorites())
         } else {
             dispatch(thunkAddSingleProductToFavorites(productData))
-            dispatch(thunkReadFavorites())
         }
     }
 
