@@ -28,7 +28,15 @@ function RedCardPanelApplyNow() {
                 <div className="RedCardPanelApplyNow-card-body-container">
                     <h2>Get even more ways to save.</h2>
                     <p>Market Square offers can help you save 5-50% on your favorite items.</p>
-                    <div className="RedCard-Square-link-container"><NavLink exaxt to={'/square'} id="RedCard-Square-link">Start saving today<i class="fa-solid fa-chevron-right" id="right-chevron-icon"></i></NavLink></div>
+                    <div className="RedCard-Square-link-container">
+                        <NavLink
+                            exaxt to={'/square'}
+                            id="RedCard-Square-link"
+                            onClick={(e) => window.scrollTo(0,0)}
+                        >
+                            Start saving today<i class="fa-solid fa-chevron-right" id="right-chevron-icon"></i>
+                        </NavLink>
+                    </div>
                 </div>
             </div>
 
@@ -47,13 +55,13 @@ function RedCardPanelApplyNow() {
                     <p>Start getting more at Market and Market.com</p>
                     <div className="RedCardPanelApplyNow-buttons-container">
                         <button id="RedCard-CTA-button-white">
-                            <NavLink exact to="/">Apply for Credit</NavLink>
+                            <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}>Apply for Credit</NavLink>
                         </button>
                         <button id="RedCard-CTA-button-white">
-                            <NavLink exact to="/">Apply for Debit</NavLink>
+                            <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}>Apply for Debit</NavLink>
                         </button>
                         <button id="RedCard-CTA-button-white">
-                            <NavLink exact to="/">Open a Reloadable</NavLink>
+                            <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}>Open a Reloadable</NavLink>
                         </button>
                     </div>
 

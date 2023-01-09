@@ -21,7 +21,7 @@ function RedCardPanelDebitCard() {
                 <h3>Pay for your Market purchases directly from your existing checking account.</h3>
                 <p><sup id="RedCardPanelDebitCard-footnote-superscript"><u>1</u></sup>Some restrictions apply. <u>See below</u> for RedCard benefits & program rules.</p>
                 <button id="RedCard-CTA-button-black">
-                    <NavLink exact to="/">Apply for Debit</NavLink>
+                    <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}>Apply for Debit</NavLink>
                 </button>
             </div>
 

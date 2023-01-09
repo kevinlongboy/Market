@@ -11,7 +11,7 @@ export const CTACreditButton = (
         className="RedCard-CTA-button"
         id="CTA-button-credit"
     >
-        <NavLink exact to="/">Apply for Credit</NavLink>
+        <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}>Apply for Credit</NavLink>
     </button>
 )
 
@@ -20,7 +20,7 @@ export const CTADebitButton = (
         className="RedCard-CTA-button"
         id="CTA-button-debit"
     >
-        <NavLink exact to="/">Apply for Debit</NavLink>
+        <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}>Apply for Debit</NavLink>
     </button>
 )
 
@@ -30,6 +30,6 @@ export const CTAReloadableButton = (
         className="RedCard-CTA-button"
         id="CTA-button-reloadable"
     >
-        <NavLink exact to="/">Open a Reloadable</NavLink>
+        <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}>Open a Reloadable</NavLink>
     </button>
 )
