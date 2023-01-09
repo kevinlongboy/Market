@@ -15,6 +15,7 @@ import { thunkAddSingleProductToCart } from "../../../store/cartReducer";
 import { thunkReadSingleDepartmentDetails } from "../../../store/departmentsReducer";
 import AddToCart from "../../Cart/AddToCart";
 import UpdateFavorite from "../../Favorites/UpdateFavorite";
+import { thunkReadFavorites } from "../../../store/favoritesReducer";
 
 
 /******************************* COMPONENT *******************************/
@@ -26,6 +27,7 @@ function ProductPage() {
   const productImages = useSelector(state => state.products.singleProductDetails.ProductImages)
   // console.log("productImages", productImages)
   const reviewsState = useSelector(state => state.reviews);
+  const favoritesState = useSelector(state => state.favorites);
 
   /************ key into pertinent values ************/
   const { productId } = useParams()
@@ -56,6 +58,10 @@ function ProductPage() {
 
   useEffect(() => {
     dispatch(thunkReadAllUserReviews());
+  }, [dispatch])
+
+  useEffect(() => {
+    dispatch(thunkReadFavorites())
   }, [dispatch])
 
   /****************** manage state *******************/

@@ -16,14 +16,14 @@ function CartConfirmationModal({productId, modalFunc}) {
     const product = useSelector(state => state.products.singleProductDetails)
 
     /************ key into pertinent values ************/
-    const images = Object.values(product.ProductImages)
+    const images = product.ProductImages
 
     /************ reducer/API communication ************/
     const dispatch = useDispatch({productId});
 
     useEffect(() => {
       dispatch(thunkReadSingleProductDetails(productId));
-    }, [dispatch, product])
+    }, [dispatch])
 
     /***************** handle events *******************/
     const history = useHistory();

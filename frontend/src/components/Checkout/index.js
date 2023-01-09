@@ -106,7 +106,7 @@ function Checkout() {
                 {products && products.map((product) => (
                   <>
                     <img src={product.previewImage} className="product-list-thumbnail"></img>
-                    <UpdateFavorite productId={product.productId}/>
+                    {/* <UpdateFavorite productId={product.productId}/> */}
                   </>
                 ))}
               </div>

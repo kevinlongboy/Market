@@ -107,11 +107,12 @@
 }
 .product-card-favorite-button-container{
     grid-column: 2 / 3;
+    /* background-color: red; */
+
+    padding: 0px 7.5px;
 
     display: flex;
     justify-content: center;
-    padding: 0px 7.5px;
-    /* background-color: red; */
 }
 
 .product-card-brand-container{

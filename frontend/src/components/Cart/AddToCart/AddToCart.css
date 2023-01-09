@@ -32,7 +32,9 @@
     height: 44px;
     width: 444px;
     margin: 15px 0px;
+
     font-size: 16px;
+    font-weight: 700;
 }
 
 #UserFavorites-AddToCart-button {
