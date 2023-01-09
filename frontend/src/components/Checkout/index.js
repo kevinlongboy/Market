@@ -20,6 +20,7 @@ function Checkout() {
   /****************** access store *******************/
   const cartState = useSelector(state => state.cart.allProductsByUser)
   const user = useSelector(state => state.session.user)
+  console.log("user", user)
 
 
   /************ key into pertinent values ************/
@@ -63,7 +64,6 @@ function Checkout() {
     )
 
     if (newOrder) {
-      console.log("newOrder", newOrder);
         history.push(`/order-confirmation/${newOrder.id}`)
     }
   }

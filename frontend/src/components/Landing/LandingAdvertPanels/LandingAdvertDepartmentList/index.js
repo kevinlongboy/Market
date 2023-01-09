@@ -13,7 +13,6 @@ function LandingAdvertDepartmentList() {
 
   /****************** access store *******************/
   const departmentsState = useSelector(state => state.departments)
-  console.log("departmentsState", departmentsState)
 
   /************ key into pertinent values ************/
   const allDepartments = Object.values(departmentsState.allDepartments);

@@ -132,13 +132,11 @@ router.post('/', requireAuth, async(req, res) => {
             return res.status(404).json(error);
         }
 
-        console.log("reach")
         // instantiate cart-object
         let postCartProduct = await Cart.create(
             { userId: currentUserId, productId: productId },
         );
         postCartProduct.save();
-        console.log("postCartProduct", postCartProduct)
 
         // dataValues are null & _previousDataValues are not null
         // findCart is not null, but record is in DataBase

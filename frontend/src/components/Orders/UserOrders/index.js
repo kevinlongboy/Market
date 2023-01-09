@@ -78,7 +78,6 @@ function UserOrders() {
 
                 <div className="UserOrders-card-thumbnail-container">
                 {order && Object.values(order.Products).map(product => {
-                  console.log("product", product)
                   return (
 
                     <NavLink exact to={`/departments/${product.departmentId}/products/${product.id}`}>

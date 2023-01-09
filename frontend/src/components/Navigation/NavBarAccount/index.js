@@ -14,7 +14,6 @@ function NavBarAccount({ user }) {
 
     /************ reducer/API communication ************/
     const dispatch = useDispatch();
-    console.log("user", user)
 
   /**************** render component *****************/
   return (

@@ -91,7 +91,6 @@ function ProductPage() {
       <div id="ProductPage-component">
 
 
-
           <div className="ProductPage-header-container">
 
             <div className="ProductPage-directory-container">
@@ -122,12 +121,21 @@ function ProductPage() {
             </div>
 
             {mainImage && (
-              <div id="ProductPage-main-image-container">
-                <img
+              <div
+                id="ProductPage-main-image-container"
+                style={{
+                  backgroundImage:`url(${productImages[0].url})`,
+                  backgroundRepeat:"no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+                >
+
+                {/* <img
                   src={mainImage.url}
                   id="ProductPage-main-image"
                 >
-                </img>
+                </img> */}
 
                 {/* <Modal onClose={() => setShowModal(false)}>
                   <ImageGallery items={images} showPlayButton={false} />

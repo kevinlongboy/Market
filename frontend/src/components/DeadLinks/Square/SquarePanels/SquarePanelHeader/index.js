@@ -14,7 +14,6 @@ function SquarePanelHeader() {
 
     /****************** access store *******************/
     const user = useSelector(state => state.session.user)
-    console.log("user", user)
 
     let buttons
     if (user && user.id) {

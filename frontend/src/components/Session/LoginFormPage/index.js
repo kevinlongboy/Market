@@ -37,9 +37,7 @@ function LoginFormPage() {
     return dispatch(sessionActions.login({ credential, password })).catch(
 
       async (res) => {
-        console.log(res)
       const data = await res.json();
-      console.log("data from loginPage", data)
 
       if (data && data.message) {
         validationErrors.push(data.message)

@@ -40,7 +40,6 @@ function AccountPage() {
   if (orders && orders.length) {
     let mostRecentOrder = orders[orders.length - 1]
     let products = Object.values(mostRecentOrder.Products)
-    console.log("products", products)
 
     ordersCard = (
       <>
@@ -87,7 +86,6 @@ function AccountPage() {
 
   if (reviews && reviews.length) {
     let mostRecentReview = reviews[reviews.length - 1]
-    console.log("mostRecentReview", mostRecentReview)
 
     reviewsCard = (
       <>

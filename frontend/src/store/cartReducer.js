@@ -30,7 +30,6 @@ export const actionRemoveSingleProductFromCart = (cartId) => ({
 /***************************** THUNKS (API) ******************************/
 export const thunkReadCart = () => async (dispatch) => {
     const response = await csrfFetch(`/api/cart`);
-    console.log("response at cart reducer", response)
     if (response.ok) {
         const cart = await response.json();
         dispatch(actionReadCart(cart))
@@ -79,7 +78,6 @@ const cartReducer = (state = initialState, action) => {
 
         case CART_READ_CART:
             newState.allProductsByUser = {...action.payload}
-            console.log("action.payload at cart reducer", action.payload)
                 newState.allProductsByUser.Products = [...action.payload.Products]
             return newState
 

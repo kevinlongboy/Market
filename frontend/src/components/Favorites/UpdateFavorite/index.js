@@ -2,7 +2,7 @@
 // libraries
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, useHistory, useParams } from "react-router-dom";
 import  StarRatings from 'react-star-ratings';
 // local files
 import { thunkAddSingleProductToFavorites, thunkReadFavorites, thunkRemoveSingleProductFromFavorites } from "../../../store/favoritesReducer";
@@ -14,12 +14,12 @@ import "./UpdateFavorite.css"
 function UpdateFavorite({productId, cssSelector}) {
 
     /****************** access store *******************/
+    const user = useSelector(state => state.session.user);
     const favoritesState = useSelector(state => state.favorites)
 
     /************ key into pertinent values ************/
     const products = favoritesState.allProductsByUser.Products;
     // const products = []; // uncomment to test for condition (no favorites)
-    console.log("products", products)
 
     const alreadyFavorite = products.find(obj => obj.productId == productId)
 
@@ -34,7 +34,12 @@ function UpdateFavorite({productId, cssSelector}) {
 
 
     /***************** handle events *******************/
+    const history = useHistory()
     function dispatchAppropriateThunk(productId) {
+
+        if (user == null) {
+            history.push('/login')
+        }
 
         let productData = {
             productId: productId
@@ -57,8 +62,6 @@ function UpdateFavorite({productId, cssSelector}) {
             <button
                 className="favorite-button"
                 id={cssSelector}
-
-                // id={cssSelector}
                 type="submit"
                 onClick={(e) => dispatchAppropriateThunk(productId).then(thunkReadFavorites())}
             >

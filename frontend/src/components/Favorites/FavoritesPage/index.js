@@ -17,7 +17,6 @@ function FavoritesPage() {
 
   /****************** access store *******************/
   const favoritesState = useSelector(state => state.favorites)
-  console.log("favoritesState", favoritesState)
 
   /************ key into pertinent values ************/
   const products = favoritesState.allProductsByUser.Products;

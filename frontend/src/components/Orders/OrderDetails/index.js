@@ -20,7 +20,6 @@ function OrderDetails() {
   /************ key into pertinent values ************/
   const { orderId } = useParams()
   const order = ordersState.allOrdersByUser[parseInt(orderId)]
-  console.log("ordersState", ordersState)
 
 
   /************ reducer/API communication ************/

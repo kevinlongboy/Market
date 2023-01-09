@@ -47,7 +47,6 @@ const productsReducer = (state = initialState, action) => {
                 newState.singleProductDetails.Department = {...action.payload.Department}
                 const normalizeImgs = normalizeArray(action.payload.ProductImages)
                 const copyArr = Object.values(normalizeImgs)
-                console.log("copyArr", copyArr)
                 newState.singleProductDetails.ProductImages = copyArr
             return newState
 

@@ -66,7 +66,6 @@ const ordersReducer = (state = initialState, action) => {
             return newState
 
         case ORDERS_READ_ALL_USER_ORDERS:
-            console.log("action.payload", action.payload)
             // action.payload.forEach((object) => {
             //     object.Products = normalizeArray(object.Products)
             // })

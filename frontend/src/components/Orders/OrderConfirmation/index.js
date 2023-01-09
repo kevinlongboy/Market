@@ -21,7 +21,6 @@ function OrderConfirmation() {
   /************ key into pertinent values ************/
   const { orderId } = useParams();
   const newOrder = allOrders[orderId]
-  console.log("newOrder", newOrder)
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();

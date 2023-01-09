@@ -38,7 +38,6 @@ export const thunkReadFavorites = () => async (dispatch) => {
 }
 
 export const thunkAddSingleProductToFavorites = (productId) => async (dispatch) => {
-    console.log("reach")
     const response = await csrfFetch(`/api/favorites`, {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },

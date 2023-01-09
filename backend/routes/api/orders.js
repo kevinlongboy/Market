@@ -31,7 +31,6 @@ router.get('/', requireAuth, async(req, res) => {
             },
             raw: true
         })
-        console.log("getAllOrders", getAllOrders)
 
         // handle error: missing order
         // if (!getAllOrders.length) {
@@ -156,7 +155,6 @@ router.post('/', requireAuth, async(req, res) => {
             total: total,
         });
         postOrder.save();
-        console.log("postOrder", postOrder)
 
 
         /************** 1. Add products as OrderDetail join table **************/
