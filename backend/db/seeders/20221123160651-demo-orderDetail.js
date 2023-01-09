@@ -71,7 +71,7 @@ const demoOrderDetails = [
   // 2552.47
   {
     orderId: 7,
-    productId: 44,
+    productId: 45, // upd
   },
   {
     orderId: 7,
@@ -103,7 +103,7 @@ const demoOrderDetails = [
   // 253.78
   {
     orderId: 7,
-    productId: 45,
+    productId: 44,
   },
   {
     orderId: 7,
@@ -331,7 +331,7 @@ const demoOrderDetails = [
   },
   {
     orderId: 27,
-    productId: 44,
+    productId: 45, // UPD
   },
   // Daniel Flores
   // 4299.97
@@ -389,7 +389,7 @@ const demoOrderDetails = [
   // 82.47
   {
     orderId: 34,
-    productId: 44,
+    productId: 45, // upd
   },
   {
     orderId: 34,

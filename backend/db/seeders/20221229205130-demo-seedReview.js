@@ -370,35 +370,35 @@ const demoReviews = [
     title: "One of my favorite",
     description: "Been having these for years and like the taste and hazelnuts in them. One of my best chocolates out there. The price has gone up but glad the taste is still the best.",
   },
-  // ✅ 44. Ice cream
+  // ✅ 44. donuts
   {
     productId: 44,
+    userId: 9, // Hector
+    rating: 5,
+    title: "A fluffy delight",
+    description: "It was so soft and not too sugary",
+  },
+  // ✅ 45. Ice cream
+  {
+    productId: 45,
     userId: 7, // Dan Purcell
     rating: 5,
     title: "The GOAT",
     description: "The GOAT. The Tom Brady of ice creams.",
   },
   {
-    productId: 44,
+    productId: 45,
     userId: 27, // Whit
     rating: 5,
     title: "The best ice cream",
     description: "I had never had a better ice cream than this one! This is the best flavor from the best brand! The cone pieces along with the chocolate and caramel create a PERFECT flavor explosion. Absolutely love it!",
   },
   {
-    productId: 44,
+    productId: 45,
     userId: 34, // Anthony Lovern
     rating: 5,
     title: "Delicious",
     description: "This is my favorite flower, I like the taste, the ingredients and nutrients, it is delicious and enjoyable, you can try and check this out.",
-  },
-  // ✅ 45. donuts
-  {
-    productId: 45,
-    userId: 9, // Hector
-    rating: 5,
-    title: "A fluffy delight",
-    description: "It was so soft and not too sugary",
   },
   // ✅ 46. orange juice
   {

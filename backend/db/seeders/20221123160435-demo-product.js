@@ -366,18 +366,18 @@ const demoProducts = [
   {
     id: 44,
     departmentId: 4,
-    name: "Haagen-Dazs Caramel Cone Ice Cream - 14oz",
-    brand: "Haagen-Dazs",
-    price: 5.99,
-    description: "HÄAGEN-DAZS Caramel Cone Ice Cream is a creamy, crunchy composition of smooth caramel ice cream, crunchy chocolaty-covered cone pieces, and rich caramel swirls for an incredibly flavorful experience that lingers on your tongue. with the finest of ingredients, including: cream, skim milk, sugar, egg yolks, vanilla extract, and condensed skim milk, the HÄAGEN-DAZS brand is dedicated to making the best tasting ice cream possible.",
-  },
-  {
-    id: 45,
-    departmentId: 4,
     name: "Assorted Mini Donuts - 11oz - Favorite Day™",
     brand: "Favorite Day",
     price: 3.79,
     description: "Assorted Mini Donuts from Favorite Day™ make it easy to start your day with something sweet. This donut pack has something to satisfy every sweet tooth, with mini donuts in three delicious varieties — there are plain donuts, powdered sugar donuts and cinnamon donuts. The pack has approximately six servings, making it great for sharing with family, friends or coworkers, or to give yourself plenty of options for morning munching over multiple days.",
+  },
+  {
+    id: 45,
+    departmentId: 4,
+    name: "Haagen-Dazs Caramel Cone Ice Cream - 14oz",
+    brand: "Haagen-Dazs",
+    price: 5.99,
+    description: "HÄAGEN-DAZS Caramel Cone Ice Cream is a creamy, crunchy composition of smooth caramel ice cream, crunchy chocolaty-covered cone pieces, and rich caramel swirls for an incredibly flavorful experience that lingers on your tongue. with the finest of ingredients, including: cream, skim milk, sugar, egg yolks, vanilla extract, and condensed skim milk, the HÄAGEN-DAZS brand is dedicated to making the best tasting ice cream possible.",
   },
   {
     id: 46,

@@ -800,35 +800,35 @@ const demoProductImages = [
     productId: 43,
     url: "https://target.scene7.com/is/image/Target/GUEST_5b0ad6c1-541c-4b7f-aba0-9a0010e6dbdb?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
-  // ice cream
-  {
-    productId: 44,
-    url: "https://target.scene7.com/is/image/Target/GUEST_1ba11e1d-e8da-4e92-9c38-35edde29f34e?wid=1000&hei=1000&qlt=80&fmt=webp",
-  },
-  {
-    productId: 44,
-    url: "https://target.scene7.com/is/image/Target/GUEST_2baec4f2-fce0-4e12-95a0-afcfcdd03a11?wid=1000&hei=1000&qlt=80&fmt=webp",
-  },
-  {
-    productId: 44,
-    url: "https://target.scene7.com/is/image/Target/GUEST_93a7971f-55d4-449a-9557-8f33a7dc346f?wid=1000&hei=1000&qlt=80&fmt=webp",
-  },
-  {
-    productId: 44,
-    url: "https://target.scene7.com/is/image/Target/GUEST_6448998b-19fd-4fc1-87d0-75d2c2e0bf1b?wid=1000&hei=1000&qlt=80&fmt=webp",
-  },
   // donuts
   {
-    productId: 45,
+    productId: 44,
     url: "https://target.scene7.com/is/image/Target/GUEST_56eb871e-f7bc-4816-a7c0-ed2d40476322?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
-    productId: 45,
+    productId: 44,
     url: "https://target.scene7.com/is/image/Target/GUEST_16174faa-8c7f-41e9-aedc-92db5abc52b5?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   {
-    productId: 45,
+    productId: 44,
     url: "https://target.scene7.com/is/image/Target/GUEST_6aa080a3-0003-4089-a57d-6ae123e0cc85?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  // ice cream
+  {
+    productId: 45,
+    url: "https://target.scene7.com/is/image/Target/GUEST_1ba11e1d-e8da-4e92-9c38-35edde29f34e?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 45,
+    url: "https://target.scene7.com/is/image/Target/GUEST_2baec4f2-fce0-4e12-95a0-afcfcdd03a11?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 45,
+    url: "https://target.scene7.com/is/image/Target/GUEST_93a7971f-55d4-449a-9557-8f33a7dc346f?wid=1000&hei=1000&qlt=80&fmt=webp",
+  },
+  {
+    productId: 45,
+    url: "https://target.scene7.com/is/image/Target/GUEST_6448998b-19fd-4fc1-87d0-75d2c2e0bf1b?wid=1000&hei=1000&qlt=80&fmt=webp",
   },
   // orange juice
   {
