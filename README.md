@@ -149,9 +149,9 @@ Click <a href="https://github.com/kevinlongboy/Market" alt="Market GitHub reposi
 ##  ✅ New Arrivals
 
 ### Search
-_Where the fu_
+_Find what you're looking for_
 
-Search feature will allow shoppers to quickly find products that are available on Market, by typing in keywords and phrases through the search bar.
+Search feature will allow shoppers to quickly find products that are available on Market, by typing keywords and phrases in the search bar.
 
 <br>
 <br>
