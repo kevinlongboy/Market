@@ -24,10 +24,10 @@ function SquarePanelHeader() {
         buttons = (
             <>
                 <button id="Square-session-button">
-                    <NavLink exact to="/login">Sign in</NavLink>
+                    <NavLink exact to="/login" onClick={(e) => window.scrollTo(0,0)}>Sign in</NavLink>
                 </button>
                 <button id="Square-session-button">
-                    <NavLink exact to="/signup">Create account</NavLink>
+                    <NavLink exact to="/signup" onClick={(e) => window.scrollTo(0,0)}>Create account</NavLink>
                 </button>
             </>
         )

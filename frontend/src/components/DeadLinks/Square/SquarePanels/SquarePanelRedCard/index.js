@@ -23,7 +23,7 @@ function SquarePanelRedCard() {
                     <h2>Have a RedCard™?</h2>
                     <p>Join Market Square to start receiving the benefits of voting and offers. You’ll continue to save 5% when you pay with your RedCard, instead of earning 1% with Market Square.<sup>2</sup></p>
                     <span>Don’t have a RedCard yet? {' '}
-                        <NavLink exact to="/redcard">Learn more about RedCard</NavLink>
+                        <NavLink exact to="/redcard" onClick={(e) => window.scrollTo(0,0)}>Learn more about RedCard</NavLink>
                     </span>
                 </div>
 
