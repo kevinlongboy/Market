@@ -1539,11 +1539,18 @@ const demoReviews = [
     description: "Nice drill to have to complete those around the house projects! Totally worth the buy….",
   },
   {
-    userId: 23, // Jake L
     productId: 24,
+    userId: 77, // Jake L
     rating: 5,
     title: "Amazing Drill",
     description: "Works like any other Drill, perfect cuz it's portable too.",
+  },
+  {
+    productId: 24,
+    userId: 23, // Daniel Chin
+    rating: 5,
+    title: "Small gets the iob done",
+    description: "Glad I bought this, small but does the job",
   },
     // ✅ 25. flatware
   {
