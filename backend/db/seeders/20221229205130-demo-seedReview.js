@@ -57,6 +57,13 @@ const demoReviews = [
     title: "Saves dry cracked lips",
     description: "The best when it comes to moisturizing your chapped lips. I love these. They're small and easy to fit into a purse, it glides on smoothly and it really works fast.",
   },
+  {
+    productId: 6,
+    userId: 131, // Mark Rodriguez
+    rating: 5,
+    title: "Perfect lip balm",
+    description: "Best chapstick, it’s not greasy. I use this all year round. Perfect for everyday use.",
+  },
   // ✅ 9. cotton
   {
     productId: 9,
@@ -172,6 +179,13 @@ const demoReviews = [
     rating: 4,
     title: "Awesome!",
     description: "We have been so pleased with our streamer. So convenient and easy to use.",
+  },
+  {
+    productId: 21,
+    userId: 128, // Calvin Liu
+    rating: 5,
+    title: "Portable light weight works great!!",
+    description: "Bought awhile ago fairer used it to dewrinkle a shirt, came out great so i finally used it on some new curtains worked great!! Also used it on some vertical blinds that were jacked up from being stored presto they straighten out",
   },
   /********************** 3. Kitchen & Dining **********************/
   // ✅ 27. wine glasses
@@ -766,6 +780,13 @@ const demoReviews = [
     title: "Adequate and Effective",
     description: "I am new to technology and my son advised me that this would be effective tool to use to meet clients. Very user friendly.",
   },
+  {
+    productId: 57,
+    userId: 131, // Mark Rodriguez
+    rating: 5,
+    title: "Great budget camera",
+    description: "Great quality video for the price, and easy setup.",
+  },
   // ✅ 59. lights
   {
     productId: 59,
@@ -1142,6 +1163,13 @@ const demoReviews = [
     title: "Classy",
     description: "Purchased this as a conference table for my office. It is so sleek and pretty. Gives my office a solid, but feminine flair!",
   },
+  {
+    productId: 97,
+    userId: 130, // Allie
+    rating: 5,
+    title: "Stunning!!",
+    description: "Absolutely gorgeous table.. now I want new chairs cuz it’s too pretty for the ones I got",
+  },
   // ✅ 99. side tables
   {
     productId: 99,
@@ -1171,6 +1199,13 @@ const demoReviews = [
     title: "Adorable!",
     description: "These are so stinking cute! I bought them to replace an old end table in my bedroom, and they are very chic. They are also generously sized, enough to fit some decorations.",
   },
+  {
+    productId: 99,
+    userId: 130, // Allie
+    rating: 5,
+    title: "Gorgeous and affordable",
+    description: "Love these chairs, purchased a few of them. Great as coding chairs. I suggest adding leg foot pads to avoid floor scratches.",
+  },
   // ✅ 100. bookcase
   {
     productId: 100,
@@ -1185,6 +1220,13 @@ const demoReviews = [
     rating: 5,
     title: "Goog product",
     description: "Easy to put together. The pieces were will marked and all holes were drilled well and in the correct spots.",
+  },
+  {
+    productId: 100,
+    userId: 130, // Allie
+    rating: 5,
+    title: "Good for the price",
+    description: "Very easy to assemble, can be done by one person within 30-40 minutes. Looks nice, we have 3 of these now.",
   },
   // ✅ 104. frames
   {
@@ -1259,6 +1301,13 @@ const demoReviews = [
     title: "Excellent Board, Insufficient Packaging",
     description: "The board is great but the packaging needs some work. I received a damaged board with missing hardware that was obviously caused by insufficient packaging. Thankfully customer service is excellent and they shipped a replacement immediately.",
   },
+  {
+    productId: 108,
+    userId: 131, // Mark Rodriguez
+    rating: 5,
+    title: "Overall, a very good product",
+    description: "I received this product for review. The board is very large and has plenty of space for writing and storing documents with the clips you can put around the edges. It's built very sturdy and seems to be well constructed for long-lasting use. It also comes with a tray that you can assemble to hold the markers and eraser. The only complaint I might have is installing it on the wall. The instructions were a tad complicated but not something we couldn't figure out, and if you can't figure them out, you could always just buy some Command strips to hang it. Overall, a very good product!",
+  },
   /******************* Phase 2 Products *******************/
     // ✅ 2. face wash
   {
@@ -1274,6 +1323,13 @@ const demoReviews = [
     rating: 1,
     title: "Returning!",
     description: "since Neutrogena discontinued the Pore Minimizer Scrub in the white tube I thought I'd try this and what a joke. This doesn't even come close to the other scrub. I cannot understand why they would cancel such a great product. This has some type of big uneven ground up type seeds for the scrub and it's terrible. Pore Minimizer scrub had tiny beads that left my skin smooth and clean, not this.",
+  },
+  {
+    productId: 2,
+    userId: 129, // Wes Trinh
+    rating: 1,
+    title: "Soft skin + goodbye pimples!",
+    description: "I've been using this product since 2015, literally no regrets until now. It really helps reducing acne if you use it at least twice a week, leaves your face extremely soft and also improves erasing of dark spots. 5/5",
   },
     // ✅ 3. toner
   {
@@ -1315,7 +1371,7 @@ const demoReviews = [
   },
   {
     productId: 7,
-    userId: 75, // Calvin
+    userId: 75, // Calvin Tzeng
     rating: 5,
     title: "Natural color",
     description: "I like that this product has a variety of colors. They have black, brown and honey colors. Personally, I prefer the brown ones because they look more natural on skin and help lighten skin tone a little bit. It's super easy to apply and removed by any makeup remover.",
@@ -1665,6 +1721,13 @@ const demoReviews = [
     title: "Good cord",
     description: "Have been using this for about a year (to play Netflix through my laptop onto the TV screen). No problems.",
   },
+  {
+    productId: 54,
+    userId: 128, // Calvin Liu
+    rating: 5,
+    title: "What you'd expect",
+    description: "Used this item for approximately 5 days. It does what it needs to do without a problem.",
+  },
     // ✅ 55. power bank
   {
     productId: 55,
@@ -1675,7 +1738,7 @@ const demoReviews = [
   },
   {
     productId: 55,
-    userId: 75, // Calvin
+    userId: 75, // Calvin Tzeng
     rating: 5,
     title: "Very useful power bank",
     description: "Love this beautiful lavender colored power bank came in very handy when my girl drained her whole charging on our recent road trip she had this in the back and her phone charged up pretty quick. Very sleek fits in her backpack and is perfect for busy teens who want to stay connected every second but are lazy to charge their phone lol btw my daughter loves the color.",
@@ -1686,6 +1749,13 @@ const demoReviews = [
     rating: 5,
     title: "..can't complain",
     description: "It does what it is supposed to do and I don't hate the color...and only $10 so..that is cool",
+  },
+  {
+    productId: 55,
+    userId: 129, // Wes Trinh
+    rating: 5,
+    title: "So far so good.",
+    description: "I bought this item to keep with me as a backup to ensure that I always have a way to make sure that I have some kind of charge on my cellphone. Haven’t needed to use it yet. While it came with the cord needed to charge it up you will need a different cord to charge your device. Unless it just happens to take the same kind of cord that this takes to charge itself up. Which my phone doesn’t. But I love the color of it. The fact that it came fully charged and ready to use was an added bonus.",
   },
     // ✅ 56. polaroid
   {
@@ -1730,6 +1800,13 @@ const demoReviews = [
     rating: 1,
     title: "Doesn't latch on",
     description: "I’ve had this for about seven months. I took it off to charge (which you have to do every few weeks) and now it won’t latch back on. I’ve tried several times and I can’t get it to work anymore. I did call Target customer service and they had to transfer me. The girl I spoke with was very helpful and out in a request with the manufacturer. Waiting to see what they say.",
+  },
+  {
+    productId: 58,
+    userId: 131, // Mark Rodriguez
+    rating: 5,
+    title: "Great purchase",
+    description: "The battery life and image quality are great. It would have been great if the storage lasted more than a few hours",
   },
     // ✅ 64. controller
   {
@@ -2108,6 +2185,13 @@ const demoReviews = [
     rating: 5,
     title: "Best Purchase!",
     description: "My puppy and I are so happy with this Cam Feeder. I can be out with no worries because I can always check on her thru the Cam. :)",
+  },
+  {
+    productId: 96,
+    userId: 130, // Allie
+    rating: 5,
+    title: "Amazing Feeder!",
+    description: "We used to mix up whether we've fed our fur baby. With this feeder, we know Elsie's fed three times a day with the desired amount of food. We can also manually add a meal from our fingertip if she had a wild day and needs another snack. The CAMERA is high definition. I can't help checking out a few times a day see how she's doing while I'm at work! :)",
   },
     // ✅ 98. dining chairs
   {

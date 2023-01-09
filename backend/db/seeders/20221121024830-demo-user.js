@@ -1171,7 +1171,7 @@ const demoUsers = [
     username: 'cliu',
     hashedPassword: bcrypt.hashSync('cliu'),
     email: 'cliu@appacademy.io',
-    url: 'https://www.appacademy.io/',
+    url: 'https://www.linkedin.com/in/calvin-lieu-3049b4228/',
   },
   {
     // id: 129,
@@ -1180,7 +1180,7 @@ const demoUsers = [
     username: 'wtrinh',
     hashedPassword: bcrypt.hashSync('wtrinh'),
     email: 'wtrinh@appacademy.io',
-    url: 'https://www.appacademy.io/',
+    url: 'https://www.linkedin.com/in/wes-trinh-28b526220',
   },
   {
     // id: 130,
@@ -1189,7 +1189,7 @@ const demoUsers = [
     username: 'avillarreal',
     hashedPassword: bcrypt.hashSync('avillarreal'),
     email: 'avillarreal@appacademy.io',
-    url: 'https://www.appacademy.io/',
+    url: 'https://www.linkedin.com/in/villarrealallie',
   },
   {
     // id: 131,
@@ -1198,7 +1198,7 @@ const demoUsers = [
     username: 'mrodriguez',
     hashedPassword: bcrypt.hashSync('mrodriguez'),
     email: 'mrodriguez@appacademy.io',
-    url: 'https://www.appacademy.io/',
+    url: 'https://www.linkedin.com/in/mvrkvincent',
   },
 ]
 
