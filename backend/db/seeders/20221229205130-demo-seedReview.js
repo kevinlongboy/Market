@@ -1847,7 +1847,7 @@ const demoReviews = [
   },
   {
     productId: 65,
-    userId: 93, // Yas
+    userId: 84, // Kris
     rating: 5,
     title: "Ive bought a bunch over the years",
     description: "I’m a photographer and producer and i use these drives to do delivery to my clients or editors, they do the trick for that light lift",
@@ -1862,7 +1862,7 @@ const demoReviews = [
     // ✅ 66. headset
   {
     productId: 66,
-    userId: 93, // Yas
+    userId: 94, // Yas
     rating: 3,
     title: "xbox wired",
     description: "if you plan on getting this for the xbox STOP. this headset only works wired to the xbox controller and will not work wirelessly. but for eveything else pretty nice headset tho",
