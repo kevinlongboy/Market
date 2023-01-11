@@ -904,26 +904,47 @@ const demoProductImages = [
     productId: 49,
     url: "https://target.scene7.com/is/image/Target/GUEST_5e9b4480-bff4-4d2c-b9a2-0728df5d30b0?wid=725&hei=725&qlt=80&fmt=webp"
   },
-  // iPad
+  // iPad 5th Generation
+  // {
+  //   productId: 50,
+  //   url: "https://target.scene7.com/is/image/Target/GUEST_18310cef-f08e-4e8c-9db0-2590f8b84993?wid=725&hei=725&qlt=80&fmt=webp"
+  // },
+  // {
+  //   productId: 50,
+  //   url: "https://target.scene7.com/is/image/Target/GUEST_dd59e86f-a518-4a99-9cca-345b9a9dd0a2?wid=725&hei=725&qlt=80&fmt=webp"
+  // },
+  // {
+  //   productId: 50,
+  //   url: "https://target.scene7.com/is/image/Target/GUEST_21440fa5-7299-42ba-b407-877e3cc67633?wid=725&hei=725&qlt=80&fmt=webp"
+  // },
+  // {
+  //   productId: 50,
+  //   url: "https://target.scene7.com/is/image/Target/GUEST_1622d248-e46e-4aee-8bf6-5a92ebc36c25?wid=725&hei=725&qlt=80&fmt=webp"
+  // },
+  // {
+  //   productId: 50,
+  //   url: "https://target.scene7.com/is/image/Target/GUEST_7832fadf-82ae-4476-b362-f57482357ec8?wid=725&hei=725&qlt=80&fmt=webp"
+  // },
+  // iPad 6th Generation
   {
     productId: 50,
-    url: "https://target.scene7.com/is/image/Target/GUEST_18310cef-f08e-4e8c-9db0-2590f8b84993?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_6fde87de-b053-463b-91ec-1a7d0d8e6be2?wid=800&hei=800&qlt=80&fmt=webp"
   },
   {
     productId: 50,
-    url: "https://target.scene7.com/is/image/Target/GUEST_dd59e86f-a518-4a99-9cca-345b9a9dd0a2?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_4fa37fdb-fbae-449e-9784-6509abe88d8f?wid=800&hei=800&qlt=80&fmt=webp"
   },
   {
     productId: 50,
-    url: "https://target.scene7.com/is/image/Target/GUEST_21440fa5-7299-42ba-b407-877e3cc67633?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_88357e60-50ba-4f4c-bf4c-08383b161772?wid=800&hei=800&qlt=80&fmt=webp"
   },
   {
     productId: 50,
-    url: "https://target.scene7.com/is/image/Target/GUEST_1622d248-e46e-4aee-8bf6-5a92ebc36c25?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_fd20ac5f-8a79-4ec1-9ff7-657b122ba0de?wid=800&hei=800&qlt=80&fmt=webp"
   },
   {
     productId: 50,
-    url: "https://target.scene7.com/is/image/Target/GUEST_7832fadf-82ae-4476-b362-f57482357ec8?wid=725&hei=725&qlt=80&fmt=webp"
+    url: "https://target.scene7.com/is/image/Target/GUEST_d4b8a135-0453-4b83-960e-3af941f7ec61?wid=800&hei=800&qlt=80&fmt=webp"
   },
   // airpods
   {
