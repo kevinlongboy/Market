@@ -139,16 +139,16 @@ function ReviewCreateForm() {
                 <div className="review-form-star-section">
                     <h2>First, rate this item</h2>
                     <StarRatings
-                    isSelectable={true}
-                    rating={rating}
-                    changeRating={(rating) => setRating(rating)}
-                    starRatedColor="#ffd700"
-                    starHoverColor="#ffd700"
-                    numberOfStars={5}
-                    name='rating'
-                    starDimension='32px'
-                    starSpacing='0'
-                />
+                        isSelectable={true}
+                        rating={rating}
+                        changeRating={(rating) => setRating(rating)}
+                        starRatedColor="#ffd700"
+                        starHoverColor="#ffd700"
+                        numberOfStars={5}
+                        name='rating'
+                        starDimension='32px'
+                        starSpacing='0'
+                    />
                 </div>
 
 
