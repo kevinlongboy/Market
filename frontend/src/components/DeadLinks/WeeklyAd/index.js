@@ -73,7 +73,7 @@ function WeeklyAd() {
 
                             {showModal && (
                                 <Modal onClose={() => setShowModal(false)}>
-                                    <ImageGallery items={images} showPlayButton={false} />
+                                    <ImageGallery items={images} showPlayButton={false} onClick={(e) => setShowModal(false)}/>
                                 </Modal>
                             )}
                         </div>

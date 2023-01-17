@@ -9,6 +9,7 @@ import CategoriesButton from '../CategoriesButton';
 import logo from "../../../images/branding/logo/market-logo.png";
 import './NavBarSecondary.css';
 import { thunkReadAllDepartments } from '../../../store/departmentsReducer';
+import SearchBar from '../../Search/SearchBar';
 
 
 /******************************* COMPONENT *******************************/
@@ -37,6 +38,10 @@ function NavBarSecondary({ isLoaded }){
             <NavLink exact to="/" onClick={(e) => window.scrollTo(0,0)}><img src={logo} id="navbar-logo"></img></NavLink>
             <CategoriesButton />
             {/* <CategoriesButton allDepartments={Object.values(departmentsState.allDepartments)} /> */}
+        </div>
+
+        <div  className='NavBarAccount-middle'>
+          <SearchBar />
         </div>
 
 

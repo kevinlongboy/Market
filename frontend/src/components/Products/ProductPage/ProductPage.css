@@ -66,16 +66,23 @@
 
 #ProductPage-thumbnail {
     width: 140px;
+
     padding-bottom: 8px;
+
+    /* cursor: pointer; */
 }
 
 #ProductPage-main-image-container {
     width: 740px;
     height: 740px;
+
+    position: relative;
+
     display: grid;
     grid-template-columns: 80% 20%;
-    position: relative;
     /* border: 1px solid red; */
+
+    /* cursor: pointer; */
 }
 #ProductPage-main-image {
     width: 740px;

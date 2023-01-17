@@ -214,6 +214,95 @@ router.post('/:productId/reviews', requireAuth, async(req, res) => {
 
 
 // Get single product details
+router.post('/search', async(req, res, next) => {
+
+    console.log("reach from router")
+    let error = {};
+
+    try {
+
+        let query = {
+            where: {},
+            include: [],
+            raw: true
+        }
+
+        /**************************** add filter ****************************/
+        // parse req data
+        let { term } = req.body;
+
+        // custom query filter
+        // location - search: address, city, state, country
+        // if (location) query.where.address = { [Op.substring]: location };
+        if (term) query.where.name = { [Op.substring]: term };
+
+        /****************************** query *******************************/
+        let searchProducts = await Product.findAll(query);
+
+        for (let i = 0; i < searchProducts.length; i++ ) {
+
+            let currProduct = searchProducts[i];
+
+            // add numReviews-key
+            let userReviewCount = await Review.count({
+                where: { productId: currProduct.id},
+                raw: true,
+            });
+
+            let seedReviewCount = await SeedReview.count({
+                where: { productId: currProduct.id},
+                raw: true,
+            });
+
+            let reviewCount = userReviewCount + seedReviewCount
+
+            reviewCount ? currProduct.numReviews = reviewCount : currProduct.numReviews = 0 // key into "dataValues" before numReviews?
+
+            // add avgRating-key
+            let userRatingsSum = await Review.sum('rating', {
+                where: { productId: currProduct.id},
+                raw: true,
+            });
+
+            let seedRatingsSum = await SeedReview.sum('rating', {
+                where: { productId: currProduct.id},
+                raw: true,
+            });
+
+            let ratingsSum = userRatingsSum + seedRatingsSum
+
+            let ratingAvg = ratingsSum / reviewCount;
+
+            ratingAvg ? currProduct.avgRating = ratingAvg : currProduct.avgRating = 0.0
+
+            // add ProductImages-key
+            let images = await ProductImage.findAll({
+                where: { productId: currProduct.id},
+                attributes: {
+                    exclude: ["createdAt", "updatedAt"]
+                },
+                raw: true,
+            })
+            currProduct.previewImage = images[0].url
+        }
+
+        console.log("searchProducts", searchProducts)
+
+        return res
+            .status(200)
+            .json({
+                "Products": searchProducts,
+                "Term": term
+            })
+
+
+    } catch (err) {
+        error.error = err;
+        return res.json(error);
+    };
+});
+
+// Get single product details
 router.get('/:productId', async(req, res) => {
 
     let currProdId = req.params.productId;

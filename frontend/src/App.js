@@ -24,6 +24,7 @@ import Footer from "./components/Footer";
 import RedCard from "./components/DeadLinks/RedCard";
 import WeeklyAd from "./components/DeadLinks/WeeklyAd";
 import Square from "./components/DeadLinks/Square";
+import SearchResultsPage from "./components/Search/SearchResultsPage";
 
 
 /******************************* COMPONENT *******************************/
@@ -124,9 +125,9 @@ function App() {
             <Square />
           </Route>
 
-          {/* <Route exact path={'/square'}>
-            <Square />
-          </Route> */}
+          <Route exact path={'/search'}>
+            <SearchResultsPage />
+          </Route>
 
           {/* <Route>
             Page Not Found

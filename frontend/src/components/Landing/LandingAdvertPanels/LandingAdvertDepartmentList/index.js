@@ -9,7 +9,7 @@ import './LandingAdvertDepartmentList.css'
 
 
 /******************************* COMPONENT *******************************/
-function LandingAdvertDepartmentList() {
+function LandingAdvertDepartmentList({header}) {
 
   /****************** access store *******************/
   const departmentsState = useSelector(state => state.departments)
@@ -30,7 +30,7 @@ function LandingAdvertDepartmentList() {
 
       <div id="LandingAdvertDepartmentList-component">
 
-          <div className="LandingAdvertDepartmentList-title">Categories</div>
+          <div className="LandingAdvertDepartmentList-title">{header}</div>
 
           <div className="department-card-container">
             {allDepartments && allDepartments.map((dept) => (

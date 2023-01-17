@@ -9,6 +9,7 @@ import favoritesReducer from "./favoritesReducer";
 import ordersReducer from "./ordersReducer";
 import productsReducer from "./productsReducer";
 import reviewsReducer from "./reviewsReducer";
+import searchReducer from "./searchReducer";
 import sessionReducer from './sessionReducer';
 
 
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   orders: ordersReducer,
   reviews: reviewsReducer,
   favorites: favoritesReducer,
+  search: searchReducer
 });
 
 let enhancer;

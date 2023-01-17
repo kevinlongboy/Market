@@ -49,7 +49,7 @@ function Landing() {
           </div>
 
           <div className="dept-panel">
-            <LandingAdvertDepartmentList />
+            <LandingAdvertDepartmentList header={'Categories'}/>
           </div>
       </div>
 

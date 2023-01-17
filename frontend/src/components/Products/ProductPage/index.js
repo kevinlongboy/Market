@@ -34,14 +34,8 @@ function ProductPage() {
   const userReviews = Object.values(reviewsState.allReviewsByUser)
   let alreadyReviewedByUser = userReviews.find((review) => review.productId == productId)
   // images for modal
-  // const images = [];
-  // productImages.forEach((obj) =>  {
-  //   let image = {}
-  //   image.original = obj.url
-  //   image.thumbnail = obj.url
-  //   images.push(image)
-  // })
-  // console.log("images", images)
+  // const modalImages = []
+  // productImages && productImages.forEach(img => modalImages.push({original: img.url, thumbnail: img.url}))
 
   /************ reducer/API communication ************/
   const dispatch = useDispatch();
@@ -129,9 +123,15 @@ function ProductPage() {
           <div className="ProductPage-body-container">
 
             <div className="ProductPage-thumbnails-container">
-              {productImages.length > 0 && productImages.map((image) => (
+              {productImages.length > 0 && productImages.map((image, index) => (
                 <div className="ProductPage-thumbnail-container">
-                  <img src={image.url} id="ProductPage-thumbnail"></img>
+                  <img
+                    src={image.url}
+                    key={index + 1}
+                    id="ProductPage-thumbnail"
+                    // onClick={()=> setShowModal(true)}
+                  >
+                  </img>
                 </div>
                 ))}
             </div>
@@ -145,25 +145,21 @@ function ProductPage() {
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                 }}
+                // onClick={()=> setShowModal(true)}
                 >
-
-                {/* <img
-                  src={mainImage.url}
-                  id="ProductPage-main-image"
-                >
-                </img> */}
-
-                {/* <Modal onClose={() => setShowModal(false)}>
-                  <ImageGallery items={images} showPlayButton={false} />
-                </Modal> */}
 
                 <div id="ProductPage-UpdateFavorite-button">
                   <UpdateFavorite productId={productId}/>
                 </div>
+
               </div>
             )}
 
-
+            {/* {showModal && (
+              <Modal onClose={() => setShowModal(false)}>
+                <ImageGallery items={modalImages} showPlayButton={false} showThumbnails={true} onClick={(e) => setShowModal(false)}/>
+              </Modal>
+            )} */}
 
             <div className="ProductPage-review-and-actions-container">
 

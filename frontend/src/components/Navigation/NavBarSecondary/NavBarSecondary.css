@@ -19,7 +19,7 @@
 
 #NavBarAccount-component {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
 
     padding: 0px 20px;
@@ -33,16 +33,56 @@
     /* background-color: yellow; */
 }
 
+
+/******************** LEFT ********************/
 .NavBarAccount-left {
+    grid-column: 1 / 2;
+    /* background-color: red; */
+
+    padding-left: 20px;
+
     display: flex;
     flex-direction: row;
     justify-content:  left;
     align-items: center;
-    padding-left: 20px;
 }
+
+.NavBarAccount-left > * {
+    margin-right: 15px;
+}
+
 #navbar-logo {
     width: 44px;
     /* padding: 0px; */
+}
+
+
+/******************** MIDDLE ********************/
+.NavBarAccount-middle {
+    grid-column: 2 / 3;
+    /* width: 100%; */
+    /* background-color: #333; */
+
+    padding: 0px 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    align-items: center;
+}
+
+
+/******************** RIGHT ********************/
+.NavBarAccount-right {
+    grid-column: 3 / 4;
+    /* background-color: aqua; */
+
+    padding-right: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content:  right;
+    align-items: center;
 }
 
 .NavBarAccount-right > * {
@@ -50,16 +90,6 @@
     text-decoration: none;
 }
 
-.NavBarAccount-right {
-    display: flex;
-    flex-direction: row;
-    justify-content:  right;
-    align-items: center;
-    padding-right: 20px;
-}
-.NavBarAccount-left > * {
-    margin-right: 15px;
-}
 
 #NavBarAccount-cart-button-container {
     display: flex;

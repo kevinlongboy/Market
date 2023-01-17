@@ -20,6 +20,9 @@
   }
 
   #modal-content {
+    width: 100vw;
+    height: 100vh;
+
     position: absolute;
-    background-color:white;
+    /* background-color:white; */
   }
